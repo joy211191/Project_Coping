@@ -5,13 +5,16 @@ using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.U2D;
 
 public class LightFlicker : MonoBehaviour {
-    Light2D globalLight;
+    Light2D lightComponent;
+    public Vector2 minMaxIntensity;
+    //public Vector2 minMaxFalloff;
     void Awake () {
-        globalLight = GetComponent<Light2D>();
+        lightComponent = GetComponent<Light2D>();
     }
 
     // Update is called once per frame
     void LateUpdate () {
-        globalLight.intensity = Random.Range(0.8f, 1.1f);
+        lightComponent.intensity = Random.Range(minMaxIntensity.x, minMaxIntensity.y);
+        //lightComponent. = Random.Range(minMaxFalloff.x, minMaxFalloff.y);
     }
 }
