@@ -32,7 +32,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.95
     min: 0
   intensity:
     m_OverrideState: 1
@@ -61,7 +61,7 @@ MonoBehaviour:
     m_Value: {fileID: 2800000, guid: 5db0a7f51c45ceb438561607acbd87a8, type: 3}
   dirtIntensity:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 1.5
     min: 0
 --- !u!114 &3457887870990851731
 MonoBehaviour:
@@ -85,12 +85,12 @@ MonoBehaviour:
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.2
     min: 0
     max: 1
   clamp:
     m_OverrideState: 1
-    m_Value: 0.043
+    m_Value: 0.008
     min: 0
     max: 0.2
 --- !u!114 &5994884536224695160
@@ -109,6 +109,6 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.27
+    m_Value: 0.375
     min: 0
     max: 1

@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Bandit\Bandit.cs" />
      <Compile Include="Assets\Scripts\Bandit\CharacterSelector_Bandit.cs" />
      <Compile Include="Assets\Scripts\Bandit\Sensor_Bandit.cs" />
+     <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
      <None Include="Assets\SpriteShaders\SpritesPixelLit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\ShaderShared.cginc" />
@@ -147,6 +148,12 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>E:/Approarr/Project_Coping/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>E:/Approarr/Project_Coping/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>E:/Approarr/Project_Coping/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

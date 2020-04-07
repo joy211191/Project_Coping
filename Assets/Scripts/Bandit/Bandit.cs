@@ -51,27 +51,27 @@ public class Bandit : MonoBehaviour {
 
         // -- Handle Animations --
         //Death
-        if (Input.GetKeyDown("e")) {
-            if(!m_isDead)
-                m_animator.SetTrigger("Death");
-            else
-                m_animator.SetTrigger("Recover");
+        //if (Input.GetKeyDown("e")) {
+        //    if(!m_isDead)
+        //        m_animator.SetTrigger("Death");
+        //    else
+        //        m_animator.SetTrigger("Recover");
 
-            m_isDead = !m_isDead;
-        }
+        //    m_isDead = !m_isDead;
+        //}
             
-        //Hurt
-        else if (Input.GetKeyDown("q"))
-            m_animator.SetTrigger("Hurt");
+        ////Hurt
+        //else if (Input.GetKeyDown("q"))
+        //    m_animator.SetTrigger("Hurt");
 
         //Attack
-        else if(Input.GetMouseButtonDown(0)) {
+        if(Input.GetMouseButtonDown(0)) {
             m_animator.SetTrigger("Attack");
         }
 
         //Change between idle and combat idle
-        else if (Input.GetKeyDown("f"))
-            m_combatIdle = !m_combatIdle;
+        //else if (Input.GetKeyDown("f"))
+        //    m_combatIdle = !m_combatIdle;
 
         //Jump
         else if (Input.GetKeyDown("space") && m_grounded) {
