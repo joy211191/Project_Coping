@@ -57,14 +57,15 @@
   <ItemGroup>
      <Compile Include="Assets\Level Generator\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Level Generator\Scripts\LevelGeneration.cs" />
-     <Compile Include="Assets\Level Generator\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Level Generator\Scripts\Room.cs" />
      <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\Bandit\Bandit.cs" />
-     <Compile Include="Assets\Scripts\Bandit\CharacterSelector_Bandit.cs" />
-     <Compile Include="Assets\Scripts\Bandit\Sensor_Bandit.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
+     <Compile Include="Assets\Scripts\Joy\Player\PlayerAnimator.cs" />
+     <Compile Include="Assets\Scripts\Joy\Player\PlayerBaseAbilities.cs" />
+     <Compile Include="Assets\Scripts\Joy\Player\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Joy\Player\PlayerSensor.cs" />
+     <Compile Include="Assets\Scripts\Joy\Player\PlayerStats.cs" />
      <None Include="Assets\SpriteShaders\SpritesPixelLit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\ShaderShared.cginc" />

@@ -5417,7 +5417,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1780031118}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 499d3dab0813e464796a46d55a5f9701, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5629,5 +5629,60 @@ PrefabInstance:
       propertyPath: m_jumpForce
       value: 2.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+--- !u!1 &1951481742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1951481741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1951481743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951481742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb87522ff7532e4db21e21bf35f5fbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_speed: 0
+  m_jumpForce: 2
+  m_animator: {fileID: 0}
+  playerBaseAbilities: {fileID: 0}
+  powerUpIndex: 0
+  powerUpSelection: 
+--- !u!114 &1951481748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951481742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8521767c16dcc2a419856396b4d820fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playHurtAnim: 1
+  countDown: 0
+  maxCountDown: 5
+--- !u!114 &1951481749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951481742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2a1378a861dd547a7728469ada9492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reserveLives: 0
+  powerUp: 0
+  playerStats: {fileID: 0}
