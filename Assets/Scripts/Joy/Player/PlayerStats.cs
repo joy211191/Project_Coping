@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour {
     public PlayerBaseAbilities playerBaseAbilities;
 
     //Debug
-    public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName;
+    public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
     
 
 

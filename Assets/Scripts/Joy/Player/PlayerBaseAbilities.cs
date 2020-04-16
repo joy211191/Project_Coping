@@ -61,6 +61,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                     break;
                 }
         }
-        Debug.Log(index);
+#if UNITY_EDITOR
+        playerStats.livesText.text = reserveLives.ToString();
+#endif
     }
 }
