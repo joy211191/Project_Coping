@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
     float attackPower=10f;
@@ -12,6 +13,12 @@ public class PlayerStats : MonoBehaviour {
     public float countDown;
     public float maxCountDown;
     List<float> originalValues = new List<float>();
+    public PlayerBaseAbilities playerBaseAbilities;
+
+    //Debug
+    public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName;
+    
+
 
     public void SetPlayerStats (float healthMultiplier, float damageTaken, float speedChange, float attackMultiplier) {
         originalValues.Clear();
@@ -50,7 +57,14 @@ public class PlayerStats : MonoBehaviour {
     }
 
     void Update () {
-        
+
+#if UNITY_EDITOR
+        speedText.text = "Speed: " +speed.ToString();
+        damageMultiplierText.text = "Damage Multiplier: "+damageMultiplier.ToString();
+        healthText.text = "Health: "+health.ToString();
+        attackPowerText.text = "AttackPower" +attackPower.ToString();
+        powerUpName.text = playerBaseAbilities.powerUp.ToString();
+#endif
         if (countDown > 0) {
             countDown -=Time.deltaTime;
             if (countDown <= 0) {

@@ -18,6 +18,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
     void Awake () {
         playerStats = GetComponent<PlayerStats>();
+        playerStats.playerBaseAbilities = this;
     }
 
     void Update () {
@@ -50,7 +51,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
             case PowerUp.SelfHarm: {
                     reserveLives -= 4;
                     playerStats.TakeDamage(playerStats.PlayerHealth() / 2);
-                    playerStats.SetPlayerStats(1, 2.5f, 1.2f, 2f);
+                    playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
                     playerStats.SetCountDown();
                     break;
                 }

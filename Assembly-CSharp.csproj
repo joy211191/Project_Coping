@@ -60,6 +60,7 @@
      <Compile Include="Assets\Level Generator\Scripts\Room.cs" />
      <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
      <Compile Include="Assets\Scripts\Joy\Player\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Joy\Player\PlayerBaseAbilities.cs" />
