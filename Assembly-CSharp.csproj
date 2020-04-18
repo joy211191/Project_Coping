@@ -55,18 +55,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Level Generator\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Level Generator\Scripts\LevelGeneration.cs" />
      <Compile Include="Assets\Level Generator\Scripts\Room.cs" />
      <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
+     <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
+     <Compile Include="Assets\Scripts\Joy\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
-     <Compile Include="Assets\Scripts\Joy\Player\PlayerAnimator.cs" />
-     <Compile Include="Assets\Scripts\Joy\Player\PlayerBaseAbilities.cs" />
-     <Compile Include="Assets\Scripts\Joy\Player\PlayerController.cs" />
-     <Compile Include="Assets\Scripts\Joy\Player\PlayerSensor.cs" />
-     <Compile Include="Assets\Scripts\Joy\Player\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\Joy\PlayerAnimator.cs" />
+     <Compile Include="Assets\Scripts\Joy\PlayerBaseAbilities.cs" />
+     <Compile Include="Assets\Scripts\Joy\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Joy\PlayerSensor.cs" />
+     <Compile Include="Assets\Scripts\Joy\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\Joy\Transition.cs" />
      <None Include="Assets\SpriteShaders\SpritesPixelLit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\ShaderShared.cginc" />
@@ -88,6 +99,7 @@
      <None Include="Assets\SpriteShaders\CameraDepthNormalsTexture.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\Noise\SimplexNoise3D.hlsl" />
      <None Include="Assets\SpriteShaders\SpritesUnlit.shader" />
+     <None Include="Assets\Demigiant\DOTween\readme.txt" />
      <None Include="Assets\SpriteShaders\SpritesVertexLit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteShadows.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteSpecular.cginc" />
@@ -333,6 +345,9 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
