@@ -18,6 +18,19 @@ public class PlayerStats : MonoBehaviour {
     public float maxCountDown;
     List<float> originalValues = new List<float>();
     public PlayerBaseAbilities playerBaseAbilities;
+    [Space(5)]
+    [Header("Numbness Pool Settings")]
+    [SerializeField]
+    [Range(0, 1)]
+    float numbnessDamageReduction;
+    [SerializeField]
+    float numbnessPool;
+    [SerializeField]
+    float maxNumbnessPoolValue;
+    [SerializeField]
+    float numbnessPoolDelayTime;
+    [SerializeField]
+    float numbnessPoolDecayValue;
 
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
@@ -40,10 +53,26 @@ public class PlayerStats : MonoBehaviour {
         playerAnimator.GetSpeed();
     }
 
-    public void TakeDamage (float damage) {
-        health -= damage * damageMultiplier;
-        if (playHurtAnim)
+    public void TakeDamage (float damage,bool selfHarm) {
+        StopCoroutine("NumbnessPoolDecay");
+        if (!selfHarm) {
+            if (numbnessPool < maxNumbnessPoolValue) {
+                numbnessPool += damage / numbnessDamageReduction;
+                health -= damage * damageMultiplier / (1 - numbnessDamageReduction);
+            }
+            else {
+                health -= damage * damageMultiplier;
+            }
+        }
+        if (playHurtAnim) {
             playerAnimator.m_animator.SetTrigger("Hurt");
+        }
+    }
+
+    public IEnumerator NumbnessPoolDecay () {
+        yield return new WaitForSeconds(numbnessPoolDelayTime);
+        while (numbnessPool > 0)
+            numbnessPool -= numbnessPoolDecayValue;
     }
 
     public float PlayerHealth () {

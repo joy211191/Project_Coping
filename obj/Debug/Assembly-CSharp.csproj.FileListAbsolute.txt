@@ -311,3 +311,5 @@ E:\Approarr\Project_Coping\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.ca
 E:\Approarr\Project_Coping\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 E:\Approarr\Project_Coping\obj\Debug\Assembly-CSharp.dll
 E:\Approarr\Project_Coping\obj\Debug\Assembly-CSharp.pdb
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTween.dll
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTween.xml

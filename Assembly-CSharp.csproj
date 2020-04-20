@@ -69,6 +69,7 @@
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
+     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataVisualizer.cs" />
      <Compile Include="Assets\Scripts\Joy\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />

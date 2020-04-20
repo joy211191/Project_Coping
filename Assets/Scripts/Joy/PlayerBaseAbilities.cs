@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 public enum PowerUp {
     SelfSoothing,
-    Numbing,
     CompulsiveRiskTaking,
     SelfHarm,
     Escape
@@ -28,50 +26,61 @@ public class PlayerBaseAbilities : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.LeftAlt)) {
             reserveLives += 5;
         }
+        if (Input.GetKeyDown(KeyCode.P)) {
+            SaveData();
+        }
     }
 
     public void SetPowerUp (PowerUp index) {
+        powerUp = index;
         switch (index) {
             case PowerUp.SelfSoothing: {
-                    dataSet.livesUsed += 1;
-                    dataSet.selfSoothing++;
-                    reserveLives -= 1;
-                    playerStats.SetPlayerStats(2, 1f, 1, 1);
-                    playerStats.SetCountDown();
-                    break;
-                }
-            case PowerUp.Numbing: {
-                    dataSet.livesUsed += 1;
-                    dataSet.numbing += 1;
-                    reserveLives -= 1;
-                    playerStats.playHurtAnim = false;
-                    playerStats.SetCountDown();
-                    break;
+                    if (reserveLives > 0) {
+                        dataSet.livesUsed += 1;
+                        dataSet.selfSoothing++;
+                        reserveLives -= 1;
+                        playerStats.SetPlayerStats(2, 1f, 1, 1);
+                        playerStats.SetCountDown();
+                        break;
+                    }
+                    else
+                        break;
                 }
             case PowerUp.CompulsiveRiskTaking: {
-                    dataSet.livesUsed += 3;
-                    dataSet.compulsiveRiskTaking += 1;
-                    reserveLives -= 3;
-                    playerStats.SetPlayerStats(2, 2.5f, 1, 2);
-                    playerStats.SetCountDown();
-                    break;
+                    if (reserveLives > 2) {
+                        dataSet.livesUsed += 3;
+                        dataSet.compulsiveRiskTaking += 1;
+                        reserveLives -= 3;
+                        playerStats.SetPlayerStats(2, 2.5f, 1, 2);
+                        playerStats.SetCountDown();
+                        break;
+                    }
+                    else break;
                 }
 
             case PowerUp.SelfHarm: {
-                    dataSet.livesUsed += 4;
-                    dataSet.selfHarm++;
-                    reserveLives -= 4;
-                    playerStats.TakeDamage(playerStats.PlayerHealth() / 2);
-                    playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
-                    playerStats.SetCountDown();
-                    break;
+                    if (reserveLives > 3) {
+                        dataSet.livesUsed += 4;
+                        dataSet.selfHarm++;
+                        reserveLives -= 4;
+                        playerStats.TakeDamage(playerStats.PlayerHealth() / 2,true);
+                        playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
+                        playerStats.SetCountDown();
+                        break;
+                    }
+                    else
+                        break;
                 }
             case PowerUp.Escape: {
-                    dataSet.livesUsed += 5;
-                    dataSet.escape++;
-                    reserveLives -= 5;
-                    playerStats.SetCountDown();
-                    break;
+                    if (reserveLives > 4) {
+                        dataSet.livesUsed += 5;
+                        dataSet.escape++;
+                        reserveLives -= 5;
+                        playerStats.SetCountDown();
+                        break;
+                    }
+                    else
+                        break;
                 }
         }
 #if UNITY_EDITOR
@@ -79,24 +88,15 @@ public class PlayerBaseAbilities : MonoBehaviour {
 #endif
     }
     public void SaveData () {
-        BinaryFormatter binaryFormatter = new BinaryFormatter();
-        if (File.Exists(Application.persistentDataPath + " / GameData.Group3")) {
-            FileStream fileStream = new FileStream(Application.persistentDataPath + "/GameData.Group3", FileMode.Open);
-            binaryFormatter.Serialize(fileStream, dataSet.selfSoothing);
-            binaryFormatter.Serialize(fileStream, dataSet.numbing);
-            binaryFormatter.Serialize(fileStream, dataSet.compulsiveRiskTaking);
-            binaryFormatter.Serialize(fileStream, dataSet.selfHarm);
-            binaryFormatter.Serialize(fileStream, dataSet.escape);
-            fileStream.Close();
+        if (File.Exists(Application.persistentDataPath + " / GameplayData.json")) {
+            string jsonstring = JsonUtility.ToJson(dataSet);
+            File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
         }
         else {
-            FileStream fileStream = new FileStream(Application.persistentDataPath + "/GameData.Group3", FileMode.Create);
-            binaryFormatter.Serialize(fileStream, dataSet.selfSoothing);
-            binaryFormatter.Serialize(fileStream, dataSet.numbing);
-            binaryFormatter.Serialize(fileStream, dataSet.compulsiveRiskTaking);
-            binaryFormatter.Serialize(fileStream, dataSet.selfHarm);
-            binaryFormatter.Serialize(fileStream, dataSet.escape);
+            FileStream fileStream = new FileStream(Application.persistentDataPath + "/GameplayData.json", FileMode.Create);
             fileStream.Close();
+            string jsonstring = JsonUtility.ToJson(dataSet);
+            File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
         }
     }
 }

@@ -275,3 +275,7 @@ E:\Approarr\Project_Coping\obj\Debug\Unity.2D.Tilemap.Extras.Editor.csproj.CoreC
 E:\Approarr\Project_Coping\obj\Debug\Unity.2D.Tilemap.Extras.Editor.csproj.CopyComplete
 E:\Approarr\Project_Coping\obj\Debug\Unity.2D.Tilemap.Extras.Editor.dll
 E:\Approarr\Project_Coping\obj\Debug\Unity.2D.Tilemap.Extras.Editor.pdb
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTween.dll
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTweenEditor.dll
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTween.xml
+E:\Approarr\Project_Coping\Temp\bin\Debug\DOTweenEditor.xml

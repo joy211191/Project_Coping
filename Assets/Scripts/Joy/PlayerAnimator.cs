@@ -80,6 +80,7 @@ public class PlayerAnimator : PlayerController {
             else
                 powerUpIndex = 4;
         }
+        playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
         foreach (KeyCode keyStroke in powerUpSelection) {
             if (Input.GetKeyDown(keyStroke)) {
                 switch (keyStroke) {
