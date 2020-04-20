@@ -53,7 +53,7 @@ public class PlayerStats : MonoBehaviour {
         playerAnimator.GetSpeed();
     }
 
-    public void TakeDamage (float damage,bool selfHarm) {
+    public void TakeDamage (float damage,bool selfHarm=false) {
         StopCoroutine("NumbnessPoolDecay");
         if (!selfHarm) {
             if (numbnessPool < maxNumbnessPoolValue) {

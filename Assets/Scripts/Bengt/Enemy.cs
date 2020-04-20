@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
 
     [SerializeField]
     protected float m_speed;
@@ -35,76 +34,74 @@ public class Enemy : MonoBehaviour
 
     protected float m_waitTime = 0;
 
+    Vector3 attackPointPosition;
+
     //TODO find better way of adding patrol targets, or find another way to patrol
-    
+
     [SerializeField]
     protected Transform m_target;
 
+    SpriteRenderer spriteRenderer;
+
     // Start is called before the first frame update
-    void Awake()
-    {
+    void Awake () {
         m_body2d = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        attackPoint = transform.Find("AttackPoint");
+        attackPointPosition = attackPoint.localPosition;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
+    void Update () {
         LookForPlayer();
 
         //Checks if Player is in melee, if they are then attack, if not then move
-        if(m_inMelee)
+        if (m_inMelee)
             Attack();
-        else 
+        else
             Move();
 
     }
 
-    private void ChangeDirection()
-    {
+    private void ChangeDirection () {
 
         m_isFacingRight = !m_isFacingRight;
 
         //finds attack point
-        Transform attackPoint = transform.Find("AttackPoint");
 
         //Flips sprite and changes side of the attack point
-        if (m_isFacingRight)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-            attackPoint.transform.localPosition = new Vector3(1, 0.35f, 0);
+        if (m_isFacingRight) {
+            spriteRenderer.flipX = true;
+            attackPoint.transform.localPosition = new Vector3(-attackPointPosition.x, attackPointPosition.y);
         }
-        else
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-            attackPoint.transform.localPosition = new Vector3(-1, 0.35f, 0);
+        else {
+            spriteRenderer.flipX = false;
+            attackPoint.transform.localPosition = new Vector3(attackPointPosition.x, attackPointPosition.y);
         }
-
-
     }
 
-    private void Attack()
-    {
+    private void Attack () {
         //Prints if circle intersects with something on player layer
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-        foreach (Collider2D player in hitPlayer)
-            Debug.Log("Hit player");
-
+        foreach (Collider2D player in hitPlayer) {
+            if (player.tag == "Player") {
+                Debug.Log("Hit player");
+                player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
+            }
+        }
     }
 
-    private void LookForPlayer()
-    {
+    private void LookForPlayer () {
         //Checks distance to player
         float distToPlayer = Vector2.Distance(transform.position, m_player.position);
 
         //Follows player if within aggro range
-        if (distToPlayer < m_aggroRange)
-        {
+        if (distToPlayer < m_aggroRange) {
             m_waitTime = 0;
             m_seenPlayer = true;
             m_target = m_player;
         }
-        else if (m_seenPlayer && distToPlayer > m_aggroRange + 2)
-        {
+        else if (m_seenPlayer && distToPlayer > m_aggroRange + 2) {
             m_seenPlayer = false;
             m_target = null;
         }
@@ -115,18 +112,15 @@ public class Enemy : MonoBehaviour
             m_inMelee = false;
     }
 
-    private void Move()
-    {
+    private void Move () {
         //Placeholder Patrol 
         //TODO: Make this better
-        if (!m_seenPlayer)
-        {
+        if (!m_seenPlayer) {
 
             if (m_target == null)
                 m_target = m_patrolTarget1;
 
-            if(transform.position.x > m_target.position.x - 0.2f && transform.position.x < m_target.position.x + 0.2f)
-            {
+            if (transform.position.x > m_target.position.x - 0.2f && transform.position.x < m_target.position.x + 0.2f) {
                 //Resets wait time and counts down
                 if (m_waitTime <= 0)
                     m_waitTime = m_startWaitTime;
@@ -134,8 +128,7 @@ public class Enemy : MonoBehaviour
                     m_waitTime -= Time.deltaTime;
 
                 //Find new target after waiting
-                if(m_waitTime <= 0)
-                {
+                if (m_waitTime <= 0) {
                     if (m_target == m_patrolTarget1)
                         m_target = m_patrolTarget2;
                     else
@@ -156,12 +149,11 @@ public class Enemy : MonoBehaviour
         else if (!m_isFacingRight && m_waitTime <= 0)
             m_body2d.velocity = new Vector2(-m_speed, 0);
 
-        
+
 
     }
 
-    void OnDrawGizmos()
-    {
+    void OnDrawGizmos () {
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);

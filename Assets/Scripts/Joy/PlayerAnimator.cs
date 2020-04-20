@@ -19,6 +19,7 @@ public class PlayerAnimator : PlayerController {
     [SerializeField]
     float attackRange;
     public LayerMask enemyLayers;
+    Vector3 attackPointPosition;
 
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -33,6 +34,7 @@ public class PlayerAnimator : PlayerController {
         powerUpSelection.Add(KeyCode.Alpha3);
         powerUpSelection.Add(KeyCode.Alpha4);
         powerUpSelection.Add(KeyCode.Alpha5);
+        attackPointPosition = attackPoint.localPosition;
     }
 
 
@@ -47,9 +49,11 @@ public class PlayerAnimator : PlayerController {
         //Attack
         if (Input.GetMouseButtonDown(0)) {
             m_animator.SetTrigger("Attack");
-            Collider2D[] hitEnemies= Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
             foreach (Collider2D enemy in hitEnemies) {
-                Debug.Log("Hit enemy " +enemy.name);
+                if (enemy.tag == "Enemy") {
+                    Debug.Log("Hit enemy " + enemy.name);
+                }
             }
         }
         if (Input.GetMouseButtonDown(1)) {
@@ -119,6 +123,10 @@ public class PlayerAnimator : PlayerController {
             m_animator.SetTrigger("Dash");
             transform.DOMove(newPosition, 0.5f);
         }
+        if (spriteRenderer.flipX)
+            attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
+        else
+            attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
     }
     int BoolToInteger () {
         if (spriteRenderer.flipX)

@@ -4940,8 +4940,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222103822}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.481, y: 0.502, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4810009, y: 0.50199986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1508926462}
@@ -5948,6 +5948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy Prefab + Patrol Targets
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067148856460773390, guid: 8953e5115f216c04088cb0d508421b13,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4252922954648763938, guid: 8953e5115f216c04088cb0d508421b13,
         type: 3}
