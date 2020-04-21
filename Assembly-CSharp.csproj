@@ -105,6 +105,7 @@
      <None Include="Assets\SpriteShaders\CameraNormalsTexture.shader" />
      <None Include="Assets\SpriteShaders\SpritesVertexLit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteSpecular.cginc" />
+     <None Include="Assets\Dialogue\Lift Attendant\Dialogue1.txt" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
  <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>

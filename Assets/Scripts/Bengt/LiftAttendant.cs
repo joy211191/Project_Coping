@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Text;
 using System.IO;
-using System.Security.Cryptography;
+using System;
 
 public class LiftAttendant : MonoBehaviour
 {
@@ -16,16 +16,20 @@ public class LiftAttendant : MonoBehaviour
     GameObject      m_interactPrompt;
     [SerializeField]
     GameObject      m_player;
+    [SerializeField]
+    string          m_dialoguePath;
 
     protected bool  m_canTalk = false;
     protected bool  m_talking = false;
 
-    [SerializeField]
     protected Text  m_nameText;
     [SerializeField]
     protected Text  m_dialogueText;
-    [SerializeField]
     protected Image m_portrait;
+
+    protected int m_dialogueNum = 0;
+
+    protected string[] m_dialogueLines;
 
     void Awake()
     {
@@ -41,22 +45,36 @@ public class LiftAttendant : MonoBehaviour
         {
             ActivateDialogue();
         }
-        else if (m_talking && Input.GetKeyDown(KeyCode.Q))
+        else if (!m_canTalk && m_talking && Input.GetKeyDown(KeyCode.Q) && m_dialogueNum < m_dialogueLines.Length)
+            ContinueDialogue();
+        else if (m_talking && Input.GetKeyDown(KeyCode.Q) && m_dialogueNum == m_dialogueLines.Length)
         {
             DeactivateDialogue();
+            m_dialogueNum = 0;
         }
     }
 
     void ActivateDialogue()
     {
-        m_nameText.text     = "The Lift Attendant";
-        m_dialogueText.text = "Hello there, I still don't have any cool voice lines or graphics. All of it is just shitty placeholder stuff. What's even worse is that it is all hardcoded. See this text, not even read from a text file. These devs suck.";
-        m_interactPrompt.SetActive(false);
+        m_nameText.text     = gameObject.name;
+        TextfileToList();
+        //m_dialogueText.text = ReadString();
+        if (m_dialogueText == null)
+            Debug.Log("Fuck");
+        m_dialogueText.text = m_dialogueLines[m_dialogueNum];
+        m_dialogueNum++;
+
         m_dialogueObject.SetActive(true);
         m_player.GetComponent<PlayerController>().enabled   = false;
         m_player.GetComponent<PlayerAnimator>().enabled     = false;
         m_talking = true;
         m_canTalk = false;
+    }
+
+    void ContinueDialogue()
+    {
+        m_dialogueText.text = m_dialogueLines[m_dialogueNum];
+        m_dialogueNum++;
     }
 
     void DeactivateDialogue()
@@ -81,6 +99,41 @@ public class LiftAttendant : MonoBehaviour
     {
         m_interactPrompt.SetActive(false);
         m_canTalk = false;
+    }
+
+    void TextfileToList()
+    {
+        int i = 0;
+
+        try
+        {
+            Debug.Log("help");
+
+            m_dialogueLines = File.ReadAllLines(m_dialoguePath, Encoding.UTF8);
+            //using (StreamReader m_reader = new StreamReader(m_dialoguePath))
+            //{
+            //    Debug.Log("help2");
+
+
+            //    string m_line;
+
+            //    while ((m_line = m_reader.ReadLine()) != null)
+            //    {
+            //        Debug.Log("help");
+            //        m_dialogueLines[i] = m_line;
+            //        i++;
+            //        Debug.Log(m_line);
+            //        Debug.Log(i);
+
+            //    }
+            //}
+
+        }
+        catch
+        {
+            Debug.Log("Could not read file");
+        }
+
     }
 
 }

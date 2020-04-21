@@ -1,0 +1,2 @@
+Hello! I have some dialogue that is read from a .txt file now! Cool! Now they just need to make it more modular.
+I can also have numerous rows of text. This is starting to look like something!

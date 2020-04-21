@@ -7944,7 +7944,7 @@ GameObject:
   - component: {fileID: 1878381087}
   - component: {fileID: 1878381086}
   m_Layer: 0
-  m_Name: liftAttendant
+  m_Name: The Lift Attendant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7965,6 +7965,7 @@ MonoBehaviour:
   m_dialogueObject: {fileID: 755358994}
   m_interactPrompt: {fileID: 1797774472}
   m_player: {fileID: 1951481742}
+  m_dialoguePath: Assets/Dialogue/Lift Attendant/Dialogue1.txt
   m_nameText: {fileID: 0}
   m_dialogueText: {fileID: 0}
   m_portrait: {fileID: 0}
