@@ -68,6 +68,7 @@
      <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Bengt\Enemy.cs" />
+     <Compile Include="Assets\Scripts\Bengt\LiftAttendant.cs" />
      <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataVisualizer.cs" />
