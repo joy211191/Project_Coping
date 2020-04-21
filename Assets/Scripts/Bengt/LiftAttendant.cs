@@ -33,6 +33,8 @@ public class LiftAttendant : MonoBehaviour
 
     void Awake()
     {
+        //Find all the UI object children and put the in the right place
+        m_nameText.text = gameObject.name;
         m_portrait      = m_dialogueObject.transform.Find("Portrait").GetComponent<Image>();
         m_dialogueText  = m_dialogueObject.transform.Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
         m_nameText      = m_dialogueObject.transform.Find("Name Panel").Find("Name").GetComponent<Text>();
@@ -42,28 +44,28 @@ public class LiftAttendant : MonoBehaviour
     void Update()
     {
         if (m_canTalk && Input.GetKeyDown(KeyCode.Q))
-        {
             ActivateDialogue();
-        }
         else if (!m_canTalk && m_talking && Input.GetKeyDown(KeyCode.Q) && m_dialogueNum < m_dialogueLines.Length)
             ContinueDialogue();
         else if (m_talking && Input.GetKeyDown(KeyCode.Q) && m_dialogueNum == m_dialogueLines.Length)
         {
             DeactivateDialogue();
-            m_dialogueNum = 0;
+            m_dialogueNum = 0; //reset dialoguenum
         }
     }
 
     void ActivateDialogue()
     {
-        m_nameText.text     = gameObject.name;
         TextfileToList();
-        //m_dialogueText.text = ReadString();
+        //Not really necessary but in case it breaks, not really helpful for a build
         if (m_dialogueText == null)
             Debug.Log("Fuck");
+
+        //Add text in first place of array and increment
         m_dialogueText.text = m_dialogueLines[m_dialogueNum];
         m_dialogueNum++;
 
+        //Show dialogue box and stop all player actions, some bool changing as well
         m_dialogueObject.SetActive(true);
         m_player.GetComponent<PlayerController>().enabled   = false;
         m_player.GetComponent<PlayerAnimator>().enabled     = false;
@@ -73,12 +75,14 @@ public class LiftAttendant : MonoBehaviour
 
     void ContinueDialogue()
     {
+        //Next dialogue text
         m_dialogueText.text = m_dialogueLines[m_dialogueNum];
         m_dialogueNum++;
     }
 
     void DeactivateDialogue()
     {
+        //Removes dialogue box and allow the player to move again, change bools back as well
         m_dialogueObject.SetActive(false);
         m_player.GetComponent<PlayerController>().enabled   = true;
         m_player.GetComponent<PlayerAnimator>().enabled     = true;
@@ -86,6 +90,8 @@ public class LiftAttendant : MonoBehaviour
         m_canTalk = true;
     }
 
+
+    //Triggered by player
     void OnTriggerEnter2D(Collider2D m_col)
     {
         if (m_col.gameObject.name == "LightBandit");
@@ -95,43 +101,27 @@ public class LiftAttendant : MonoBehaviour
         }
     }
 
+    //No longer triggered by player
     void OnTriggerExit2D(Collider2D m_col)
     {
         m_interactPrompt.SetActive(false);
         m_canTalk = false;
     }
 
+
+    //Read from .txt file
     void TextfileToList()
     {
-        int i = 0;
-
         try
         {
-            Debug.Log("help");
-
+            //Read the entirety of the file and puts everything in its own place in the array
             m_dialogueLines = File.ReadAllLines(m_dialoguePath, Encoding.UTF8);
-            //using (StreamReader m_reader = new StreamReader(m_dialoguePath))
-            //{
-            //    Debug.Log("help2");
-
-
-            //    string m_line;
-
-            //    while ((m_line = m_reader.ReadLine()) != null)
-            //    {
-            //        Debug.Log("help");
-            //        m_dialogueLines[i] = m_line;
-            //        i++;
-            //        Debug.Log(m_line);
-            //        Debug.Log(i);
-
-            //    }
-            //}
 
         }
         catch
         {
-            Debug.Log("Could not read file");
+            //Print if it can't read the file
+            Debug.Log("Could not read file. Is the path correct?");
         }
 
     }
