@@ -21,6 +21,15 @@ public class PlayerAnimator : PlayerController {
     public LayerMask enemyLayers;
     Vector3 attackPointPosition;
 
+    public bool playerDown;
+    
+
+    [Tooltip("The x is the first damage, y the second and z the third. This is in respect to the sword swings of the player during the combat")]
+    [SerializeField]
+    Vector3 damageVectors;
+
+    Rigidbody2D rb2D;
+
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerStats>();
@@ -35,8 +44,8 @@ public class PlayerAnimator : PlayerController {
         powerUpSelection.Add(KeyCode.Alpha4);
         powerUpSelection.Add(KeyCode.Alpha5);
         attackPointPosition = attackPoint.localPosition;
+        rb2D = GetComponent<Rigidbody2D>();
     }
-
 
     // Update is called once per frame
     void Update () {
@@ -47,30 +56,26 @@ public class PlayerAnimator : PlayerController {
             m_animator.SetTrigger("Jump");
 
         //Attack
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+            m_animator.SetTrigger("FirstAttack");
+            HitEnemy(damageVectors.x);
+        }
+        else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
             m_animator.SetTrigger("Attack");
-            Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
-            foreach (Collider2D enemy in hitEnemies) {
-                if (enemy.tag == "Enemy") {
-                    Debug.Log("Hit enemy " + enemy.name);
-                }
-            }
+            HitEnemy(damageVectors.y);
+        }
+        if (m_animator.GetCurrentAnimatorStateInfo(0).IsTag("FinalAttack")) {
+            HitEnemy(damageVectors.z);
         }
         if (Input.GetMouseButtonDown(1)) {
             m_animator.SetTrigger("HeavyAttack");
         }
-        float inputX = Input.GetAxis("Horizontal");
-        //Run
-        if (Mathf.Abs(inputX) > Mathf.Epsilon)
-            m_animator.SetInteger("AnimState", 2);
-
-        //Combat Idle
-        else if (m_combatIdle)
-            m_animator.SetInteger("AnimState", 1);
-
-        //Idle
-        else
-            m_animator.SetInteger("AnimState", 0);
+        if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+            float inputX = Input.GetAxis("Horizontal");
+            //Run
+            if (Mathf.Abs(inputX) > Mathf.Epsilon)
+                m_animator.SetInteger("Speed", (int)rb2D.velocity.magnitude);
+        }
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0) {
             if (powerUpIndex < 4)
@@ -113,8 +118,20 @@ public class PlayerAnimator : PlayerController {
 
         }
         //Activating the powerup
-        if (Input.GetKeyDown(KeyCode.E)) {
+        if (Input.GetKeyDown(KeyCode.E)&&!playerStats.powerActivated) {
             playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
+        }
+
+        if (!playerDown && playerStats.PlayerHealth() <= 0) {
+            playerDown = true;
+            m_animator.SetTrigger("Death");
+        }
+
+        if (playerDown) {
+            if (Input.GetKeyDown(KeyCode.E) && playerBaseAbilities.GetReserveLives() > 3) {
+                m_animator.SetTrigger("Heal");
+                playerBaseAbilities.Revive();
+            }
         }
 
         //dash
@@ -128,6 +145,16 @@ public class PlayerAnimator : PlayerController {
         else
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
     }
+
+    void HitEnemy (float damageValue) {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies) {
+            if (enemy.tag == "Enemy") {
+                enemy.GetComponent<Enemy>().TakeDamage(damageValue);
+            }
+        }
+    }
+
     int BoolToInteger () {
         if (spriteRenderer.flipX)
             return -1;
