@@ -1,0 +1,51 @@
+Normal text will be displayed as dialogue "spoken" by the NPC. 
+
+Use less than(<) and greater than(>) to assign text as a dialogue option.
+Each Dialogue option needs to be put on a new line and be followed by a flag.
+
+Use *END* to assign an end to the conversation.
+
+Use brackets([ and ]) to create a flag. Example: [Example Flag]
+Flags needs to be put after a dialogue option and the line before where that option leads.
+There can be no duplicate flag names. Use descriptive names for readability.
+A flag cannot be followed by a dialogue option. Only 
+There can be no empty lines between dialogue text and dialogue options or flags and dialogue text.
+
+
+See following example:
+
+Hello! I have some dialogue that is read from a .txt file now! Cool! Now they just need to make it more modular.
+I can also have numerous rows of text. This is starting to look like something!
+<So what? So can I.>[Rude]
+<I can also say stuff!>[Friendly]
+<Don't talk to me or my son ever again>[Leave Flag]
+
+
+[Rude]
+Buzzkill. 
+Now go and kill that monster already.
+*END*
+
+
+[Friendly]
+Oh, really? Awesome! *High Five*
+Do you want some coffee?
+<Yes, Please!>[Coffee yes]
+<No thank you.>[Coffe no]
+
+
+[Coffee yes]
+Well that's too bad, I don't have any more.
+Soooo.....
+You're gonna go kill that monster now, right? If you do I'll make some more.
+*END*
+
+
+[Leave Flag]
+*END*
+
+
+[Coffee no]
+That's good. Cause this is the last cup.
+Now go kill that monster and we can talk again.
+*END*
