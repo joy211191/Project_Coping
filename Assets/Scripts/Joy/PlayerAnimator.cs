@@ -22,7 +22,14 @@ public class PlayerAnimator : PlayerController {
     Vector3 attackPointPosition;
 
     public bool playerDown;
-    
+
+    bool climbable;
+
+    [SerializeField]
+    Vector3 offsetVector;
+
+    public BoxCollider2D shield;
+
 
     [Tooltip("The x is the first damage, y the second and z the third. This is in respect to the sword swings of the player during the combat")]
     [SerializeField]
@@ -118,7 +125,7 @@ public class PlayerAnimator : PlayerController {
 
         }
         //Activating the powerup
-        if (Input.GetKeyDown(KeyCode.E)&&!playerStats.powerActivated) {
+        if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated) {
             playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
         }
 
@@ -144,6 +151,27 @@ public class PlayerAnimator : PlayerController {
             attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
         else
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
+
+
+        //Will extrapolate  this into a parry system
+        shield.isTrigger=!Input.GetKey(KeyCode.LeftShift);
+
+
+        //Climb Mechanic. Needs a bit testing
+        RaycastHit2D hit;
+        if (spriteRenderer.flipX)
+            hit = Physics2D.Raycast(transform.position + offsetVector, -transform.right * 5);
+        else
+            hit = Physics2D.Raycast(transform.position + offsetVector, transform.right * 5);
+        climbable = hit.transform.tag == "Climbable";
+        if (climbable && Input.GetAxis("Vertical") > 0) {
+            rb2D.simulated = false;
+            transform.position += new Vector3(0, 2, 0);
+        }
+        else if(climbable && Input.GetAxis("Vertical") < 0) {
+            rb2D.simulated = false;
+            transform.position += new Vector3(0, -2, 0);
+        }
     }
 
     void HitEnemy (float damageValue) {
@@ -166,5 +194,6 @@ public class PlayerAnimator : PlayerController {
         if (attackPoint == null)
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        Gizmos.DrawCube(shield.transform.position, new Vector3(attackRange/2,attackRange*2,0));
     }
 }
