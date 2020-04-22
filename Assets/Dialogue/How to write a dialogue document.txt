@@ -1,4 +1,13 @@
 Normal text will be displayed as dialogue "spoken" by the NPC. 
+A line in a dialogue document equates to a dialogue box in-game.
+A line in the dialogue box in game equates to 33 characters. 
+That means that the dialogue box can contain a total of 99 characters.
+Please note that words that cause the total number of characters to exceed 
+the maximum length of a line(33 characters) will appear on the next line.
+To prevent this try to keep lines short if not count the characters yourself.
+NOTE: This is based on the Arial font in size 36 and the current screensize. 
+If the font or the size of either the screen or font is changed,
+please recalculate and update this passage.
 
 Use less than(<) and greater than(>) to assign text as a dialogue option.
 Each Dialogue option needs to be put on a new line and be followed by a flag.

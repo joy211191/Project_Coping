@@ -64,11 +64,11 @@ public class LiftAttendant : MonoBehaviour
     {
         if (m_canTalk && Input.GetKeyDown(KeyCode.Q))
             ActivateDialogue();
-        else if (!m_canTalk && m_talking && Input.GetKeyDown(KeyCode.Return) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput)
+        else if (!m_canTalk && m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput)
             ContinueDialogue();
         else if (m_waitingForInput)
             SelectDialogue();
-        else if (m_talking && Input.GetKeyDown(KeyCode.Return) && m_dialogueLines[m_dialogueNum] == "*END*")
+        else if (m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] == "*END*")
             DeactivateDialogue();
     }
 
@@ -180,7 +180,7 @@ public class LiftAttendant : MonoBehaviour
             else
                 m_activeDialogueOption++;
         }
-        else if (Input.GetKeyDown(KeyCode.Return))
+        else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
         {
             m_waitingForInput = false;
             FindFlag(m_dialogueFlags[m_activeDialogueOption]);
