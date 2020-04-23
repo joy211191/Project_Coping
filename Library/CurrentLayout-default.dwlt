@@ -15,6 +15,7 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
+    x: 1920
     y: 43
     width: 1920
     height: 997
@@ -22,6 +23,7 @@ MonoBehaviour:
   m_Title: 
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 558}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -112,9 +114,11 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 609, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 25
+=======
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,9 +141,13 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 609, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 26
+=======
+  controlID: 348
+>>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +169,14 @@ MonoBehaviour:
     y: 0
     width: 1510
     height: 947
-  m_MinSize: {x: 333, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 331, y: 471}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 27
+=======
+  controlID: 349
+>>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,11 +197,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1510
-    height: 593
-  m_MinSize: {x: 303, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+    height: 650
+  m_MinSize: {x: 302, y: 200}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 28
+=======
+  controlID: 350
+>>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,9 +224,15 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 296
+<<<<<<< HEAD
     height: 593
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
+=======
+    height: 650
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> parent of 9dcabee6... Block Parry
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -226,7 +248,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: AnimatorControllerTool
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -234,10 +256,10 @@ MonoBehaviour:
     x: 296
     y: 0
     width: 1214
-    height: 593
+    height: 650
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 25}
   m_Panes:
   - {fileID: 21}
   - {fileID: 16}
@@ -248,8 +270,8 @@ MonoBehaviour:
   - {fileID: 24}
   - {fileID: 15}
   - {fileID: 18}
-  m_Selected: 8
-  m_LastSelected: 2
+  m_Selected: 5
+  m_LastSelected: 8
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,13 +290,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 593
+    y: 650
     width: 1510
-    height: 354
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+    height: 297
+  m_MinSize: {x: 331, y: 271}
+  m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 152
+=======
+  controlID: 148
+>>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -292,8 +318,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 613
-    height: 354
+    width: 619
+    height: 297
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 26}
@@ -317,12 +343,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 613
+    x: 619
     y: 0
-    width: 897
-    height: 354
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+    width: 891
+    height: 297
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 28}
   m_Panes:
   - {fileID: 28}
@@ -347,8 +373,8 @@ MonoBehaviour:
     y: 0
     width: 410
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -386,7 +412,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 19822
+  m_LastSelectedObjectID: 17336
 --- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -442,7 +468,7 @@ MonoBehaviour:
     x: 296
     y: 73
     width: 1212
-    height: 572
+    height: 629
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewsNames: []
   m_SerializedViewsValues: []
@@ -450,7 +476,7 @@ MonoBehaviour:
   m_ShowGizmos: 1
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 980, y: 551}
+  m_TargetSize: {x: 1081, y: 608}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -464,10 +490,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -508.5
     m_HBaseRangeMax: 508.5
     m_VBaseRangeMin: -286
     m_VBaseRangeMax: 286
+=======
+    m_HBaseRangeMin: -540.5
+    m_HBaseRangeMax: 540.5
+    m_VBaseRangeMin: -304
+    m_VBaseRangeMax: 304
+>>>>>>> parent of 9dcabee6... Block Parry
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -476,7 +509,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -486,9 +519,15 @@ MonoBehaviour:
       x: 0
       y: 0
       width: 1212
+<<<<<<< HEAD
       height: 572
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 606, y: 286}
+=======
+      height: 608
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 606, y: 304}
+>>>>>>> parent of 9dcabee6... Block Parry
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -496,12 +535,18 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -606
+<<<<<<< HEAD
       y: -286
       width: 1212
       height: 572
+=======
+      y: -304
+      width: 1212
+      height: 608
+>>>>>>> parent of 9dcabee6... Block Parry
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1212, y: 572}
+  m_LastWindowPixelSize: {x: 1212, y: 629}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000100
@@ -531,7 +576,7 @@ MonoBehaviour:
     x: 296
     y: 73
     width: 1212
-    height: 572
+    height: 629
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 2286dc94c9d6c9243ada1246d5f75458
@@ -543,9 +588,13 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: 103.91627, y: 4.135619, z: -4.46875}
+>>>>>>> parent of 9dcabee6... Block Parry
     speed: 2
-    m_Value: {x: -18.14926, y: -4.807298, z: -1.6209096}
+    m_Value: {x: 103.91627, y: 4.135619, z: -4.46875}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -595,9 +644,13 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 10
+=======
+    m_Target: 46.67034
+>>>>>>> parent of 9dcabee6... Block Parry
     speed: 2
-    m_Value: 4.8045607
+    m_Value: 46.67034
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -643,7 +696,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1510
+    x: 3430
     y: 73
     width: 409
     height: 926
@@ -681,17 +734,23 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 73
     width: 295
-    height: 572
+    height: 629
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 1eedffff
+=======
+      m_SelectedIDs: 38f9ffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 42fbffffc04c0000e64c0000404d0000
+>>>>>>> parent of 9dcabee6... Block Parry
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -824,7 +883,7 @@ MonoBehaviour:
     height: 629
   m_ViewDataDictionary: {fileID: 0}
   m_VertSplit:
-    ID: 255
+    ID: 1410
     splitterInitialOffset: 487
     currentActiveSplitter: -1
     realSizes: 6c010000f4000000
@@ -836,7 +895,7 @@ MonoBehaviour:
     lastTotalSize: 608
     splitSize: 6
     xOffset: 0
-  m_Recording: 1
+  m_Recording: 0
   m_ActiveNativePlatformSupportModule: 
   m_CurrentArea: 0
   m_ProfilerModules:
@@ -1318,7 +1377,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 296
+    x: 2216
     y: 73
     width: 1212
     height: 629
@@ -1418,10 +1477,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 666
-    width: 612
-    height: 333
+    x: 1920
+    y: 723
+    width: 618
+    height: 276
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1436,20 +1495,27 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Joy
+    - Assets/Anims/Animators
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts/Joy
+  - Assets/Anims/Animators
   m_LastFoldersGridSize: 16
   m_LastProjectPath: E:\Approarr\Project_Coping
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a05d0000
     m_LastClickedID: 23968
     m_ExpandedIDs: 00000000c6540000545700002a580000545800001a590000145c0000785d0000a25f000002600000286000002e6000007c6000007062000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 32400000
+    m_LastClickedID: 16434
+    m_ExpandedIDs: 00000000c03c00009a3f0000d23f000080400000ac400000cc400000d841000088450000124a0000404a0000464a0000924a0000d84e000000ca9a3b
+>>>>>>> parent of 9dcabee6... Block Parry
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1477,7 +1543,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c6540000545700002a580000545800001a590000145c0000785d0000a25f000002600000286000002e6000007c60000070620000
+=======
+    m_ExpandedIDs: 00000000c03c00009a3f0000ac400000d841000088450000124a0000404a0000464a0000924a0000d84e0000
+>>>>>>> parent of 9dcabee6... Block Parry
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1672,10 +1742,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 613
-    y: 666
-    width: 895
-    height: 333
+    x: 2539
+    y: 723
+    width: 889
+    height: 276
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &29
 MonoBehaviour:
