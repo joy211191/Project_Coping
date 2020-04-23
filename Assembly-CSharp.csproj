@@ -74,7 +74,10 @@
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataVisualizer.cs" />
      <Compile Include="Assets\Scripts\Joy\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
+     <Compile Include="Assets\Scripts\Joy\InventorySystem.cs" />
+     <Compile Include="Assets\Scripts\Joy\Item.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
+     <Compile Include="Assets\Scripts\Joy\ParrySystem.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerBaseAbilities.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerController.cs" />
