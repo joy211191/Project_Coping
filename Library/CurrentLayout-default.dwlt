@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
+=======
+>>>>>>> parent of 9dcabee6... Block Parry
     x: 1920
     y: 43
     width: 1920
@@ -22,7 +25,10 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
+<<<<<<< HEAD
   m_MinSize: {x: 875, y: 300}
+=======
+>>>>>>> parent of 9dcabee6... Block Parry
   m_MinSize: {x: 875, y: 558}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -113,12 +119,19 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 609, y: 492}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
 <<<<<<< HEAD
   controlID: 25
 =======
+=======
+  m_MinSize: {x: 606, y: 471}
+  m_MaxSize: {x: 18001, y: 14042}
+  vertical: 0
+  controlID: 347
+>>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,12 +153,19 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 609, y: 492}
   m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
 <<<<<<< HEAD
   controlID: 26
 =======
+  controlID: 348
+>>>>>>> parent of 9dcabee6... Block Parry
+=======
+  m_MinSize: {x: 606, y: 471}
+  m_MaxSize: {x: 18001, y: 14042}
+  vertical: 0
   controlID: 348
 >>>>>>> parent of 9dcabee6... Block Parry
 --- !u!114 &7
@@ -173,7 +193,11 @@ MonoBehaviour:
   m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 27
+=======
+  controlID: 349
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
   controlID: 349
 >>>>>>> parent of 9dcabee6... Block Parry
@@ -202,7 +226,11 @@ MonoBehaviour:
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 28
+=======
+  controlID: 350
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
   controlID: 350
 >>>>>>> parent of 9dcabee6... Block Parry
@@ -225,10 +253,13 @@ MonoBehaviour:
     y: 0
     width: 296
 <<<<<<< HEAD
+<<<<<<< HEAD
     height: 593
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
 =======
+=======
+>>>>>>> parent of 9dcabee6... Block Parry
     height: 650
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
@@ -297,7 +328,11 @@ MonoBehaviour:
   m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 152
+=======
+  controlID: 148
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
   controlID: 148
 >>>>>>> parent of 9dcabee6... Block Parry
@@ -491,15 +526,21 @@ MonoBehaviour:
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HBaseRangeMin: -508.5
     m_HBaseRangeMax: 508.5
     m_VBaseRangeMin: -286
     m_VBaseRangeMax: 286
 =======
+=======
+>>>>>>> parent of 9dcabee6... Block Parry
     m_HBaseRangeMin: -540.5
     m_HBaseRangeMax: 540.5
     m_VBaseRangeMin: -304
     m_VBaseRangeMax: 304
+<<<<<<< HEAD
+>>>>>>> parent of 9dcabee6... Block Parry
+=======
 >>>>>>> parent of 9dcabee6... Block Parry
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
@@ -520,9 +561,15 @@ MonoBehaviour:
       y: 0
       width: 1212
 <<<<<<< HEAD
+<<<<<<< HEAD
       height: 572
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 606, y: 286}
+=======
+      height: 608
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 606, y: 304}
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
       height: 608
     m_Scale: {x: 1, y: 1}
@@ -536,9 +583,15 @@ MonoBehaviour:
       serializedVersion: 2
       x: -606
 <<<<<<< HEAD
+<<<<<<< HEAD
       y: -286
       width: 1212
       height: 572
+=======
+      y: -304
+      width: 1212
+      height: 608
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
       y: -304
       width: 1212
@@ -589,7 +642,11 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0}
+=======
+    m_Target: {x: 103.91627, y: 4.135619, z: -4.46875}
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
     m_Target: {x: 103.91627, y: 4.135619, z: -4.46875}
 >>>>>>> parent of 9dcabee6... Block Parry
@@ -645,7 +702,11 @@ MonoBehaviour:
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 10
+=======
+    m_Target: 46.67034
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
     m_Target: 46.67034
 >>>>>>> parent of 9dcabee6... Block Parry
@@ -743,9 +804,15 @@ MonoBehaviour:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 1eedffff
+=======
+      m_SelectedIDs: 38f9ffff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 42fbffffc04c0000e64c0000404d0000
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
       m_SelectedIDs: 38f9ffff
       m_LastClickedID: 0
@@ -1506,15 +1573,21 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a05d0000
     m_LastClickedID: 23968
     m_ExpandedIDs: 00000000c6540000545700002a580000545800001a590000145c0000785d0000a25f000002600000286000002e6000007c6000007062000000ca9a3b
 =======
+=======
+>>>>>>> parent of 9dcabee6... Block Parry
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 32400000
     m_LastClickedID: 16434
     m_ExpandedIDs: 00000000c03c00009a3f0000d23f000080400000ac400000cc400000d841000088450000124a0000404a0000464a0000924a0000d84e000000ca9a3b
+<<<<<<< HEAD
+>>>>>>> parent of 9dcabee6... Block Parry
+=======
 >>>>>>> parent of 9dcabee6... Block Parry
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1544,7 +1617,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c6540000545700002a580000545800001a590000145c0000785d0000a25f000002600000286000002e6000007c60000070620000
+=======
+    m_ExpandedIDs: 00000000c03c00009a3f0000ac400000d841000088450000124a0000404a0000464a0000924a0000d84e0000
+>>>>>>> parent of 9dcabee6... Block Parry
 =======
     m_ExpandedIDs: 00000000c03c00009a3f0000ac400000d841000088450000124a0000404a0000464a0000924a0000d84e0000
 >>>>>>> parent of 9dcabee6... Block Parry
