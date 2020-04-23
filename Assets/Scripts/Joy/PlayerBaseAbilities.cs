@@ -99,14 +99,4 @@ public class PlayerBaseAbilities : MonoBehaviour {
             File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
         }
     }
-
-    //Revive Mechanic
-    public void Revive () {
-        reserveLives-=1;
-        playerStats.PlayerHealth();
-    }
-
-    public int GetReserveLives () {
-        return reserveLives;
-    }
 }

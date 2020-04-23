@@ -23,7 +23,6 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     protected float m_startWaitTime = 5;
 
-    float enemyHealth;
 
     public LayerMask playerLayers;
 
@@ -61,10 +60,7 @@ public class Enemy : MonoBehaviour {
             Attack();
         else
             Move();
-    }
 
-    public void TakeDamage(float damageValue) {
-        enemyHealth -= damageValue;
     }
 
     private void ChangeDirection () {

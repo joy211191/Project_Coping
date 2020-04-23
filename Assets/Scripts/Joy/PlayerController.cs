@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
         //Check if character just landed on the ground
         if (!m_grounded && m_groundSensor.State()) {
             m_grounded = true;
+
         }
 
         //Check if character just started falling

@@ -7,9 +7,7 @@ public class PlayerStats : MonoBehaviour {
     [SerializeField]
     float attackPower=10f;
     [SerializeField]
-    float maxHealth = 100;
-    [SerializeField]
-    float health;
+    float health = 100f;
     [SerializeField]
     float speed;
     [SerializeField]
@@ -33,8 +31,6 @@ public class PlayerStats : MonoBehaviour {
     float numbnessPoolDelayTime;
     [SerializeField]
     float numbnessPoolDecayValue;
-
-    public bool powerActivated;
 
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
@@ -79,10 +75,6 @@ public class PlayerStats : MonoBehaviour {
             numbnessPool -= numbnessPoolDecayValue;
     }
 
-    public void HealPlayer () {
-        health = maxHealth;
-    }
-
     public float PlayerHealth () {
         return health;
     }
@@ -92,7 +84,6 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void SetCountDown () {
-        powerActivated = true;
         countDown = maxCountDown;
     }
 
@@ -104,17 +95,10 @@ public class PlayerStats : MonoBehaviour {
         healthText.text = "Health: "+health.ToString();
         attackPowerText.text = "AttackPower" +attackPower.ToString();
         powerUpName.text = playerBaseAbilities.powerUp.ToString();
-#else
-        speedText.text = "";
-        damageMultiplierText.text = "";
-        healthText.text = "";
-        attackPowerText.text = "";
-        powerUpName.text = "";
 #endif
         if (countDown > 0) {
             countDown -=Time.deltaTime;
             if (countDown <= 0) {
-                powerActivated = false;
                 playHurtAnim = true;
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
                 originalValues.Clear();
