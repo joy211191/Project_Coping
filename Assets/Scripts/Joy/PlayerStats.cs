@@ -36,6 +36,11 @@ public class PlayerStats : MonoBehaviour {
 
     public bool powerActivated;
 
+    [Space(20)]
+    [Header("UI")]
+    public Image healthImage;
+    public Image numbnessImage;
+
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
 
@@ -97,7 +102,8 @@ public class PlayerStats : MonoBehaviour {
     }
 
     void Update () {
-
+        numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
+        healthImage.fillAmount = health / maxHealth;
 #if UNITY_EDITOR
         speedText.text = "Speed: " + speed.ToString();
         damageMultiplierText.text = "Damage Multiplier: " + damageMultiplier.ToString();
