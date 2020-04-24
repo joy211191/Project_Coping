@@ -63,7 +63,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.livesUsed += 4;
                         dataSet.selfHarm++;
                         reserveLives -= 4;
-                        playerStats.TakeDamage(playerStats.PlayerHealth() / 2,true);
+                        playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
                         playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
                         playerStats.SetCountDown();
                         break;
@@ -98,5 +98,15 @@ public class PlayerBaseAbilities : MonoBehaviour {
             string jsonstring = JsonUtility.ToJson(dataSet);
             File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
         }
+    }
+
+    //Revive Mechanic
+    public void Revive () {
+        reserveLives -= 1;
+        playerStats.PlayerHealth();
+    }
+
+    public int GetReserveLives () {
+        return reserveLives;
     }
 }
