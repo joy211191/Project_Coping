@@ -5,9 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public class DataSet {
     public int selfSoothing;
-    public int numbing;
     public int compulsiveRiskTaking;
     public int selfHarm;
     public int escape;
     public int livesUsed;
+    public float totaldamageTaken;
+    public int timesRevived;
 }

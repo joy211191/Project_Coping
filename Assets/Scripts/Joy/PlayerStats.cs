@@ -63,6 +63,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void TakeDamage (float damage, bool selfHarm = false) {
+        playerBaseAbilities.dataSet.totaldamageTaken++;
         StopCoroutine("NumbnessPoolDecay");
         if (!selfHarm) {
             if (numbnessPool < maxNumbnessPoolValue) {

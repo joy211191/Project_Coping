@@ -1,17 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.IO;
 using UnityEngine;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
-using UnityEngine.UI;
 
-public class DataVisualizer : MonoBehaviour
-{
+[System.Serializable]
+public class DataSets {
+    public DataSet[] DataSetList;
+}
+
+
+public class DataVisualizer : MonoBehaviour {
+    public DataSets dataSets;
+
     void Awake () {
-        VisualizeData();
+        LoadData();
     }
 
-    void VisualizeData () {
-
+    public void LoadData () {
+        string jsonString = File.ReadAllText(Application.dataPath + "/Resources/GameplayData.json");
+        Debug.Log(jsonString);
+        dataSets = new DataSets();
+        JsonUtility.FromJsonOverwrite(jsonString, dataSets);
+        
     }
 }

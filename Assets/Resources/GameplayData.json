@@ -1,0 +1,32 @@
+{
+"DataSetList":
+[
+{
+	"selfSoothing": 3,
+	"compulsiveRiskTaking": 5,
+	"selfHarm": 2,
+	"escape": 0,
+	"livesUsed": 10,
+	"totaldamageTaken": 45.0,
+	"timesRevived": 2
+},
+{
+	"selfSoothing": 1,
+	"compulsiveRiskTaking": 4,
+	"selfHarm": 5,
+	"escape": 1,
+	"livesUsed": 15,
+	"totaldamageTaken": 23.0,
+	"timesRevived": 3
+},
+{
+	"selfSoothing": 1,
+	"compulsiveRiskTaking": 4,
+	"selfHarm": 5,
+	"escape": 1,
+	"livesUsed": 15,
+	"totaldamageTaken": 23.0,
+	"timesRevived": 3
+}
+]
+}

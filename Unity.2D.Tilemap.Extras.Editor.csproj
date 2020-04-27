@@ -286,6 +286,9 @@
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+ </Reference>
  <Reference Include="nunit.framework">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
