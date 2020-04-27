@@ -51,7 +51,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.selfSoothing++;
                         //we can change the values later on
                         willPower -= 1;
-                        playerStats.SetPlayerStats(2, 1f, 1, 1);
+                        playerStats.SetPlayerStats(2, 1f, 2, 1);
                         playerStats.SetCountDown();
                         break;
                     }
@@ -63,7 +63,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.livesUsed += 3;
                         dataSet.compulsiveRiskTaking += 1;
                         willPower -= 3;
-                        playerStats.SetPlayerStats(2, 2.5f, 1, 2);
+                        playerStats.SetPlayerStats(2, 2.5f, 2, 2);
                         playerStats.SetCountDown();
                         break;
                     }

@@ -10459,7 +10459,7 @@ MonoBehaviour:
   countDown: 0
   maxCountDown: 5
   playerBaseAbilities: {fileID: 0}
-  numbnessDamageReduction: 0.12
+  numbnessDamageReduction: 0.25
   numbnessPool: 0
   maxNumbnessPoolValue: 100
   numbnessPoolDelayTime: 0
