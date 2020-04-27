@@ -2,31 +2,40 @@
 "DataSetList":
 [
 {
-	"selfSoothing": 3,
-	"compulsiveRiskTaking": 5,
-	"selfHarm": 2,
-	"escape": 0,
-	"livesUsed": 10,
-	"totaldamageTaken": 45.0,
-	"timesRevived": 2
+	"dataSetName": "",
+	"numericalValues": [
+		3,
+		1,
+		1,
+		2,
+		20,
+		1,
+		0
+	]
 },
 {
-	"selfSoothing": 1,
-	"compulsiveRiskTaking": 4,
-	"selfHarm": 5,
-	"escape": 1,
-	"livesUsed": 15,
-	"totaldamageTaken": 23.0,
-	"timesRevived": 3
+	"dataSetName": "",
+	"numericalValues": [
+		5,
+		4,
+		8,
+		2,
+		50,
+		2,
+		8
+	]
 },
 {
-	"selfSoothing": 1,
-	"compulsiveRiskTaking": 4,
-	"selfHarm": 5,
-	"escape": 1,
-	"livesUsed": 15,
-	"totaldamageTaken": 23.0,
-	"timesRevived": 3
+	"dataSetName": "",
+	"numericalValues": [
+		3,
+		4,
+		6,
+		1,
+		42,
+		8,
+		7
+	]
 }
 ]
 }

@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &313668864
@@ -7423,7 +7423,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1553339887
@@ -10490,12 +10490,8 @@ MonoBehaviour:
   powerUp: 0
   playerStats: {fileID: 0}
   dataSet:
-    selfSoothing: 0
-    numbing: 0
-    compulsiveRiskTaking: 0
-    selfHarm: 0
-    escape: 0
-    livesUsed: 0
+    dataSetName: 
+    numericalValues: 00000000000000000000000000000000000000000000000000000000
   willPowerImage: {fileID: 1866017028}
   powerUpText: {fileID: 1575333876}
 --- !u!1 &2006486864

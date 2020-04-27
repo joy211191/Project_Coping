@@ -4,11 +4,13 @@ using UnityEngine;
 
 [System.Serializable]
 public class DataSet {
-    public int selfSoothing;
-    public int compulsiveRiskTaking;
-    public int selfHarm;
-    public int escape;
-    public int livesUsed;
-    public float totaldamageTaken;
-    public int timesRevived;
+    public string dataSetName;
+    public int[] numericalValues = new int[7];
+    //public int selfSoothing;
+    //public int compulsiveRiskTaking;
+    //public int selfHarm;
+    //public int escape;
+    //public int livesUsed;
+    //public int totaldamageTaken;
+    //public int timesRevived;
 }

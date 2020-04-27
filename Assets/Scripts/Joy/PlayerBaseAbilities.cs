@@ -27,6 +27,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
         playerStats = GetComponent<PlayerStats>();
         playerStats.playerBaseAbilities = this;
         willPower = maxWillPower;
+
     }
 
     void Update () {
@@ -47,8 +48,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
         switch (index) {
             case PowerUp.SelfSoothing: {
                     if (willPower > 0) {
-                        dataSet.livesUsed += 1;
-                        dataSet.selfSoothing++;
+                        dataSet.numericalValues[4] += 1;
+                        dataSet.numericalValues[0]++;
                         //we can change the values later on
                         willPower -= 1;
                         playerStats.SetPlayerStats(2, 1f, 2, 1);
@@ -60,8 +61,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                 }
             case PowerUp.CompulsiveRiskTaking: {
                     if (willPower > 2) {
-                        dataSet.livesUsed += 3;
-                        dataSet.compulsiveRiskTaking += 1;
+                        dataSet.numericalValues[4] += 3;
+                        dataSet.numericalValues[1] += 1;
                         willPower -= 3;
                         playerStats.SetPlayerStats(2, 2.5f, 2, 2);
                         playerStats.SetCountDown();
@@ -72,8 +73,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
             case PowerUp.SelfHarm: {
                     if (willPower > 3) {
-                        dataSet.livesUsed += 4;
-                        dataSet.selfHarm++;
+                        dataSet.numericalValues[4] += 4;
+                        dataSet.numericalValues[2]++;
                         willPower -= 4;
                         playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
                         playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
@@ -85,8 +86,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                 }
             case PowerUp.Escape: {
                     if (willPower > 4) {
-                        dataSet.livesUsed += 5;
-                        dataSet.escape++;
+                        dataSet.numericalValues[4] += 5;
+                        dataSet.numericalValues[3]++;
                         willPower -= 5;
                         playerStats.SetCountDown();
                         break;

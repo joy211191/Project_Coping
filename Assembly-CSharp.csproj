@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Bengt\LiftAttendant.cs" />
      <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
+     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataRange.cs" />
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataVisualizer.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
@@ -83,12 +84,8 @@
      <Compile Include="Assets\Scripts\Joy\PlayerSensor.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Joy\Transition.cs" />
-     <Compile Include="Assets\SimpleJSON-master\SimpleJSON.cs" />
-     <Compile Include="Assets\SimpleJSON-master\SimpleJSONBinary.cs" />
-     <Compile Include="Assets\SimpleJSON-master\SimpleJSONUnity.cs" />
      <None Include="Assets\SpriteShaders\CameraDepthTexture.shader" />
      <None Include="Assets\SpriteShaders\SpritesPixelLit.shader" />
-     <None Include="Assets\SimpleJSON-master\Changelog.txt" />
      <None Include="Assets\SpriteShaders\CGIncludes\Noise\SimplexNoise2D.hlsl" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteUnlit.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\Noise\ClassicNoise3D.hlsl" />
