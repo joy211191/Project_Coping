@@ -1,9 +1,9 @@
 Normal text will be displayed as dialogue "spoken" by the NPC. 
 A line in a dialogue document equates to a dialogue box in-game.
 A line in the dialogue box in game equates to 33 characters. 
-That means that the dialogue box can contain a total of 99 characters.
+That means that the dialogue box can contain a total of 69 characters.
 Please note that words that cause the total number of characters to exceed 
-the maximum length of a line(33 characters) will appear on the next line.
+the maximum length of a line(23 characters) will appear on the next line.
 To prevent this try to keep lines short if not count the characters yourself.
 NOTE: This is based on the Arial font in size 36 and the current screensize. 
 If the font or the size of either the screen or font is changed,
@@ -19,6 +19,8 @@ Flags needs to be put after a dialogue option and the line before where that opt
 There can be no duplicate flag names. Use descriptive names for readability.
 A flag cannot be followed by a dialogue option. Only 
 There can be no empty lines between dialogue text and dialogue options or flags and dialogue text.
+
+When writing please separate sections with two empty lines.
 
 
 See following example:
@@ -40,7 +42,7 @@ Now go and kill that monster already.
 Oh, really? Awesome! *High Five*
 Do you want some coffee?
 <Yes, Please!>[Coffee yes]
-<No thank you.>[Coffe no]
+<No thank you.>[Coffee no]
 
 
 [Coffee yes]

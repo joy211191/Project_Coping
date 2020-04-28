@@ -17,7 +17,7 @@ public class LiftAttendant : MonoBehaviour
     [SerializeField]
     protected List<GameObject>  m_dialogueOptionButtons = new List<GameObject>();
     [SerializeField]
-    GameObject                  m_dialogueOptionPrefab; 
+    GameObject                  m_dialogueOptionHolder; 
     [SerializeField]
     GameObject                  m_interactPrompt;
     [SerializeField]
@@ -54,7 +54,7 @@ public class LiftAttendant : MonoBehaviour
     {
         //Find all the UI object children and put the in the right place and give name
         m_portrait      = m_dialogueObject.transform.Find("Portrait").GetComponent<Image>();
-        m_dialogueText  = m_dialogueObject.transform.Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
+        m_dialogueText  = m_dialogueObject.transform.Find("Dialogue").Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
         m_nameText      = m_dialogueObject.transform.Find("Name Panel").Find("Name").GetComponent<Text>();
         m_nameText.text = gameObject.name;
     }
@@ -79,8 +79,11 @@ public class LiftAttendant : MonoBehaviour
         m_dialogueNum = 0;
         m_activeDialogueOption = 0;
 
+        m_interactPrompt.SetActive(false);
+
+        //Read all the text and put it in a list
         TextfileToList();
-        //Not really necessary but in case it breaks, not really helpful for a build
+        //Not really necessary but in case it breaks
         if (m_dialogueText == null)
             Debug.Log("Cannot find text. Is the file empty?");
 
@@ -123,6 +126,8 @@ public class LiftAttendant : MonoBehaviour
         //Removes dialogue box and allow the player to move again, change bools back as well
         m_dialogueObject.SetActive(false);
 
+        m_interactPrompt.SetActive(true);
+
         m_player.GetComponent<PlayerController>().enabled   = true; //Allow the player to move again
         m_player.GetComponent<PlayerAnimator>().enabled     = true;
 
@@ -144,8 +149,9 @@ public class LiftAttendant : MonoBehaviour
         //m_dialogueOptionButtons[i].transform.Find("Choice Text").GetComponent<Text>().text  = p_inText.Split('<', '>')[1];
         //m_dialogueOptionButtons[i].transform.Find("Choice Text").GetComponent<Text>().color = m_inactiveText;
 
+        m_dialogueOptionHolder.SetActive(true);
         m_dialogueOptionButtons[i].SetActive(true);
-        m_dialogueOptionButtons[i].transform.parent = m_dialogueObject.transform;
+        //m_dialogueOptionButtons[i].transform.parent = m_dialogueObject.transform;
         m_dialogueOptionButtons[i].GetComponent<Text>().text = p_inText.Split('<', '>')[1];
         m_dialogueOptionButtons[i].GetComponent<Text>().color = m_inactiveText;
         m_dialogueFlags.Add(p_inText.Split('[', ']')[1]);
@@ -188,12 +194,14 @@ public class LiftAttendant : MonoBehaviour
             //Remove the options
             for (int i = 0; i < m_dialogueOptionButtons.Count; i++)
                 m_dialogueOptionButtons[i].SetActive(false);
+
+            m_dialogueOptionHolder.SetActive(false);
             //Destroy(m_dialogueOptionButtons[i]);
 
             //Left for posterity
             //m_dialogueOptionButtons.Clear();
-            
-            
+
+
             //Clear Dialogue flags
             m_dialogueFlags.Clear();
 
@@ -211,7 +219,7 @@ public class LiftAttendant : MonoBehaviour
     //Triggered by player
     void OnTriggerEnter2D(Collider2D m_col)
     {
-        if (m_col.gameObject.name == "LightBandit");
+        if (m_col.gameObject.name == "Player");
         {
             m_interactPrompt.SetActive(true);
             m_canTalk = true;
