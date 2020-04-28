@@ -9,13 +9,23 @@ public class LevelGenerationManager : MonoBehaviour
     [SerializeField]
     int                 m_sectionLength; //Length of a single section
     [SerializeField]
+    int                 m_sectionsBeforeIncrease;
+    [SerializeField]
     List<GameObject>    m_RoomPrefabsList       = new List<GameObject>(); //Room Class? Store roomtype?
     [SerializeField]
-    GameObject m_StartRoom;
+    GameObject          m_StartRoom;
     [SerializeField]
-    GameObject m_EndRoom;
+    GameObject          m_EndRoom;
+    [SerializeField]
+    GameObject          m_player;
 
+    [SerializeField]
+    GameObject          m_playerSpawn;
+
+    [SerializeField]
     protected int       m_sectionNumber         = 1;
+
+    public bool         m_playerLeftHub         = false;
 
     List<GameObject>    m_CurrentSectionRooms   = new List<GameObject>(); //Rooms in the current section
     List<GameObject>    m_NextSectionRooms      = new List<GameObject>(); //Rooms in the next section
@@ -30,6 +40,8 @@ public class LevelGenerationManager : MonoBehaviour
         //Create Current and next section
         GenerateSection(m_sectionLength, m_RoomPrefabsList, m_CurrentSectionRooms);
         GenerateSection(m_sectionLength, m_RoomPrefabsList, m_NextSectionRooms);
+
+        m_playerSpawn = m_CurrentSectionRooms[0].transform.Find("Player Spawn").gameObject;
     }
 
     // Update is called once per frame
@@ -43,7 +55,7 @@ public class LevelGenerationManager : MonoBehaviour
     {
         float m_tempXdif = 0;
 
-        for (int i = 0; i <= p_inLength + 2; i++)
+        for (int i = 0; i <= p_inLength + 1; i++)
         {
             float currRoomYDiff = 0;
             float prevRoomYDiff = 0;
@@ -51,7 +63,7 @@ public class LevelGenerationManager : MonoBehaviour
 
             if (i == 0)//If first room, instantiate start room
                 p_inListDest.Add(Instantiate(m_StartRoom, new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
-            else if (i == p_inLength + 2) //If last room, instantiate end room
+            else if (i == p_inLength + 1) //If last room, instantiate end room
                 p_inListDest.Add(Instantiate(m_EndRoom, new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
             else //if neither, instantiate a random non-start non-end room
                 p_inListDest.Add(Instantiate(p_inList[RandomNumber(0, m_RoomPrefabsList.Count - 1)], new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
@@ -82,4 +94,40 @@ public class LevelGenerationManager : MonoBehaviour
             return random.Next(min, max);
         }
     }
+
+    public void TeleportPlayer()
+    {
+        m_player.transform.position = m_playerSpawn.transform.position;
+
+        if(m_playerLeftHub == true)
+            GenerateNewSection();
+
+
+        m_playerSpawn = m_NextSectionRooms[0].transform.Find("Player Spawn").gameObject;
+
+        m_playerLeftHub = true;
+    }
+
+    private void GenerateNewSection()
+    {
+        //Replace current room list with new room list
+        for (int i = 0; i < m_CurrentSectionRooms.Count; i++)
+            Destroy(m_CurrentSectionRooms[i]);
+
+        m_CurrentSectionRooms.Clear();
+
+        for (int i = 0; i < m_NextSectionRooms.Count; i++)
+            m_CurrentSectionRooms.Add(m_NextSectionRooms[i]);
+
+        m_NextSectionRooms.Clear();
+
+        GenerateSection(m_sectionLength, m_RoomPrefabsList, m_NextSectionRooms);
+
+        if (m_sectionNumber >= m_sectionsBeforeIncrease)
+        {
+            m_sectionLength++;
+            m_sectionNumber = 1;
+        }
+    }
+
 }

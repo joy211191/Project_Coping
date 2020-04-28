@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Bengt\Enemy.cs" />
     <Compile Include="Assets\Scripts\Bengt\Level Generation\LevelGenerationManager.cs" />
     <Compile Include="Assets\Scripts\Bengt\LiftAttendant.cs" />
+    <Compile Include="Assets\Scripts\Bengt\StairScript.cs" />
     <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataRange.cs" />
