@@ -68,19 +68,15 @@
      <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
      <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
      <Compile Include="Assets\Scripts\Bengt\Enemy.cs" />
-     <Compile Include="Assets\Scripts\Bengt\Level Generation\LevelGenerationManager.cs" />
      <Compile Include="Assets\Scripts\Bengt\LiftAttendant.cs" />
      <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
-     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataRange.cs" />
-     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataVisualizer.cs" />
-     <Compile Include="Assets\Scripts\Joy\Data Visualizer\FlyCamera.cs" />
-     <Compile Include="Assets\Scripts\Joy\Data Visualizer\LookAtCamera.cs" />
-     <Compile Include="Assets\Scripts\Joy\Data Visualizer\ValueSet.cs" />
+     <Compile Include="Assets\Scripts\Joy\DataSet.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
+     <Compile Include="Assets\Scripts\Joy\InventorySystem.cs" />
+     <Compile Include="Assets\Scripts\Joy\Item.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
-     <Compile Include="Assets\Scripts\Joy\Manager.cs" />
      <Compile Include="Assets\Scripts\Joy\ParrySystem.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerAnimator.cs" />
      <Compile Include="Assets\Scripts\Joy\PlayerBaseAbilities.cs" />
@@ -104,7 +100,6 @@
      <None Include="Assets\SpriteShaders\SpritesUnlit.shader" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpritePixelLighting.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteDissolve.cginc" />
-     <None Include="Assets\JsonDotNet\link.xml" />
      <None Include="Assets\SpriteShaders\CGIncludes\ShaderMaths.cginc" />
      <None Include="Assets\SpriteShaders\CGIncludes\SpriteLighting.cginc" />
      <None Include="Assets\Demigiant\DOTween\readme.txt" />
@@ -361,9 +356,6 @@
  </Reference>
  <Reference Include="DOTween">
  <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="Newtonsoft.Json">
- <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
