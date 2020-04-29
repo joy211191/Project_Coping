@@ -72,9 +72,9 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\ICollabHistoryItemFactory.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\PagedListView.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\StatusView.cs" />
-     <None Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Resources\Styles\CollabHistoryDark.uss" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Resources\Styles\CollabHistoryLight.uss" />
      <None Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Resources\Styles\CollabHistoryCommon.uss" />
+     <None Include="Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Resources\Styles\CollabHistoryDark.uss" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -263,6 +263,15 @@
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

@@ -56,50 +56,50 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\DummyShaderLibrary.cs" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Validate.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Debug.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMappingInternal.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Random.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Refraction.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\UnityInstancing.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\SDF2D.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\EntityLighting.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Color.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Macros.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Fibonacci.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonLighting.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMapping.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\GLES3.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonMaterial.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Filtering.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Metal.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Sampling.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Vulkan.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\PhysicalCamera.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Common.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\ACES.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\SpaceFillingCurves.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\VolumeRendering.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Version.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\NormalSurfaceGradient.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\SpaceTransforms.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMappingNormalInternal.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\AreaLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\GeometricTools.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Refraction.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Version.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\SDF2D.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Common.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMappingInternal.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\ACES.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Vulkan.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\GLCore.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\BC6H.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\GLES2.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonShadow.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Switch.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMappingNormalInternal.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\PerPixelDisplacement.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\AreaLighting.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Hammersley.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonDeprecated.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\EntityLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonMaterial.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Validate.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Metal.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\D3D11.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Packing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Macros.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Tessellation.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\BSDF.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\ImageBasedLighting.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\GeometricTools.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\UnityInstancing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\CommonShadow.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Filtering.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Fibonacci.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\NormalSurfaceGradient.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Shadow\ShadowSamplingTent.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Packing.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Hammersley.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Color.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\GLES3.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\PhysicalCamera.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\SampleUVMapping.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\PerPixelDisplacement.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\SpaceFillingCurves.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\GLES2.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Sampling\Sampling.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\VolumeRendering.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\Debug.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\ImageBasedLighting.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.core@7.1.8\ShaderLibrary\API\Switch.hlsl" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -288,6 +288,15 @@
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

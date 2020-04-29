@@ -178,22 +178,22 @@
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\UniversalRenderPipelineMaterialUpgrader.cs" />
      <Compile Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\UpgradeCommon.cs" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\Varyings.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\RendererFeatures\NewRendererFeature.cs.txt" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Templates\BuildVertexDescriptionInputs.template.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Templates\BuildSurfaceDescriptionInputs.template.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\Overrides\Shaders\ShadowsMidtonesHighlightsCurves.shader" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\UnlitPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteUnlitPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\PBRForwardPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\Overrides\Shaders\TrackballEditor.shader" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteNormalPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteForwardPass.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\ShadowCasterPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\LightingMetaPass.hlsl" />
-     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteLitPass.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\PBR2DPass.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\Overrides\Shaders\CurveBackground.shader" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteLitPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\Overrides\Shaders\ShadowsMidtonesHighlightsCurves.shader" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\LightingMetaPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteForwardPass.hlsl" />
      <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\DepthOnlyPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\RendererFeatures\NewRendererFeature.cs.txt" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Templates\BuildSurfaceDescriptionInputs.template.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\SpriteUnlitPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\PBRForwardPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Templates\BuildVertexDescriptionInputs.template.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\ShaderGraph\Includes\UnlitPass.hlsl" />
+     <None Include="Library\PackageCache\com.unity.render-pipelines.universal@7.1.8\Editor\Overrides\Shaders\TrackballEditor.shader" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -382,6 +382,15 @@
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

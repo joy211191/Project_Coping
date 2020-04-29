@@ -501,64 +501,64 @@
      <Compile Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Util\TypeMapper.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Util\TypeMapping.cs" />
      <Compile Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Util\UIUtilities.cs" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\BlitNoAlpha.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\IntegerControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Resizable.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ScreenPositionSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PixelCacheProfiler.uss" />
      <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\CubemapSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MasterPreviewView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\TextureArraySlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderPort.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyNameReferenceField.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialNodeView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\StickyNote.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\SliderControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyNodeView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialGraph.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\PopupControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\GradientSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ReorderableSlotListView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\EnumConversionControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ColorRGBASlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\DielectricSpecularControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\HlslFunctionView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\NodeSettings.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\BooleanSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderGraphBlackboard.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Selectable.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\MultiFloatControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\EnumControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\GraphEditorView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\MultiFloatSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\StickyNote.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardRow.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\NodeSettings.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\TextureSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\UVSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelMixerControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialGraphView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ColorMode.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyRow.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ToggleControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\FallbackError.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ColorControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardSection.uxml" />
      <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PortInputView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\Checkerboard.shader" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertySheet.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Templates\PassMesh.template" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelEnumMaskControlView.uss" />
      <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\Texture3DSlotControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\GradientControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelEnumControlView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderPropertyView.uss" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardField.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\Resizable.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\Blackboard.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\PixelCacheProfiler.uxml" />
-     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Blackboard.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\UVSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\MultiFloatSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\GraphEditorView.uss" />
      <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ColorRGBSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Selectable.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\BlitNoAlpha.shader" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\GradientSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MasterPreviewView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\IntegerControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyNameReferenceField.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\EnumControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ColorMode.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelMixerControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\Blackboard.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\HlslFunctionView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\BooleanSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialGraph.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\SliderControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Templates\PassMesh.template" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\MultiFloatControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ScreenPositionSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\StickyNote.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ReorderableSlotListView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\NodeSettings.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ColorControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderPort.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\Checkerboard.shader" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Resizable.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\GradientControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\NodeSettings.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PixelCacheProfiler.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ToggleControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\PopupControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardSection.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderPropertyView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardRow.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Blackboard.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ColorRGBASlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialGraphView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\ShaderGraphBlackboard.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\GraphView\BlackboardField.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\EnumConversionControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\DielectricSpecularControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\Resizable.uxml" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertySheet.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\TextureArraySlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyNodeView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\StickyNote.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelEnumControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\MaterialNodeView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\TextureSlotControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Shaders\FallbackError.shader" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\Controls\ChannelEnumMaskControlView.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\Styles\PropertyRow.uss" />
+     <None Include="Library\PackageCache\com.unity.shadergraph@7.1.8\Editor\Resources\UXML\PixelCacheProfiler.uxml" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
@@ -747,6 +747,15 @@
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>E:/Approarr/Project_Coping/Assets/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>E:/Approarr/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
  <HintPath>E:/Approarr/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

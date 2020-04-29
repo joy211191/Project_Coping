@@ -4,7 +4,7 @@
 {
 	"dataSetName": "",
 	"numericalValues": [
-		3,
+		10,
 		1,
 		1,
 		2,
@@ -35,6 +35,18 @@
 		42,
 		8,
 		7
+	]
+},
+{
+	"dataSetName": "",
+	"numericalValues": [
+		5,
+		3,
+		8,
+		12,
+		35,
+		7,
+		8
 	]
 }
 ]
