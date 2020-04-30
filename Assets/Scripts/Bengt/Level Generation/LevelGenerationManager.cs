@@ -30,6 +30,10 @@ public class LevelGenerationManager : MonoBehaviour
     List<GameObject>    m_CurrentSectionRooms   = new List<GameObject>(); //Rooms in the current section
     List<GameObject>    m_NextSectionRooms      = new List<GameObject>(); //Rooms in the next section
 
+    protected bool      m_sectionHasBossRoom    = false;
+    protected bool      m_sectionHasClimberRoom = false;
+    protected bool      m_sectionHasAmbushRoom  = false;
+
     //TODO: Some way to increase rooms in future sections?
     //Exponential curve? Some other type of curve?
     //make sure that we only get certain amaounts of certain types of rooms?
@@ -66,7 +70,27 @@ public class LevelGenerationManager : MonoBehaviour
             else if (i == p_inLength + 1) //If last room, instantiate end room
                 p_inListDest.Add(Instantiate(m_EndRoom, new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
             else //if neither, instantiate a random non-start non-end room
-                p_inListDest.Add(Instantiate(p_inList[RandomNumber(0, m_RoomPrefabsList.Count - 1)], new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
+            {
+                GameObject tempRoom = p_inList[RandomNumber(0, m_RoomPrefabsList.Count)];
+
+                if (tempRoom.tag == "Ambush Room" && m_sectionHasAmbushRoom)
+                    while (tempRoom.tag == "Ambush Room")
+                        tempRoom = p_inList[RandomNumber(0, m_RoomPrefabsList.Count)];
+
+                else if (tempRoom.tag == "Climber Room" && m_sectionHasClimberRoom)
+                    while (tempRoom.tag == "Climber Room")
+                        tempRoom = p_inList[RandomNumber(0, m_RoomPrefabsList.Count)];
+
+                if (tempRoom.tag == "Ambush Room")
+                    m_sectionHasAmbushRoom = true;
+                else if (tempRoom.tag == "Climber Room")
+                    m_sectionHasClimberRoom = true;
+
+                p_inListDest.Add(Instantiate(tempRoom, new Vector2(i * m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
+
+
+
+            }
 
             if (i > 0)
             {
@@ -82,7 +106,10 @@ public class LevelGenerationManager : MonoBehaviour
 
         m_sectionNumber++; //Increase section number after instantiating a full section
 
-       }
+        m_sectionHasClimberRoom = false;
+        m_sectionHasAmbushRoom  = false;
+
+}
 
     //Function to get a random number 
     private static readonly System.Random random = new System.Random();
@@ -129,5 +156,4 @@ public class LevelGenerationManager : MonoBehaviour
             m_sectionNumber = 1;
         }
     }
-
 }

@@ -7086,15 +7086,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sectionLength: 3
+  m_sectionsBeforeIncrease: 3
   m_RoomPrefabsList:
   - {fileID: 1859554089745595776, guid: 5f80d04a91f45d74bb5ab827f76c164f, type: 3}
   - {fileID: 3910660487222422506, guid: 496ccabc1f63cc84f8149edec761a48f, type: 3}
   - {fileID: 8910465364119474445, guid: eb7f13aafcaf9db4ea9fb5050c80dd7b, type: 3}
   - {fileID: 2188583978975139111, guid: 2dcf658fec91dda4fa39b4815db6d84b, type: 3}
+  - {fileID: 9154453488326225240, guid: fd898ede98503634fb078f46889ed8d2, type: 3}
+  - {fileID: 2341368991037510176, guid: 72976bb5c81ec9e4fa1ec9c4f3313c20, type: 3}
   m_StartRoom: {fileID: 2745537827735964123, guid: a2642d5b8d4e62d4fa1a2c73c0e5f111,
     type: 3}
   m_EndRoom: {fileID: 2559148502413963371, guid: 19f76cb72a8d7f44ba2cfc3229e8a9ae,
     type: 3}
+  m_player: {fileID: 1951481742}
+  m_playerSpawn: {fileID: 0}
+  m_sectionNumber: 1
+  m_playerLeftHub: 0
 --- !u!1 &1481033460
 GameObject:
   m_ObjectHideFlags: 0
@@ -7990,6 +7997,7 @@ GameObject:
   - component: {fileID: 1763543173}
   - component: {fileID: 1763543174}
   - component: {fileID: 1763543175}
+  - component: {fileID: 1763543176}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -8047,6 +8055,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd480cfac20880f4890143e98c61426d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1763543176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763543172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c54cc7058d205864bb9c1db70731fe4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1780031118

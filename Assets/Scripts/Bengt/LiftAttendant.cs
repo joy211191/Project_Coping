@@ -41,6 +41,7 @@ public class LiftAttendant : MonoBehaviour
 
     protected int               m_activeDialogueOption  = 0;
     protected int               m_dialogueNum           = 0;
+    protected int               m_dialogueOptions       = 0;
 
     protected string[]          m_dialogueLines;
     protected List<string>      m_dialogueFlags         = new List<string>();
@@ -155,6 +156,7 @@ public class LiftAttendant : MonoBehaviour
         m_dialogueOptionButtons[i].GetComponent<Text>().text = p_inText.Split('<', '>')[1];
         m_dialogueOptionButtons[i].GetComponent<Text>().color = m_inactiveText;
         m_dialogueFlags.Add(p_inText.Split('[', ']')[1]);
+        m_dialogueOptions++;
         i++;
     }
 
@@ -162,7 +164,7 @@ public class LiftAttendant : MonoBehaviour
     private void SelectDialogue()
     {
         //Set right font colour, colour can be changed in the menu
-        for (int i = 0; i < m_dialogueOptionButtons.Count; i++ )
+        for (int i = 0; i < m_dialogueOptions; i++ )
         {
             if (m_activeDialogueOption == i)
                 m_dialogueOptionButtons[i].GetComponent<Text>().color = m_activeText;
@@ -175,13 +177,13 @@ public class LiftAttendant : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             if (m_activeDialogueOption == 0)
-                m_activeDialogueOption = m_dialogueOptionButtons.Count - 1;
+                m_activeDialogueOption = m_dialogueOptions - 1;
             else
                 m_activeDialogueOption--;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            if (m_activeDialogueOption == m_dialogueOptionButtons.Count - 1)
+            if (m_activeDialogueOption == m_dialogueOptions - 1)
                 m_activeDialogueOption = 0;
             else
                 m_activeDialogueOption++;
@@ -212,6 +214,8 @@ public class LiftAttendant : MonoBehaviour
                 m_dialogueText.text = m_dialogueLines[m_dialogueNum];
 
             m_dialogueNum++;
+
+            m_dialogueOptions = 0;
 
         }
     }
