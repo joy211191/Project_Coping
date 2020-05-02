@@ -4,16 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
-    [SerializeField]
-    float attackPower = 10f;
-    [SerializeField]
-    float maxHealth = 100;
-    [SerializeField]
-    float health;
-    [SerializeField]
-    float speed;
-    [SerializeField]
-    float damageMultiplier;
+   public float attackPower = 10f;
+    public float maxHealth = 100;
+    public float health;
+    public float speed;
+    public float damageMultiplier;
     PlayerAnimator playerAnimator;
     public bool playHurtAnim = true;
     public float countDown;

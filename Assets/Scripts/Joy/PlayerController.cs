@@ -39,14 +39,6 @@ public class PlayerController : MonoBehaviour {
 
         // Move
         m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
-
-        //Jump
-        if (Input.GetButtonDown("Jump") && m_grounded) {
-
-            m_grounded = false;
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
-        }
     }
 
     public void GetSpeed () {

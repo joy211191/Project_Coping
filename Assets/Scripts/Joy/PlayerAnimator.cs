@@ -4,7 +4,6 @@ using UnityEngine;
 using DG.Tweening;
 
 public class PlayerAnimator : PlayerController {
-
     public Animator m_animator;
     public PlayerBaseAbilities playerBaseAbilities;
     [SerializeField]
@@ -21,14 +20,29 @@ public class PlayerAnimator : PlayerController {
     public LayerMask enemyLayers;
     Vector3 attackPointPosition;
 
-    public bool playerDown;
+    public List<Equipement> equipmentList = new List<Equipement>();
 
+    public bool playerDown;
 
     [Tooltip("The x is the first damage, y the second and z the third. This is in respect to the sword swings of the player during the combat")]
     [SerializeField]
     Vector3 damageVectors;
 
     Rigidbody2D rb2D;
+
+    public float distanceCheck;
+
+    bool doubleDash;
+    bool doubleJump;
+
+    [SerializeField]
+    float dashTimeRecharge;
+    float lastDashed;
+    int maxDashes=1;
+    int maxJumps=1;
+
+    int jumpCounter=0;
+    int dashCounter=0;
 
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -49,12 +63,35 @@ public class PlayerAnimator : PlayerController {
 
     // Update is called once per frame
     void Update () {
+        //Dash
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) { 
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * BoolToInteger(), distanceCheck);
+            if (hit.transform.tag != "Environment") {
+                Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
+                m_animator.SetTrigger("Dash");
+                transform.DOMove(newPosition, 0.5f);
+                lastDashed = Time.time;
+                dashCounter++;
+            }
+        }
+        else
+            dashCounter = 0;
+
+        if ((Input.GetButtonDown("Jump") && m_grounded) || Input.GetButtonDown("Jump") && jumpCounter < maxJumps) {
+            jumpCounter++;
+            m_animator.SetTrigger("Jump");
+            m_grounded = false;
+            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+            m_groundSensor.Disable(0.2f);
+        }
+        else
+            jumpCounter = 0;
+
         m_animator.SetBool("Grounded", m_grounded);
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
-        if (Input.GetButtonDown("Jump"))
-            m_animator.SetTrigger("Jump");
 
+        #region ATTACK
         //Attack
         if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
             m_animator.SetTrigger("FirstAttack");
@@ -77,6 +114,8 @@ public class PlayerAnimator : PlayerController {
                 m_animator.SetInteger("Speed", (int)rb2D.velocity.magnitude);
         }
 
+        #endregion
+        #region POWER_UP_SELCETION
         if (Input.GetAxis("Mouse ScrollWheel") > 0) {
             if (powerUpIndex < 4)
                 powerUpIndex++;
@@ -115,8 +154,8 @@ public class PlayerAnimator : PlayerController {
                         }
                 }
             }
-
         }
+        #endregion
         //Activating the powerup
         if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated) {
             playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
@@ -132,15 +171,6 @@ public class PlayerAnimator : PlayerController {
                 m_animator.SetTrigger("Heal");
                 playerBaseAbilities.Revive();
             }
-        }
-
-
-
-        //dash
-        if (Input.GetKeyDown(KeyCode.LeftAlt)) {
-            Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
-            m_animator.SetTrigger("Dash");
-            transform.DOMove(newPosition, 0.5f);
         }
         if (spriteRenderer.flipX)
             attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
@@ -169,4 +199,28 @@ public class PlayerAnimator : PlayerController {
             return;
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
+
+    /*void SetAbilities () {
+        if (equipmentList == null)
+            return;
+        else {
+            bool dash=false, jump=false;
+            for(int i = 0; i < equipmentList.Count; i++) {
+                playerStats.maxHealth=
+                dash = equipmentList[i].doubleDash || dash;
+                jump = equipmentList[i].doubleJump || jump;
+            }
+            doubleDash = dash;
+            doubleJump = jump;
+        }
+
+        if (doubleJump)
+            maxJumps = 2;
+        else
+            maxJumps = 1;
+        if (doubleDash)
+            maxDashes = 2;
+        else
+            maxDashes = 1;
+    }*/
 }
