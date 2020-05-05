@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour {
-   public float attackPower = 10f;
+    public float attackPower = 10f;
     public float maxHealth = 100;
     public float health;
     public float speed;
