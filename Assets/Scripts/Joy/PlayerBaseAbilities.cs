@@ -23,23 +23,26 @@ public class PlayerBaseAbilities : MonoBehaviour {
     public Image willPowerImage;
     public Text powerUpText;
 
-    void Awake () {
+    void Start () {
         playerStats = GetComponent<PlayerStats>();
         playerStats.playerBaseAbilities = this;
         willPower = maxWillPower;
-
     }
 
     void Update () {
         willPowerImage.fillAmount =willPower / maxWillPower;
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.LeftAlt)) {
-            willPower += 5;
+            willPower += 5f;
         }
         if (Input.GetKeyDown(KeyCode.P)) {
             SaveData();
         }
 #endif
+    }
+
+    public void IncreaseWillPower(float willpowerIncrementValue) {
+        maxWillPower += willpowerIncrementValue;
     }
 
     public void SetPowerUp (PowerUp index) {

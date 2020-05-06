@@ -20,8 +20,6 @@ public class PlayerAnimator : PlayerController {
     public LayerMask enemyLayers;
     Vector3 attackPointPosition;
 
-    public List<Equipement> equipmentList = new List<Equipement>();
-
     public bool playerDown;
 
     [Tooltip("The x is the first damage, y the second and z the third. This is in respect to the sword swings of the player during the combat")]
@@ -32,8 +30,8 @@ public class PlayerAnimator : PlayerController {
 
     public float distanceCheck;
 
-    bool doubleDash;
-    bool doubleJump;
+    public bool doubleDash;
+    public bool doubleJump;
 
     [SerializeField]
     float dashTimeRecharge;
@@ -200,20 +198,7 @@ public class PlayerAnimator : PlayerController {
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-    /*void SetAbilities () {
-        if (equipmentList == null)
-            return;
-        else {
-            bool dash=false, jump=false;
-            for(int i = 0; i < equipmentList.Count; i++) {
-                playerStats.maxHealth=
-                dash = equipmentList[i].doubleDash || dash;
-                jump = equipmentList[i].doubleJump || jump;
-            }
-            doubleDash = dash;
-            doubleJump = jump;
-        }
-
+    public void SetAbilities () {
         if (doubleJump)
             maxJumps = 2;
         else
@@ -222,5 +207,5 @@ public class PlayerAnimator : PlayerController {
             maxDashes = 2;
         else
             maxDashes = 1;
-    }*/
+    }
 }

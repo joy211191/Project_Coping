@@ -80,7 +80,7 @@
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\LookAtCamera.cs" />
      <Compile Include="Assets\Scripts\Joy\Data Visualizer\ValueSet.cs" />
      <Compile Include="Assets\Scripts\Joy\DebugStats.cs" />
-     <Compile Include="Assets\Scripts\Joy\Equipement.cs" />
+     <Compile Include="Assets\Scripts\Joy\EquipementSpawner.cs" />
      <Compile Include="Assets\Scripts\Joy\InventorySystem.cs" />
      <Compile Include="Assets\Scripts\Joy\Item.cs" />
      <Compile Include="Assets\Scripts\Joy\LightFlicker.cs" />
