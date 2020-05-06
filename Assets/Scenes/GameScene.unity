@@ -7088,15 +7088,15 @@ MonoBehaviour:
   m_sectionLength: 3
   m_sectionsBeforeIncrease: 3
   m_RoomPrefabsList:
-  - {fileID: 1859554089745595776, guid: 5f80d04a91f45d74bb5ab827f76c164f, type: 3}
-  - {fileID: 3910660487222422506, guid: 496ccabc1f63cc84f8149edec761a48f, type: 3}
-  - {fileID: 8910465364119474445, guid: eb7f13aafcaf9db4ea9fb5050c80dd7b, type: 3}
-  - {fileID: 2188583978975139111, guid: 2dcf658fec91dda4fa39b4815db6d84b, type: 3}
-  - {fileID: 9154453488326225240, guid: fd898ede98503634fb078f46889ed8d2, type: 3}
-  - {fileID: 2341368991037510176, guid: 72976bb5c81ec9e4fa1ec9c4f3313c20, type: 3}
-  m_StartRoom: {fileID: 2745537827735964123, guid: a2642d5b8d4e62d4fa1a2c73c0e5f111,
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
+  - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
+  m_StartRoom: {fileID: 1686982658660957899, guid: c76d29726a541594d9002dce1dd25739,
     type: 3}
-  m_EndRoom: {fileID: 2559148502413963371, guid: 19f76cb72a8d7f44ba2cfc3229e8a9ae,
+  m_EndRoom: {fileID: 3955056792529298342, guid: c7f8ac8c916e53645a08d47359f2aa84,
     type: 3}
   m_player: {fileID: 1951481742}
   m_playerSpawn: {fileID: 0}
@@ -10257,7 +10257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  m_jumpForce: 2
+  m_jumpForce: 4
   m_animator: {fileID: 0}
   playerBaseAbilities: {fileID: 0}
   powerUpIndex: 0
@@ -10269,8 +10269,11 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 0
+  equipmentList: []
   playerDown: 0
   damageVectors: {x: 0, y: 0, z: 0}
+  distanceCheck: 0
+  dashTimeRecharge: 0
 --- !u!114 &1951481748
 MonoBehaviour:
   m_ObjectHideFlags: 0
