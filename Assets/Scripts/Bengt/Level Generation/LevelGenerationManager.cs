@@ -166,7 +166,7 @@ public class LevelGenerationManager : MonoBehaviour
     public void UseLift(int p_inFloor)
     {
 
-        for (int i = 0; i < p_inFloor; i++)
+        for (int i = 0; i < p_inFloor - 1; i++)
             m_player.GetComponent<PlayerBaseAbilities>().willPower -= m_playerWillpowerChange[i];
 
 
