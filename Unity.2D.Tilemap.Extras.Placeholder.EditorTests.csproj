@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Packages\com.unity.2d.tilemap.extras\Tests\Editor\PlaceholderTests.cs" />
+    <None Include="Packages\com.unity.2d.tilemap.extras\Tests\Editor\Unity.2D.Tilemap.Extras.EditorTests.asmdef" />
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>

@@ -223,7 +223,7 @@ public class LiftAttendant : MonoBehaviour
     //Triggered by player
     void OnTriggerEnter2D(Collider2D m_col)
     {
-        if (m_col.gameObject.name == "Player");
+        if (m_col.gameObject.name == "Player")
         {
             m_interactPrompt.SetActive(true);
             m_canTalk = true;

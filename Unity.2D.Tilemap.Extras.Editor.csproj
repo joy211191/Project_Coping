@@ -81,6 +81,7 @@
     <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\CustomRuleTileMenu.cs" />
     <Compile Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\RuleTileEditor.cs" />
     <None Include="Packages\com.unity.2d.tilemap.extras\Editor\Tiles\RuleTile\ScriptTemplates\NewCustomRuleTile.cs.txt" />
+    <None Include="Packages\com.unity.2d.tilemap.extras\Editor\Unity.2D.Tilemap.Extras.Editor.asmdef" />
     <Reference Include="Unity.2D.Tilemap.Editor">
       <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
@@ -293,6 +294,21 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Advertisements">
+      <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Editor">
+      <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.Tracker">
+      <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Analytics.StandardEvents">
+      <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.Purchasing">
+      <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>C:/Users/Topha/OneDrive/Dokument/GitHub/Project_Coping/Library/PackageCache/com.unity.render-pipelines.core@7.1.8/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>

@@ -98,6 +98,12 @@ public class PlayerStats : MonoBehaviour {
     }
 
     void Update () {
+        if (Input.GetKeyDown(KeyCode.K))
+            health = 0;
+
+        if (health == 0)
+            ResetPlayer();
+
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
         healthImage.fillAmount = health / maxHealth;
 #if UNITY_EDITOR
@@ -122,5 +128,13 @@ public class PlayerStats : MonoBehaviour {
                 originalValues.Clear();
             }
         }
+    }
+
+    private void ResetPlayer()
+    {
+        health = maxHealth;
+        gameObject.GetComponent<PlayerBaseAbilities>().willPower = 0;
+        gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
+        
     }
 }
