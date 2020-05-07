@@ -15,7 +15,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
     [SerializeField]
     float maxWillPower=100;
     [SerializeField]
-    float willPower;
+    public float willPower;
     public PowerUp powerUp;
     public PlayerStats playerStats;
     public DataSet dataSet;
