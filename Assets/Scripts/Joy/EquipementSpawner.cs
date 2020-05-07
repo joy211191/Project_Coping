@@ -37,7 +37,16 @@ public class EquipementSpawner : MonoBehaviour {
     List<string> itemNames = new List<string>();
 
     void Awake () {
-        if (enabled) {
+
+		if (transform.childCount > 0)
+		{
+			foreach (Transform child in transform)
+			{
+				pickUpSpawnPoints.Add(child);
+			}
+		}
+
+		if (enabled) {
             if (pickUpSpawnPoints.Count > 0)
                 SpawnPickUps();
         }
