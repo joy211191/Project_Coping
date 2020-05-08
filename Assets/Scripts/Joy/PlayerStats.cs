@@ -149,7 +149,7 @@ public class PlayerStats : MonoBehaviour {
     private void ResetPlayer()
     {
         health = maxHealth;
-        gameObject.GetComponent<PlayerBaseAbilities>().willPower = 0;
+        GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
         
     }

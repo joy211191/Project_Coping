@@ -13,7 +13,7 @@ public enum PowerUp {
 
 public class PlayerBaseAbilities : MonoBehaviour {
     [SerializeField]
-    float maxWillPower=100;
+    public float maxWillPower=100;
     [SerializeField]
     public float willPower;
     public PowerUp powerUp;
@@ -32,8 +32,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
     void Update () {
         willPowerImage.fillAmount =willPower / maxWillPower;
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.LeftAlt)) {
-            willPower += 5f;
+        if (Input.GetKeyDown(KeyCode.LeftAlt) && willPower >= 5) {
+            willPower -= 5f;
         }
         if (Input.GetKeyDown(KeyCode.P)) {
             SaveData();

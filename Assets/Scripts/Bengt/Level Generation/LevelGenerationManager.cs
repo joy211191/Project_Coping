@@ -8,43 +8,43 @@ using UnityEngine.Tilemaps;
 public class LevelGenerationManager : MonoBehaviour
 {
     [SerializeField]
-    int                 m_sectionStartLength; //Length of the first section
+    int m_sectionStartLength; //Length of the first section
     [SerializeField]
-    int                 m_sectionsBeforeIncrease;
+    int m_sectionsBeforeIncrease;
     [SerializeField]
-    List<GameObject>    m_RoomPrefabsList       = new List<GameObject>(); //Room Class? Store roomtype?
+    List<GameObject> m_RoomPrefabsList = new List<GameObject>(); //Room Class? Store roomtype?
     [SerializeField]
-    GameObject          m_StartRoom;
+    GameObject m_StartRoom;
     [SerializeField]
-    GameObject          m_EndRoom;
+    GameObject m_EndRoom;
     [SerializeField]
-    GameObject          m_player;
+    GameObject m_player;
 
 
-    protected int       m_sectionNumber             = 1; //Current section of section group, ie the group of sections with an equal amount of rooms
-    protected int       m_sectionLength             = 0; //Length of section
-    public int          m_currentSectionNumber      = 0; //Current section overall
+    protected int m_sectionNumber = 1; //Current section of section group, ie the group of sections with an equal amount of rooms
+    protected int m_sectionLength = 0; //Length of section
+    public int m_currentSectionNumber = 0; //Current section overall
 
     [SerializeField]
-    protected float     m_playerStartWillpower      = 0; //Player Willpower at start of section
+    protected float m_playerStartWillpower = 0; //Player Willpower at start of section
     [SerializeField]
-    protected float     m_playerEndWillpower        = 0; //Player willpower at end of section
+    protected float m_playerEndWillpower = 0; //Player willpower at end of section
     [SerializeField]
-    protected float     m_tempPlayerWillpowerChange = 0;
+    protected float m_tempPlayerWillpowerChange = 0;
 
     [SerializeField]
-    public List<float>  m_playerWillpowerChange     = new List<float>(); //Player willpower change for each section, use this for cost-calculation
+    public List<float> m_playerWillpowerChange = new List<float>(); //Player willpower change for each section, use this for cost-calculation
 
 
     [SerializeField]
-    List<GameObject>    m_CurrentSectionRooms       = new List<GameObject>();   //Rooms in the current section
-    List<GameObject>    m_NextSectionRooms          = new List<GameObject>();   //Rooms in the next section
+    List<GameObject> m_CurrentSectionRooms = new List<GameObject>();   //Rooms in the current section
+    List<GameObject> m_NextSectionRooms = new List<GameObject>();   //Rooms in the next section
     [SerializeField]
-    GameObject          m_playerSpawn;                                      //The point where the player will spawn when they enter that section
+    GameObject m_playerSpawn;                                      //The point where the player will spawn when they enter that section
 
     //protected bool      m_sectionHasBossRoom    = false; No bossrooms :(
-    protected bool      m_sectionHasClimberRoom     = false;
-    protected bool      m_sectionHasAmbushRoom      = false;
+    protected bool m_sectionHasClimberRoom = false;
+    protected bool m_sectionHasAmbushRoom = false;
 
 
     void Awake()
@@ -103,19 +103,19 @@ public class LevelGenerationManager : MonoBehaviour
                 totalRoomYDiff = prevRoomYDiff + currRoomYDiff; //add both together
             }
 
-			m_tempXdif += (p_inListDest[i].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2); //Change m_tempXdif to width of the newly insatntiated room
+            m_tempXdif += (p_inListDest[i].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2); //Change m_tempXdif to width of the newly insatntiated room
 
-			if (i > 0)
-				m_tempXdif += (p_inListDest[i - 1].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2);
+            if (i > 0)
+                m_tempXdif += (p_inListDest[i - 1].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2);
 
-			p_inListDest[i].transform.position = new Vector3(m_tempXdif, p_inListDest[i].transform.position.y + totalRoomYDiff, p_inListDest[i].transform.position.z); //Change room position depending on RoomYDiff
-			
+            p_inListDest[i].transform.position = new Vector3(m_tempXdif, p_inListDest[i].transform.position.y + totalRoomYDiff, p_inListDest[i].transform.position.z); //Change room position depending on RoomYDiff
+
         }
 
         m_sectionNumber++; //Increase section number after instantiating a full section
 
         m_sectionHasClimberRoom = false;
-        m_sectionHasAmbushRoom  = false;
+        m_sectionHasAmbushRoom = false;
 
         if (m_sectionNumber > m_sectionsBeforeIncrease)
         {
@@ -149,7 +149,7 @@ public class LevelGenerationManager : MonoBehaviour
 
         m_tempPlayerWillpowerChange = m_playerStartWillpower - m_playerEndWillpower; //temporarily store the difference in willpower between the start and end of that level
 
-        if (m_currentSectionNumber <= m_playerWillpowerChange.Count() && Math.Abs(m_playerWillpowerChange[m_currentSectionNumber - 1]) > Math.Abs(m_tempPlayerWillpowerChange)) //If the player has already completed that level and used less willpower
+        if (m_currentSectionNumber <= m_playerWillpowerChange.Count() && m_playerWillpowerChange[m_currentSectionNumber - 1] > m_tempPlayerWillpowerChange) //If the player has already completed that level and used less willpower
             m_playerWillpowerChange[m_currentSectionNumber - 1] = m_tempPlayerWillpowerChange; //Change that element of the list with the new willpower change
         else if (m_currentSectionNumber > m_playerWillpowerChange.Count())  //If the player hasn't finished this level before
             m_playerWillpowerChange.Add(m_tempPlayerWillpowerChange);
@@ -162,14 +162,10 @@ public class LevelGenerationManager : MonoBehaviour
 
     public void UseLift(int p_inFloor)
     {
-
         for (int i = 0; i < p_inFloor - 1; i++)
             m_player.GetComponent<PlayerBaseAbilities>().willPower -= m_playerWillpowerChange[i];
 
-
         m_playerStartWillpower = m_player.GetComponent<PlayerBaseAbilities>().willPower;
-
-        Debug.Log("Hello there");
 
         m_currentSectionNumber = p_inFloor;
 
@@ -177,19 +173,21 @@ public class LevelGenerationManager : MonoBehaviour
 
         m_sectionLength = m_sectionStartLength + (Convert.ToInt32(Math.Ceiling(temp)) - 1);
 
-        if(temp - Math.Floor(temp) < 0.5)
-            m_sectionNumber = 1;
-        else if (temp - Math.Floor(temp) < 1)
-            m_sectionNumber = 2;
-        else if (temp - Math.Floor(temp) == 1)
-            m_sectionNumber = 3;
+        for (int i = 1; i <= m_sectionsBeforeIncrease; i++)
+        {
+            if (i / m_sectionsBeforeIncrease == temp - Math.Floor(temp))
+            {
+                m_sectionNumber = i;
+                break;
+            }
+        }
 
         for (int i = 0; i < m_CurrentSectionRooms.Count; i++)
             Destroy(m_CurrentSectionRooms[i]);
 
         m_CurrentSectionRooms.Clear();
 
-        for (int i = 0; i < m_NextSectionRooms.Count; i++)  
+        for (int i = 0; i < m_NextSectionRooms.Count; i++)
             Destroy(m_NextSectionRooms[i]);
 
         m_NextSectionRooms.Clear();
@@ -221,13 +219,13 @@ public class LevelGenerationManager : MonoBehaviour
 
     public void ResetLevelGeneration()
     {
-        m_sectionLength             = m_sectionStartLength;
-        m_sectionNumber             = 1;
-        m_currentSectionNumber      = 1;
+        m_sectionLength = m_sectionStartLength;
+        m_sectionNumber = 1;
+        m_currentSectionNumber = 1;
 
-        m_player.GetComponent<PlayerBaseAbilities>().willPower = 0;
-        m_playerStartWillpower  = m_player.GetComponent<PlayerBaseAbilities>().willPower;
-        m_playerEndWillpower    = 0;
+        m_player.GetComponent<PlayerBaseAbilities>().willPower = m_player.GetComponent<PlayerBaseAbilities>().maxWillPower;
+        m_playerStartWillpower = m_player.GetComponent<PlayerBaseAbilities>().willPower;
+        m_playerEndWillpower = 0;
 
         for (int i = 0; i < m_CurrentSectionRooms.Count; i++)
             Destroy(m_CurrentSectionRooms[i]);
@@ -241,7 +239,7 @@ public class LevelGenerationManager : MonoBehaviour
         GenerateSection(m_sectionLength, m_RoomPrefabsList, m_CurrentSectionRooms);
         GenerateSection(m_sectionLength, m_RoomPrefabsList, m_NextSectionRooms);
 
-        m_playerSpawn               = m_CurrentSectionRooms[0].transform.Find("Player Spawn").gameObject;
+        m_playerSpawn = m_CurrentSectionRooms[0].transform.Find("Player Spawn").gameObject;
         m_player.transform.position = m_playerSpawn.transform.position;
     }
 }
