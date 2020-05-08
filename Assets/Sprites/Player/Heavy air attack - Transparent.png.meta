@@ -1,12 +1,30 @@
 fileFormatVersion: 2
 guid: 35f5b54204ed27a409a46088e2a7aeb1
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3936960850588131389
+    second: Heavy air attack - Transparent_0
+  - first:
+      213: 4644649357268678823
+    second: Heavy air attack - Transparent_1
+  - first:
+      213: -6035224276924000216
+    second: Heavy air attack - Transparent_2
+  - first:
+      213: 683321668555093833
+    second: Heavy air attack - Transparent_3
+  - first:
+      213: -8704975725314036164
+    second: Heavy air attack - Transparent_4
+  - first:
+      213: -6375019439524116456
+    second: Heavy air attack - Transparent_5
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +52,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +67,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +88,163 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 68
+        width: 862
+        height: 997
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf131e17fa1d59c0800000000000000
+      internalID: -3936960850588131389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_1
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 117
+        width: 850
+        height: 894
+      alignment: 9
+      pivot: {x: 0.4663593, y: 0.49543062}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a8fe366bfb157040800000000000000
+      internalID: 4644649357268678823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_2
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 15
+        width: 1663
+        height: 1534
+      alignment: 9
+      pivot: {x: 0.3550734, y: 0.36951536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82891220f739e3ca0800000000000000
+      internalID: -6035224276924000216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_3
+      rect:
+        serializedVersion: 2
+        x: 3717
+        y: 76
+        width: 739
+        height: 1062
+      alignment: 9
+      pivot: {x: 0.50000036, y: 0.43845627}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947bd89ef65ab7900800000000000000
+      internalID: 683321668555093833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_4
+      rect:
+        serializedVersion: 2
+        x: 4538
+        y: 35
+        width: 657
+        height: 1074
+      alignment: 9
+      pivot: {x: 0.5870471, y: 0.45055425}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e2242e2b6b13780800000000000000
+      internalID: -8704975725314036164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heavy air attack - Transparent_5
+      rect:
+        serializedVersion: 2
+        x: 5261
+        y: 72
+        width: 604
+        height: 980
+      alignment: 9
+      pivot: {x: 0.41884264, y: 0.4624848}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81884f698916787a0800000000000000
+      internalID: -6375019439524116456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 66bf3a033da768348ad7546f2c1fe84e
     internalID: 0
     vertices: []
     indices: 

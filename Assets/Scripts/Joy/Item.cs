@@ -14,4 +14,8 @@ public class Item: MonoBehaviour
     public bool doubleJump;
     public bool doubleDash;
     public Sprite sprite;
+
+    public void ApplySprite () {
+        GetComponent<SpriteRenderer>().sprite = sprite;
+    }
 }

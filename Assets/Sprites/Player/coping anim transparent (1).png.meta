@@ -1,12 +1,105 @@
 fileFormatVersion: 2
 guid: 7866536eac10ba94387e467c7e87e865
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 4780956752054222402
+    second: coping anim transparent (1)_0
+  - first:
+      213: -5762564332773996244
+    second: coping anim transparent (1)_1
+  - first:
+      213: -4275623216345199456
+    second: coping anim transparent (1)_2
+  - first:
+      213: -7294573188129776245
+    second: coping anim transparent (1)_3
+  - first:
+      213: -5984059727622600025
+    second: coping anim transparent (1)_4
+  - first:
+      213: -8174613361600743210
+    second: coping anim transparent (1)_5
+  - first:
+      213: -1840384114455628372
+    second: coping anim transparent (1)_6
+  - first:
+      213: -6462176789983270109
+    second: coping anim transparent (1)_7
+  - first:
+      213: -2653236713234225731
+    second: coping anim transparent (1)_8
+  - first:
+      213: 1124031557415243456
+    second: coping anim transparent (1)_9
+  - first:
+      213: 8103777835007863498
+    second: coping anim transparent (1)_10
+  - first:
+      213: -1884913284730055282
+    second: coping anim transparent (1)_11
+  - first:
+      213: 9076491673022014376
+    second: coping anim transparent (1)_12
+  - first:
+      213: -3764076015315211578
+    second: coping anim transparent (1)_13
+  - first:
+      213: -5301182629563776440
+    second: coping anim transparent (1)_14
+  - first:
+      213: 450039584405479209
+    second: coping anim transparent (1)_15
+  - first:
+      213: -1214914580256143329
+    second: coping anim transparent (1)_16
+  - first:
+      213: 8920541628453861628
+    second: coping anim transparent (1)_17
+  - first:
+      213: 3858531852831712067
+    second: coping anim transparent (1)_18
+  - first:
+      213: -4304785606849073155
+    second: coping anim transparent (1)_19
+  - first:
+      213: 6414421144495454723
+    second: coping anim transparent (1)_20
+  - first:
+      213: 5366229978624546899
+    second: coping anim transparent (1)_21
+  - first:
+      213: 4731505565116099492
+    second: coping anim transparent (1)_22
+  - first:
+      213: -8746411987685970012
+    second: coping anim transparent (1)_23
+  - first:
+      213: -6187295951592319649
+    second: coping anim transparent (1)_24
+  - first:
+      213: 8151450942366346366
+    second: coping anim transparent (1)_25
+  - first:
+      213: 4233811497381413240
+    second: coping anim transparent (1)_26
+  - first:
+      213: -5788763211480794251
+    second: coping anim transparent (1)_27
+  - first:
+      213: 496290647847591979
+    second: coping anim transparent (1)_28
+  - first:
+      213: 4855796564722966554
+    second: coping anim transparent (1)_29
+  - first:
+      213: 476454607198966923
+    second: coping anim transparent (1)_30
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,27 +124,27 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +163,310 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: coping anim transparent (1)_0
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 253
+        width: 862
+        height: 1125
+      alignment: 9
+      pivot: {x: 0.7279238, y: 0.36901963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e72bcd5de595240800000000000000
+      internalID: 4780956752054222402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_3
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 256
+        width: 851
+        height: 989
+      alignment: 9
+      pivot: {x: 0.7219901, y: 0.39303124}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8d9f6d655874ca90800000000000000
+      internalID: -7294573188129776245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_6
+      rect:
+        serializedVersion: 2
+        x: 3282
+        y: 250
+        width: 751
+        height: 1102
+      alignment: 9
+      pivot: {x: 0.69117707, y: 0.38685715}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5b99f0664a576e0800000000000000
+      internalID: -1840384114455628372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_10
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 1204
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acae35a5107667070800000000000000
+      internalID: 8103777835007863498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_13
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 277
+        width: 492
+        height: 851
+      alignment: 9
+      pivot: {x: 0.3735882, y: 0.46964192}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6caa1979ec053cbc0800000000000000
+      internalID: -3764076015315211578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 1074
+        width: 175
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842416b3c7a6e66b0800000000000000
+      internalID: -5301182629563776440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_16
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 267
+        width: 530
+        height: 855
+      alignment: 9
+      pivot: {x: 0.5356438, y: 0.4646477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18c36b40a1c32fe0800000000000000
+      internalID: -1214914580256143329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_17
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 1074
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8b31819512ccb70800000000000000
+      internalID: 8920541628453861628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_19
+      rect:
+        serializedVersion: 2
+        x: 4361
+        y: 246
+        width: 1494
+        height: 852
+      alignment: 9
+      pivot: {x: 0.24457334, y: 0.5709534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffeb8d5c445244c0800000000000000
+      internalID: -4304785606849073155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_20
+      rect:
+        serializedVersion: 2
+        x: 2423
+        y: 1053
+        width: 38
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30af76dbb0a940950800000000000000
+      internalID: 6414421144495454723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_22
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 985
+        width: 45
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab678d2e3fa9a140800000000000000
+      internalID: 4731505565116099492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_23
+      rect:
+        serializedVersion: 2
+        x: 2464
+        y: 971
+        width: 35
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af62ce33a08e9680800000000000000
+      internalID: -8746411987685970012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: coping anim transparent (1)_25
+      rect:
+        serializedVersion: 2
+        x: 6005
+        y: 205
+        width: 927
+        height: 694
+      alignment: 9
+      pivot: {x: 0.41848284, y: 0.5707744}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ce4cf9175cf1170800000000000000
+      internalID: 8151450942366346366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cbc070a7d0f52fe4cadb00b8736d332b
     internalID: 0
     vertices: []
     indices: 

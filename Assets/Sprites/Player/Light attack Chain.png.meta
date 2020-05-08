@@ -1,12 +1,45 @@
 fileFormatVersion: 2
 guid: df88c74e05e36f9488d85b798e1844ce
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1559387662346015077
+    second: Light attack Chain_0
+  - first:
+      213: 1731937479894214480
+    second: Light attack Chain_1
+  - first:
+      213: 8355106838453147111
+    second: Light attack Chain_2
+  - first:
+      213: -6853389737633838575
+    second: Light attack Chain_3
+  - first:
+      213: 248256584040643587
+    second: Light attack Chain_4
+  - first:
+      213: -8474686027240666459
+    second: Light attack Chain_5
+  - first:
+      213: 8357449301690079227
+    second: Light attack Chain_6
+  - first:
+      213: 4597686913970523241
+    second: Light attack Chain_7
+  - first:
+      213: 3235880440532675324
+    second: Light attack Chain_8
+  - first:
+      213: -179487929191571342
+    second: Light attack Chain_9
+  - first:
+      213: 4394288069002168044
+    second: Light attack Chain_10
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,24 +67,24 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 500
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +103,268 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Light attack Chain_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 1208
+        width: 506
+        height: 913
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e2dbede21fb5ae0800000000000000
+      internalID: -1559387662346015077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1200
+        width: 1054
+        height: 925
+      alignment: 9
+      pivot: {x: 0.34959373, y: 0.53242373}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057a74636f3190810800000000000000
+      internalID: 1731937479894214480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_2
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 1204
+        width: 1041
+        height: 977
+      alignment: 9
+      pivot: {x: 0.40945244, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5df6ef66d43f370800000000000000
+      internalID: 8355106838453147111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_3
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 1200
+        width: 809
+        height: 964
+      alignment: 9
+      pivot: {x: 0.5317766, y: 0.50444466}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a070d285ed3e0a0800000000000000
+      internalID: -6853389737633838575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_4
+      rect:
+        serializedVersion: 2
+        x: 3740
+        y: 1200
+        width: 1045
+        height: 981
+      alignment: 9
+      pivot: {x: 0.3277984, y: 0.4868974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30cf4e04c0cf17300800000000000000
+      internalID: 248256584040643587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_5
+      rect:
+        serializedVersion: 2
+        x: 4866
+        y: 1200
+        width: 883
+        height: 964
+      alignment: 9
+      pivot: {x: 0.33502287, y: 0.5000001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa8a5385fdd36a80800000000000000
+      internalID: -8474686027240666459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_6
+      rect:
+        serializedVersion: 2
+        x: 5818
+        y: 1195
+        width: 681
+        height: 964
+      alignment: 9
+      pivot: {x: 0.3552938, y: 0.49555546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf7d2973cdf9bf370800000000000000
+      internalID: 8357449301690079227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_7
+      rect:
+        serializedVersion: 2
+        x: 6614
+        y: 1191
+        width: 703
+        height: 1191
+      alignment: 9
+      pivot: {x: 0.5853249, y: 0.42445385}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cccaf73e34ecf30800000000000000
+      internalID: 4597686913970523241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 26
+        width: 1538
+        height: 1024
+      alignment: 9
+      pivot: {x: 0.3857825, y: 0.54602534}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfaa591cd1828ec20800000000000000
+      internalID: 3235880440532675324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_9
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 51
+        width: 694
+        height: 1007
+      alignment: 9
+      pivot: {x: 0.35183126, y: 0.55956674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270e01beda4528df0800000000000000
+      internalID: -179487929191571342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Light attack Chain_10
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 73
+        width: 476
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce68c9187b5abfc30800000000000000
+      internalID: 4394288069002168044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 61f480ef20677ed4f8cc5a6d084aba9f
     internalID: 0
     vertices: []
     indices: 

@@ -7305,7 +7305,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346815085}
-  - component: {fileID: 1346815084}
   - component: {fileID: 1346815083}
   m_Layer: 0
   m_Name: Level Item Spawner
@@ -7326,7 +7325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0cff655e638e84abbb5bd63077fa01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 0}
+  itemPrefab: {fileID: 7379642022673678446, guid: 5817a1e392cd6b34c997cb813c10b881,
+    type: 3}
   items: []
   pickUpSpawnPoints: []
   enabled: 0
@@ -7338,56 +7338,6 @@ MonoBehaviour:
   willpowerIncrease: {x: 0, y: 0}
   sprites: []
   itemNames: []
---- !u!212 &1346815084
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346815082}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e3af91ab35889334ea33b6769b9d8959, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4.15, y: 5.12}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!4 &1346815085
 Transform:
   m_ObjectHideFlags: 0
@@ -11059,7 +11009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  m_jumpForce: 2
+  m_jumpForce: 4
   m_animator: {fileID: 0}
   playerBaseAbilities: {fileID: 0}
   powerUpIndex: 0
@@ -11073,9 +11023,10 @@ MonoBehaviour:
     m_Bits: 0
   playerDown: 0
   damageVectors: {x: 0, y: 0, z: 0}
+  rayCastLength: 1
   distanceCheck: 0
   doubleDash: 0
-  doubleJump: 0
+  doubleJump: 1
   dashTimeRecharge: 0
 --- !u!114 &1951481748
 MonoBehaviour:

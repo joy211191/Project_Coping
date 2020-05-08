@@ -28,6 +28,9 @@ public class PlayerAnimator : PlayerController {
 
     Rigidbody2D rb2D;
 
+    [SerializeField]
+    float rayCastLength;
+
     public float distanceCheck;
 
     public bool doubleDash;
@@ -75,14 +78,13 @@ public class PlayerAnimator : PlayerController {
         else
             dashCounter = 0;
 
-        if ((Input.GetButtonDown("Jump") && m_grounded) || Input.GetButtonDown("Jump") && jumpCounter < maxJumps) {
+        if ((Input.GetButtonDown("Jump") && m_grounded) || (Input.GetButtonDown("Jump") && jumpCounter < maxJumps)) {
             jumpCounter++;
             m_animator.SetTrigger("Jump");
-            m_grounded = false;
             m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
             m_groundSensor.Disable(0.2f);
         }
-        else
+        else if (m_grounded)
             jumpCounter = 0;
 
         m_animator.SetBool("Grounded", m_grounded);
@@ -97,13 +99,13 @@ public class PlayerAnimator : PlayerController {
         }
         else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
             m_animator.SetTrigger("Attack");
-            HitEnemy(damageVectors.y);
+            HitEnemy(damageVectors.y+Random.Range(1f,5f));
         }
-        if (m_animator.GetCurrentAnimatorStateInfo(0).IsTag("FinalAttack")) {
-            HitEnemy(damageVectors.z);
-        }
+
+        //Heavy Attack
         if (Input.GetMouseButtonDown(1)) {
             m_animator.SetTrigger("HeavyAttack");
+            HitEnemy(damageVectors.z);
         }
         if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
             float inputX = Input.GetAxis("Horizontal");
@@ -175,6 +177,21 @@ public class PlayerAnimator : PlayerController {
         else
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
     }
+
+    #region COLLISION DETECTIONS
+    void OnCollisionEnter2D (Collision2D collider2D) {
+        if (collider2D.transform.tag == "Ground") {
+            m_grounded = true;
+        }
+    }
+
+    void OnCollisionExit2D (Collision2D collider2D) {
+        if (collider2D.transform.tag == "Ground") {
+            m_grounded = false;
+        }
+    }
+
+    #endregion
 
     void HitEnemy (float damageValue) {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);

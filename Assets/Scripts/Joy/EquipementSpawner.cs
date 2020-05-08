@@ -69,5 +69,6 @@ public class EquipementSpawner : MonoBehaviour {
         item.willpowerIncrease = Random.Range(willpowerIncrease.x, willpowerIncrease.y);
         item.sprite = sprites[Random.Range(0, sprites.Count)];
         item.itemName = itemNames[Random.Range(0, itemNames.Count)];
+        item.ApplySprite();
     }
 }
