@@ -47,7 +47,7 @@ public class PlayerStats : MonoBehaviour {
         ItemEffects();
     }
 
-    void ItemEffects () {
+    public void ItemEffects () {
         for (int i = 0; i < equippedItems.Count; i++) {
             maxHealth += equippedItems[i].healthIncrase;
             speed += equippedItems[i].movementSpeedIncrease;
