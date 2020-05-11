@@ -11376,14 +11376,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 00f8227dd9355eb4db8bda24de606f46, type: 2}
-    - target: {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2,
-        type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_speed
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2,
-        type: 3}
+    - target: {fileID: 0}
       propertyPath: m_jumpForce
       value: 2.5
       objectReference: {fileID: 0}
@@ -11398,8 +11396,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -899620374153902453, guid: dbee6708d25d8a3409ddee28e8719bf3,
         type: 3}
-    m_RemovedComponents:
-    - {fileID: 114850797635947820, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1951481742 stripped
 GameObject:
@@ -11439,6 +11436,7 @@ MonoBehaviour:
   doubleDash: 0
   doubleJump: 1
   dashTimeRecharge: 0
+  offsetVector: {x: 0, y: 0, z: 0}
 --- !u!114 &1951481748
 MonoBehaviour:
   m_ObjectHideFlags: 0

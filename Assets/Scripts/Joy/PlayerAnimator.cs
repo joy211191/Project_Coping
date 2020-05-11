@@ -45,6 +45,11 @@ public class PlayerAnimator : PlayerController {
     int jumpCounter=0;
     int dashCounter=0;
 
+    bool climbable;
+
+    [SerializeField]
+    Vector3 offsetVector;
+
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerStats>();
@@ -66,8 +71,8 @@ public class PlayerAnimator : PlayerController {
     void Update () {
         //Dash
         if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) { 
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right * BoolToInteger(), distanceCheck);
-            if (hit.transform.tag != "Environment") {
+            RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position, transform.right * BoolToInteger(), distanceCheck);
+            if (hit_Combat.transform.tag != "Environment") {
                 Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
                 m_animator.SetTrigger("Dash");
                 transform.DOMove(newPosition, 0.5f);
@@ -176,6 +181,24 @@ public class PlayerAnimator : PlayerController {
             attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
         else
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
+
+
+        #region CLIMBING
+        RaycastHit2D hit;
+        if (spriteRenderer.flipX)
+            hit = Physics2D.Raycast(transform.position + offsetVector, -transform.right * 5);
+        else
+            hit = Physics2D.Raycast(transform.position + offsetVector, transform.right * 5);
+        climbable = hit.transform.tag == "Climbable";
+        if (climbable && Input.GetAxis("Vertical") > 0) {
+            rb2D.simulated = false;
+            transform.position += new Vector3(0, 2, 0);
+        }
+        else if (climbable && Input.GetAxis("Vertical") < 0) {
+            rb2D.simulated = false;
+            transform.position += new Vector3(0, -2, 0);
+        }
+        #endregion
     }
 
     #region COLLISION DETECTIONS

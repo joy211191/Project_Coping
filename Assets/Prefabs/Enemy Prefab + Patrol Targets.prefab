@@ -144,7 +144,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
-  m_Material: {fileID: 6200000, guid: f480b5fed0fa44845b6379ccbf069bfb, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_Size: {x: 1.5, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8751764219707025995
@@ -234,21 +234,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 8751764219707025998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e75e01cc06af6a94da9e0471497e3412, type: 3}
+  m_Script: {fileID: 11500000, guid: e259ed7ac4bf6cb4897faca8e326af87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 2
+  m_speed: 0
   m_attackDamage: 0
   m_player: {fileID: 0}
-  m_aggroRange: 8
+  m_aggroRange: 0
   attackPoint: {fileID: 8751764220183784446}
-  attackRange: 0.75
+  attackRange: 0
   m_patrolTarget1: {fileID: 8751764218959410213}
   m_patrolTarget2: {fileID: 8751764218911668317}
   m_startWaitTime: 5
   playerLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   m_target: {fileID: 0}
 --- !u!1 &8751764220183784445
 GameObject:
