@@ -104,6 +104,7 @@
     <Compile Include="Assets\Scripts\Joy\PlayerSensor.cs" />
     <Compile Include="Assets\Scripts\Joy\PlayerStats.cs" />
     <Compile Include="Assets\Scripts\Joy\Transition.cs" />
+    <None Include="Assets\Dialogue\Veteran\VeteranSpentDialogue.txt" />
     <None Include="Assets\SpriteShaders\SpritesPixelLit.shader" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteVertexLighting.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\ShaderShared.cginc" />
@@ -119,6 +120,7 @@
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteDissolve.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\SimplexNoise3D.hlsl" />
     <None Include="Assets\SpriteShaders\CameraNormalsTexture.shader" />
+    <None Include="Assets\Dialogue\Storyteller\StorytellerSpentDialogue2.txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\Noise2d.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteLighting.cginc" />
     <None Include="Assets\SpriteShaders\CameraDepthTexture.shader" />
@@ -130,6 +132,7 @@
     <None Include="Assets\Dialogue\How to write a dialogue document.txt" />
     <None Include="Assets\SpriteShaders\SpritesVertexLit.shader" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteShadows.cginc" />
+    <None Include="Assets\Dialogue\Storyteller\StorytellerSpentDialogue1.txt" />
     <None Include="Assets\Dialogue\Lift Attendant\Dialogue1.txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteSpecular.cginc" />
     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">

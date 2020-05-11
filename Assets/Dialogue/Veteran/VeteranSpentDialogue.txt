@@ -1,0 +1,7 @@
+"I see we meet again, but now is not the time..." 
+"*He sips on his waterskin and looks away solemnly*"
+<I understand>[Leave Flag]
+<...>[Leave Flag]
+
+[Leave Flag]
+*END*

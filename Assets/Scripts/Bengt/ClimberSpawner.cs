@@ -39,4 +39,9 @@ public class ClimberSpawner : MonoBehaviour
             return random.Next(min, max);
         }
     }
+
+    private void OnDestroy()
+    {
+        m_climber.transform.position = new Vector2(-50, -50);
+    }
 }

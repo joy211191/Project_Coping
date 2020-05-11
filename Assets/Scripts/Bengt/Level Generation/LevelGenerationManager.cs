@@ -114,9 +114,7 @@ public class LevelGenerationManager : MonoBehaviour
 
         m_sectionNumber++; //Increase section number after instantiating a full section
 
-        m_sectionHasClimberRoom = false;
-        m_sectionHasAmbushRoom = false;
-
+        
         if (m_sectionNumber > m_sectionsBeforeIncrease)
         {
             m_sectionLength++;
@@ -182,13 +180,22 @@ public class LevelGenerationManager : MonoBehaviour
             }
         }
 
+
         for (int i = 0; i < m_CurrentSectionRooms.Count; i++)
+        {
+            if (m_CurrentSectionRooms[i].tag == "Climber")
+                m_sectionHasClimberRoom = false;
             Destroy(m_CurrentSectionRooms[i]);
+        }
 
         m_CurrentSectionRooms.Clear();
 
         for (int i = 0; i < m_NextSectionRooms.Count; i++)
+        {
+            if (m_NextSectionRooms[i].tag == "Climber")
+                m_sectionHasClimberRoom = false;
             Destroy(m_NextSectionRooms[i]);
+        }
 
         m_NextSectionRooms.Clear();
 
