@@ -9,6 +9,7 @@ TagManager:
   - Ambush Room
   - Climber Room
   - Ground
+  - Climber
   layers:
   - Default
   - TransparentFX

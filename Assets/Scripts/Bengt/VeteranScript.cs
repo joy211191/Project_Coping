@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.Remoting;
@@ -10,43 +10,44 @@ using System;
 using System.Text.RegularExpressions;
 using System.Collections.Specialized;
 
-public class LiftAttendant : MonoBehaviour
+
+public class VeteranScript : MonoBehaviour
 {
     [SerializeField]
-    GameObject                  m_dialogueObject;
+    GameObject m_dialogueObject;
     [SerializeField]
-    protected List<GameObject>  m_dialogueOptionButtons = new List<GameObject>();
+    protected List<GameObject> m_dialogueOptionButtons = new List<GameObject>();
     [SerializeField]
-    GameObject                  m_dialogueOptionHolder; 
+    GameObject m_dialogueOptionHolder;
     [SerializeField]
-    GameObject                  m_interactPrompt;
+    GameObject m_interactPrompt;
     [SerializeField]
-    GameObject                  m_player;
+    GameObject m_player;
     [SerializeField]
-    string                      m_dialoguePath;
+    string m_dialoguePath;
     [SerializeField]
-    Color                       m_activeText;
+    Color m_activeText;
     [SerializeField]
-    Color                       m_inactiveText;
+    Color m_inactiveText;
 
 
-    protected bool              m_canTalk               = false;
-    protected bool              m_talking               = false;
-    protected bool              m_waitingForInput       = false;
+    protected bool m_canTalk = false;
+    protected bool m_talking = false;
+    protected bool m_waitingForInput = false;
 
-    protected Text              m_dialogueText;
-    protected Text              m_nameText;
+    protected Text m_dialogueText;
+    protected Text m_nameText;
 
-    protected Image             m_portrait;
+    protected Image m_portrait;
 
-    protected int               m_activeDialogueOption  = 0;
-    protected int               m_dialogueNum           = 0;
-    protected int               m_dialogueOptions       = 0;
+    protected int m_activeDialogueOption = 0;
+    protected int m_dialogueNum = 0;
+    protected int m_dialogueOptions = 0;
 
-    protected string[]          m_dialogueLines;
-    protected List<string>      m_dialogueFlags         = new List<string>();
+    protected string[] m_dialogueLines;
+    protected List<string> m_dialogueFlags = new List<string>();
 
-    
+
 
     //Temporary? TODO: Find a way to remove this, low priority
     int i;
@@ -54,9 +55,9 @@ public class LiftAttendant : MonoBehaviour
     void Awake()
     {
         //Find all the UI object children and put the in the right place and give name
-        m_portrait      = m_dialogueObject.transform.Find("Portrait").GetComponent<Image>();
-        m_dialogueText  = m_dialogueObject.transform.Find("Dialogue").Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
-        m_nameText      = m_dialogueObject.transform.Find("Name Panel").Find("Name").GetComponent<Text>();
+        m_portrait = m_dialogueObject.transform.Find("Portrait").GetComponent<Image>();
+        m_dialogueText = m_dialogueObject.transform.Find("Dialogue").Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
+        m_nameText = m_dialogueObject.transform.Find("Name Panel").Find("Name").GetComponent<Text>();
         m_nameText.text = gameObject.name;
     }
 
@@ -94,8 +95,8 @@ public class LiftAttendant : MonoBehaviour
 
         //Show dialogue box and stop all player actions, some bool changing as well
         m_dialogueObject.SetActive(true);
-        m_player.GetComponent<PlayerController>().enabled   = false;
-        m_player.GetComponent<PlayerAnimator>().enabled     = false;
+        m_player.GetComponent<PlayerController>().enabled = false;
+        m_player.GetComponent<PlayerAnimator>().enabled = false;
         m_talking = true;
         m_canTalk = false;
     }
@@ -137,8 +138,8 @@ public class LiftAttendant : MonoBehaviour
 
         m_interactPrompt.SetActive(true);
 
-        m_player.GetComponent<PlayerController>().enabled   = true; //Allow the player to move again
-        m_player.GetComponent<PlayerAnimator>().enabled     = true;
+        m_player.GetComponent<PlayerController>().enabled = true; //Allow the player to move again
+        m_player.GetComponent<PlayerAnimator>().enabled = true;
 
         m_talking = false; //Reset the bools
         m_canTalk = true;
@@ -172,7 +173,7 @@ public class LiftAttendant : MonoBehaviour
     private void SelectDialogue()
     {
         //Set right font colour, colour can be changed in the menu
-        for (int i = 0; i < m_dialogueOptions; i++ )
+        for (int i = 0; i < m_dialogueOptions; i++)
         {
             if (m_activeDialogueOption == i)
                 m_dialogueOptionButtons[i].GetComponent<Text>().color = m_activeText;
