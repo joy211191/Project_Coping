@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Bengt\LiftAttendant.cs" />
     <Compile Include="Assets\Scripts\Bengt\LiftScript.cs" />
     <Compile Include="Assets\Scripts\Bengt\StairScript.cs" />
+    <Compile Include="Assets\Scripts\Bengt\StoryTellerScript.cs" />
     <Compile Include="Assets\Scripts\Bengt\VeteranScript.cs" />
     <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
@@ -110,12 +111,14 @@
     <None Include="Assets\SpriteShaders\CGIncludes\ShaderShared.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\ClassicNoise3D.hlsl" />
     <None Include="Assets\Cinematic Look LUT Library\Readme.txt" />
+    <None Include="Assets\Dialogue\Lift Attendant\Dialogue1 - kopia (2).txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\ShaderMaths.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\Noise3d.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteUnlit.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpritePixelLighting.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\SimplexNoise2D.hlsl" />
     <None Include="Assets\JsonDotNet\link.xml" />
+    <None Include="Assets\Dialogue\Lift Attendant\Dialogue1 - kopia.txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\ClassicNoise2D.hlsl" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteDissolve.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\SimplexNoise3D.hlsl" />

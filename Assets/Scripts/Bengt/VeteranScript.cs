@@ -13,52 +13,66 @@ using System.Collections.Specialized;
 
 public class VeteranScript : MonoBehaviour
 {
+    [Header("UI Components")]
     [SerializeField]
-    GameObject m_dialogueObject;
+    GameObject                  m_dialogueObject;
     [SerializeField]
-    protected List<GameObject> m_dialogueOptionButtons = new List<GameObject>();
+    protected List<GameObject>  m_dialogueOptionButtons = new List<GameObject>();
     [SerializeField]
-    GameObject m_dialogueOptionHolder;
+    GameObject                  m_dialogueOptionHolder;
     [SerializeField]
-    GameObject m_interactPrompt;
+    GameObject                  m_interactPrompt;
     [SerializeField]
-    GameObject m_player;
+    string                      m_portraitPath;
+    [Header("Dialogue Filepaths")]
     [SerializeField]
-    string m_dialoguePath;
+    List<string>                m_dialogueList          = new List<string>();
     [SerializeField]
-    Color m_activeText;
+    string                      m_endDialoguePath;
     [SerializeField]
-    Color m_inactiveText;
+    string                      m_finalDialoguePath;
+    [Header("Text Colour")]
+    [SerializeField]
+    Color                       m_activeText;
+    [SerializeField]
+    Color                       m_inactiveText;
+    [Header("Other")]
+    [SerializeField]
+    GameObject                  m_player;
 
 
-    protected bool m_canTalk = false;
-    protected bool m_talking = false;
-    protected bool m_waitingForInput = false;
+    protected bool m_canTalk                = false;
+    protected bool m_talking                = false;
+    protected bool m_waitingForInput        = false;
 
     protected Text m_dialogueText;
     protected Text m_nameText;
 
+    [SerializeField]
     protected Image m_portrait;
 
-    protected int m_activeDialogueOption = 0;
-    protected int m_dialogueNum = 0;
-    protected int m_dialogueOptions = 0;
+    protected int m_activeDialogueOption    = 0;
+    protected int m_dialogueNum             = 0;
+    protected int m_dialogueOptions         = 0;
+    protected int m_dialogueCounter         = 0;
 
+    protected string m_dialoguePath;
     protected string[] m_dialogueLines;
-    protected List<string> m_dialogueFlags = new List<string>();
-
-
+    protected List<string> m_dialogueFlags  = new List<string>();
 
     //Temporary? TODO: Find a way to remove this, low priority
     int i;
 
+
     void Awake()
     {
         //Find all the UI object children and put the in the right place and give name
-        m_portrait = m_dialogueObject.transform.Find("Portrait").GetComponent<Image>();
-        m_dialogueText = m_dialogueObject.transform.Find("Dialogue").Find("Main Panel").Find("Dialogue Text").GetComponent<Text>();
-        m_nameText = m_dialogueObject.transform.Find("Name Panel").Find("Name").GetComponent<Text>();
+        m_dialogueText = m_dialogueObject.transform.Find("Dialogue/Main Panel/Dialogue Text").GetComponent<Text>();
+        m_nameText = m_dialogueObject.transform.Find("Dialogue/Name Panel/Name").GetComponent<Text>();
+        m_portrait = m_dialogueObject.transform.Find("Dialogue/Portrait").GetComponent<Image>();
         m_nameText.text = gameObject.name;
+
+        m_dialoguePath = m_dialogueList[0];
     }
 
     // Update is called once per frame
@@ -99,13 +113,22 @@ public class VeteranScript : MonoBehaviour
         m_player.GetComponent<PlayerAnimator>().enabled = false;
         m_talking = true;
         m_canTalk = false;
+
+        m_portrait.sprite = Resources.Load<Sprite>("Portraits/" + m_portraitPath);
+
+        PrintContinue();
     }
+
+
 
     void ContinueDialogue()
     {
         //Prints dialogue if next row doesn't start with a '<'
         if (!m_dialogueLines[m_dialogueNum].StartsWith("<"))
+        {
             m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
+            PrintContinue();
+        }
 
         if (m_dialogueLines[m_dialogueNum].Contains("{"))   //Checks if we want to run a function
         {
@@ -148,6 +171,8 @@ public class VeteranScript : MonoBehaviour
         m_dialogueNum = 0; //reset dialoguenum
         i = 0;//Resets this little thingy, TODO: Replace with something
 
+        m_dialoguePath = m_endDialoguePath;
+
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
     }
 
@@ -159,8 +184,8 @@ public class VeteranScript : MonoBehaviour
         //m_dialogueOptionButtons[i].transform.Find("Choice Text").GetComponent<Text>().text  = p_inText.Split('<', '>')[1];
         //m_dialogueOptionButtons[i].transform.Find("Choice Text").GetComponent<Text>().color = m_inactiveText;
 
-        m_dialogueOptionHolder.SetActive(true);
-        m_dialogueOptionButtons[i].SetActive(true);
+        //m_dialogueOptionHolder.SetActive(true);
+        //m_dialogueOptionButtons[i].SetActive(true);
         //m_dialogueOptionButtons[i].transform.parent = m_dialogueObject.transform;
         m_dialogueOptionButtons[i].GetComponent<Text>().text = p_inText.Split('<', '>')[1];
         m_dialogueOptionButtons[i].GetComponent<Text>().color = m_inactiveText;
@@ -203,10 +228,10 @@ public class VeteranScript : MonoBehaviour
             FindFlag(m_dialogueFlags[m_activeDialogueOption]);
 
             //Remove the options
-            for (int i = 0; i < m_dialogueOptionButtons.Count; i++)
-                m_dialogueOptionButtons[i].SetActive(false);
+            //for (int i = 0; i < m_dialogueOptionButtons.Count; i++)
+            //m_dialogueOptionButtons[i].SetActive(false);
 
-            m_dialogueOptionHolder.SetActive(false);
+            //m_dialogueOptionHolder.SetActive(false);
             //Destroy(m_dialogueOptionButtons[i]);
 
             //Left for posterity
@@ -220,13 +245,28 @@ public class VeteranScript : MonoBehaviour
             if (m_dialogueLines[m_dialogueNum] == "*END*")
                 DeactivateDialogue();
             else
+            {
                 m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
+                PrintContinue();
+            }
 
             m_dialogueNum++;
 
             m_dialogueOptions = 0;
 
         }
+    }
+
+    void PrintContinue()
+    {
+        //m_dialogueOptionHolder.SetActive(true);
+        //m_dialogueOptionButtons[i].SetActive(true);
+        //m_dialogueOptionButtons[i].transform.parent = m_dialogueObject.transform;
+        m_dialogueOptionButtons[0].GetComponent<Text>().text = "Continue...";
+        m_dialogueOptionButtons[0].GetComponent<Text>().color = m_activeText;
+        m_dialogueOptionButtons[1].GetComponent<Text>().text = "";
+        m_dialogueOptionButtons[2].GetComponent<Text>().text = "";
+        //m_dialogueOptions++;
     }
 
     //Triggered by player
@@ -242,8 +282,11 @@ public class VeteranScript : MonoBehaviour
     //No longer triggered by player
     void OnTriggerExit2D(Collider2D m_col)
     {
-        m_interactPrompt.SetActive(false);
-        m_canTalk = false;
+        if (m_col.gameObject.name == "Player")
+        {
+            m_interactPrompt.SetActive(false);
+            m_canTalk = false;
+        }
     }
 
     //Read from .txt file
@@ -277,5 +320,15 @@ public class VeteranScript : MonoBehaviour
     void RefillPotions()
     {
 
+    }
+
+    public void NextDialogue()
+    {
+        m_dialogueCounter++;
+
+        if (m_dialogueCounter < m_dialogueList.Count)
+            m_dialoguePath = m_dialogueList[m_dialogueCounter];
+        else
+            m_dialoguePath = m_finalDialoguePath;
     }
 }
