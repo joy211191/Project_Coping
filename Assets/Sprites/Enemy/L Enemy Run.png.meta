@@ -1,12 +1,24 @@
 fileFormatVersion: 2
 guid: 92557fd4231c1a344ba15cbef082181a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5208933164086930677
+    second: L Enemy Run_0
+  - first:
+      213: -6027137277391669278
+    second: L Enemy Run_1
+  - first:
+      213: -486245192074460573
+    second: L Enemy Run_2
+  - first:
+      213: -9003424437530151423
+    second: L Enemy Run_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,27 +43,27 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +82,121 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: L Enemy Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1962
+        height: 1726
+      alignment: 9
+      pivot: {x: 0.49564126, y: 0.024361266}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc27285d19d94840800000000000000
+      internalID: 5208933164086930677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L Enemy Run_1
+      rect:
+        serializedVersion: 2
+        x: 1970
+        y: 0
+        width: 1711
+        height: 1713
+      alignment: 9
+      pivot: {x: 0.48500568, y: 0.0357281}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7fd80549e4b5ca0800000000000000
+      internalID: -6027137277391669278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L Enemy Run_2
+      rect:
+        serializedVersion: 2
+        x: 3723
+        y: 0
+        width: 1779
+        height: 1747
+      alignment: 9
+      pivot: {x: 0.49759594, y: 0.032526247}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36209a4f2928049f0800000000000000
+      internalID: -486245192074460573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: L Enemy Run_3
+      rect:
+        serializedVersion: 2
+        x: 5566
+        y: 0
+        width: 1761
+        height: 1760
+      alignment: 9
+      pivot: {x: 0.49999943, y: 0.03840865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 106b1fe1d296d0380800000000000000
+      internalID: -9003424437530151423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2a753dbb5fe73c34ab6dac1f469c5bd1
     internalID: 0
     vertices: []
     indices: 
