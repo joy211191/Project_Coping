@@ -1,0 +1,7 @@
+"*They look up at you from behind their mask, a tired and blank stare meets your eyes...*"
+"... It's as if you do not exist, as if they are staring at the void behind you*"
+<I'll leave you then>[Leave Flag]
+<Walk away, slowly>[Leave Flag]
+
+[Leave Flag]
+*END*

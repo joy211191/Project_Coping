@@ -1,0 +1,7 @@
+"So much to find out about others, gotta write it all down before I forget it."
+"*They ignore you, scribbling in their book*"
+<I'll leave you to it>[Leave Flag]
+<...>[Leave Flag]
+
+[Leave Flag]
+*END*

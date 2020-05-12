@@ -1,4 +1,4 @@
-"Hello! I have some dialogue that is read from a .txt file now! Cool! And its modular too? That's great!"
+"This is the third dialogue"
 "I can also have numerous rows of text. This is starting to look like something!"
 <So what? So can I.>[Rude]
 <I can also say stuff!>[Friendly]

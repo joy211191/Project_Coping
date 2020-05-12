@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.Remoting;
@@ -10,7 +10,8 @@ using System;
 using System.Text.RegularExpressions;
 using System.Collections.Specialized;
 
-public class LiftAttendant : MonoBehaviour
+
+public class VeteranScript : MonoBehaviour
 {
     [Header("UI Components")]
     [SerializeField]
@@ -18,7 +19,7 @@ public class LiftAttendant : MonoBehaviour
     [SerializeField]
     protected List<GameObject>  m_dialogueOptionButtons = new List<GameObject>();
     [SerializeField]
-    GameObject                  m_dialogueOptionHolder; 
+    GameObject                  m_dialogueOptionHolder;
     [SerializeField]
     GameObject                  m_interactPrompt;
     [SerializeField]
@@ -40,28 +41,28 @@ public class LiftAttendant : MonoBehaviour
     GameObject                  m_player;
 
 
-    protected bool              m_canTalk               = false;
-    protected bool              m_talking               = false;
-    protected bool              m_waitingForInput       = false;
+    protected bool m_canTalk                = false;
+    protected bool m_talking                = false;
+    protected bool m_waitingForInput        = false;
 
-    protected Text              m_dialogueText;
-    protected Text              m_nameText;
+    protected Text m_dialogueText;
+    protected Text m_nameText;
 
-    protected Image             m_portrait;
+    [SerializeField]
+    protected Image m_portrait;
 
-    protected int               m_activeDialogueOption  = 0;
-    protected int               m_dialogueNum           = 0;
-    protected int               m_dialogueOptions       = 0;
-    protected int               m_dialogueCounter       = 0;
+    protected int m_activeDialogueOption    = 0;
+    protected int m_dialogueNum             = 0;
+    protected int m_dialogueOptions         = 0;
+    protected int m_dialogueCounter         = 0;
 
-    protected string            m_dialoguePath;
-    protected string[]          m_dialogueLines;
-    protected List<string>      m_dialogueFlags         = new List<string>();
-
-
+    protected string m_dialoguePath;
+    protected string[] m_dialogueLines;
+    protected List<string> m_dialogueFlags  = new List<string>();
 
     //Temporary? TODO: Find a way to remove this, low priority
     int i;
+
 
     void Awake()
     {
