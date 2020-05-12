@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     protected float m_attackDamage;
     [SerializeField]
-    protected Transform m_player;
+    protected float m_attackSpeed;
+    [SerializeField]
+    protected GameObject m_player;
     [SerializeField]
     protected int m_aggroRange;
     [SerializeField]
@@ -22,27 +24,29 @@ public class Enemy : MonoBehaviour {
     protected Transform m_patrolTarget2;
     [SerializeField]
     protected float m_startWaitTime = 5;
-
+    [SerializeField]
     float enemyHealth;
 
     public LayerMask playerLayers;
 
     protected Rigidbody2D m_body2d;
-    protected bool m_seenPlayer = false;
-    protected bool m_isDead = false;
-    protected bool m_isFacingRight = false;
-    protected bool m_inMelee = false;
 
-    protected float m_waitTime = 0;
+    protected bool m_seenPlayer     = false;
+    protected bool m_isDead         = false;
+    protected bool m_isFacingRight  = true;
+    protected bool m_inMelee        = false;
+
+    protected float m_waitTime      = 0;
+    protected float m_attackWait    = 0;
 
     Vector3 attackPointPosition;
-
-    //TODO find better way of adding patrol targets, or find another way to patrol
 
     [SerializeField]
     protected Transform m_target;
 
     SpriteRenderer spriteRenderer;
+
+    Animator m_animator;
 
     // Start is called before the first frame update
     void Awake () {
@@ -50,21 +54,48 @@ public class Enemy : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         attackPoint = transform.Find("AttackPoint");
         attackPointPosition = attackPoint.localPosition;
+        m_player = GameObject.FindGameObjectWithTag("Player");
+        m_animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update () {
-        LookForPlayer();
 
-        //Checks if Player is in melee, if they are then attack, if not then move
-        if (m_inMelee)
-            Attack();
-        else
-            Move();
+        
+
+        if (enemyHealth <= 0 && !m_isDead)
+        {
+            m_animator.SetTrigger("Dead");
+            m_isDead = true;
+        }
+        else if(!m_isDead)
+        {
+            LookForPlayer();
+            //Checks if Player is in melee, if they are then attack, if not then move
+            if (m_inMelee)
+            {
+                Attack();
+            }
+            else
+                Move();
+        }
+
+        //if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        //{
+        //    float inputX = Input.GetAxis("Horizontal");
+        //    //Run
+        //    if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        //        m_animator.SetInteger("Speed", (int)m_body2d.velocity.magnitude);
+        //}
+
     }
 
     public void TakeDamage (float damageValue) {
-        enemyHealth -= damageValue;
+        if (enemyHealth > 0)
+        {
+            enemyHealth -= damageValue;
+            m_animator.SetTrigger("Damage");
+        }
     }
 
     private void ChangeDirection () {
@@ -75,40 +106,50 @@ public class Enemy : MonoBehaviour {
 
         //Flips sprite and changes side of the attack point
         if (m_isFacingRight) {
-            spriteRenderer.flipX = true;
-            attackPoint.transform.localPosition = new Vector3(-attackPointPosition.x, attackPointPosition.y);
-        }
-        else {
             spriteRenderer.flipX = false;
             attackPoint.transform.localPosition = new Vector3(attackPointPosition.x, attackPointPosition.y);
+        }
+        else {
+            spriteRenderer.flipX = true;
+            attackPoint.transform.localPosition = new Vector3(-attackPointPosition.x, attackPointPosition.y);
         }
     }
 
     private void Attack () {
         //Prints if circle intersects with something on player layer
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
-        foreach (Collider2D player in hitPlayer) {
-            if (player.tag == "Player") {
-                Debug.Log("Hit player");
-                player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
+        if (Time.time > m_attackWait && m_player.GetComponent<PlayerStats>().health > 0)
+        {
+            Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
+            foreach (Collider2D player in hitPlayer)
+            {
+                if (player.tag == "Player")
+                {
+                    Debug.Log("Hit player");
+                    m_animator.SetTrigger("Attack");
+                    m_player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
+                }
             }
+
+            m_attackWait = Time.time + m_attackSpeed;
         }
     }
 
+
     private void LookForPlayer () {
         //Checks distance to player
-        float distToPlayer = Vector2.Distance(transform.position, m_player.position);
+        float distToPlayer = Vector2.Distance(transform.position, m_player.transform.position);
 
         //Follows player if within aggro range
-        if (distToPlayer < m_aggroRange) {
+        if (distToPlayer < m_aggroRange && m_player.GetComponent<PlayerStats>().health > 0) {
             m_waitTime = 0;
             m_seenPlayer = true;
-            m_target = m_player;
+            m_target = m_player.transform;
         }
-        else if (m_seenPlayer && distToPlayer > m_aggroRange + 2) {
+        else if ((m_seenPlayer && distToPlayer > m_aggroRange + 2) || m_player.GetComponent<PlayerStats>().health <= 0) {
             m_seenPlayer = false;
             m_target = null;
         }
+
 
         if (Physics2D.OverlapCircle(attackPoint.position, attackRange, playerLayers))
             m_inMelee = true;
@@ -117,8 +158,7 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Move () {
-        //Placeholder Patrol 
-        //TODO: Make this better
+        //Placeholder Patrol
         if (!m_seenPlayer) {
 
             if (m_target == null)
@@ -137,7 +177,6 @@ public class Enemy : MonoBehaviour {
                         m_target = m_patrolTarget2;
                     else
                         m_target = m_patrolTarget1;
-
                     ChangeDirection();
                 }
             }
@@ -160,6 +199,6 @@ public class Enemy : MonoBehaviour {
     void OnDrawGizmos () {
         if (attackPoint == null)
             return;
-        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+        //Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 }

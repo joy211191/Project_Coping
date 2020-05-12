@@ -115,9 +115,6 @@ public class PlayerStats : MonoBehaviour {
 
     void Update () {
         if (Input.GetKeyDown(KeyCode.K))
-            health = 0;
-
-        if (health == 0)
             ResetPlayer();
 
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
@@ -151,6 +148,5 @@ public class PlayerStats : MonoBehaviour {
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
-        
     }
 }

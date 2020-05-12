@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8751764218911668316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.790703, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4252922954648763938}
@@ -87,7 +87,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8751764218959410212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.800704, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4252922954648763938}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 258918764720793009}
   m_Layer: 11
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,18 +163,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.8215134}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.50217927, y: 0.40338585}
+    pivot: {x: 0.49564126, y: 0.024361266}
     oldSize: {x: 1.962, y: 1.7271793}
-    newSize: {x: 1.962, y: 1.7271793}
+    newSize: {x: 1.418, y: 1.7988803}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 2}
+  m_Size: {x: 1, y: 1.55}
   m_EdgeRadius: 0
 --- !u!212 &8751764219707025999
 SpriteRenderer:
@@ -215,15 +215,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8aee5689835934f46bf4ef71731c678b, type: 3}
+  m_Sprite: {fileID: 5208933164086930677, guid: 92557fd4231c1a344ba15cbef082181a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.962, y: 1.7271793}
+  m_Size: {x: 1.418, y: 1.7988803}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8751764219707025995
@@ -238,18 +239,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e259ed7ac4bf6cb4897faca8e326af87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 0
-  m_attackDamage: 0
+  m_speed: 4
+  m_attackDamage: 10
+  m_attackSpeed: 0.6
   m_player: {fileID: 0}
-  m_aggroRange: 0
+  m_aggroRange: 5
   attackPoint: {fileID: 8751764220183784446}
-  attackRange: 0
+  attackRange: 0.6
   m_patrolTarget1: {fileID: 8751764218959410213}
   m_patrolTarget2: {fileID: 8751764218911668317}
-  m_startWaitTime: 5
+  m_startWaitTime: 0
+  enemyHealth: 50
   playerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_target: {fileID: 0}
 --- !u!95 &258918764720793009
 Animator:
@@ -294,7 +297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8751764220183784445}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.35, z: 0}
+  m_LocalPosition: {x: 0.843, y: 0.871, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8751764219707025994}
