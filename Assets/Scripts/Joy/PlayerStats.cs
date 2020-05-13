@@ -31,6 +31,8 @@ public class PlayerStats : MonoBehaviour {
 
     public bool powerActivated;
 
+    public int potionCounter;
+
     [Space(20)]
     [Header("UI")]
     public Image healthImage;
@@ -97,6 +99,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void HealPlayer () {
+        potionCounter--;
         health = maxHealth;
     }
 

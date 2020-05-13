@@ -182,6 +182,9 @@ public class PlayerAnimator : PlayerController {
         else
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
 
+        if (Input.GetKeyDown(KeyCode.F)&&playerStats.potionCounter>0&&playerStats.health<playerStats.maxHealth) {
+            playerStats.HealPlayer();
+        }
 
         #region CLIMBING
         RaycastHit2D hit;
