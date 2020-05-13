@@ -7,27 +7,27 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     protected float m_speed;
     [SerializeField]
+    float enemyHealth;
+    [SerializeField]
     protected float m_attackDamage;
     [SerializeField]
     protected float m_attackSpeed;
     [SerializeField]
-    protected GameObject m_player;
+    float attackRange;
     [SerializeField]
     protected int m_aggroRange;
     [SerializeField]
-    Transform attackPoint;
+    protected float m_startWaitTime = 5;
     [SerializeField]
-    float attackRange;
+    protected GameObject m_player;
+    [SerializeField]
+    Transform attackPoint;
     [SerializeField]
     protected Transform m_patrolTarget1;
     [SerializeField]
     protected Transform m_patrolTarget2;
     [SerializeField]
-    protected float m_startWaitTime = 5;
-    [SerializeField]
-    float enemyHealth;
-
-    public LayerMask playerLayers;
+    protected LayerMask playerLayers;
 
     protected Rigidbody2D m_body2d;
 
@@ -124,7 +124,6 @@ public class Enemy : MonoBehaviour {
             {
                 if (player.tag == "Player")
                 {
-                    Debug.Log("Hit player");
                     m_animator.SetTrigger("Attack");
                     m_player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
                 }

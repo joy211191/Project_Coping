@@ -240,16 +240,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 4
-  m_attackDamage: 10
+  enemyHealth: 50
+  m_attackDamage: 0
   m_attackSpeed: 0.6
-  m_player: {fileID: 0}
-  m_aggroRange: 5
-  attackPoint: {fileID: 8751764220183784446}
   attackRange: 0.6
+  m_aggroRange: 5
+  m_startWaitTime: 0
+  m_player: {fileID: 0}
+  attackPoint: {fileID: 8751764220183784446}
   m_patrolTarget1: {fileID: 8751764218959410213}
   m_patrolTarget2: {fileID: 8751764218911668317}
-  m_startWaitTime: 0
-  enemyHealth: 50
   playerLayers:
     serializedVersion: 2
     m_Bits: 1024

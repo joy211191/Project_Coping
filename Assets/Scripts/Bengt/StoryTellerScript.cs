@@ -131,7 +131,10 @@ public class StoryTellerScript : MonoBehaviour
         if (m_dialogueLines[m_dialogueNum].Contains("{"))   //Checks if we want to run a function
         {
             if (m_dialogueLines[m_dialogueNum].Split('{', '}')[1] == "giveItem") //If the function is giveItem
-                GiveItem();
+            {
+                Item temp = (Item)this.GetType().GetField(m_dialogueLines[m_dialogueNum].Split('-', '-')[1]).GetValue(this);
+                GiveItem(temp);
+            }
             else if (m_dialogueLines[m_dialogueNum].Split('{', '}')[1] == "refillPotions") //If the function is giveItem
                 RefillPotions();
         }
@@ -310,10 +313,11 @@ public class StoryTellerScript : MonoBehaviour
         m_dialogueNum = (Array.IndexOf(m_dialogueLines, '[' + p_inFlag + ']') + 1);
     }
 
-    void GiveItem()
+    void GiveItem(Item p_inItem)
     {
-
+        m_player.GetComponent<InventorySystem>().AddItemToList(p_inItem);
     }
+
 
     void RefillPotions()
     {
