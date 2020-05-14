@@ -18,7 +18,7 @@ public class PlayerStats : MonoBehaviour {
     [Space(5)]
     [Header("Numbness Pool Settings")]
     [SerializeField]
-    [Range(0, 1)]
+    [Range(0f, 1f)]
     float numbnessDamageReduction;
     [SerializeField]
     float numbnessPool;
@@ -40,11 +40,14 @@ public class PlayerStats : MonoBehaviour {
 
     public List<Item> equippedItems = new List<Item>();
 
+    bool refillNumbness;
+
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
 
     void Awake () {
         playerAnimator = GetComponent<PlayerAnimator>();
+        numbnessPool = maxNumbnessPoolValue;
         SetPlayerStats(1, damageMultiplier, speed, 1);
         ItemEffects();
     }
@@ -78,10 +81,20 @@ public class PlayerStats : MonoBehaviour {
     public void TakeDamage (float damage, bool selfHarm = false) {
         playerBaseAbilities.dataSet.numericalValues[5]++;
         StopCoroutine("NumbnessPoolDecay");
+        refillNumbness = false;
+        float decrementValue = damage * numbnessDamageReduction;
         if (!selfHarm) {
-            if (numbnessPool < maxNumbnessPoolValue) {
-                numbnessPool += damage / numbnessDamageReduction;
-                health -= damage * damageMultiplier / (1 - numbnessDamageReduction);
+            if (numbnessPool >0) {
+                numbnessPool -= decrementValue;
+                float tempDamage = 1f - numbnessDamageReduction;
+                health -= (damage * damageMultiplier) * tempDamage;
+            }
+            else if(numbnessPool< damage / numbnessDamageReduction) {
+                float tempValue = numbnessPool;
+                numbnessPool = 0;
+                float tempDamage = 1f - numbnessDamageReduction;
+                health -= (damage * damageMultiplier) * tempDamage;
+                health -= decrementValue - tempValue;
             }
             else {
                 health -= damage * damageMultiplier;
@@ -90,12 +103,12 @@ public class PlayerStats : MonoBehaviour {
         if (playHurtAnim) {
             playerAnimator.m_animator.SetTrigger("Hurt");
         }
+        StartCoroutine("NumbnessPoolDecay");
     }
 
     public IEnumerator NumbnessPoolDecay () {
         yield return new WaitForSeconds(numbnessPoolDelayTime);
-        while (numbnessPool > 0)
-            numbnessPool -= numbnessPoolDecayValue;
+        refillNumbness = true;
     }
 
     public void HealPlayer () {
@@ -122,12 +135,19 @@ public class PlayerStats : MonoBehaviour {
 
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
         healthImage.fillAmount = health / maxHealth;
+        if (refillNumbness&&numbnessPool<maxNumbnessPoolValue) {
+            numbnessPool += numbnessPoolDecayValue;
+        }
 #if UNITY_EDITOR
         speedText.text = "Speed: " + speed.ToString();
         damageMultiplierText.text = "Damage Multiplier: " + damageMultiplier.ToString();
         healthText.text = "Health: " + health.ToString();
         attackPowerText.text = "AttackPower" + attackPower.ToString();
         powerUpName.text = playerBaseAbilities.powerUp.ToString();
+        if (Input.GetKeyDown(KeyCode.H)) {
+            TakeDamage(Random.Range(1f, 10f));
+        }
+
 #else
         speedText.text = "";
         damageMultiplierText.text = "";

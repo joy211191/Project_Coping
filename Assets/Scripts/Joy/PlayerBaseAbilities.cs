@@ -5,9 +5,9 @@ using System.IO;
 using UnityEngine.UI;
 
 public enum PowerUp {
-    SelfSoothing,
-    CompulsiveRiskTaking,
-    SelfHarm,
+    CompulsionRage,
+    Risk,
+    Numbing,
     Escape
 }
 
@@ -20,8 +20,10 @@ public class PlayerBaseAbilities : MonoBehaviour {
     public PlayerStats playerStats;
     public DataSet dataSet;
 
+    public List<Sprite> powerUpSprites = new List<Sprite>();
+
     public Image willPowerImage;
-    public Text powerUpText;
+    public Image powerUpImage;
 
     void Start () {
         playerStats = GetComponent<PlayerStats>();
@@ -47,9 +49,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
     public void SetPowerUp (PowerUp index) {
         //powerUp = index;
-        powerUpText.text = index.ToString();
         switch (index) {
-            case PowerUp.SelfSoothing: {
+            case PowerUp.CompulsionRage: {
                     if (willPower > 0) {
                         dataSet.numericalValues[4] += 1;
                         dataSet.numericalValues[0]++;
@@ -62,7 +63,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                     else
                         break;
                 }
-            case PowerUp.CompulsiveRiskTaking: {
+            case PowerUp.Risk: {
                     if (willPower > 2) {
                         dataSet.numericalValues[4] += 3;
                         dataSet.numericalValues[1] += 1;
@@ -74,7 +75,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                     else break;
                 }
 
-            case PowerUp.SelfHarm: {
+            case PowerUp.Numbing: {
                     if (willPower > 3) {
                         dataSet.numericalValues[4] += 4;
                         dataSet.numericalValues[2]++;
