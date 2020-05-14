@@ -49,6 +49,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
     public void SetPowerUp (PowerUp index) {
         //powerUp = index;
+        powerUpImage.GetComponent<Animator>().SetBool("Activate", true);
         switch (index) {
             case PowerUp.CompulsionRage: {
                     if (willPower > 0) {
