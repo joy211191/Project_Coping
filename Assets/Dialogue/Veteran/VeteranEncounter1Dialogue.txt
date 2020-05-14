@@ -1,5 +1,5 @@
 "At ease, soldier. *The man takes a few seconds to inspect you*"
-"I reckon I hav'nt seen you before, you're new here aren't you?"
+"I reckon I havn't seen you before, you're new here aren't you?"
 <Yeah>[New]
 <I've been here for a while, actually.>[A while]
 <...>[NoProgressEnd]
@@ -39,7 +39,7 @@
 
 
 [Yes Wine]
-"*You take the wineskine and bring it up to your nose. It smells strongly of alcohol.*"
+"*You take the wineskin and bring it up to your nose. It smells strongly of alcohol.*"
 <*Hand it back*>[Changed Mind]
 <*Take sip*>[Sip]
 
@@ -58,6 +58,7 @@
 <Thank you>[Thanks]
 <*Nod*>[End]
 
+
 [Sip]
 "*The wine is surprisingly strong and definately fortified.*"
 "What do you think?"
@@ -69,7 +70,7 @@
 "Changed your mind, eh? No matter. That leaves more wine for me! *He chuckles before taking a sip*"
 "So, anyway, how are you holding up?"
 <Not well>[Not Well]
-<Pretty okay. All things considred.>[OK]
+<Pretty okay. All things considered.>[OK]
 
 
 [Like]
@@ -109,7 +110,7 @@
 "Then you should at least have this.*He tosses you a small charm*"{recieveItem}
 "It's not much, but it kept me alive when I first got here."
 "I was bleeding out on the floor when someone found me, patched me up and gave it to me."
-"I never got the opportunity to ask her name and I was to stupid to even thank her."
+"I never got the opportunity to ask her for her name and I was to stupid to even thank her."
 "I never met her again after that. I like to think she made it to the top and got out of this hellhole."
 "When I get out I'll find her and thank her properly."
 <I hope you do.>[Encourage]
