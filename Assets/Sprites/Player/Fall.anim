@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LightBandit_Idle
+  m_Name: Fall
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,19 +20,16 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -2660968328804394481, guid: 1922470868f629f4d8a8768f96e0aa2f,
+      value: {fileID: 2826979704478040783, guid: 2333c9235e96f3742840313b62edcd50,
         type: 3}
-    - time: 0.5
-      value: {fileID: -4856050642018953775, guid: 1922470868f629f4d8a8768f96e0aa2f,
-        type: 3}
-    - time: 0.75
-      value: {fileID: -4856050642018953775, guid: 1922470868f629f4d8a8768f96e0aa2f,
+    - time: 0.05
+      value: {fileID: 2826979704478040783, guid: 2333c9235e96f3742840313b62edcd50,
         type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 4
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -47,15 +44,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -2660968328804394481, guid: 1922470868f629f4d8a8768f96e0aa2f, type: 3}
-    - {fileID: -4856050642018953775, guid: 1922470868f629f4d8a8768f96e0aa2f, type: 3}
-    - {fileID: -4856050642018953775, guid: 1922470868f629f4d8a8768f96e0aa2f, type: 3}
+    - {fileID: 2826979704478040783, guid: 2333c9235e96f3742840313b62edcd50, type: 3}
+    - {fileID: 2826979704478040783, guid: 2333c9235e96f3742840313b62edcd50, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

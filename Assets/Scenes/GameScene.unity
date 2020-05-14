@@ -8265,7 +8265,7 @@ MonoBehaviour:
   m_RoomPrefabsList:
   - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
   - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
-  - {fileID: 7938436112731414907, guid: 2034fad394c982145a1c4d5e1234bb0a, type: 3}
+  - {fileID: 4011575378546940975, guid: 269cea73038130342835910f807758f7, type: 3}
   m_StartRoom: {fileID: 1686982658660957899, guid: c76d29726a541594d9002dce1dd25739,
     type: 3}
   m_EndRoom: {fileID: 3955056792529298342, guid: c7f8ac8c916e53645a08d47359f2aa84,
@@ -11489,6 +11489,16 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 00f8227dd9355eb4db8bda24de606f46, type: 2}
+    - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
@@ -11524,6 +11534,11 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 61368513597639598, guid: 2e2183501755a214591e802f3aff33d2,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 212259381048184306, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_FlipX
@@ -11556,7 +11571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_speed: 5
-  m_jumpForce: 4
+  m_jumpForce: 12
   m_animator: {fileID: 0}
   playerBaseAbilities: {fileID: 0}
   powerUpIndex: 0
@@ -11617,6 +11632,7 @@ MonoBehaviour:
   numbnessPoolDelayTime: 0
   numbnessPoolDecayValue: 0
   powerActivated: 0
+  potionCounter: 0
   healthImage: {fileID: 1700774549}
   numbnessImage: {fileID: 17432154}
   equippedItems: []
