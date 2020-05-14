@@ -70,9 +70,12 @@ public class PlayerAnimator : PlayerController {
     // Update is called once per frame
     void Update () {
         //Dash
+#if UNITY_EDITOR
+        Debug.DrawRay(transform.position, transform.right * BoolToInteger() * distanceCheck, Color.green);
+#endif
         if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) { 
             RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position, transform.right * BoolToInteger(), distanceCheck);
-            if (hit_Combat.transform.tag != "Environment") {
+            if (hit_Combat.transform == null||hit_Combat.transform.tag != "Environment") {
                 Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
                 m_animator.SetTrigger("Dash");
                 transform.DOMove(newPosition, 0.5f);
