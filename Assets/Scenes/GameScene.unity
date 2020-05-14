@@ -7613,7 +7613,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1222103823}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11581,11 +11581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1943394156383696, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4269114208525818, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11737,7 +11737,7 @@ MonoBehaviour:
   playerDown: 0
   damageVectors: {x: 0, y: 0, z: 0}
   rayCastLength: 1
-  distanceCheck: 0
+  distanceCheck: 5
   doubleDash: 0
   doubleJump: 1
   dashTimeRecharge: 0
@@ -12129,7 +12129,7 @@ GameObject:
   - component: {fileID: 2120230253}
   - component: {fileID: 2120230254}
   - component: {fileID: 2120230255}
-  m_Layer: 10
+  m_Layer: 2
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
