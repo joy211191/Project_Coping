@@ -4,18 +4,20 @@
     <LangVersion>latest</LangVersion>
     <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.3.0f6\Editor\Data\Tools\RoslynScripts</CscToolPath>
     <CscToolExe>unity_csc.bat</CscToolExe>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{545B0ECA-9215-62C3-E897-C0A709AB7882}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -69,11 +71,6 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\Level Generator\Scripts\CameraFollow.cs" />
-    <Compile Include="Assets\Level Generator\Scripts\LevelGeneration.cs" />
-    <Compile Include="Assets\Level Generator\Scripts\Room.cs" />
-    <Compile Include="Assets\Level Generator\Scripts\RoomPos.cs" />
-    <Compile Include="Assets\Level Generator\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\Scripts\Bengt\ClimberSpawner.cs" />
     <Compile Include="Assets\Scripts\Bengt\Enemy.cs" />
     <Compile Include="Assets\Scripts\Bengt\HubStairScript.cs" />
@@ -83,6 +80,7 @@
     <Compile Include="Assets\Scripts\Bengt\StairScript.cs" />
     <Compile Include="Assets\Scripts\Bengt\StoryTellerScript.cs" />
     <Compile Include="Assets\Scripts\Bengt\VeteranScript.cs" />
+    <Compile Include="Assets\Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Joy\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Joy\CheckpointManager.cs" />
     <Compile Include="Assets\Scripts\Joy\Data Visualizer\DataRange.cs" />
@@ -117,9 +115,12 @@
     <None Include="Assets\SpriteShaders\CGIncludes\SpritePixelLighting.cginc" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\SimplexNoise2D.hlsl" />
     <None Include="Assets\JsonDotNet\link.xml" />
+    <None Include="Assets\Dialogue\Storyteller\StoryTellerFinishDialogue.txt" />
     <None Include="Assets\Dialogue\Lift Attendant\Dialogue1 - kopia.txt" />
+    <None Include="Assets\Dialogue\Storyteller\StorytellerEncounter2Dialogue - Edit.txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\ClassicNoise2D.hlsl" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteDissolve.cginc" />
+    <None Include="Assets\Dialogue\Veteran\VeteranFinishDialogue.txt" />
     <None Include="Assets\SpriteShaders\CGIncludes\SimplexNoise3D.hlsl" />
     <None Include="Assets\SpriteShaders\CameraNormalsTexture.shader" />
     <None Include="Assets\Dialogue\Storyteller\StorytellerSpentDialogue2.txt" />
@@ -131,6 +132,7 @@
     <None Include="Assets\SpriteShaders\CGIncludes\Noise\SimplexNoise3D.hlsl" />
     <None Include="Assets\SpriteShaders\SpritesUnlit.shader" />
     <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Dialogue\Storyteller\StorytellerEncounter1Dialogue - Edit.txt" />
     <None Include="Assets\Dialogue\How to write a dialogue document.txt" />
     <None Include="Assets\SpriteShaders\SpritesVertexLit.shader" />
     <None Include="Assets\SpriteShaders\CGIncludes\SpriteShadows.cginc" />

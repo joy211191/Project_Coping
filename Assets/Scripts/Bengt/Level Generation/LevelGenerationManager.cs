@@ -103,12 +103,13 @@ public class LevelGenerationManager : MonoBehaviour
                 totalRoomYDiff = prevRoomYDiff + currRoomYDiff; //add both together
             }
 
-            m_tempXdif += (p_inListDest[i].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2); //Change m_tempXdif to width of the newly insatntiated room
+            m_tempXdif += (p_inListDest[i].transform.Find("Grid").transform.Find("Tilemap").GetComponent<CompositeCollider2D>().bounds.size.x / 2); //Change m_tempXdif to width of the newly insatntiated room
 
             if (i > 0)
-                m_tempXdif += (p_inListDest[i - 1].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2);
+                //m_tempXdif += (p_inListDest[i - 1].transform.Find("Grid").transform.Find("Tilemap").GetComponent<TilemapCollider2D>().bounds.size.x / 2);
+				m_tempXdif += (p_inListDest[i - 1].transform.Find("Grid").transform.Find("Tilemap").GetComponent<CompositeCollider2D>().bounds.size.x / 2);
 
-            p_inListDest[i].transform.position = new Vector3(m_tempXdif, p_inListDest[i].transform.position.y + totalRoomYDiff, p_inListDest[i].transform.position.z); //Change room position depending on RoomYDiff
+			p_inListDest[i].transform.position = new Vector3(m_tempXdif, p_inListDest[i].transform.position.y + totalRoomYDiff, p_inListDest[i].transform.position.z); //Change room position depending on RoomYDiff
 
         }
 
