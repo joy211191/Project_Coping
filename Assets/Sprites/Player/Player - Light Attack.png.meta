@@ -1,0 +1,2770 @@
+fileFormatVersion: 2
+guid: 0af9ca9da0710e540a5fc3e64cf04c04
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6261360215029927685
+    second: Player - Light Attack_0
+  - first:
+      213: 4347617449983816172
+    second: Player - Light Attack_1
+  - first:
+      213: 7405400308320504262
+    second: Player - Light Attack_2
+  - first:
+      213: 6400404790025276343
+    second: Player - Light Attack_3
+  - first:
+      213: 3030561899382759602
+    second: Player - Light Attack_4
+  - first:
+      213: 5935808092669469229
+    second: Player - Light Attack_5
+  - first:
+      213: 7101148389191668410
+    second: Player - Light Attack_6
+  - first:
+      213: 6048611275948355797
+    second: Player - Light Attack_7
+  - first:
+      213: -1512950661650324559
+    second: Player - Light Attack_8
+  - first:
+      213: -772086649689000787
+    second: Player - Light Attack_9
+  - first:
+      213: 3377502265776107075
+    second: Player - Light Attack_10
+  - first:
+      213: -3383230079132776981
+    second: Player - Light Attack_11
+  - first:
+      213: -3797256387940926134
+    second: Player - Light Attack_12
+  - first:
+      213: 5180134651103574684
+    second: Player - Light Attack_13
+  - first:
+      213: 3514171409146562481
+    second: Player - Light Attack_14
+  - first:
+      213: 5715246302417766739
+    second: Player - Light Attack_15
+  - first:
+      213: 513862462475584148
+    second: Player - Light Attack_16
+  - first:
+      213: 102984033715722451
+    second: Player - Light Attack_17
+  - first:
+      213: -4311097761429614566
+    second: Player - Light Attack_18
+  - first:
+      213: -9006646937126497007
+    second: Player - Light Attack_19
+  - first:
+      213: -4858150443957818727
+    second: Player - Light Attack_20
+  - first:
+      213: 1610550385276220735
+    second: Player - Light Attack_21
+  - first:
+      213: 5571108844313004345
+    second: Player - Light Attack_22
+  - first:
+      213: -541070754112774873
+    second: Player - Light Attack_23
+  - first:
+      213: 8098130904805178904
+    second: Player - Light Attack_24
+  - first:
+      213: 5619655350324487038
+    second: Player - Light Attack_25
+  - first:
+      213: -271096380100576790
+    second: Player - Light Attack_26
+  - first:
+      213: 5800535639933838920
+    second: Player - Light Attack_27
+  - first:
+      213: 103277578641805080
+    second: Player - Light Attack_28
+  - first:
+      213: -3346041988044564068
+    second: Player - Light Attack_29
+  - first:
+      213: -23184935277528182
+    second: Player - Light Attack_30
+  - first:
+      213: 2588246119411882818
+    second: Player - Light Attack_31
+  - first:
+      213: -6610274095281679977
+    second: Player - Light Attack_32
+  - first:
+      213: -8338920610026789941
+    second: Player - Light Attack_33
+  - first:
+      213: -4320697594761222482
+    second: Player - Light Attack_34
+  - first:
+      213: -7311421439909855563
+    second: Player - Light Attack_35
+  - first:
+      213: 4480900368712683098
+    second: Player - Light Attack_36
+  - first:
+      213: 4455572133516561437
+    second: Player - Light Attack_37
+  - first:
+      213: 8615720202840256491
+    second: Player - Light Attack_38
+  - first:
+      213: 9143550439239367761
+    second: Player - Light Attack_39
+  - first:
+      213: 6830075683511857724
+    second: Player - Light Attack_40
+  - first:
+      213: 8353472136685314468
+    second: Player - Light Attack_41
+  - first:
+      213: 7970861211212094481
+    second: Player - Light Attack_42
+  - first:
+      213: 8904734044677114347
+    second: Player - Light Attack_43
+  - first:
+      213: 7825188667094460624
+    second: Player - Light Attack_44
+  - first:
+      213: -6542245913090966135
+    second: Player - Light Attack_45
+  - first:
+      213: -4658791262083703572
+    second: Player - Light Attack_46
+  - first:
+      213: 5909839515016770573
+    second: Player - Light Attack_47
+  - first:
+      213: 7011037900744374651
+    second: Player - Light Attack_48
+  - first:
+      213: 3606401171010492586
+    second: Player - Light Attack_49
+  - first:
+      213: -598183119227659634
+    second: Player - Light Attack_50
+  - first:
+      213: 1640809945080045975
+    second: Player - Light Attack_51
+  - first:
+      213: 3297003646659036186
+    second: Player - Light Attack_52
+  - first:
+      213: 2727237663669072542
+    second: Player - Light Attack_53
+  - first:
+      213: 228536783920103318
+    second: Player - Light Attack_54
+  - first:
+      213: 788925264809769833
+    second: Player - Light Attack_55
+  - first:
+      213: 8060916749168133920
+    second: Player - Light Attack_56
+  - first:
+      213: 68094353103319320
+    second: Player - Light Attack_57
+  - first:
+      213: -9002816769692930083
+    second: Player - Light Attack_58
+  - first:
+      213: -7309160307689495892
+    second: Player - Light Attack_59
+  - first:
+      213: 2577706985542425340
+    second: Player - Light Attack_60
+  - first:
+      213: -1102790339385071689
+    second: Player - Light Attack_61
+  - first:
+      213: -3047374443043385555
+    second: Player - Light Attack_62
+  - first:
+      213: -6092395918697271021
+    second: Player - Light Attack_63
+  - first:
+      213: 8528942440047383518
+    second: Player - Light Attack_64
+  - first:
+      213: -1916236903475366246
+    second: Player - Light Attack_65
+  - first:
+      213: 4812841786721836851
+    second: Player - Light Attack_66
+  - first:
+      213: -7495245256719876839
+    second: Player - Light Attack_67
+  - first:
+      213: 4024121021953187688
+    second: Player - Light Attack_68
+  - first:
+      213: 1824242651413786482
+    second: Player - Light Attack_69
+  - first:
+      213: 3622724515869540044
+    second: Player - Light Attack_70
+  - first:
+      213: -6634432914171697399
+    second: Player - Light Attack_71
+  - first:
+      213: 4363850198056418571
+    second: Player - Light Attack_72
+  - first:
+      213: 49246434309196024
+    second: Player - Light Attack_73
+  - first:
+      213: -3741913467405994521
+    second: Player - Light Attack_74
+  - first:
+      213: 4675982386862549808
+    second: Player - Light Attack_75
+  - first:
+      213: -6225258378543524805
+    second: Player - Light Attack_76
+  - first:
+      213: 6959312321041460779
+    second: Player - Light Attack_77
+  - first:
+      213: -212469555796584782
+    second: Player - Light Attack_78
+  - first:
+      213: -5929914781766097308
+    second: Player - Light Attack_79
+  - first:
+      213: 5949936030730239595
+    second: Player - Light Attack_80
+  - first:
+      213: 2970149636653152894
+    second: Player - Light Attack_81
+  - first:
+      213: 3842324565987688936
+    second: Player - Light Attack_82
+  - first:
+      213: -1993554734180784457
+    second: Player - Light Attack_83
+  - first:
+      213: 7576324690254494135
+    second: Player - Light Attack_84
+  - first:
+      213: 6839178041677201472
+    second: Player - Light Attack_85
+  - first:
+      213: -1339853216161752162
+    second: Player - Light Attack_86
+  - first:
+      213: -3063239980318548047
+    second: Player - Light Attack_87
+  - first:
+      213: -7428126991721577164
+    second: Player - Light Attack_88
+  - first:
+      213: -3981313681814739585
+    second: Player - Light Attack_89
+  - first:
+      213: -5975372116419066213
+    second: Player - Light Attack_90
+  - first:
+      213: 6416195994070975797
+    second: Player - Light Attack_91
+  - first:
+      213: -4184446311467244890
+    second: Player - Light Attack_92
+  - first:
+      213: 1751716023680434449
+    second: Player - Light Attack_93
+  - first:
+      213: 8779190267709803428
+    second: Player - Light Attack_94
+  - first:
+      213: -7622755449471341559
+    second: Player - Light Attack_95
+  - first:
+      213: -1775871116260644549
+    second: Player - Light Attack_96
+  - first:
+      213: 1851473397897519874
+    second: Player - Light Attack_97
+  - first:
+      213: 3084822106598468629
+    second: Player - Light Attack_98
+  - first:
+      213: -6447405389018098923
+    second: Player - Light Attack_99
+  - first:
+      213: 9101685549696360008
+    second: Player - Light Attack_100
+  - first:
+      213: -8534677600701789850
+    second: Player - Light Attack_101
+  - first:
+      213: -1894383973978268673
+    second: Player - Light Attack_102
+  - first:
+      213: -5937490329530853698
+    second: Player - Light Attack_103
+  - first:
+      213: -389728460963547395
+    second: Player - Light Attack_104
+  - first:
+      213: 5399383057596410151
+    second: Player - Light Attack_105
+  - first:
+      213: 791428666212223056
+    second: Player - Light Attack_106
+  - first:
+      213: 2246128587593367252
+    second: Player - Light Attack_107
+  - first:
+      213: -275742697671511409
+    second: Player - Light Attack_108
+  - first:
+      213: -8171758166492506153
+    second: Player - Light Attack_109
+  - first:
+      213: -5154760290528402390
+    second: Player - Light Attack_110
+  - first:
+      213: 4272184426923238701
+    second: Player - Light Attack_111
+  - first:
+      213: 4907558775707280082
+    second: Player - Light Attack_112
+  - first:
+      213: 9074203883933554007
+    second: Player - Light Attack_113
+  - first:
+      213: -3860272320948463648
+    second: Player - Light Attack_114
+  - first:
+      213: 8191521694167947273
+    second: Player - Light Attack_115
+  - first:
+      213: -8804665288570774145
+    second: Player - Light Attack_116
+  - first:
+      213: 5096896284466105375
+    second: Player - Light Attack_117
+  - first:
+      213: -3958821274209358701
+    second: Player - Light Attack_118
+  - first:
+      213: 7725636265469469711
+    second: Player - Light Attack_119
+  - first:
+      213: -3623523859705410416
+    second: Player - Light Attack_120
+  - first:
+      213: -1341738146871341012
+    second: Player - Light Attack_121
+  - first:
+      213: 9219436847548928921
+    second: Player - Light Attack_122
+  - first:
+      213: -6509150348306236935
+    second: Player - Light Attack_123
+  - first:
+      213: 4123001619724103526
+    second: Player - Light Attack_124
+  - first:
+      213: 1454622560531804947
+    second: Player - Light Attack_125
+  - first:
+      213: -3661088649803282427
+    second: Player - Light Attack_126
+  - first:
+      213: -441408088308560807
+    second: Player - Light Attack_127
+  - first:
+      213: 5704963108312632585
+    second: Player - Light Attack_128
+  - first:
+      213: -3821614808627066019
+    second: Player - Light Attack_129
+  - first:
+      213: 7581226242591685023
+    second: Player - Light Attack_130
+  - first:
+      213: -7764388818741013637
+    second: Player - Light Attack_131
+  - first:
+      213: -5381950509635283718
+    second: Player - Light Attack_132
+  - first:
+      213: -5785778695180699086
+    second: Player - Light Attack_133
+  - first:
+      213: -2039827267890161562
+    second: Player - Light Attack_134
+  - first:
+      213: -63769930591344754
+    second: Player - Light Attack_135
+  - first:
+      213: 3524881063271033924
+    second: Player - Light Attack_136
+  - first:
+      213: -2465284905723479865
+    second: Player - Light Attack_137
+  - first:
+      213: 2632718402215960927
+    second: Player - Light Attack_138
+  - first:
+      213: -168938451402010565
+    second: Player - Light Attack_139
+  - first:
+      213: 2615203668964780503
+    second: Player - Light Attack_140
+  - first:
+      213: 522812542896072580
+    second: Player - Light Attack_141
+  - first:
+      213: -3534706472708132412
+    second: Player - Light Attack_142
+  - first:
+      213: 6203458934711726443
+    second: Player - Light Attack_143
+  - first:
+      213: -4905514476770628734
+    second: Player - Light Attack_144
+  - first:
+      213: -293117905502826908
+    second: Player - Light Attack_145
+  - first:
+      213: 161545298836751883
+    second: Player - Light Attack_146
+  - first:
+      213: 2370096900983146175
+    second: Player - Light Attack_147
+  - first:
+      213: 5580781715546385861
+    second: Player - Light Attack_148
+  - first:
+      213: -5281390344085936332
+    second: Player - Light Attack_149
+  - first:
+      213: -807196834198229095
+    second: Player - Light Attack_150
+  - first:
+      213: 3910036709806891744
+    second: Player - Light Attack_151
+  - first:
+      213: 7061594810355148335
+    second: Player - Light Attack_152
+  - first:
+      213: 8505711388754434651
+    second: Player - Light Attack_153
+  - first:
+      213: -7553079032979670532
+    second: Player - Light Attack_154
+  - first:
+      213: 2935450620652153942
+    second: Player - Light Attack_155
+  - first:
+      213: -8805770528948083771
+    second: Player - Light Attack_156
+  - first:
+      213: 7261685171507112612
+    second: Player - Light Attack_157
+  - first:
+      213: -8379220423951273449
+    second: Player - Light Attack_158
+  - first:
+      213: 3778239099956404802
+    second: Player - Light Attack_159
+  - first:
+      213: -2417290467624286497
+    second: Player - Light Attack_160
+  - first:
+      213: 5864935665359369856
+    second: Player - Light Attack_161
+  - first:
+      213: 3206371258838679564
+    second: Player - Light Attack_162
+  - first:
+      213: -5576259983984510464
+    second: Player - Light Attack_163
+  - first:
+      213: -5268836564013716544
+    second: Player - Light Attack_164
+  - first:
+      213: 4182262955321172430
+    second: Player - Light Attack_165
+  - first:
+      213: 2782352777664834561
+    second: Player - Light Attack_166
+  - first:
+      213: 8133582905465036681
+    second: Player - Light Attack_167
+  - first:
+      213: -7536674019842486451
+    second: Player - Light Attack_168
+  - first:
+      213: -1364869073381857790
+    second: Player - Light Attack_169
+  - first:
+      213: -1292127454873185563
+    second: Player - Light Attack_170
+  - first:
+      213: -3574440827005533150
+    second: Player - Light Attack_171
+  - first:
+      213: -3554433149075676295
+    second: Player - Light Attack_172
+  - first:
+      213: -593527082678868021
+    second: Player - Light Attack_173
+  - first:
+      213: -4684343352407220678
+    second: Player - Light Attack_174
+  - first:
+      213: 4257205097661281408
+    second: Player - Light Attack_175
+  - first:
+      213: -1776634565350497843
+    second: Player - Light Attack_176
+  - first:
+      213: 2767278512534066208
+    second: Player - Light Attack_177
+  - first:
+      213: 518758271080057958
+    second: Player - Light Attack_178
+  - first:
+      213: -4254006790844110048
+    second: Player - Light Attack_179
+  - first:
+      213: -8659207694999408191
+    second: Player - Light Attack_180
+  - first:
+      213: 8459523486109472397
+    second: Player - Light Attack_181
+  - first:
+      213: -467471872917246205
+    second: Player - Light Attack_182
+  - first:
+      213: 8019699870932982488
+    second: Player - Light Attack_183
+  - first:
+      213: -226646810051784128
+    second: Player - Light Attack_184
+  - first:
+      213: -4953632266031258677
+    second: Player - Light Attack_185
+  - first:
+      213: -148765167425640449
+    second: Player - Light Attack_186
+  - first:
+      213: 1906045758629382194
+    second: Player - Light Attack_187
+  - first:
+      213: -8517460631738576625
+    second: Player - Light Attack_188
+  - first:
+      213: 847934289825362464
+    second: Player - Light Attack_189
+  - first:
+      213: 6159356484223652698
+    second: Player - Light Attack_190
+  - first:
+      213: 5363619865816823363
+    second: Player - Light Attack_191
+  - first:
+      213: -6327797736469424618
+    second: Player - Light Attack_192
+  - first:
+      213: 1428318174491698132
+    second: Player - Light Attack_193
+  - first:
+      213: 1048755542429726373
+    second: Player - Light Attack_194
+  - first:
+      213: 6007691149277681035
+    second: Player - Light Attack_195
+  - first:
+      213: 2520599379018279032
+    second: Player - Light Attack_196
+  - first:
+      213: 4280583067151073754
+    second: Player - Light Attack_197
+  - first:
+      213: -6258079617217469730
+    second: Player - Light Attack_198
+  - first:
+      213: -7026499477844905971
+    second: Player - Light Attack_199
+  - first:
+      213: 352283006519867240
+    second: Player - Light Attack_200
+  - first:
+      213: 2624420450267358150
+    second: Player - Light Attack_201
+  - first:
+      213: 2119176206935193941
+    second: Player - Light Attack_202
+  - first:
+      213: 5076257256627281759
+    second: Player - Light Attack_203
+  - first:
+      213: -3482673592800312279
+    second: Player - Light Attack_204
+  - first:
+      213: -2678793980922199502
+    second: Player - Light Attack_205
+  - first:
+      213: 920396914294654712
+    second: Player - Light Attack_206
+  - first:
+      213: 2268274284312357999
+    second: Player - Light Attack_207
+  - first:
+      213: -7363272168087269745
+    second: Player - Light Attack_208
+  - first:
+      213: -3452402727249932274
+    second: Player - Light Attack_209
+  - first:
+      213: 1904286082584284321
+    second: Player - Light Attack_210
+  - first:
+      213: -2573461969827725552
+    second: Player - Light Attack_211
+  - first:
+      213: -6090259595678713270
+    second: Player - Light Attack_212
+  - first:
+      213: -6906920262618612800
+    second: Player - Light Attack_213
+  - first:
+      213: -7239613106092113297
+    second: Player - Light Attack_214
+  - first:
+      213: 5837520209241908609
+    second: Player - Light Attack_215
+  - first:
+      213: 1317252877546428028
+    second: Player - Light Attack_216
+  - first:
+      213: 8667054094578368112
+    second: Player - Light Attack_217
+  - first:
+      213: 5131695897563942037
+    second: Player - Light Attack_218
+  - first:
+      213: -5624549338275368346
+    second: Player - Light Attack_219
+  - first:
+      213: -8325567756946316267
+    second: Player - Light Attack_220
+  - first:
+      213: 5530623428998926333
+    second: Player - Light Attack_221
+  - first:
+      213: -8075887996815034239
+    second: Player - Light Attack_222
+  - first:
+      213: -5933598636770527029
+    second: Player - Light Attack_223
+  - first:
+      213: -8708542075008263388
+    second: Player - Light Attack_224
+  - first:
+      213: -925274258755846502
+    second: Player - Light Attack_225
+  - first:
+      213: 6333550712889560016
+    second: Player - Light Attack_226
+  - first:
+      213: -1696798413359861291
+    second: Player - Light Attack_227
+  - first:
+      213: -5621650942671587448
+    second: Player - Light Attack_228
+  - first:
+      213: -437883734761454313
+    second: Player - Light Attack_229
+  - first:
+      213: 6538914617551081072
+    second: Player - Light Attack_230
+  - first:
+      213: -6227826655070224141
+    second: Player - Light Attack_231
+  - first:
+      213: 1095275000923165481
+    second: Player - Light Attack_232
+  - first:
+      213: 1976279278507846231
+    second: Player - Light Attack_233
+  - first:
+      213: -5470417959990095262
+    second: Player - Light Attack_234
+  - first:
+      213: 8778089394513005582
+    second: Player - Light Attack_235
+  - first:
+      213: -6879726612254844429
+    second: Player - Light Attack_236
+  - first:
+      213: -4212856153031387496
+    second: Player - Light Attack_237
+  - first:
+      213: -609018955122136427
+    second: Player - Light Attack_238
+  - first:
+      213: -2026035553733939051
+    second: Player - Light Attack_239
+  - first:
+      213: 8459046940311129406
+    second: Player - Light Attack_240
+  - first:
+      213: 6461985189235669775
+    second: Player - Light Attack_241
+  - first:
+      213: -3486969190967828403
+    second: Player - Light Attack_242
+  - first:
+      213: -6778276429261343996
+    second: Player - Light Attack_243
+  - first:
+      213: -5174977790460706149
+    second: Player - Light Attack_244
+  - first:
+      213: 6973223796005420139
+    second: Player - Light Attack_245
+  - first:
+      213: -5030601729024480957
+    second: Player - Light Attack_246
+  - first:
+      213: -8732932957709110630
+    second: Player - Light Attack_247
+  - first:
+      213: -917305648332626213
+    second: Player - Light Attack_248
+  - first:
+      213: 7532508134994392044
+    second: Player - Light Attack_249
+  - first:
+      213: 1061186313720454662
+    second: Player - Light Attack_250
+  - first:
+      213: 6620970255329158763
+    second: Player - Light Attack_251
+  - first:
+      213: -7275640543416780447
+    second: Player - Light Attack_252
+  - first:
+      213: -5346918720162844098
+    second: Player - Light Attack_253
+  - first:
+      213: 2371377635989944624
+    second: Player - Light Attack_254
+  - first:
+      213: 2248861312082492199
+    second: Player - Light Attack_255
+  - first:
+      213: -5165927011969551456
+    second: Player - Light Attack_256
+  - first:
+      213: -5682760940857624984
+    second: Player - Light Attack_257
+  - first:
+      213: 9007678675348558282
+    second: Player - Light Attack_258
+  - first:
+      213: 8002715488888968273
+    second: Player - Light Attack_259
+  - first:
+      213: -8527960542453664512
+    second: Player - Light Attack_260
+  - first:
+      213: -4610545603045082386
+    second: Player - Light Attack_261
+  - first:
+      213: 1000667280571043543
+    second: Player - Light Attack_262
+  - first:
+      213: -7407291481139397869
+    second: Player - Light Attack_263
+  - first:
+      213: 7603943755233042478
+    second: Player - Light Attack_264
+  - first:
+      213: -1027817164830933158
+    second: Player - Light Attack_265
+  - first:
+      213: -3260716500433135419
+    second: Player - Light Attack_266
+  - first:
+      213: 1448777995243402269
+    second: Player - Light Attack_267
+  - first:
+      213: 7388033440810338080
+    second: Player - Light Attack_268
+  - first:
+      213: 9082307343491201314
+    second: Player - Light Attack_269
+  - first:
+      213: 1745395770467592258
+    second: Player - Light Attack_270
+  - first:
+      213: -402623704060001922
+    second: Player - Light Attack_271
+  - first:
+      213: -419504634200939176
+    second: Player - Light Attack_272
+  - first:
+      213: -5596285661901340498
+    second: Player - Light Attack_273
+  - first:
+      213: 1727534123197427087
+    second: Player - Light Attack_274
+  - first:
+      213: -2164643675062642267
+    second: Player - Light Attack_275
+  - first:
+      213: 4251111708159895055
+    second: Player - Light Attack_276
+  - first:
+      213: -49957552865293919
+    second: Player - Light Attack_277
+  - first:
+      213: 6395895358587307585
+    second: Player - Light Attack_278
+  - first:
+      213: 5049374643344858171
+    second: Player - Light Attack_279
+  - first:
+      213: 5248997313978759186
+    second: Player - Light Attack_280
+  - first:
+      213: 287473979926522306
+    second: Player - Light Attack_281
+  - first:
+      213: -3289774185539583713
+    second: Player - Light Attack_282
+  - first:
+      213: -7382385853006298663
+    second: Player - Light Attack_283
+  - first:
+      213: -8644517122538871959
+    second: Player - Light Attack_284
+  - first:
+      213: 5847738635439310007
+    second: Player - Light Attack_285
+  - first:
+      213: -4222801010838841597
+    second: Player - Light Attack_286
+  - first:
+      213: -9143075877229993360
+    second: Player - Light Attack_287
+  - first:
+      213: -6182742470881572829
+    second: Player - Light Attack_288
+  - first:
+      213: 4259527263014880295
+    second: Player - Light Attack_289
+  - first:
+      213: -8535751126038922987
+    second: Player - Light Attack_290
+  - first:
+      213: 4735426446003946334
+    second: Player - Light Attack_291
+  - first:
+      213: 1141903870295420485
+    second: Player - Light Attack_292
+  - first:
+      213: 5598307500282428871
+    second: Player - Light Attack_293
+  - first:
+      213: -2339127443865468662
+    second: Player - Light Attack_294
+  - first:
+      213: 9078732843924008053
+    second: Player - Light Attack_295
+  - first:
+      213: 6689038331822002577
+    second: Player - Light Attack_296
+  - first:
+      213: -8269556778406051109
+    second: Player - Light Attack_297
+  - first:
+      213: -5350009220561231633
+    second: Player - Light Attack_298
+  - first:
+      213: -925554367897521445
+    second: Player - Light Attack_299
+  - first:
+      213: 6224573137021087775
+    second: Player - Light Attack_300
+  - first:
+      213: -1819214102452780076
+    second: Player - Light Attack_301
+  - first:
+      213: -5467944878211836939
+    second: Player - Light Attack_302
+  - first:
+      213: -4767371584004217956
+    second: Player - Light Attack_303
+  - first:
+      213: -1843382315670566188
+    second: Player - Light Attack_304
+  - first:
+      213: 1087630387687704734
+    second: Player - Light Attack_305
+  - first:
+      213: 2889428264716367635
+    second: Player - Light Attack_306
+  - first:
+      213: -5236605843663383039
+    second: Player - Light Attack_307
+  - first:
+      213: 119781083903346703
+    second: Player - Light Attack_308
+  - first:
+      213: -8042628710828109865
+    second: Player - Light Attack_309
+  - first:
+      213: 6731429904523341378
+    second: Player - Light Attack_310
+  - first:
+      213: 405614474800869705
+    second: Player - Light Attack_311
+  - first:
+      213: 2528971196380352910
+    second: Player - Light Attack_312
+  - first:
+      213: -9205957983020990516
+    second: Player - Light Attack_313
+  - first:
+      213: -1184712167644941259
+    second: Player - Light Attack_314
+  - first:
+      213: -433456620599087862
+    second: Player - Light Attack_315
+  - first:
+      213: 8131086029278318061
+    second: Player - Light Attack_316
+  - first:
+      213: -6433320607619838235
+    second: Player - Light Attack_317
+  - first:
+      213: 8754244372614225631
+    second: Player - Light Attack_318
+  - first:
+      213: 7439298327365506092
+    second: Player - Light Attack_319
+  - first:
+      213: -7086660673179505245
+    second: Player - Light Attack_320
+  - first:
+      213: -6740177832263708404
+    second: Player - Light Attack_321
+  - first:
+      213: -532388786037144538
+    second: Player - Light Attack_322
+  - first:
+      213: -1098248774998826671
+    second: Player - Light Attack_323
+  - first:
+      213: -6758672888870359046
+    second: Player - Light Attack_324
+  - first:
+      213: -5585783958341100896
+    second: Player - Light Attack_325
+  - first:
+      213: -356161117124013177
+    second: Player - Light Attack_326
+  - first:
+      213: 4610773645754135878
+    second: Player - Light Attack_327
+  - first:
+      213: -7678708415811251786
+    second: Player - Light Attack_328
+  - first:
+      213: -3749234498757630078
+    second: Player - Light Attack_329
+  - first:
+      213: 7389912811032977086
+    second: Player - Light Attack_330
+  - first:
+      213: -7765916533168219061
+    second: Player - Light Attack_331
+  - first:
+      213: -9074412926363138617
+    second: Player - Light Attack_332
+  - first:
+      213: -7949917872696161682
+    second: Player - Light Attack_333
+  - first:
+      213: 8400822036119902062
+    second: Player - Light Attack_334
+  - first:
+      213: 304051321136161334
+    second: Player - Light Attack_335
+  - first:
+      213: 8406413373108651750
+    second: Player - Light Attack_336
+  - first:
+      213: 2507461122167700217
+    second: Player - Light Attack_337
+  - first:
+      213: 9203446029936605793
+    second: Player - Light Attack_338
+  - first:
+      213: -3095981815363027545
+    second: Player - Light Attack_339
+  - first:
+      213: -4873809672316851384
+    second: Player - Light Attack_340
+  - first:
+      213: -7578794320718221649
+    second: Player - Light Attack_341
+  - first:
+      213: -3276910101118077331
+    second: Player - Light Attack_342
+  - first:
+      213: 1432514425680390553
+    second: Player - Light Attack_343
+  - first:
+      213: -5728445465229157541
+    second: Player - Light Attack_344
+  - first:
+      213: 6160496757712224187
+    second: Player - Light Attack_345
+  - first:
+      213: -5071357386375882002
+    second: Player - Light Attack_346
+  - first:
+      213: 1050960807834482157
+    second: Player - Light Attack_347
+  - first:
+      213: 4536108710241844112
+    second: Player - Light Attack_348
+  - first:
+      213: 481672324304430024
+    second: Player - Light Attack_349
+  - first:
+      213: 5945485505296407529
+    second: Player - Light Attack_350
+  - first:
+      213: 7818668495626661331
+    second: Player - Light Attack_351
+  - first:
+      213: 308807771967713948
+    second: Player - Light Attack_352
+  - first:
+      213: 8699115203718087907
+    second: Player - Light Attack_353
+  - first:
+      213: -3261745644934113443
+    second: Player - Light Attack_354
+  - first:
+      213: -3416478906898918165
+    second: Player - Light Attack_355
+  - first:
+      213: -5265681179427420045
+    second: Player - Light Attack_356
+  - first:
+      213: -2865459642262138168
+    second: Player - Light Attack_357
+  - first:
+      213: -1293594839260016730
+    second: Player - Light Attack_358
+  - first:
+      213: -7659789915454739710
+    second: Player - Light Attack_359
+  - first:
+      213: 6603626696364657690
+    second: Player - Light Attack_360
+  - first:
+      213: 4526366472084587656
+    second: Player - Light Attack_361
+  - first:
+      213: -5425716139114042252
+    second: Player - Light Attack_362
+  - first:
+      213: -4118938787693379899
+    second: Player - Light Attack_363
+  - first:
+      213: 4443890893615750297
+    second: Player - Light Attack_364
+  - first:
+      213: 1486265160660321971
+    second: Player - Light Attack_365
+  - first:
+      213: -1334753000183984535
+    second: Player - Light Attack_366
+  - first:
+      213: 1129484241291950822
+    second: Player - Light Attack_367
+  - first:
+      213: 2405884352920350233
+    second: Player - Light Attack_368
+  - first:
+      213: -914189476036895146
+    second: Player - Light Attack_369
+  - first:
+      213: 8018939903533874568
+    second: Player - Light Attack_370
+  - first:
+      213: -1171628464370751811
+    second: Player - Light Attack_371
+  - first:
+      213: -6240992491105509145
+    second: Player - Light Attack_372
+  - first:
+      213: -8231733894885869999
+    second: Player - Light Attack_373
+  - first:
+      213: 9217156286491476785
+    second: Player - Light Attack_374
+  - first:
+      213: 960191765437929629
+    second: Player - Light Attack_375
+  - first:
+      213: -5256162784514273534
+    second: Player - Light Attack_376
+  - first:
+      213: 4002808378066558477
+    second: Player - Light Attack_377
+  - first:
+      213: -6287563835317014658
+    second: Player - Light Attack_378
+  - first:
+      213: -5673843013757521204
+    second: Player - Light Attack_379
+  - first:
+      213: 84859828822991128
+    second: Player - Light Attack_380
+  - first:
+      213: -5017072294044600088
+    second: Player - Light Attack_381
+  - first:
+      213: 2526319786379347150
+    second: Player - Light Attack_382
+  - first:
+      213: 2269322143328597103
+    second: Player - Light Attack_383
+  - first:
+      213: -4787454743654551611
+    second: Player - Light Attack_384
+  - first:
+      213: 251072010810478861
+    second: Player - Light Attack_385
+  - first:
+      213: 2471408870016602510
+    second: Player - Light Attack_386
+  - first:
+      213: -7597446736340740058
+    second: Player - Light Attack_387
+  - first:
+      213: -1903349697446259907
+    second: Player - Light Attack_388
+  - first:
+      213: -3136790920547768864
+    second: Player - Light Attack_389
+  - first:
+      213: 9195123859817133907
+    second: Player - Light Attack_390
+  - first:
+      213: 386684033146998366
+    second: Player - Light Attack_391
+  - first:
+      213: 100191726134082058
+    second: Player - Light Attack_392
+  - first:
+      213: -243662940669306236
+    second: Player - Light Attack_393
+  - first:
+      213: -1305881173247547561
+    second: Player - Light Attack_394
+  - first:
+      213: 8683282948258604578
+    second: Player - Light Attack_395
+  - first:
+      213: -8439205140550685977
+    second: Player - Light Attack_396
+  - first:
+      213: 4480216011691034393
+    second: Player - Light Attack_397
+  - first:
+      213: -2169818128572026711
+    second: Player - Light Attack_398
+  - first:
+      213: 914686432469305251
+    second: Player - Light Attack_399
+  - first:
+      213: -44435980101196999
+    second: Player - Light Attack_400
+  - first:
+      213: -8298005493908787634
+    second: Player - Light Attack_401
+  - first:
+      213: 823529184880525839
+    second: Player - Light Attack_402
+  - first:
+      213: -5009080658231364784
+    second: Player - Light Attack_403
+  - first:
+      213: 3808425078931101537
+    second: Player - Light Attack_404
+  - first:
+      213: -7617758853668106546
+    second: Player - Light Attack_405
+  - first:
+      213: 2283188774547914447
+    second: Player - Light Attack_406
+  - first:
+      213: 7168417022693669423
+    second: Player - Light Attack_407
+  - first:
+      213: 7252846368618860050
+    second: Player - Light Attack_408
+  - first:
+      213: 6728838959819334514
+    second: Player - Light Attack_409
+  - first:
+      213: 8221459984080780628
+    second: Player - Light Attack_410
+  - first:
+      213: -1669962333762058784
+    second: Player - Light Attack_411
+  - first:
+      213: 252524729271151540
+    second: Player - Light Attack_412
+  - first:
+      213: 2723647434001902600
+    second: Player - Light Attack_413
+  - first:
+      213: -8739801714973478625
+    second: Player - Light Attack_414
+  - first:
+      213: 789311022538769425
+    second: Player - Light Attack_415
+  - first:
+      213: -4471824185597040429
+    second: Player - Light Attack_416
+  - first:
+      213: -2957560491556499528
+    second: Player - Light Attack_417
+  - first:
+      213: -418360467534798040
+    second: Player - Light Attack_418
+  - first:
+      213: -4783934518212455880
+    second: Player - Light Attack_419
+  - first:
+      213: -3274543255000487226
+    second: Player - Light Attack_420
+  - first:
+      213: 4397936157543049206
+    second: Player - Light Attack_421
+  - first:
+      213: 2011042116134427325
+    second: Player - Light Attack_422
+  - first:
+      213: -1306741430641145368
+    second: Player - Light Attack_423
+  - first:
+      213: -8374361358962683573
+    second: Player - Light Attack_424
+  - first:
+      213: -2401249742907871596
+    second: Player - Light Attack_425
+  - first:
+      213: -2338133566409418669
+    second: Player - Light Attack_426
+  - first:
+      213: -6703933433405519022
+    second: Player - Light Attack_427
+  - first:
+      213: 3656263270024887718
+    second: Player - Light Attack_428
+  - first:
+      213: 1435334311072550767
+    second: Player - Light Attack_429
+  - first:
+      213: 2297456078020914518
+    second: Player - Light Attack_430
+  - first:
+      213: -2109492501522533219
+    second: Player - Light Attack_431
+  - first:
+      213: 6309935819978086248
+    second: Player - Light Attack_432
+  - first:
+      213: -5669362319222401468
+    second: Player - Light Attack_433
+  - first:
+      213: 486556657614655822
+    second: Player - Light Attack_434
+  - first:
+      213: -5755537084748209745
+    second: Player - Light Attack_435
+  - first:
+      213: 6114995545083489456
+    second: Player - Light Attack_436
+  - first:
+      213: -5363273590545683477
+    second: Player - Light Attack_437
+  - first:
+      213: -1341007406377079221
+    second: Player - Light Attack_438
+  - first:
+      213: 7210213384759570155
+    second: Player - Light Attack_439
+  - first:
+      213: -6604325290114258633
+    second: Player - Light Attack_440
+  - first:
+      213: -7148192213058284010
+    second: Player - Light Attack_441
+  - first:
+      213: -7417976835460465722
+    second: Player - Light Attack_442
+  - first:
+      213: 1568722060828866114
+    second: Player - Light Attack_443
+  - first:
+      213: -4107388792993736926
+    second: Player - Light Attack_444
+  - first:
+      213: 2421830835671167572
+    second: Player - Light Attack_445
+  - first:
+      213: 1615183718849189817
+    second: Player - Light Attack_446
+  - first:
+      213: -1059419693379413475
+    second: Player - Light Attack_447
+  - first:
+      213: 5034159708923367686
+    second: Player - Light Attack_448
+  - first:
+      213: 1802496101902753693
+    second: Player - Light Attack_449
+  - first:
+      213: -9191499031042311978
+    second: Player - Light Attack_450
+  - first:
+      213: -8267841199191653926
+    second: Player - Light Attack_451
+  - first:
+      213: 1443979308301947601
+    second: Player - Light Attack_452
+  - first:
+      213: 8587191691887509452
+    second: Player - Light Attack_453
+  - first:
+      213: -6213619243505281723
+    second: Player - Light Attack_454
+  - first:
+      213: -4715337390668031033
+    second: Player - Light Attack_455
+  - first:
+      213: -2026593144530790129
+    second: Player - Light Attack_456
+  - first:
+      213: 3801950527329621276
+    second: Player - Light Attack_457
+  - first:
+      213: 3021331221171529594
+    second: Player - Light Attack_458
+  - first:
+      213: -8385760027387309075
+    second: Player - Light Attack_459
+  - first:
+      213: 4881354216884781734
+    second: Player - Light Attack_460
+  - first:
+      213: 6475095907009880978
+    second: Player - Light Attack_461
+  - first:
+      213: 3004396687561473036
+    second: Player - Light Attack_462
+  - first:
+      213: 4163677979395293895
+    second: Player - Light Attack_463
+  - first:
+      213: 4360855083777261912
+    second: Player - Light Attack_464
+  - first:
+      213: -2087348308608928003
+    second: Player - Light Attack_465
+  - first:
+      213: 608356536986750669
+    second: Player - Light Attack_466
+  - first:
+      213: 9189225611598032447
+    second: Player - Light Attack_467
+  - first:
+      213: -5725230332981049327
+    second: Player - Light Attack_468
+  - first:
+      213: 9140239615849368277
+    second: Player - Light Attack_469
+  - first:
+      213: -1249960728081069977
+    second: Player - Light Attack_470
+  - first:
+      213: 7429583659282766270
+    second: Player - Light Attack_471
+  - first:
+      213: -2656091365813677093
+    second: Player - Light Attack_472
+  - first:
+      213: 7146168046884740708
+    second: Player - Light Attack_473
+  - first:
+      213: -5862904457942143509
+    second: Player - Light Attack_474
+  - first:
+      213: 692051566109076898
+    second: Player - Light Attack_475
+  - first:
+      213: 2960126803707922316
+    second: Player - Light Attack_476
+  - first:
+      213: -4692381888901185273
+    second: Player - Light Attack_477
+  - first:
+      213: 5683402594728718445
+    second: Player - Light Attack_478
+  - first:
+      213: 2578467238815437518
+    second: Player - Light Attack_479
+  - first:
+      213: -8366104933838320516
+    second: Player - Light Attack_480
+  - first:
+      213: 6341114775146131902
+    second: Player - Light Attack_481
+  - first:
+      213: -7278429496035038623
+    second: Player - Light Attack_482
+  - first:
+      213: -4703490879935565325
+    second: Player - Light Attack_483
+  - first:
+      213: 4378346674861862719
+    second: Player - Light Attack_484
+  - first:
+      213: -54383349771598926
+    second: Player - Light Attack_485
+  - first:
+      213: -2272188778870995149
+    second: Player - Light Attack_486
+  - first:
+      213: 8189214903826653999
+    second: Player - Light Attack_487
+  - first:
+      213: 4430247238083907350
+    second: Player - Light Attack_488
+  - first:
+      213: 683543101258347809
+    second: Player - Light Attack_489
+  - first:
+      213: -5773184058867019905
+    second: Player - Light Attack_490
+  - first:
+      213: 852106393446910229
+    second: Player - Light Attack_491
+  - first:
+      213: 437759816706828042
+    second: Player - Light Attack_492
+  - first:
+      213: -6980430549381792289
+    second: Player - Light Attack_493
+  - first:
+      213: 528699823335959578
+    second: Player - Light Attack_494
+  - first:
+      213: -6278243797501484832
+    second: Player - Light Attack_495
+  - first:
+      213: -2614002559168329528
+    second: Player - Light Attack_496
+  - first:
+      213: 5936403124896786555
+    second: Player - Light Attack_497
+  - first:
+      213: -2185152244789900772
+    second: Player - Light Attack_498
+  - first:
+      213: 3984175031243824030
+    second: Player - Light Attack_499
+  - first:
+      213: -1734645458732210781
+    second: Player - Light Attack_500
+  - first:
+      213: -1894308874539317934
+    second: Player - Light Attack_501
+  - first:
+      213: 120518923068682532
+    second: Player - Light Attack_502
+  - first:
+      213: 8427205393036729953
+    second: Player - Light Attack_503
+  - first:
+      213: -2168018347828986038
+    second: Player - Light Attack_504
+  - first:
+      213: 7713029182965952337
+    second: Player - Light Attack_505
+  - first:
+      213: -4254721543399199001
+    second: Player - Light Attack_506
+  - first:
+      213: -6541303646416555454
+    second: Player - Light Attack_507
+  - first:
+      213: -3417980083790290609
+    second: Player - Light Attack_508
+  - first:
+      213: 3649896216755763314
+    second: Player - Light Attack_509
+  - first:
+      213: -533503687682489718
+    second: Player - Light Attack_510
+  - first:
+      213: -6955776367764071182
+    second: Player - Light Attack_511
+  - first:
+      213: 8779614379712880440
+    second: Player - Light Attack_512
+  - first:
+      213: -4040083410298141890
+    second: Player - Light Attack_513
+  - first:
+      213: -2828086144791401811
+    second: Player - Light Attack_514
+  - first:
+      213: -4780267194335745352
+    second: Player - Light Attack_515
+  - first:
+      213: 5973185917216840503
+    second: Player - Light Attack_516
+  - first:
+      213: 5672506858474432726
+    second: Player - Light Attack_517
+  - first:
+      213: 4680580774161122522
+    second: Player - Light Attack_518
+  - first:
+      213: -7824466922749152560
+    second: Player - Light Attack_519
+  - first:
+      213: 1608237586724197781
+    second: Player - Light Attack_520
+  - first:
+      213: -3531789871900441458
+    second: Player - Light Attack_521
+  - first:
+      213: 4862235680932519819
+    second: Player - Light Attack_522
+  - first:
+      213: 5383921654296767600
+    second: Player - Light Attack_523
+  - first:
+      213: 4288200023279841031
+    second: Player - Light Attack_524
+  - first:
+      213: -8052869801937645872
+    second: Player - Light Attack_525
+  - first:
+      213: 4788857836275675058
+    second: Player - Light Attack_526
+  - first:
+      213: -5240966521942712181
+    second: Player - Light Attack_527
+  - first:
+      213: -3074444135069916233
+    second: Player - Light Attack_528
+  - first:
+      213: 4125372743083556214
+    second: Player - Light Attack_529
+  - first:
+      213: 1607612716236275721
+    second: Player - Light Attack_530
+  - first:
+      213: -94250753067679882
+    second: Player - Light Attack_531
+  - first:
+      213: 6405936132156347930
+    second: Player - Light Attack_532
+  - first:
+      213: 5529560739541558443
+    second: Player - Light Attack_533
+  - first:
+      213: 6966987200375410287
+    second: Player - Light Attack_534
+  - first:
+      213: 3393927159616971016
+    second: Player - Light Attack_535
+  - first:
+      213: -6505563142149761588
+    second: Player - Light Attack_536
+  - first:
+      213: 6234247929260211252
+    second: Player - Light Attack_537
+  - first:
+      213: 7545212150693933047
+    second: Player - Light Attack_538
+  - first:
+      213: -7374255220764207921
+    second: Player - Light Attack_539
+  - first:
+      213: 1307995666985898114
+    second: Player - Light Attack_540
+  - first:
+      213: 5161837840730721785
+    second: Player - Light Attack_541
+  - first:
+      213: 6499927806758638091
+    second: Player - Light Attack_542
+  - first:
+      213: -6755194024882736843
+    second: Player - Light Attack_543
+  - first:
+      213: -7383816156282785859
+    second: Player - Light Attack_544
+  - first:
+      213: 8297116583140762548
+    second: Player - Light Attack_545
+  - first:
+      213: 397845923562383458
+    second: Player - Light Attack_546
+  - first:
+      213: 8815257408808128098
+    second: Player - Light Attack_547
+  - first:
+      213: 2816940972645459930
+    second: Player - Light Attack_548
+  - first:
+      213: 1601068400790126426
+    second: Player - Light Attack_549
+  - first:
+      213: -8621835965249699058
+    second: Player - Light Attack_550
+  - first:
+      213: 6981587114356671320
+    second: Player - Light Attack_551
+  - first:
+      213: 5964708198543933656
+    second: Player - Light Attack_552
+  - first:
+      213: 8866067706684894350
+    second: Player - Light Attack_553
+  - first:
+      213: -1641464180249906540
+    second: Player - Light Attack_554
+  - first:
+      213: -7893303126113694086
+    second: Player - Light Attack_555
+  - first:
+      213: -3605440871703971520
+    second: Player - Light Attack_556
+  - first:
+      213: -8420253862175613688
+    second: Player - Light Attack_557
+  - first:
+      213: -607247380707601973
+    second: Player - Light Attack_558
+  - first:
+      213: -1125422646222527294
+    second: Player - Light Attack_559
+  - first:
+      213: -8591824245372037641
+    second: Player - Light Attack_560
+  - first:
+      213: -2362751396987407023
+    second: Player - Light Attack_561
+  - first:
+      213: 9011364876434850357
+    second: Player - Light Attack_562
+  - first:
+      213: 3049771040096941941
+    second: Player - Light Attack_563
+  - first:
+      213: 8362301125710471014
+    second: Player - Light Attack_564
+  - first:
+      213: -2558965311773868993
+    second: Player - Light Attack_565
+  - first:
+      213: -6253244013432482895
+    second: Player - Light Attack_566
+  - first:
+      213: -5646236641813357605
+    second: Player - Light Attack_567
+  - first:
+      213: 7326008055512683483
+    second: Player - Light Attack_568
+  - first:
+      213: 5455448304026270931
+    second: Player - Light Attack_569
+  - first:
+      213: 7193706747219343808
+    second: Player - Light Attack_570
+  - first:
+      213: -3709857330802980313
+    second: Player - Light Attack_571
+  - first:
+      213: 6975207618024049206
+    second: Player - Light Attack_572
+  - first:
+      213: 2424221802655632720
+    second: Player - Light Attack_573
+  - first:
+      213: 2706579579459535148
+    second: Player - Light Attack_574
+  - first:
+      213: -7321521539012471119
+    second: Player - Light Attack_575
+  - first:
+      213: 5208036044340218903
+    second: Player - Light Attack_576
+  - first:
+      213: 9065907186813883542
+    second: Player - Light Attack_577
+  - first:
+      213: -3090379209628521914
+    second: Player - Light Attack_578
+  - first:
+      213: -2165669545983739363
+    second: Player - Light Attack_579
+  - first:
+      213: 2548053261192172206
+    second: Player - Light Attack_580
+  - first:
+      213: -831887444888988741
+    second: Player - Light Attack_581
+  - first:
+      213: -2427295679052786133
+    second: Player - Light Attack_582
+  - first:
+      213: 8623970004149307156
+    second: Player - Light Attack_583
+  - first:
+      213: 5824283055415196991
+    second: Player - Light Attack_584
+  - first:
+      213: -2515731594732527496
+    second: Player - Light Attack_585
+  - first:
+      213: 2147509831665964211
+    second: Player - Light Attack_586
+  - first:
+      213: -204582137005382984
+    second: Player - Light Attack_587
+  - first:
+      213: -5341600745105877651
+    second: Player - Light Attack_588
+  - first:
+      213: 7607924126253624541
+    second: Player - Light Attack_589
+  - first:
+      213: -6344665503901542528
+    second: Player - Light Attack_590
+  - first:
+      213: 8303105328688206459
+    second: Player - Light Attack_591
+  - first:
+      213: 839679538917165491
+    second: Player - Light Attack_592
+  - first:
+      213: 7896584681802154012
+    second: Player - Light Attack_593
+  - first:
+      213: 6382604113150275907
+    second: Player - Light Attack_594
+  - first:
+      213: -5142250546051861000
+    second: Player - Light Attack_595
+  - first:
+      213: 6140878947005137890
+    second: Player - Light Attack_596
+  - first:
+      213: 340452991906806371
+    second: Player - Light Attack_597
+  - first:
+      213: -788259031997633830
+    second: Player - Light Attack_598
+  - first:
+      213: -9126376055783255104
+    second: Player - Light Attack_599
+  - first:
+      213: -3197584040017650334
+    second: Player - Light Attack_600
+  - first:
+      213: 3784419481390632025
+    second: Player - Light Attack_601
+  - first:
+      213: -87404466590408570
+    second: Player - Light Attack_602
+  - first:
+      213: -4506765701497172544
+    second: Player - Light Attack_603
+  - first:
+      213: 7485797870973999441
+    second: Player - Light Attack_604
+  - first:
+      213: -8417809778203195227
+    second: Player - Light Attack_605
+  - first:
+      213: -2282759703385861226
+    second: Player - Light Attack_606
+  - first:
+      213: -60700618698459576
+    second: Player - Light Attack_607
+  - first:
+      213: -7480383836347081502
+    second: Player - Light Attack_608
+  - first:
+      213: -3847458680799100119
+    second: Player - Light Attack_609
+  - first:
+      213: 2709481891875401622
+    second: Player - Light Attack_610
+  - first:
+      213: 820611487505152836
+    second: Player - Light Attack_611
+  - first:
+      213: -1668239001493181598
+    second: Player - Light Attack_612
+  - first:
+      213: 6289890447221338766
+    second: Player - Light Attack_613
+  - first:
+      213: 5630265621916863997
+    second: Player - Light Attack_614
+  - first:
+      213: 1013718786581961733
+    second: Player - Light Attack_615
+  - first:
+      213: 6644879512283674641
+    second: Player - Light Attack_616
+  - first:
+      213: -3217342562945360666
+    second: Player - Light Attack_617
+  - first:
+      213: 4543202083841574857
+    second: Player - Light Attack_618
+  - first:
+      213: -476672873793915647
+    second: Player - Light Attack_619
+  - first:
+      213: 7866942799647516244
+    second: Player - Light Attack_620
+  - first:
+      213: 185160330070182717
+    second: Player - Light Attack_621
+  - first:
+      213: 1281751968181327057
+    second: Player - Light Attack_622
+  - first:
+      213: 1820523538227825111
+    second: Player - Light Attack_623
+  - first:
+      213: -7695270937620774020
+    second: Player - Light Attack_624
+  - first:
+      213: -5613376248159686494
+    second: Player - Light Attack_625
+  - first:
+      213: -7339257360483854790
+    second: Player - Light Attack_626
+  - first:
+      213: 6459375084744389694
+    second: Player - Light Attack_627
+  - first:
+      213: -7052927335641488408
+    second: Player - Light Attack_628
+  - first:
+      213: -6494460419972930233
+    second: Player - Light Attack_629
+  - first:
+      213: -7751826325745999616
+    second: Player - Light Attack_630
+  - first:
+      213: 3205231331957060395
+    second: Player - Light Attack_631
+  - first:
+      213: 891473161160185132
+    second: Player - Light Attack_632
+  - first:
+      213: -5939130685825808513
+    second: Player - Light Attack_633
+  - first:
+      213: -7998043153662901184
+    second: Player - Light Attack_634
+  - first:
+      213: 236060321786727632
+    second: Player - Light Attack_635
+  - first:
+      213: 6062898280608904741
+    second: Player - Light Attack_636
+  - first:
+      213: -6531862545470547614
+    second: Player - Light Attack_637
+  - first:
+      213: 5912710504937604917
+    second: Player - Light Attack_638
+  - first:
+      213: -3862800651769903725
+    second: Player - Light Attack_639
+  - first:
+      213: 6735213643949372608
+    second: Player - Light Attack_640
+  - first:
+      213: -1229758089057311605
+    second: Player - Light Attack_641
+  - first:
+      213: 3733750459267480847
+    second: Player - Light Attack_642
+  - first:
+      213: -6800138528260498294
+    second: Player - Light Attack_643
+  - first:
+      213: 4017733478829423387
+    second: Player - Light Attack_644
+  - first:
+      213: 6869898500603933224
+    second: Player - Light Attack_645
+  - first:
+      213: 415402269362363375
+    second: Player - Light Attack_646
+  - first:
+      213: -4541370586710421030
+    second: Player - Light Attack_647
+  - first:
+      213: 7409560611779488162
+    second: Player - Light Attack_648
+  - first:
+      213: -8769608053486635868
+    second: Player - Light Attack_649
+  - first:
+      213: 5025230882190431751
+    second: Player - Light Attack_650
+  - first:
+      213: 5840964037095248242
+    second: Player - Light Attack_651
+  - first:
+      213: 5311352581041999469
+    second: Player - Light Attack_652
+  - first:
+      213: -8860112165621222934
+    second: Player - Light Attack_653
+  - first:
+      213: 1973505335149009280
+    second: Player - Light Attack_654
+  - first:
+      213: -3186547917565606305
+    second: Player - Light Attack_655
+  - first:
+      213: 3088061453337839604
+    second: Player - Light Attack_656
+  - first:
+      213: -4550067596960728591
+    second: Player - Light Attack_657
+  - first:
+      213: 1129580627015477166
+    second: Player - Light Attack_658
+  - first:
+      213: 5797420687541764330
+    second: Player - Light Attack_659
+  - first:
+      213: -5282203445651392199
+    second: Player - Light Attack_660
+  - first:
+      213: 2633071247086351504
+    second: Player - Light Attack_661
+  - first:
+      213: 2215586291688682238
+    second: Player - Light Attack_662
+  - first:
+      213: -1799170178728975532
+    second: Player - Light Attack_663
+  - first:
+      213: 2787843202560213485
+    second: Player - Light Attack_664
+  - first:
+      213: -5202993989258067866
+    second: Player - Light Attack_665
+  - first:
+      213: 3074639360072779107
+    second: Player - Light Attack_666
+  - first:
+      213: 1980310535821125275
+    second: Player - Light Attack_667
+  - first:
+      213: 8462718627310589908
+    second: Player - Light Attack_668
+  - first:
+      213: 6036446377156544061
+    second: Player - Light Attack_669
+  - first:
+      213: 7334041064053586461
+    second: Player - Light Attack_670
+  - first:
+      213: 678064939805967060
+    second: Player - Light Attack_671
+  - first:
+      213: 3592735042639013094
+    second: Player - Light Attack_672
+  - first:
+      213: 2176845675518034421
+    second: Player - Light Attack_673
+  - first:
+      213: -7069346437066846955
+    second: Player - Light Attack_674
+  - first:
+      213: 8826885055132856094
+    second: Player - Light Attack_675
+  - first:
+      213: 3918316511563011573
+    second: Player - Light Attack_676
+  - first:
+      213: 6926692536143116912
+    second: Player - Light Attack_677
+  - first:
+      213: 8196316828201611438
+    second: Player - Light Attack_678
+  - first:
+      213: -6464325616622147256
+    second: Player - Light Attack_679
+  - first:
+      213: 836250493942802854
+    second: Player - Light Attack_680
+  - first:
+      213: 5997145128273331170
+    second: Player - Light Attack_681
+  - first:
+      213: 8784064406611932974
+    second: Player - Light Attack_682
+  - first:
+      213: 9038880189963544203
+    second: Player - Light Attack_683
+  - first:
+      213: 3366756252519371914
+    second: Player - Light Attack_684
+  - first:
+      213: 9082998005846899099
+    second: Player - Light Attack_685
+  - first:
+      213: -4624272129493659981
+    second: Player - Light Attack_686
+  - first:
+      213: -8608799858132827529
+    second: Player - Light Attack_687
+  - first:
+      213: -1876033746095293268
+    second: Player - Light Attack_688
+  - first:
+      213: 3836613861861086358
+    second: Player - Light Attack_689
+  - first:
+      213: 6512488476569924697
+    second: Player - Light Attack_690
+  - first:
+      213: -7755643815036361299
+    second: Player - Light Attack_691
+  - first:
+      213: 7981927982278622244
+    second: Player - Light Attack_692
+  - first:
+      213: -637125578782411636
+    second: Player - Light Attack_693
+  - first:
+      213: -4760725838581599964
+    second: Player - Light Attack_694
+  - first:
+      213: -5817705168779319956
+    second: Player - Light Attack_695
+  - first:
+      213: 7300723364015006299
+    second: Player - Light Attack_696
+  - first:
+      213: -8860771541426910186
+    second: Player - Light Attack_697
+  - first:
+      213: 422850983218699635
+    second: Player - Light Attack_698
+  - first:
+      213: 809260012259018806
+    second: Player - Light Attack_699
+  - first:
+      213: -8651255446789807368
+    second: Player - Light Attack_700
+  - first:
+      213: 402413089803443381
+    second: Player - Light Attack_701
+  - first:
+      213: 3536495130742444088
+    second: Player - Light Attack_702
+  - first:
+      213: -3445784634163149722
+    second: Player - Light Attack_703
+  - first:
+      213: -1071723660007129300
+    second: Player - Light Attack_704
+  - first:
+      213: -6053200942727679615
+    second: Player - Light Attack_705
+  - first:
+      213: 3808974548363038489
+    second: Player - Light Attack_706
+  - first:
+      213: -7191490052968592483
+    second: Player - Light Attack_707
+  - first:
+      213: 7103351673772834330
+    second: Player - Light Attack_708
+  - first:
+      213: 8596351387779034097
+    second: Player - Light Attack_709
+  - first:
+      213: -351578004910731330
+    second: Player - Light Attack_710
+  - first:
+      213: -6016120022067168526
+    second: Player - Light Attack_711
+  - first:
+      213: -6402710645880865890
+    second: Player - Light Attack_712
+  - first:
+      213: -1988635293484530379
+    second: Player - Light Attack_713
+  - first:
+      213: 6907889706300407149
+    second: Player - Light Attack_714
+  - first:
+      213: -3620009086118615455
+    second: Player - Light Attack_715
+  - first:
+      213: 509930297947308271
+    second: Player - Light Attack_716
+  - first:
+      213: 1012361151851710684
+    second: Player - Light Attack_717
+  - first:
+      213: -4823866819042322256
+    second: Player - Light Attack_718
+  - first:
+      213: 8806694631748608446
+    second: Player - Light Attack_719
+  - first:
+      213: 7901334695351180484
+    second: Player - Light Attack_720
+  - first:
+      213: 2497583149857918061
+    second: Player - Light Attack_721
+  - first:
+      213: 1836023576183419312
+    second: Player - Light Attack_722
+  - first:
+      213: 1274224660468331423
+    second: Player - Light Attack_723
+  - first:
+      213: -2070332885152766583
+    second: Player - Light Attack_724
+  - first:
+      213: -140108181999147396
+    second: Player - Light Attack_725
+  - first:
+      213: -3048301968904435419
+    second: Player - Light Attack_726
+  - first:
+      213: 4534608849582170657
+    second: Player - Light Attack_727
+  - first:
+      213: -6931884301284177958
+    second: Player - Light Attack_728
+  - first:
+      213: 1589450526995096975
+    second: Player - Light Attack_729
+  - first:
+      213: 2434326693012743891
+    second: Player - Light Attack_730
+  - first:
+      213: -926914950696864263
+    second: Player - Light Attack_731
+  - first:
+      213: 7009114999862535224
+    second: Player - Light Attack_732
+  - first:
+      213: 8576349606697083949
+    second: Player - Light Attack_733
+  - first:
+      213: -4602403813512520688
+    second: Player - Light Attack_734
+  - first:
+      213: -5919010516994584135
+    second: Player - Light Attack_735
+  - first:
+      213: -3203304912286239533
+    second: Player - Light Attack_736
+  - first:
+      213: -1706702588922634164
+    second: Player - Light Attack_737
+  - first:
+      213: -3974645545427343278
+    second: Player - Light Attack_738
+  - first:
+      213: 6724632089412058624
+    second: Player - Light Attack_739
+  - first:
+      213: -205689675399347075
+    second: Player - Light Attack_740
+  - first:
+      213: -4135189722438304032
+    second: Player - Light Attack_741
+  - first:
+      213: 3471243460806509795
+    second: Player - Light Attack_742
+  - first:
+      213: 7964530911484981178
+    second: Player - Light Attack_743
+  - first:
+      213: 7701859781180913457
+    second: Player - Light Attack_744
+  - first:
+      213: -772750778269903170
+    second: Player - Light Attack_745
+  - first:
+      213: -9166564178089867460
+    second: Player - Light Attack_746
+  - first:
+      213: 8579610122290453568
+    second: Player - Light Attack_747
+  - first:
+      213: 582522665371977879
+    second: Player - Light Attack_748
+  - first:
+      213: 3997123936306122533
+    second: Player - Light Attack_749
+  - first:
+      213: 2109376126431985770
+    second: Player - Light Attack_750
+  - first:
+      213: 8299584299252721729
+    second: Player - Light Attack_751
+  - first:
+      213: 2143912867899903017
+    second: Player - Light Attack_752
+  - first:
+      213: -1725873530983297286
+    second: Player - Light Attack_753
+  - first:
+      213: -6049634169684938061
+    second: Player - Light Attack_754
+  - first:
+      213: -7129881331110863410
+    second: Player - Light Attack_755
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player - Light Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0b06cfe0e2b19a0800000000000000
+      internalID: -6261360215029927685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_1
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1339d3907d55c30800000000000000
+      internalID: 4347617449983816172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_2
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c9030d485445c660800000000000000
+      internalID: 7405400308320504262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_3
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb4a28ee3ec2d850800000000000000
+      internalID: 6400404790025276343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_4
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0ea8aadf7be0a20800000000000000
+      internalID: 3030561899382759602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_5
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22e372d20a306250800000000000000
+      internalID: 5935808092669469229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_6
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 2666.6665
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab25b1326d85c8260800000000000000
+      internalID: 7101148389191668410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1333.6666
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d0f25798ebf0f350800000000000000
+      internalID: 6048611275948355797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 1333.6666
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3e3a1a36be00be0800000000000000
+      internalID: -1512950661650324559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_9
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 1344
+        width: 1214
+        height: 1333
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da43775684ff845f0800000000000000
+      internalID: -772086649689000787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_10
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 1336
+        width: 1214
+        height: 1333
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e69ab7a6c4fde20800000000000000
+      internalID: 3377502265776107075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_11
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 1333.6666
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5cfdb0b2a5c01d0800000000000000
+      internalID: -3383230079132776981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_12
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 1333.6666
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4db2b31f6f6d4bc0800000000000000
+      internalID: -3797256387940926134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_13
+      rect:
+        serializedVersion: 2
+        x: 7284
+        y: 1333.6666
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9a78b7050983e740800000000000000
+      internalID: 5180134651103574684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.666626
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7c30a1748d4c030800000000000000
+      internalID: 3514171409146562481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_15
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 0.666626
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359c97b3b32a05f40800000000000000
+      internalID: 5715246302417766739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_16
+      rect:
+        serializedVersion: 2
+        x: 2428
+        y: 0.666626
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492c343ef2b912700800000000000000
+      internalID: 513862462475584148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_17
+      rect:
+        serializedVersion: 2
+        x: 3642
+        y: 0.666626
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8992bde6fdd6100800000000000000
+      internalID: 102984033715722451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light Attack_18
+      rect:
+        serializedVersion: 2
+        x: 4856
+        y: 0.666626
+        width: 1214.2858
+        height: 1333.3334
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a10910a5d67eb24c0800000000000000
+      internalID: -4311097761429614566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e84cf2d15c104e94bb12a0ccae28c619
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

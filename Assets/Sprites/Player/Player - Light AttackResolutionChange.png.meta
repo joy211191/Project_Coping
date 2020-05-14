@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: c6070a699fb688745a082c1511f8a24c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3793431684353945248
+    second: Player - Light AttackResolutionChange_0
+  - first:
+      213: 4554256525472245514
+    second: Player - Light AttackResolutionChange_1
+  - first:
+      213: 8131110297566022707
+    second: Player - Light AttackResolutionChange_2
+  - first:
+      213: 5431675906657686087
+    second: Player - Light AttackResolutionChange_3
+  - first:
+      213: 4409545988425797390
+    second: Player - Light AttackResolutionChange_4
+  - first:
+      213: -6819111156048068044
+    second: Player - Light AttackResolutionChange_5
+  - first:
+      213: 1733585342414468205
+    second: Player - Light AttackResolutionChange_6
+  - first:
+      213: 5882626815787296864
+    second: Player - Light AttackResolutionChange_7
+  - first:
+      213: -2343042907559736073
+    second: Player - Light AttackResolutionChange_8
+  - first:
+      213: -5574853760239734415
+    second: Player - Light AttackResolutionChange_9
+  - first:
+      213: -4896640012324726215
+    second: Player - Light AttackResolutionChange_10
+  - first:
+      213: -3139409570709890983
+    second: Player - Light AttackResolutionChange_11
+  - first:
+      213: -5738175458035765785
+    second: Player - Light AttackResolutionChange_12
+  - first:
+      213: 664653218215583808
+    second: Player - Light AttackResolutionChange_13
+  - first:
+      213: -3469908330275965273
+    second: Player - Light AttackResolutionChange_14
+  - first:
+      213: -1644303640472130750
+    second: Player - Light AttackResolutionChange_15
+  - first:
+      213: -8156694766704047736
+    second: Player - Light AttackResolutionChange_16
+  - first:
+      213: -8368357403703418943
+    second: Player - Light AttackResolutionChange_17
+  - first:
+      213: -8682315746109112996
+    second: Player - Light AttackResolutionChange_18
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aee0a9b40af4a430800000000000000
+      internalID: 3793431684353945248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_1
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0727c03e28f33f30800000000000000
+      internalID: 4554256525472245514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_2
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c81f33cb187d070800000000000000
+      internalID: 8131110297566022707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_3
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74211677570316b40800000000000000
+      internalID: 5431675906657686087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_4
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f4ed4b6bad13d30800000000000000
+      internalID: 4409545988425797390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_5
+      rect:
+        serializedVersion: 2
+        x: 5750
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4320ad36886ad51a0800000000000000
+      internalID: -6819111156048068044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_6
+      rect:
+        serializedVersion: 2
+        x: 6900
+        y: 2233.3335
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64307a1faeee0810800000000000000
+      internalID: 1733585342414468205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0686035ebe943a150800000000000000
+      internalID: 5882626815787296864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_8
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc4769b3e6db7fd0800000000000000
+      internalID: -2343042907559736073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_9
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171f82aba0422a2b0800000000000000
+      internalID: -5574853760239734415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_10
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a9b603ad3ab0cb0800000000000000
+      internalID: -4896640012324726215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_11
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9581065f0a39e64d0800000000000000
+      internalID: -3139409570709890983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_12
+      rect:
+        serializedVersion: 2
+        x: 5750
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ede9e4b2d7ed50b0800000000000000
+      internalID: -5738175458035765785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_13
+      rect:
+        serializedVersion: 2
+        x: 6900
+        y: 1117.3334
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0406f8a9492593900800000000000000
+      internalID: 664653218215583808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.333374
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a67bba02c868dfc0800000000000000
+      internalID: -3469908330275965273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_15
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1.333374
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24be6c60d824e29e0800000000000000
+      internalID: -1644303640472130750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_16
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 1.333374
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889415163599dce80800000000000000
+      internalID: -8156694766704047736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_17
+      rect:
+        serializedVersion: 2
+        x: 3450
+        y: 1.333374
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf5fbe574f9ddb80800000000000000
+      internalID: -8368357403703418943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player - Light AttackResolutionChange_18
+      rect:
+        serializedVersion: 2
+        x: 4600
+        y: 1.333374
+        width: 1150
+        height: 1116.6666
+      alignment: 9
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5db26d64d7328780800000000000000
+      internalID: -8682315746109112996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0914f95c5fc11ec479bb7add002c9dad
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
