@@ -251,4 +251,16 @@ public class PlayerAnimator : PlayerController {
         else
             maxDashes = 1;
     }
+
+
+    //Added on request of Emelie. Called in the animations.
+    public void AddVelocityX(float p_inVelocityX)
+    {
+        m_body2d.velocity = new Vector2(m_body2d.velocity.x, p_inVelocityX);
+    }
+
+    public void AddVelocityY(float p_inVelocityY)
+    {
+        m_body2d.velocity = new Vector2(m_body2d.velocity.y, p_inVelocityY);
+    }
 }

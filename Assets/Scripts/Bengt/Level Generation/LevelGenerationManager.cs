@@ -70,9 +70,9 @@ public class LevelGenerationManager : MonoBehaviour
             float totalRoomYDiff = 0;
 
             if (i == 0)//If first room, instantiate start room
-                p_inListDest.Add(Instantiate(m_StartRoom, new Vector2(m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
+                p_inListDest.Add(Instantiate(m_StartRoom, new Vector2(m_tempXdif, m_sectionNumber * 500), Quaternion.identity));
             else if (i == p_inLength + 1) //If last room, instantiate end room
-                p_inListDest.Add(Instantiate(m_EndRoom, new Vector2(m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
+                p_inListDest.Add(Instantiate(m_EndRoom, new Vector2(m_tempXdif, m_sectionNumber * 500), Quaternion.identity));
             else //if neither, instantiate a random non-start non-end room
             {
                 GameObject tempRoom = p_inList[RandomNumber(0, m_RoomPrefabsList.Count)];
@@ -90,7 +90,7 @@ public class LevelGenerationManager : MonoBehaviour
                 else if (tempRoom.tag == "Climber Room")
                     m_sectionHasClimberRoom = true;
 
-                p_inListDest.Add(Instantiate(tempRoom, new Vector2(m_tempXdif, m_sectionNumber * 100), Quaternion.identity));
+                p_inListDest.Add(Instantiate(tempRoom, new Vector2(m_tempXdif, m_sectionNumber * 500), Quaternion.identity));
 
 
 

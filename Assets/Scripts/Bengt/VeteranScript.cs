@@ -15,35 +15,35 @@ public class VeteranScript : MonoBehaviour
 {
     [Header("UI Components")]
     [SerializeField]
-    GameObject                  m_dialogueObject;
+    GameObject m_dialogueObject;
     [SerializeField]
-    protected List<GameObject>  m_dialogueOptionButtons = new List<GameObject>();
+    protected List<GameObject> m_dialogueOptionButtons = new List<GameObject>();
     [SerializeField]
-    GameObject                  m_dialogueOptionHolder;
+    GameObject m_dialogueOptionHolder;
     [SerializeField]
-    GameObject                  m_interactPrompt;
+    GameObject m_interactPrompt;
     [SerializeField]
-    string                      m_portraitPath;
+    string m_portraitPath;
     [Header("Dialogue Filepaths")]
     [SerializeField]
-    List<string>                m_dialogueList          = new List<string>();
+    List<string> m_dialogueList = new List<string>();
     [SerializeField]
-    string                      m_endDialoguePath;
+    string m_endDialoguePath;
     [SerializeField]
-    string                      m_finalDialoguePath;
+    string m_finalDialoguePath;
     [Header("Text Colour")]
     [SerializeField]
-    Color                       m_activeText;
+    Color m_activeText;
     [SerializeField]
-    Color                       m_inactiveText;
+    Color m_inactiveText;
     [Header("Other")]
     [SerializeField]
-    GameObject                  m_player;
+    GameObject m_player;
 
 
-    protected bool m_canTalk                = false;
-    protected bool m_talking                = false;
-    protected bool m_waitingForInput        = false;
+    protected bool m_canTalk = false;
+    protected bool m_talking = false;
+    protected bool m_waitingForInput = false;
 
     protected Text m_dialogueText;
     protected Text m_nameText;
@@ -51,14 +51,14 @@ public class VeteranScript : MonoBehaviour
     [SerializeField]
     protected Image m_portrait;
 
-    protected int m_activeDialogueOption    = 0;
-    protected int m_dialogueNum             = 0;
-    protected int m_dialogueOptions         = 0;
-    protected int m_dialogueCounter         = 0;
+    protected int m_activeDialogueOption = 0;
+    protected int m_dialogueNum = 0;
+    protected int m_dialogueOptions = 0;
+    protected int m_dialogueCounter = 0;
 
     protected string m_dialoguePath;
     protected string[] m_dialogueLines;
-    protected List<string> m_dialogueFlags  = new List<string>();
+    protected List<string> m_dialogueFlags = new List<string>();
 
     //Temporary? TODO: Find a way to remove this, low priority
     int i;
@@ -80,11 +80,11 @@ public class VeteranScript : MonoBehaviour
     {
         if (m_canTalk && Input.GetKeyDown(KeyCode.Q))
             ActivateDialogue();
-        else if (!m_canTalk && m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput)
+        else if (!m_canTalk && m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput && m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
             ContinueDialogue();
         else if (m_waitingForInput)
             SelectDialogue();
-        else if (m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] == "*END*")
+        else if (m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && (m_dialogueLines[m_dialogueNum] == "*END*" || m_dialogueLines[m_dialogueNum] == "*NOPROGRESSEND*"))
             DeactivateDialogue();
     }
 
@@ -116,7 +116,28 @@ public class VeteranScript : MonoBehaviour
 
         m_portrait.sprite = Resources.Load<Sprite>("Portraits/" + m_portraitPath);
 
-        PrintContinue();
+        if (!m_dialogueLines[m_dialogueNum].StartsWith("<"))
+        {
+            m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
+            PrintContinue();
+        }
+        else
+        {
+            PrintContinue();
+            m_dialogueOptions = 0;
+
+            while ((m_dialogueNum + 1) < m_dialogueLines.Length && m_dialogueLines[m_dialogueNum + 1].StartsWith("<"))
+            {
+                m_dialogueNum++;
+                string temp = m_dialogueLines[m_dialogueNum];
+                PrintDialogueOption(temp);
+                m_waitingForInput = true;
+            }
+
+            i = 0;//Resets this little thingy, TODO: Replace with something
+        }
+
+
     }
 
 
@@ -153,7 +174,7 @@ public class VeteranScript : MonoBehaviour
         i = 0;//Resets this little thingy, TODO: Replace with something
 
         //If you havn't reached the end keep printing dialogue stuff
-        if (m_dialogueLines[m_dialogueNum] != "*END*")
+        if (m_dialogueLines[m_dialogueNum] != "*END*" || m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
             m_dialogueNum++;
     }
 
@@ -174,7 +195,8 @@ public class VeteranScript : MonoBehaviour
         m_dialogueNum = 0; //reset dialoguenum
         i = 0;//Resets this little thingy, TODO: Replace with something
 
-        m_dialoguePath = m_endDialoguePath;
+        if (m_dialogueLines[m_dialogueNum] == "*END*")
+            m_dialoguePath = m_endDialoguePath;
 
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
     }
@@ -245,7 +267,7 @@ public class VeteranScript : MonoBehaviour
             m_dialogueFlags.Clear();
 
             //Checks if player selected a dialogue ending option
-            if (m_dialogueLines[m_dialogueNum] == "*END*")
+            if (m_dialogueLines[m_dialogueNum] == "*END*" || m_dialogueLines[m_dialogueNum] == "*NOPROGRESSEND*")
                 DeactivateDialogue();
             else
             {
@@ -319,7 +341,6 @@ public class VeteranScript : MonoBehaviour
     {
         m_player.GetComponent<InventorySystem>().AddItemToList(p_inItem);
     }
-
 
     void RefillPotions()
     {

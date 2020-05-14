@@ -686,7 +686,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1662, y: 1248}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &203542625
 GameObject:
@@ -2779,6 +2779,7 @@ MonoBehaviour:
   m_activeText: {r: 0.4716981, g: 0.45713332, b: 0.02002491, a: 1}
   m_inactiveText: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
   m_player: {fileID: 1951481742}
+  m_portrait: {fileID: 0}
 --- !u!61 &911765659
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11185,6 +11186,7 @@ MonoBehaviour:
   m_activeText: {r: 0.64169776, g: 0.6509434, b: 0.23028658, a: 1}
   m_inactiveText: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
   m_player: {fileID: 1951481742}
+  m_portrait: {fileID: 0}
 --- !u!61 &1878381087
 BoxCollider2D:
   m_ObjectHideFlags: 0
