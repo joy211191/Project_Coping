@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -11463,7 +11463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1508926462}
   smoothSpeed: 1
-  offset: {x: 0, y: 2.88, z: -10}
+  offset: {x: 0, y: 0, z: -10}
 --- !u!114 &1922799005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11589,15 +11589,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4269114208525818, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.005
+      value: -5.782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4269114208525818, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.185
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.5
+      value: -17.97
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.19
+      value: -5.96
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11635,6 +11639,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_UseAutoMass
@@ -11663,27 +11675,32 @@ PrefabInstance:
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.462
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.991
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 1.867157
       objectReference: {fileID: 0}
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: -3.6041145
       objectReference: {fileID: 0}
     - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.99
+      value: 4.3204823
+      objectReference: {fileID: 0}
+    - target: {fileID: 61252362154681264, guid: 2e2183501755a214591e802f3aff33d2,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.5961685
       objectReference: {fileID: 0}
     - target: {fileID: 61368513597639598, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
@@ -11699,8 +11716,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -899620374153902453, guid: dbee6708d25d8a3409ddee28e8719bf3,
+      objectReference: {fileID: 21300000, guid: 10adf033e7ac7654abfa416bee6401db,
         type: 3}
+    - target: {fileID: 212259381048184306, guid: 2e2183501755a214591e802f3aff33d2,
+        type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1951481742 stripped
@@ -12144,7 +12166,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120230252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.489, y: 0.499, z: 0}
+  m_LocalPosition: {x: 1.49, y: -2.29, z: 0}
   m_LocalScale: {x: 0.35, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1508926462}
