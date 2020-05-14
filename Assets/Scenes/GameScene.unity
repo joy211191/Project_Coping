@@ -10971,7 +10971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0.00018310547}
+  m_AnchoredPosition: {x: 0, y: 0.00018310547}
   m_SizeDelta: {x: 0.000022888, y: 0.00040006638}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796219058
@@ -11254,8 +11254,8 @@ MonoBehaviour:
   m_interactPrompt: {fileID: 1797774472}
   m_portraitPath: Lift_AttendantDialoguePortrait
   m_dialogueList:
-  - Assets/Dialogue/Lift Attendant/Dialogue1.txt
-  - Assets/Dialogue/Lift Attendant/Dialogue1 - kopia.txt
+  - Assets/Dialogue/Veteran/VeteranEncounter1Dialogue.txt
+  - Assets/Dialogue/Veteran/VeteranEncounter2Dialogue.txt
   m_endDialoguePath: Assets/Dialogue/Lift Attendant/Dialogue1 - kopia (2).txt
   m_finalDialoguePath: Assets/Dialogue/Lift Attendant/Dialogue1 - kopia (2).txt
   m_activeText: {r: 0.64169776, g: 0.6509434, b: 0.23028658, a: 1}

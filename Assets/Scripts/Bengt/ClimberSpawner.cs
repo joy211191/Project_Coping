@@ -22,7 +22,6 @@ public class ClimberSpawner : MonoBehaviour
     private void Start()
     {
         m_climber.transform.position = transform.position;
-        Debug.Log(transform.position);
     }
 
     private static readonly System.Random random = new System.Random();

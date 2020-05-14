@@ -79,11 +79,11 @@ public class LiftAttendant : MonoBehaviour
     {
         if (m_canTalk && Input.GetKeyDown(KeyCode.Q))
             ActivateDialogue();
-        else if (!m_canTalk && m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput && m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
+        else if (!m_canTalk && m_talking && Input.GetKeyDown(KeyCode.Space) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput && m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
             ContinueDialogue();
         else if (m_waitingForInput)
             SelectDialogue();
-        else if (m_talking && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)) && (m_dialogueLines[m_dialogueNum] == "*END*" || m_dialogueLines[m_dialogueNum] == "*NOPROGRESSEND*"))
+        else if (m_talking && Input.GetKeyDown(KeyCode.Space) && (m_dialogueLines[m_dialogueNum] == "*END*" || m_dialogueLines[m_dialogueNum] == "*NOPROGRESSEND*"))
             DeactivateDialogue();
     }
 
@@ -103,8 +103,8 @@ public class LiftAttendant : MonoBehaviour
             Debug.Log("Cannot find text. Is the file empty?");
 
         //Add text in first place of array and increment
-        m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
-        m_dialogueNum++;
+        //m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
+        //m_dialogueNum++;
 
         //Show dialogue box and stop all player actions, some bool changing as well
         m_dialogueObject.SetActive(true);
@@ -115,31 +115,28 @@ public class LiftAttendant : MonoBehaviour
 
         m_portrait.sprite = Resources.Load<Sprite>("Portraits/" + m_portraitPath);
 
-        if (!m_dialogueLines[m_dialogueNum].StartsWith("<"))
-        {
-            m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
-            PrintContinue();
-        }
-        else
+        if (m_dialogueLines[m_dialogueNum + 1].StartsWith("<"))
         {
             PrintContinue();
-            m_dialogueOptions = 0;
 
-            while ((m_dialogueNum + 1) < m_dialogueLines.Length && m_dialogueLines[m_dialogueNum + 1].StartsWith("<"))
+            i = 0;//Resets this little thingy, TODO: Replace with something
+
+            while ((m_dialogueNum + 2) < m_dialogueLines.Length && m_dialogueLines[m_dialogueNum + 1].StartsWith("<"))
             {
                 m_dialogueNum++;
                 string temp = m_dialogueLines[m_dialogueNum];
                 PrintDialogueOption(temp);
                 m_waitingForInput = true;
             }
-
-            i = 0;//Resets this little thingy, TODO: Replace with something
+        }
+        else
+        {
+            m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
+            PrintContinue();
         }
 
-
+        m_dialogueNum++;
     }
-
-
 
     void ContinueDialogue()
     {
@@ -161,6 +158,11 @@ public class LiftAttendant : MonoBehaviour
                 RefillPotions();
         }
 
+
+        m_dialogueOptions = 0;
+
+        i = 0;//Resets this little thingy, TODO: Replace with something
+
         //Calls PrintDialogueOption for every dialogue option
         while ((m_dialogueNum + 1) < m_dialogueLines.Length && m_dialogueLines[m_dialogueNum + 1].StartsWith("<"))
         {
@@ -170,7 +172,9 @@ public class LiftAttendant : MonoBehaviour
             m_waitingForInput = true;
         }
 
-        i = 0;//Resets this little thingy, TODO: Replace with something
+        m_activeDialogueOption = 0;
+
+        Debug.Log(m_dialogueNum);
 
         //If you havn't reached the end keep printing dialogue stuff
         if (m_dialogueLines[m_dialogueNum] != "*END*" || m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
@@ -234,14 +238,14 @@ public class LiftAttendant : MonoBehaviour
         // Return - Select active option
         if (Input.GetKeyDown(KeyCode.W))
         {
-            if (m_activeDialogueOption == 0)
+            if (m_activeDialogueOption <= 0)
                 m_activeDialogueOption = m_dialogueOptions - 1;
             else
                 m_activeDialogueOption--;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            if (m_activeDialogueOption == m_dialogueOptions - 1)
+            if (m_activeDialogueOption >= m_dialogueOptions - 1)
                 m_activeDialogueOption = 0;
             else
                 m_activeDialogueOption++;
@@ -270,13 +274,11 @@ public class LiftAttendant : MonoBehaviour
                 DeactivateDialogue();
             else
             {
-                m_dialogueText.text = m_dialogueLines[m_dialogueNum].Split('"', '"')[1];
-                PrintContinue();
+                ContinueDialogue();
             }
 
-            m_dialogueNum++;
+            //m_dialogueNum++;
 
-            m_dialogueOptions = 0;
 
         }
     }
