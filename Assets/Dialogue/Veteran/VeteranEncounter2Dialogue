@@ -1,0 +1,125 @@
+"*When you see the Veteran he sits staring blankly out ahead of him. He doesn't seem to notice you as you walk up to him*"
+<*Leave him alone*>[NoProgressEnd]
+<*Wave you hand in front of his eyes*>[Attention]
+<*Cough*>[Attention]
+
+
+[Attention]
+"*He startles before looking up at you.* Oh. It's you."
+<Are you okay?>[Okay]
+<Do you want me to leave?>[Leave?]
+
+
+[Okay]
+"Uh...Yeah. I was... uh thinking.... about something. No matter."
+"*His mood changes, becoming more jovial* You're here, let's talk! How have you been?"
+<Do you want to talk about it?>[Inquisitive]
+<I've been doing well.>[Well]
+<Could be better.>[Better]
+
+
+[Leave?]
+"Oh no! By all means stay. Some company is always appreciated. How have you been?"
+<Are YOU alright?>[Alright]
+<I've been doing well.>[Well]
+<Could be better.>[Better]
+
+[Inquisitive]
+"Talk about what?"
+<You were staring out into nothing.>[Keep going]
+<Forget it.>[Retrace]
+
+
+[Well]
+"That's good to hear! I hope the charm I gave you helped."
+<It has.>[Charm yes]
+<Haven't had the oppurtunity to use it yet.>[Charm no]
+
+
+[Better]
+"Ah! That's too bad. I'm sure you'll bounce back."
+"*He offers you his wineskin* Wine?"
+<No, thank you.>[Wine no]
+<*Take the wineskin*>[Wine yes]
+
+
+[Keep going]
+"Oh? Yes... I suppose I was... *He looks down*"
+"I've had a lot to think about is all."
+<*Listen*>[Listen]
+<Myabe some more wine will help?>[Change Subject]
+
+
+[Retrace]
+"So... How have you been?"
+<I've been doing well.>[Well]
+<Could be better.>[Better]
+
+
+[Alright]
+"Absolutely! Never been better! But, how have you been? Not struggling too much I hope!"
+<I've been doing well.>[Well]
+<Could be better.>[Better]
+
+
+[Charm yes]
+"That's great! Make sure to pay it forward. If you see someone struggling, lend them a helping hand."
+<I will.>[Help]
+
+
+[Charm no]
+"Ah, well. Maybe it's good that you have no need for it? If you really don't have any use for it give it to someone that does."
+<I will.>[Help]
+
+
+[Wine no]
+"Alright"
+"Did the charm help? If you've hade the oppurtunity to use it yet."
+<It did.>[Charm yes]
+<I have'nt.>[Charm no]
+
+
+[Wine yes]
+"*He hands you the wineskin and you take a sip before handing it back*"{refillPotions}
+"Did the charm help? If you've hade the oppurtunity to use it yet."
+<It did.>[Charm yes]
+<I have'nt.>[Charm no]
+
+
+[Listen]
+"I remembered an old friend. From before the Tower."
+<I see>[Listen2]
+<*Wait for him to continue*>[Listen2]
+
+
+[Change Subject]
+"Yes! *His mood changes almost immediately as he reaches for his wineskin and takes a sip*"
+"So, how have you been?"
+<I've been doing well.>[Well]
+<Could be better.>[Better]
+
+
+[Help]
+"I did find this. *He digs through his bag and tosses you another charm*"{recieveItem}
+"Maybe this one is a bit more useful."
+<Thanks!>[Thanks]
+
+
+[Listen2]
+"Well. That's in the past. *He raises his hand holding the wineskin* To the future! *He takes a sip*"
+"Did the charm help? If you've hade the oppurtunity to use it yet."
+<It did.>[Charm yes]
+<I have'nt.>[Charm no]
+
+[Thanks]
+"No worries!"
+"Well, again, I think it's time for us to part ways. Until next time!"
+<Bye>[End]
+<*wave*>[End]
+
+[End]
+*END*
+
+
+[NoProgressEnd]
+*NOPROGRESSEND*

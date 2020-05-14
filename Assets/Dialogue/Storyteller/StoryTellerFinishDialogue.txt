@@ -1,0 +1,18 @@
+"Ah, You are here! Let us brave the tower further, how can I help you today?"
+<I would need to rest>[Refill]{refillPotions} 
+<I need more power to face my struggles>[Item]{giveItem}
+<No help is needed, I'm fine>[Leave Flag]
+
+[Refill]
+"Rest is good for all of us, and an important part of every ones of ours journey" {refillPotions}
+"Until we meet again then!"
+*END*
+
+[Item]
+"Ah the power to face our fears as we struggle on our journey"
+"Of course I will help you with that, I have this..."
+"... story that might help you further than it helped me" {giveItem}
+*END*
+
+[Leave Flag]
+*END*
