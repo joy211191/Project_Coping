@@ -1,0 +1,176 @@
+"A face I've never seen before, how intriguing. Who are you?"
+<I'm me?>[Introspective]
+<I just got here.>[New Face]
+<...>[NoProgressEnd]
+
+[Introspective]
+"And who, exactly, is 'me'? Such a fascinating answer."
+"Its as if you are just starting a grand tale, before the Hero's Journey has begun..."
+"...so what brings you here?"
+<I don't want to talk about it.>[Brush off] 
+<Melancholy and a wish to get out of it.>[Melancholy] 
+<Who are you?!>[Storytellers' introduction] 
+
+[Brush off]
+"Ah, we've nothing to talk about then. I guess I'll focus on my own journey then."
+"Got other climbers to record and more stories to tell."
+<'Stories to tell'?>[Story Time]
+<*Leave them and say goodbye*>[NoProgressEnd]
+
+[Story Time]
+"Ah yes, I'm a storyteller. I tell the stories of the many climbers in here."
+"Many of us face these challenges, and I record them."
+<Can you tell me about any of them?>[The Veteran]
+<Aren't you also a climber?>[Storytellers' introduction]
+
+[New Face]
+"Exciting! A new chapter is added to the story of the Tower..."
+"A new beginning and a story of your own, to unfold in the many directions that the tower can go."
+"A new face to the story and to me, I welcome you to the Tower of Smoke"
+<Yeah... I don't really feel welcome here...>[Welcome]
+<Thank you, but who are you?>[The Storytellers' introduction]
+
+[Welcome]
+"Not a lot of us do, I'm afraid. It is a bit, unwelcoming in here and we do all struggle..."
+"Not like that matters much. What matters is what is at the top of the tower."
+<*Nod* My melancholy is not making it easier.>[Melancholy]
+<Climbing the tower is all that matters...>[Tower will Tell]
+
+[Melancholy]
+"Melancholy and the struggle out of it..."
+"There are others like that in this tower, stories I can tell you of course."
+<Tell me one of those stories.>[The Veteran]
+<Tell me more about yourself.>[Storytellers' introduction]
+
+[The Veteran]
+"A sad story. A story of a fighter just like you or I" 
+"A man of many adventures, both before the tower and inside of it"
+"The Audacious Veteran is who I will tell you about!"
+"*They open their Journal, smiling*"
+<*Keep listening in silence*>[VeteranCont]
+<The Veteran?>[VeteranCont]
+
+[VeteranCont]
+"Indeed! He was here long before I came. He had encountered horrors beyond even my imagination."
+"A soul ravaged by war and conflict, but somehow able to constantly keep on fighting."
+"Let's see... The story of how he fought the Keeper of Despair might be a fitting one. What do you think?"
+<That sounds... intersting.>[TheKeeper]
+<'The Keeper of Despair'?>[TheKeeper] 
+
+[TheKeeper] 
+"Within the Tower there are many wardens. Each one unique."
+"One of the more prominent ones is the Keeper of Despair" 
+"A vicious creature feeding off of anguish and fear, as its name entails."
+"An architect of anguish that claws at your sanity the moment you see it." 
+"The veteran entered its halls. A giant shrine of stone, held up by the desperate."
+"Those that take solace in their misery, wallowing in their mental pain."
+"They pray at its altar, which only increases its power."
+"The Veteran walked up to its altar and smashed it with a mailed fist, challenging the beast."
+"As the veteran looked around, the swirling darkness around him thickened." 
+"The shrine's walls pushing in around him as the horrendous avatar of the warden appeared."
+"As the creature crawled out through the darkness the Veteran readied himself"
+"Lifting his crossbow to his shoulder, aiming towards the creature..."
+<*Keep listening in silence*>[KeeperCont]
+<*nod*>[KeeperCont] 
+<*Look sceptically at the Storyteller*>[Disbelief]
+
+[KeeperCont]
+"As the creature emerges from the shadows its two long sinewy arms claw at the ground with long blade-like nails"
+"The shape of the creature is barely recognizable as human, too uncanny and malformed. Torn apart from the prayers of despair" 
+"The Veteran fires at it, releasing a heavy bolt from his crossbow, striking the keeper in the shoulder."
+"As the creature shrieks, the veteran rolls in behind the Altar and he starts reloading his crossbow."
+"The creature violently strikes the altar...tearing it to pieces."
+"With only a split second left before the keeper of despair reaches him, he fires once more."
+"The bolt striking true, as the creature twists in agony. The veteran drops his crossbow, striking at the creature with his fists."
+"Pummeling the Keeper of Despair again and again, until it lashes out, launching the veteran through the room and into on of the walls of the temple."
+"The veteran rises to his feet. He readies himself for the approaching beast, taking a drink from his wineskin."
+"With reinvigorated courage, he strikes out again, fist against claws."
+"A crack is heard. The bones in the creatures arms shattering as the Veteran readies another blow."
+"This time, the veteran goes for the creatures head. Emboldened by liquor, the strike find its target knocking the creature to the flagstones."
+"Lost in his stupor, the Veteran keeps hitting the beast, over and over. Until the shadows it was made of shatters and the darkness in the shrine, finally, fades..."
+"*The Storyteller looks at you, silent now*"
+<So he drinks to overcome his issues?>[Coping]
+<So if that is the veteran, what is your story?>[Storytellers' introduction]
+
+
+[Coping]
+"Yes, we all have ways to overcome the challenges we face. His is drinking..."
+"There are many ways for us to face our struggles *The Storyteller holds up their Journal*"
+"And I'm guessing even you have your own way to face all of it."
+"Although I may be unable to assist you directly, I hope this will be of some use to you. *The Storyteller hands you a small charm*" {recieveItem}
+"I should be on my way, the climb waits for no one."
+*END* 
+
+
+[Disbelief]
+"*The Storyteller recognize the look on your face* Ah! One who has not come to know the horrors out there?"
+"In our path through this tower, these, Wardens, as we call them, come to test us."
+"Horrific beings, powerful enough to cut many of us down without as much as second look"
+"If you haven't met one yet, I hope you never do. Take this, as it will help you when when the time comes. *The Storyteller hands you a small charm*"{recieveItem}
+"And I think this story is too... long for you for now, and I'll tell you it some other time. But for now, It is time to say goodbye. I hope we meet again, friend."
+*END* 
+
+[Storytellers' introduction]
+"You're... asking about me?"
+<Yes>[Introduction Cont]
+<No, I'm just messing with you and I'll be taking my leave>[NoProgressEnd]
+
+[Introduction Cont]
+"I'm the Storyteller, I'm one of the many climbers of the Tower." 
+"I collect the stories of all of us, and spread them. I gather and build these stories..." 
+"...to make sure that we don't forget anyone's journey, or anyone's struggles through out this tower"
+"I want to bring those stories with me outside of this tower when I reach the top... *They look longingly at the ceiling*" 
+"...Whatever is up there, informing everyone about our struggles..."
+"... so we can remember those that have fallen."
+<*Nod* Tell me more about your story.>[Further Cont]
+<Those that have fallen?>[Fallen]
+
+[Further Cont]
+"More about me? Other climbers rarely ask about me, so I don't really know what to say"
+"*They open their journal* Well I have... climbed this tower for a long time..."
+"The pages of my journals talk more about others than about meyself so I know that I've met so many fantastic people in here"
+"As well as the wardens that keep pulling me back down, over and over again."
+"But I will climb to the end of this tower, and I'll tear it down and free everyone in here."
+<I just want to get out.>[Tower will Tell]
+<That is a big goal...>[RestStart]
+
+[Fallen]
+"The Fallen is everyone I haven't met for a long time, who's story has been curt short."
+"Either they got to the top or they... gave up." 
+"Staying in the lobby, or trenched up in a safe space of the tower never to be found"
+"Or they are gone, entirely... *They look down at the floor*"
+<...>[Silence]
+<Gone entirely?>[Gone]
+
+[Silence]
+"Sometimes, a fallen appears again, but it's rare that they get out of their pits."
+"This is why I record their stories, so everyone fallen on their journey."
+"... is still remembered, treasured and at least, here. And if they return they too can remember who they were."
+<That is commendable.>[RestStart]
+
+[Gone]
+"Yes, a tragedy, when they fade away within the tower itself. Gone forever..."
+"This is why I record their stories, so everyone that falls on their journey"
+"... is still remembered, treasured and at least, here, somehow."
+<A noble goal.>[RestStart]
+
+[Tower will Tell]
+"Only the Tower can tell if you can succeed in that goal."
+"Let me help your story at it's infancy. *They hand you a small charm*"{recieveItem}
+"It is not much, but, I hope it will help you in your journey to get out. Just like it helped me when I first came here."
+"And I will have to... leave now then, the struggle up the tower has only just begun. I wish you good luck."
+*END*
+
+[RestStart]
+"Thank you. The tower and its wardens will always stand in our path."
+"But I guess that is our challenge to face on our journey forward." 
+"Let's make camp together for the day. That way, one of us can keep guard while the other rests, so that we can both refill our strength."
+<That does sound like a good plan.>[RestEnd]
+<I just want to get out of here.>[Tower will tell]
+
+[RestEnd]
+"Good, feel free to rest then."{refillPotions}
+*END*
+
+[NoProgressEnd]
+*NOPROGRESSEND*

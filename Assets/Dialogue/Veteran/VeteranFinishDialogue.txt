@@ -1,0 +1,18 @@
+"Finally, we run into each other again! *Chuckles*"
+"Can I be of any assistance today?"
+<Can you let me rest, and I'll be fine>[Refill]
+<I don't feel like I can make it further without more power>[Item]
+<I'm fine, I can go forever>[Leave Flag]
+
+[Refill]
+"Let me cover for you then, while you rest" {refillPotions}
+*END*
+
+[Item]
+
+"Ah, the power to fight further, something we all need"
+"I might just have the thing though, has served me well this far" {giveItem}
+*END*
+
+[Leave Flag]
+*END*

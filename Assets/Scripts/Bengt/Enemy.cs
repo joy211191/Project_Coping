@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Enemy : MonoBehaviour {
 
     [SerializeField]
     protected float m_speed;
     [SerializeField]
-    float enemyHealth;
+    float enemyMaxHealth;
     [SerializeField]
     protected float m_attackDamage;
     [SerializeField]
@@ -28,6 +28,12 @@ public class Enemy : MonoBehaviour {
     protected Transform m_patrolTarget2;
     [SerializeField]
     protected LayerMask playerLayers;
+    [SerializeField]
+    protected Transform m_enemyHealthbar;
+    [SerializeField]
+    protected Image m_enemyHealthbarFill;
+    [SerializeField]
+    protected Camera m_camera;
 
     protected Rigidbody2D m_body2d;
 
@@ -38,6 +44,7 @@ public class Enemy : MonoBehaviour {
 
     protected float m_waitTime      = 0;
     protected float m_attackWait    = 0;
+    float           enemyHealth;
 
     Vector3 attackPointPosition;
 
@@ -48,6 +55,8 @@ public class Enemy : MonoBehaviour {
 
     Animator m_animator;
 
+    Vector2 m_wantedPos;
+
     // Start is called before the first frame update
     void Awake () {
         m_body2d = GetComponent<Rigidbody2D>();
@@ -56,6 +65,7 @@ public class Enemy : MonoBehaviour {
         attackPointPosition = attackPoint.localPosition;
         m_player = GameObject.FindGameObjectWithTag("Player");
         m_animator = GetComponent<Animator>();
+        enemyHealth = enemyMaxHealth;
     }
 
     // Update is called once per frame
@@ -70,6 +80,11 @@ public class Enemy : MonoBehaviour {
         }
         else if(!m_isDead)
         {
+            //m_wantedPos = m_camera.WorldToViewportPoint(new Vector2(transform.position.x, transform.position.y + 50));
+            //m_enemyHealthbar.position = m_wantedPos;
+
+            m_enemyHealthbarFill.fillAmount = enemyHealth / enemyMaxHealth;
+
             LookForPlayer();
             //Checks if Player is in melee, if they are then attack, if not then move
             if (m_inMelee)

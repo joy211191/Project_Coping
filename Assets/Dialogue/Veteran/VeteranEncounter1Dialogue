@@ -1,0 +1,144 @@
+"At ease, soldier. *The man takes a few seconds to inspect you*"
+"I reckon I hav'nt seen you before, you're new here aren't you?"
+<Yeah>[New]
+<I've been here for a while, actually.>[A while]
+<...>[NoProgressEnd]
+
+
+[New]
+"Well, what are you waiting for? Have a seat! *He motions to the floor in front of him*"
+<*Sit down*>[Sit]
+<No, thank you. I'll stand.>[Stand]
+
+
+[A while]
+"*The old man raises an eyebrow* Is that so? Strange that this is the first time we've met."
+"I suppose the Tower has not wanted us to meet until now! *He chuckles*"
+"Sit a while with me. *He motions to the floor in front of him*"
+<*Sit down*>[Sit]
+<No, thank you. I'll stand.>[Stand]
+
+
+[Sit]
+"Thirsty? *He offers you his wineskin*"
+<*Decline*>[No Wine]
+<*Take the wineskin*>[Yes Wine]
+
+
+[Stand]
+"Suit yourself. *He takes a sip from his wineskin before offering it to you*"
+<*Decline*>[No Wine]
+<*Take the wineskin*>[Yes Wine]
+
+
+[No Wine]
+"More for me! *He takes another sip*"
+"So, how are you holding up?"
+<Not well>[Not Well]
+<Pretty okay. All things considred.>[OK]
+
+
+[Yes Wine]
+"*You take the wineskine and bring it up to your nose. It smells strongly of alcohol.*"
+<*Hand it back*>[Changed Mind]
+<*Take sip*>[Sip]
+
+
+[Not Well]
+"Is that so? Some wine would help to ease the pain."
+<No, thank you.>[No Two]
+<OK.>[Yes Wine]
+
+
+[OK]
+"That's good. The Tower takes a toll on you. It takes strength to keep climbing. Something I think you have."
+"I believe it's time for me to move on. The Tower waits for no one. But first... *He starts rifling through his pack*"
+"Take this. *He tosses you a small charm*"{recieveItem}
+"I know you saud you were doing alright, but a little extra help never hurts."
+<Thank you>[Thanks]
+<*Nod*>[End]
+
+[Sip]
+"*The wine is surprisingly strong and definately fortified.*"
+"What do you think?"
+<It's good! I like it!>[Like]
+<To strong for my tastes.>[No Like]
+
+
+[Changed Mind]
+"Changed your mind, eh? No matter. That leaves more wine for me! *He chuckles before taking a sip*"
+"So, anyway, how are you holding up?"
+<Not well>[Not Well]
+<Pretty okay. All things considred.>[OK]
+
+
+[Like]
+"Then keep it. I have more. *He rustles through his pack pulling out another wineskin, immediately uncorking it and taking a sip."{Refill Potions}
+"Strengtens the nerves, don't you think?"
+<Yeah>[Agree]
+<Maybe you should take it easy>[Warn]
+
+
+[No like]
+"*You hand the wineskin back* It's an aquired taste."
+"It's time to move on. The Tower waits for no one. But first... *He starts rifling through his pack*"
+"Take this. *He tosses you a small charm*"{recieveItem}
+"See it as a housewarming gift."
+<Thank you>[Thanks]
+<*Nod*>[End]
+
+
+[Agree]
+"I believe it's time for me to move on. The Tower waits for no one. But first... *He starts rifling through his pack*"
+"Take this. *He tosses you a small charm*"{recieveItem}
+"See it as a housewarming gift."
+<Thank you.>[Thanks]
+<*Nod*>[End]
+
+
+[Warn]
+"No need to worry about me. I made it this far. A little wine won't kill me."
+"I believe it's time for me to move on. The Tower waits for no one. But first... *He starts rifling through his pack*"
+"Take this. *He tosses you a small charm*"{recieveItem}
+"See it as a housewarming gift."
+<Thank you>[Thanks]
+<*Nod*>[End]
+
+
+[No Two]
+"Then you should at least have this.*He tosses you a small charm*"{recieveItem}
+"It's not much, but it kept me alive when I first got here."
+"I was bleeding out on the floor when someone found me, patched me up and gave it to me."
+"I never got the opportunity to ask her name and I was to stupid to even thank her."
+"I never met her again after that. I like to think she made it to the top and got out of this hellhole."
+"When I get out I'll find her and thank her properly."
+<I hope you do.>[Encourage]
+<What do you think is up there?>[Top]
+
+
+[Top]
+"I don't know. A way out, I hope."
+"A REAL way out."
+"Well, I think it's about time for me to get going. I hope this isn't the last time we meet. *He salutes you*"
+<Bye.>[End]
+<*salute him back*>[End]
+
+
+[Encourage]
+"Thanks. *He smiles warmly at you before rising to his feet*"
+"I think it's about time for me to leave. I hope we meet again."
+<Bye.>[End]
+
+
+[Thanks]
+"No need to thank me. We have to look after one another in here. Or else no one would make it."
+"Until next time."
+<Bye.>[End]
+
+
+[NoProgressEnd]
+*NOPROGRESSEND*
+
+
+[End]
+*END*

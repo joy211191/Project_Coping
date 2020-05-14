@@ -1,0 +1,108 @@
+"*You come across the Storyteller, sitting in the corner of the room and staring up at the ceiling*"
+"*Their journal lies open on the floor next to them, their mask's shape twisted, with a sad smile on it*" 
+<*Leave them be*>[NoProgressEnd]
+<*Walk up to them*>[Approach]
+
+[Approach]
+"*As you approach the Storyteller, they looks up at you*"
+"Ah, it's you..."
+<It is, so why are you on the ground?>[On the ground]
+<We meet again.>[Journal]
+
+[On the ground]
+"I just, ended up here"
+<So what do you remember of the last time we met?>[Journal]
+
+[Journal]
+"I don't really remember much of... all that" 
+"*They reach for their Journal and starts looking through the pages* Let me... remind myself..."
+<I don't have time for this.>[Leave]
+<I can wait.>[Stay]
+
+[Stay]
+*You sit there in silence as the Storyteller skim the pages of their book*
+*After a short while, they stop skimming and start reading*
+"So you are a new climber?"
+<Still pretty new>[New]
+<A lot of things have happened since then.>[Events]
+<I'm starting to build a story.>[Story]
+
+[Events]
+"So nice for you, that events have unfurled... *They shake their head*"
+"For me, the events have mostly torn me apart. *They manage a pained laugh*"
+"Torn me apart... It feels like I'll fade..."
+<I'll let your pity parade continue, alone.>[Leave]
+<Let us... not do that.>[Keep on]
+
+[Keep on]
+"But how could I keep going here? The tower never ends, I feel like I will be here forever."
+"I can't understand what is happening around me..."
+<Let's stay till we are both ready>[Stay2]
+<We will one day, but I have to go>[Leave]
+
+[New]
+"I understand, so not a lot to say about your journey then? *The storyteller stares through you*"
+"*The storyteller curls up back against the wall, holding their head against their knees*
+"You should go."
+<I do have a story to tell.>[Story]
+<I'll leave you then.>[Leave2]
+
+[Story]
+"A story... *The Storyteller laughs coldly as they grasp their head*"
+"If my arms could write right now, I would love to hear it"
+<If you could write right now?>[Arms]
+<Wasn't your goal to record all the stories?>[Goal]
+
+[Arms]
+"It's my arms, they feel numb, I can barely turn a page, how would I hold a quill?"
+"Much less take in what the story is and what you tell me. I just can't..."
+<Point me to where I should write down the footnotes>[Assistance]
+<I see... I'll stay here till we can jot it all down.>[Rested]
+<I'll leave you in your pity.>[Leave]
+
+[Assistance]
+"*They turn a page in the journal, and point to it* Thank you, your help means a lot to me"
+<*Write down your tale this far*>[Writing]
+
+[Writing]
+"*They smile at the pages as you start filling them and as you finish they reach for their bag*"
+"*they pull out a ring from it and hands it to you* Thank you again... {recieveItem}
+"I'll go over this now, try to... get an understanding of it"
+"*They dissappear into your text, reading intensively*"
+<...>[Leave2]
+
+[Goal]
+"It is, but there is no end to this tower. I'll just let the wardens come and take me!"
+*The storyteller presses their face into their hands*
+<There is an end, we just have to keep going!>[Fallen]
+<*Leave them*>[Leave2]
+
+[Fallen]
+"I would love to just fade, to fall..."
+<Let us... not do that>[Keep on]
+<I'll stay here until we are both ready, okay?>[Stay2]
+<Well, I'll leave you to it.>[Leave]
+
+[Stay2]
+"Stay till we are both ready? The tower has killed all our hope, our willingness to go on."
+"That doesn't work, we can't just... go on. It just doesn't work."
+"*they stare cathatonically into the ground*"
+<*Stay and wait for them to get ready to leave*>[Rested]
+
+
+[Rested]
+"*The two of you sit in silence, for what feels like hours*...{refillPotions}
+"... *maybe even days, until they struggle to their feet*"
+"I'll be... fine now, let's take your story another time...I can't wait to hear it.
+"*They slowly stumble through the room*"
+*END*
+ 
+[Leave]
+"I... I see... *They drop their book and stare back at the ceiling*
+*END*
+
+[Leave2]
+*END*
+
+[NoProgressEnd]
+*NOPROGRESSEND*

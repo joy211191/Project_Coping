@@ -26,7 +26,7 @@ public class LiftScript : MonoBehaviour
     void Awake()
     {
         m_LevelGenerationManager = GameObject.Find("GameManager").GetComponent<LevelGenerationManager>();
-        m_interactionPrompt = GameObject.Find("/Canvas/Interaction Prompt");
+        m_interactionPrompt = GameObject.FindGameObjectWithTag("InteractionPrompt");
         m_levelHeader = GameObject.Find("/Canvas/Lift UI/Panel/Level Panel/Level Header");
         m_levelText = GameObject.Find("/Canvas/Lift UI/Panel/Level Panel/Level Text").GetComponent<Text>();
         m_costHeader = GameObject.Find("/Canvas/Lift UI/Panel/Cost Panel/Cost Header");

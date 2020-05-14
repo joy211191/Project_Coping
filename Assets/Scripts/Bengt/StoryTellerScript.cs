@@ -30,6 +30,8 @@ public class StoryTellerScript : MonoBehaviour
     [SerializeField]
     string m_endDialoguePath;
     [SerializeField]
+    string m_secondEndDialoguePath;
+    [SerializeField]
     string m_finalDialoguePath;
     [Header("Text Colour")]
     [SerializeField]
@@ -55,6 +57,7 @@ public class StoryTellerScript : MonoBehaviour
     protected int m_dialogueNum = 0;
     protected int m_dialogueOptions = 0;
     protected int m_dialogueCounter = 0;
+    protected int m_dialogueEndCounter = 0;
 
     protected string m_dialoguePath;
     protected string[] m_dialogueLines;
@@ -196,7 +199,14 @@ public class StoryTellerScript : MonoBehaviour
         i = 0;//Resets this little thingy, TODO: Replace with something
 
         if (m_dialogueLines[m_dialogueNum] == "*END*")
+            m_dialogueEndCounter++;
+
+
+        if(m_dialogueEndCounter == 0)
             m_dialoguePath = m_endDialoguePath;
+        else 
+            m_dialoguePath = m_secondEndDialoguePath;
+
 
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
     }
