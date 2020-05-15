@@ -52,6 +52,8 @@ public class InventoryUIScript : MonoBehaviour
 
     public void ShowUI()
     {
+        m_playerInLocker = true;
+
         //Make so that the player can't move with the locker open
         m_player.GetComponent<PlayerController>().enabled = false;
         m_player.GetComponent<PlayerAnimator>().enabled = false;
@@ -94,6 +96,8 @@ public class InventoryUIScript : MonoBehaviour
 
     public void HideUI()
     {
+        m_playerInLocker = false;
+
         //Let the player move again
         m_player.GetComponent<PlayerController>().enabled = true;
         m_player.GetComponent<PlayerAnimator>().enabled = true;

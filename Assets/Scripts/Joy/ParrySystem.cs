@@ -15,7 +15,7 @@ public class ParrySystem : MonoBehaviour
     }
 
     void Update () {
-        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift;
+        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift);
         playerAnimator.m_animator.SetBool("Block",Input.GetKey(KeyCode.LeftShift));
     }
 
