@@ -195,11 +195,13 @@ public class LiftAttendant : MonoBehaviour
         m_canTalk = true;
         m_waitingForInput = false;
 
-        m_dialogueNum = 0; //reset dialoguenum
-        i = 0;//Resets this little thingy, TODO: Replace with something
+
 
         if (m_dialogueLines[m_dialogueNum] == "*END*")
             m_dialoguePath = m_endDialoguePath;
+
+        m_dialogueNum = 0; //reset dialoguenum
+        i = 0;//Resets this little thingy, TODO: Replace with something
 
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
     }
@@ -345,7 +347,7 @@ public class LiftAttendant : MonoBehaviour
 
     void RefillPotions()
     {
-
+        m_player.GetComponent<PlayerStats>().refillPotions();
     }
 
     public void NextDialogue()

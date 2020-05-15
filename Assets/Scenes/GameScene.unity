@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2882,7 +2882,7 @@ MonoBehaviour:
   - Assets/Dialogue/Storyteller/StorytellerEncounter1Dialogue - Edit.txt
   - Assets/Dialogue/Storyteller/StorytellerEncounter2Dialogue - Edit.txt
   m_endDialoguePath: Assets/Dialogue/Storyteller/StorytellerSpentDialogue1.txt
-  m_secondEndDialoguePath: 
+  m_endDialoguePath2: Assets/Dialogue/Storyteller/StorytellerSpentDialogue2.txt
   m_finalDialoguePath: Assets/Dialogue/Storyteller/StoryTellerFinishDialogue.txt
   m_activeText: {r: 0.4716981, g: 0.45713332, b: 0.02002491, a: 1}
   m_inactiveText: {r: 0.4245283, g: 0.4245283, b: 0.4245283, a: 1}
@@ -11256,7 +11256,7 @@ MonoBehaviour:
   m_dialogueList:
   - Assets/Dialogue/Veteran/VeteranEncounter1Dialogue.txt
   - Assets/Dialogue/Veteran/VeteranEncounter2Dialogue.txt
-  m_endDialoguePath: Assets/Dialogue/Lift Attendant/Dialogue1 - kopia (2).txt
+  m_endDialoguePath: Assets/Dialogue/Storyteller/StorytellerSpentDialogue1.txt
   m_finalDialoguePath: Assets/Dialogue/Lift Attendant/Dialogue1 - kopia (2).txt
   m_activeText: {r: 0.64169776, g: 0.6509434, b: 0.23028658, a: 1}
   m_inactiveText: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
@@ -11805,6 +11805,7 @@ MonoBehaviour:
   numbnessPoolDelayTime: 2
   numbnessPoolDecayValue: 0.15
   powerActivated: 0
+  maxPotions: 0
   potionCounter: 0
   healthImage: {fileID: 689735468}
   numbnessImage: {fileID: 1165672051}

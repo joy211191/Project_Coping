@@ -31,6 +31,8 @@ public class PlayerStats : MonoBehaviour {
 
     public bool powerActivated;
 
+    [SerializeField]
+    int maxPotions;
     public int potionCounter;
 
     [Space(20)]
@@ -46,6 +48,7 @@ public class PlayerStats : MonoBehaviour {
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
 
     void Awake () {
+        potionCounter = maxPotions;
         playerAnimator = GetComponent<PlayerAnimator>();
         numbnessPool = maxNumbnessPoolValue;
         SetPlayerStats(1, damageMultiplier, speed, 1);
@@ -172,5 +175,10 @@ public class PlayerStats : MonoBehaviour {
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
+    }
+
+    public void refillPotions()
+    {
+        potionCounter = maxPotions;
     }
 }
