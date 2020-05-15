@@ -32,7 +32,7 @@ public class InventorySystem : MonoBehaviour {
     public void UnequipItem(Item equipItem)
     {
         playerStats.equippedItems.Remove(equipItem);
-        playerStats.ItemEffects();
+        playerStats.ResetEffects();
     }
 
     void LoadData () {
