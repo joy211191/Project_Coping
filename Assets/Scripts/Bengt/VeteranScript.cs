@@ -82,15 +82,15 @@ public class VeteranScript : MonoBehaviour
 
        
 
-        if (PlayerPrefs.HasKey("Storyteller DialogueCounter"))
-            m_dialogueCounter = PlayerPrefs.GetInt("Storyteller DialogueCounter");
+        if (PlayerPrefs.HasKey("Veteran DialogueCounter"))
+            m_dialogueCounter = PlayerPrefs.GetInt("Veteran DialogueCounter");
         else
-            PlayerPrefs.SetInt("Storyteller DialogueCounter", m_dialogueCounter);
+            PlayerPrefs.SetInt("Veteran DialogueCounter", m_dialogueCounter);
 
-        if (PlayerPrefs.HasKey("Storyteller ItemsReceived"))
-            m_itemsRecieved = PlayerPrefs.GetInt("Storyteller ItemsReceived");
+        if (PlayerPrefs.HasKey("Veteran ItemsReceived"))
+            m_itemsRecieved = PlayerPrefs.GetInt("Veteran ItemsReceived");
         else
-            PlayerPrefs.SetInt("Storyteller ItemsReceived", m_itemsRecieved);
+            PlayerPrefs.SetInt("Veteran ItemsReceived", m_itemsRecieved);
 
         
     }
@@ -382,11 +382,13 @@ public class VeteranScript : MonoBehaviour
 
     public void NextDialogue()
     {
+        /*
         m_dialogueCounter++;
 
         if (m_dialogueCounter < m_dialogueList.Count)
             m_dialoguePath = m_dialogueList[m_dialogueCounter];
         else
             m_dialoguePath = m_finalDialoguePath;
+            */
     }
 }

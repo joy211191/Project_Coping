@@ -139,7 +139,8 @@ public class LiftScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player")
+        if (col.tag == "Player" &&
+            m_LevelGenerationManager.m_currentSectionNumber > 0)
         {
             m_playerIsByLift = true;
             m_interactionPrompt.SetActive(true);
@@ -148,7 +149,8 @@ public class LiftScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
         {
-            if (col.tag == "Player")
+            if (col.tag == "Player" &&
+            m_LevelGenerationManager.m_currentSectionNumber > 0)
             {
                 m_playerIsByLift = false;
                 m_interactionPrompt.SetActive(false);

@@ -24,11 +24,15 @@ public class InventoryUIScript : MonoBehaviour
     [SerializeField]
     GameObject m_interactionPrompt;
 
+    [SerializeField]
+    List<Sprite> m_itemSprites = new List<Sprite>();
+
+
     List<bool> m_ItemEquipped = new List<bool>();
 
     InventorySystem m_inventorySystem;
 
-    bool m_playerIsByLocker = true;
+    bool m_playerIsByLocker = false;
     bool m_playerInLocker = false;
 
     // Start is called before the first frame update
@@ -79,13 +83,22 @@ public class InventoryUIScript : MonoBehaviour
             }
 
 
-            //m_InventoryIcons.sprite = m_player.GetComponent<InventorySystem>().items[i].sprite; //Show the sprite of the object
+           
             m_InventoryIcons[i].gameObject.SetActive(true);
             Color tempColour = m_InventoryIcons[i].GetComponent<Image>().color;
             tempColour.a = 1f;
             m_InventoryIcons[i].GetComponent<Image>().color = tempColour;
             m_InventoryIcons[i].GetComponent<Button>().enabled = true;
-            m_InventoryIcons[i].GetComponent<Image>().sprite = m_inventorySystem.items[i].itemSprite;
+            //m_InventoryIcons[i].GetComponent<Image>().sprite = m_inventorySystem.items[i].itemSprite;
+
+            if (m_inventorySystem.items[i].itemName == '"' + "Housewarming Gift" + '"')
+                m_InventoryIcons[i].GetComponent<Image>().sprite = m_itemSprites[0];
+            if (m_inventorySystem.items[i].itemName == "Bull Pendant")
+                m_InventoryIcons[i].GetComponent<Image>().sprite = m_itemSprites[1];
+            if (m_inventorySystem.items[i].itemName == "Good Luch Charm")
+                m_InventoryIcons[i].GetComponent<Image>().sprite = m_itemSprites[2];
+            if (m_inventorySystem.items[i].itemName == "Light Ring")
+                m_InventoryIcons[i].GetComponent<Image>().sprite = m_itemSprites[3];
 
         }
     }
@@ -104,9 +117,10 @@ public class InventoryUIScript : MonoBehaviour
         for (int i = 0; i < m_inventorySystem.items.Count; i++)
         {
             m_InventoryIcons[i].gameObject.SetActive(false);
-            m_InventoryBackground.SetActive(false);
-            m_InfoPanel.SetActive(false);
         }
+
+        m_InventoryBackground.SetActive(false);
+        m_InfoPanel.SetActive(false);
     }
 
     public void EquipItem(int p_inItem)
