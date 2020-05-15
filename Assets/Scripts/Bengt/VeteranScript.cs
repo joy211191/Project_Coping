@@ -79,6 +79,20 @@ public class VeteranScript : MonoBehaviour
         m_nameText.text = gameObject.name;
 
         m_dialoguePath = m_dialogueList[0];
+
+        /*
+
+        if (PlayerPrefs.HasKey("Storyteller DialogueCounter"))
+            m_dialogueCounter = PlayerPrefs.GetKey("Storyteller DialogueCounter");
+        else
+            PlayerPrefs.SetKey("Storyteller DialogueCounter", m_dialogueCounter);
+
+        if (PlayerPrefs.HasKey("Storyteller ItemsReceived"))
+            m_itemsRecieved = PlayerPrefs.GetKey("Storyteller ItemsReceived");
+        else
+            PlayerPrefs.SetKey("Storyteller ItemsReceived", m_itemsRecieved);
+
+        */
     }
 
     // Update is called once per frame
@@ -212,6 +226,10 @@ public class VeteranScript : MonoBehaviour
         i = 0;//Resets this little thingy, TODO: Replace with something
 
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
+
+
+        PlayerPrefs.SetInt("Veteran DialogueCounter", m_dialogueCounter);
+        PlayerPrefs.SetInt("Veteran ItemsReceived", m_itemsRecieved);
     }
 
     //Prints dialogue options
@@ -288,8 +306,8 @@ public class VeteranScript : MonoBehaviour
             }
 
             //m_dialogueNum++;
-
-
+            // protected int m_dialogueCounter = 0;
+            //protected int m_itemsRecieved = 0;
         }
     }
 
