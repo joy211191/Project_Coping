@@ -21,9 +21,15 @@ public class InventoryUIScript : MonoBehaviour
     Text m_ItemName;
     [SerializeField]
     Text m_ItemInfo;
+    [SerializeField]
+    GameObject m_interactionPrompt;
+
     List<bool> m_ItemEquipped = new List<bool>();
 
     InventorySystem m_inventorySystem;
+
+    bool m_playerIsByLocker = true;
+    bool m_playerInLocker = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -38,23 +44,27 @@ public class InventoryUIScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I) && !m_InventoryBackground.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByLocker && !m_playerInLocker)
             ShowUI();
-        else if (Input.GetKeyDown(KeyCode.I) && m_InventoryBackground.activeSelf)
+        else if (Input.GetKeyDown(KeyCode.Q) && m_playerInLocker)
             HideUI();
     }
 
-    protected void ShowUI()
+    public void ShowUI()
     {
         //Make so that the player can't move with the locker open
         m_player.GetComponent<PlayerController>().enabled = false;
         m_player.GetComponent<PlayerAnimator>().enabled = false;
+
+
+        Debug.Log(m_ItemEquipped.Count + " 1");
 
         m_InventoryBackground.SetActive(true);
         m_InfoPanel.SetActive(true);
         //Show as many items as we need
         for (int i = 0; i < m_inventorySystem.items.Count; i++)
         {
+
 
             if (m_player.GetComponent<PlayerStats>().equippedItems.Contains(m_inventorySystem.items[i]))
             {
@@ -67,16 +77,22 @@ public class InventoryUIScript : MonoBehaviour
                 m_EquippedIndicators[i].SetActive(false);
             }
 
+
             //m_InventoryIcons.sprite = m_player.GetComponent<InventorySystem>().items[i].sprite; //Show the sprite of the object
             m_InventoryIcons[i].gameObject.SetActive(true);
             Color tempColour = m_InventoryIcons[i].GetComponent<Image>().color;
             tempColour.a = 1f;
             m_InventoryIcons[i].GetComponent<Image>().color = tempColour;
             m_InventoryIcons[i].GetComponent<Button>().enabled = true;
+
+
         }
+
+
+        Debug.Log(m_ItemEquipped.Count + " 2");
     }
 
-    protected void HideUI()
+    public void HideUI()
     {
         //Let the player move again
         m_player.GetComponent<PlayerController>().enabled = true;
@@ -94,6 +110,10 @@ public class InventoryUIScript : MonoBehaviour
 
     public void EquipItem(int p_inItem)
     {
+
+        Debug.Log(p_inItem);
+        Debug.Log(m_ItemEquipped.Count + " 3");
+
         if (!m_ItemEquipped[p_inItem])
         {
             m_player.GetComponent<InventorySystem>().EquipItem(m_inventorySystem.items[p_inItem]);
@@ -129,5 +149,23 @@ public class InventoryUIScript : MonoBehaviour
     {
         m_ItemName.text = "";
         m_ItemInfo.text = "";
+    }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            m_playerIsByLocker = true;
+            m_interactionPrompt.SetActive(true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.tag == "Player")
+        {
+            m_playerIsByLocker = false;
+            m_interactionPrompt.SetActive(false);
+        }
     }
 }
