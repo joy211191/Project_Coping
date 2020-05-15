@@ -36,6 +36,10 @@ public class ClimberSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
+        //Removing this will stop the errors but it will cause problems 
+        //such as the NPC climbers not switching to the correct dialogue
+        //or appearing where they shouldn't
+        //¯\_(ツ)_/¯
         m_climber.transform.position = new Vector2(-50, -50);
         if (m_climberName == "Veteran")
             m_climber.GetComponent<VeteranScript>().NextDialogue();
