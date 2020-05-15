@@ -59,7 +59,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[0]++;
                         //we can change the values later on 
                         willPower -= 7;
-                        playerStats.SetPlayerStats(2, 1f, 2, 2); //Increases damage, increases speed by 50%, 4x Cost 7 Willpower, 15seconds
+                        playerStats.SetPlayerStats(2, 1f, 10, 2); //Increases damage, increases speed by 50%, 4x Cost 7 Willpower, 15seconds
                         playerStats.SetCountDown(15f);
                         break;
                     }

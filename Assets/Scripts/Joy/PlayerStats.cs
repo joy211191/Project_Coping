@@ -79,7 +79,7 @@ public class PlayerStats : MonoBehaviour {
         attackPower *= attackMultiplier;
         health *= healthMultiplier;
         damageMultiplier *= damageTaken;
-        speed *= speedChange;
+        speed = speedChange;
         maxNumbnessPoolValue = numbnessPoolIncrease;
         playerAnimator.GetSpeed();
     }
@@ -109,8 +109,25 @@ public class PlayerStats : MonoBehaviour {
         if (playHurtAnim) {
             playerAnimator.m_animator.SetTrigger("Hurt");
         }
+        if (health <= 0) {
+            Respeawn();
+        }
         StartCoroutine("NumbnessPoolDecay");
     }
+
+    public void Respeawn () {
+        if (playerBaseAbilities.willPower > 10) {
+            playerBaseAbilities.willPower -= 10;
+            playerAnimator.m_animator.enabled = false;
+            playerAnimator.m_animator.enabled = true;
+
+        }
+        else {
+            playerAnimator.dead = true;
+            playerAnimator.m_animator.SetTrigger("Death");
+        }
+    }
+
 
     public IEnumerator NumbnessPoolDecay () {
         yield return new WaitForSeconds(numbnessPoolDelayTime);
@@ -176,6 +193,7 @@ public class PlayerStats : MonoBehaviour {
 
     private void ResetPlayer()
     {
+        playerAnimator.m_animator.SetTrigger("Heal");
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
