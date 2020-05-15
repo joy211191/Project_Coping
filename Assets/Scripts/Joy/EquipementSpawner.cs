@@ -67,8 +67,6 @@ public class EquipementSpawner : MonoBehaviour {
         item.numbnessDamagePercentage = Random.Range(numbnessDamagePercentage.x, numbnessDamagePercentage.y);
         item.movementSpeedIncrease = Random.Range(movementSpeedIncrease.x, movementSpeedIncrease.y);
         item.willpowerIncrease = Random.Range(willpowerIncrease.x, willpowerIncrease.y);
-        item.sprite = sprites[Random.Range(0, sprites.Count)];
         item.itemName = itemNames[Random.Range(0, itemNames.Count)];
-        item.ApplySprite();
     }
 }

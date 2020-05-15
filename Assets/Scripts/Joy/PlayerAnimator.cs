@@ -16,9 +16,12 @@ public class PlayerAnimator : PlayerController {
     [SerializeField]
     Transform attackPoint;
     [SerializeField]
+    Transform shieldTransform;
+    [SerializeField]
     float attackRange;
     public LayerMask enemyLayers;
     Vector3 attackPointPosition;
+    Vector3 shieldPosition;
 
     public bool playerDown;
 
@@ -50,6 +53,9 @@ public class PlayerAnimator : PlayerController {
     [SerializeField]
     Vector3 offsetVector;
 
+    [SerializeField]
+    Vector3 raycastVectorOffset;
+
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerStats>();
@@ -62,8 +68,8 @@ public class PlayerAnimator : PlayerController {
         powerUpSelection.Add(KeyCode.Alpha2);
         powerUpSelection.Add(KeyCode.Alpha3);
         powerUpSelection.Add(KeyCode.Alpha4);
-        powerUpSelection.Add(KeyCode.Alpha5);
         attackPointPosition = attackPoint.localPosition;
+        shieldPosition = shieldTransform.localPosition;
         rb2D = GetComponent<Rigidbody2D>();
     }
 
@@ -71,10 +77,10 @@ public class PlayerAnimator : PlayerController {
     void Update () {
         //Dash
 #if UNITY_EDITOR
-        Debug.DrawRay(transform.position, transform.right * BoolToInteger() * distanceCheck, Color.green);
+        Debug.DrawRay(transform.position+ raycastVectorOffset, transform.right * BoolToInteger() * distanceCheck, Color.green);
 #endif
         if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) { 
-            RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position, transform.right * BoolToInteger(), distanceCheck);
+            RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position+ raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
             if (hit_Combat.transform == null||hit_Combat.transform.tag != "Environment") {
                 Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
                 m_animator.SetTrigger("Dash");
@@ -125,7 +131,7 @@ public class PlayerAnimator : PlayerController {
         #endregion
         #region POWER_UP_SELCETION
         if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-            if (powerUpIndex < 4)
+            if (powerUpIndex < 3)
                 powerUpIndex++;
             else
                 powerUpIndex = 0;
@@ -134,7 +140,7 @@ public class PlayerAnimator : PlayerController {
             if (powerUpIndex > 0)
                 powerUpIndex--;
             else
-                powerUpIndex = 4;
+                powerUpIndex = 3;
         }
         playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
         foreach (KeyCode keyStroke in powerUpSelection) {
@@ -154,10 +160,6 @@ public class PlayerAnimator : PlayerController {
                         }
                     case KeyCode.Alpha4: {
                             powerUpIndex = 3;
-                            break;
-                        }
-                    case KeyCode.Alpha5: {
-                            powerUpIndex = 4;
                             break;
                         }
                 }
@@ -181,10 +183,14 @@ public class PlayerAnimator : PlayerController {
                 playerBaseAbilities.Revive();
             }
         }
-        if (spriteRenderer.flipX)
+        if (spriteRenderer.flipX) {
             attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
-        else
+            shieldTransform.localPosition = new Vector2(-shieldPosition.x, shieldPosition.y);
+        }
+        else {
             attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
+            shieldTransform.localPosition = new Vector2(shieldPosition.x, shieldPosition.y);
+        }
 
         if (Input.GetKeyDown(KeyCode.F)&&playerStats.potionCounter>0&&playerStats.health<playerStats.maxHealth) {
             playerStats.HealPlayer();

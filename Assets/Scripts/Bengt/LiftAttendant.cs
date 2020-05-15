@@ -39,6 +39,8 @@ public class LiftAttendant : MonoBehaviour
     [SerializeField]
     GameObject m_player;
 
+    public Item item;
+
 
     protected bool m_canTalk = false;
     protected bool m_talking = false;
