@@ -71,10 +71,13 @@ public class Enemy : MonoBehaviour {
     // Update is called once per frame
     void Update () {
 
-        
+        m_enemyHealthbarFill.fillAmount = enemyHealth / enemyMaxHealth;
 
         if (enemyHealth <= 0 && !m_isDead)
         {
+            m_enemyHealthbar.gameObject.SetActive(false);
+            GetComponent<BoxCollider2D>().enabled = false;
+            m_body2d.simulated = false;
             m_animator.SetTrigger("Dead");
             m_isDead = true;
         }
@@ -83,7 +86,6 @@ public class Enemy : MonoBehaviour {
             //m_wantedPos = m_camera.WorldToViewportPoint(new Vector2(transform.position.x, transform.position.y + 50));
             //m_enemyHealthbar.position = m_wantedPos;
 
-            m_enemyHealthbarFill.fillAmount = enemyHealth / enemyMaxHealth;
 
             LookForPlayer();
             //Checks if Player is in melee, if they are then attack, if not then move
@@ -141,6 +143,9 @@ public class Enemy : MonoBehaviour {
                 {
                     m_animator.SetTrigger("Attack");
                     m_player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
+                }
+                else if (player.tag == "Shield") {
+                    m_animator.SetTrigger("Damage");
                 }
             }
 

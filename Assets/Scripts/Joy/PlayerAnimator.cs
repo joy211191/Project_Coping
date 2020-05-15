@@ -56,6 +56,9 @@ public class PlayerAnimator : PlayerController {
     [SerializeField]
     Vector3 raycastVectorOffset;
 
+    bool powerActivated;
+    float countDown;
+
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerStats>();
@@ -73,8 +76,30 @@ public class PlayerAnimator : PlayerController {
         rb2D = GetComponent<Rigidbody2D>();
     }
 
+    public void SetCountDown (float maxCountDown) {
+        powerActivated = true;
+        countDown = maxCountDown;
+    }
+
+    public void EscapeMechanicUpdate (bool activate) {
+        doubleDash = activate;
+        doubleJump = activate;
+        if (activate)
+            dashTimeRecharge = dashTimeRecharge / 2;
+        else
+            dashTimeRecharge = dashTimeRecharge * 2;
+    }
+
     // Update is called once per frame
     void Update () {
+        if (countDown > 0) {
+            countDown -= Time.deltaTime;
+            if (countDown <= 0) {
+                powerActivated = false;
+                EscapeMechanicUpdate(false);
+                playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
+            }
+        }
         //Dash
 #if UNITY_EDITOR
         Debug.DrawRay(transform.position+ raycastVectorOffset, transform.right * BoolToInteger() * distanceCheck, Color.green);
@@ -83,6 +108,7 @@ public class PlayerAnimator : PlayerController {
             RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position+ raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
             if (hit_Combat.transform == null||hit_Combat.transform.tag != "Environment") {
                 Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
+                playerBaseAbilities.willPower -= 5;
                 m_animator.SetTrigger("Dash");
                 transform.DOMove(newPosition, 0.5f);
                 lastDashed = Time.time;
@@ -131,7 +157,7 @@ public class PlayerAnimator : PlayerController {
         #endregion
         #region POWER_UP_SELCETION
         if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-            if (powerUpIndex < 3)
+            if (powerUpIndex < 2)
                 powerUpIndex++;
             else
                 powerUpIndex = 0;
@@ -140,7 +166,7 @@ public class PlayerAnimator : PlayerController {
             if (powerUpIndex > 0)
                 powerUpIndex--;
             else
-                powerUpIndex = 3;
+                powerUpIndex = 2;
         }
         playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
         foreach (KeyCode keyStroke in powerUpSelection) {
@@ -156,10 +182,6 @@ public class PlayerAnimator : PlayerController {
                         }
                     case KeyCode.Alpha3: {
                             powerUpIndex = 2;
-                            break;
-                        }
-                    case KeyCode.Alpha4: {
-                            powerUpIndex = 3;
                             break;
                         }
                 }

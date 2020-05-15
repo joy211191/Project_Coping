@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7379642022673678737}
   - component: {fileID: 7379642022673678736}
-  - component: {fileID: 7379642022673678447}
+  - component: {fileID: 3757039158335976594}
   m_Layer: 0
   m_Name: ItemPrefab
   m_TagString: Untagged
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7379642022673678447
+--- !u!114 &3757039158335976594
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,15 +91,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7379642022673678446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c37fcd7b19f7bd4e93ca4e7629c3b03, type: 3}
+  m_Script: {fileID: 11500000, guid: 8225bad20e497a9449ab8ab09daa1a11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  healthIncrase: 0
-  numbnessPoolIncrease: 0
-  numbnessDamagePercentage: 0
-  movementSpeedIncrease: 0
-  willpowerIncrease: 0
-  doubleJump: 0
-  doubleDash: 0
-  sprite: {fileID: 0}

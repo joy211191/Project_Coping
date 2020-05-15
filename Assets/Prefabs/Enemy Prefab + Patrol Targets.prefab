@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 4
   enemyMaxHealth: 50
-  m_attackDamage: 0
+  m_attackDamage: 20
   m_attackSpeed: 0.6
   attackRange: 0.6
   m_aggroRange: 5
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_patrolTarget2: {fileID: 8751764218911668317}
   playerLayers:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 4
   m_enemyHealthbar: {fileID: 599994822}
   m_enemyHealthbarFill: {fileID: 1321910393}
   m_camera: {fileID: 0}

@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour {
     PlayerAnimator playerAnimator;
     public bool playHurtAnim = true;
     public float countDown;
-    public float maxCountDown;
+    //public float maxCountDown;
     List<float> originalValues = new List<float>();
     public PlayerBaseAbilities playerBaseAbilities;
     [Space(5)]
@@ -70,7 +70,7 @@ public class PlayerStats : MonoBehaviour {
         }
     }
 
-    public void SetPlayerStats (float healthMultiplier, float damageTaken, float speedChange, float attackMultiplier) {
+    public void SetPlayerStats (float healthMultiplier, float damageTaken, float speedChange, float attackMultiplier,float numbnessPoolIncrease=0) {
         originalValues.Clear();
         originalValues.Add(health);
         originalValues.Add(damageMultiplier);
@@ -78,8 +78,9 @@ public class PlayerStats : MonoBehaviour {
         originalValues.Add(attackPower);
         attackPower *= attackMultiplier;
         health *= healthMultiplier;
-        damageMultiplier = damageTaken;
-        speed = speedChange;
+        damageMultiplier *= damageTaken;
+        speed *= speedChange;
+        maxNumbnessPoolValue = numbnessPoolIncrease;
         playerAnimator.GetSpeed();
     }
 
@@ -130,7 +131,7 @@ public class PlayerStats : MonoBehaviour {
         return speed;
     }
 
-    public void SetCountDown () {
+    public void SetCountDown (float maxCountDown) {
         powerActivated = true;
         countDown = maxCountDown;
     }

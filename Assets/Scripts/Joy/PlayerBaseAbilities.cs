@@ -19,6 +19,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
     public PowerUp powerUp;
     public PlayerStats playerStats;
     public DataSet dataSet;
+    PlayerAnimator playerAnimator;
 
     public List<Sprite> powerUpSprites = new List<Sprite>();
 
@@ -29,14 +30,15 @@ public class PlayerBaseAbilities : MonoBehaviour {
         playerStats = GetComponent<PlayerStats>();
         playerStats.playerBaseAbilities = this;
         willPower = maxWillPower;
+        playerAnimator = GetComponent<PlayerAnimator>();
     }
 
     void Update () {
         willPowerImage.fillAmount =willPower / maxWillPower;
 #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.LeftAlt) && willPower >= 5) {
+        /*if (Input.GetKeyDown(KeyCode.LeftAlt) && willPower >= 5) {
             willPower -= 5f;
-        }
+        }*/
         if (Input.GetKeyDown(KeyCode.P)) {
             SaveData();
         }
@@ -56,15 +58,15 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[4] += 1;
                         dataSet.numericalValues[0]++;
                         //we can change the values later on 
-                        willPower -= 1;
-                        playerStats.SetPlayerStats(2, 1f, 2, 1); //Increases damage, increases speed by 50%, 4x Cost 7 Willpower, 15seconds
-                        playerStats.SetCountDown();
+                        willPower -= 7;
+                        playerStats.SetPlayerStats(2, 1f, 2, 2); //Increases damage, increases speed by 50%, 4x Cost 7 Willpower, 15seconds
+                        playerStats.SetCountDown(15f);
                         break;
                     }
                     else
                         break;
                 }
-            case PowerUp.Risk: {
+            /*case PowerUp.Risk: {
                     if (willPower > 2) {
                         dataSet.numericalValues[4] += 3;
                         dataSet.numericalValues[1] += 1;
@@ -74,16 +76,17 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         break;
                     }
                     else break;
-                }
+                }*/
 
             case PowerUp.Numbing: {
                     if (willPower > 3) {
                         dataSet.numericalValues[4] += 4;
                         dataSet.numericalValues[2]++;
-                        willPower -= 4;
+                        willPower -= 5;
                         playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
-                        playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds
-                        playerStats.SetCountDown();
+                        playerStats.SetPlayerStats(2, 0.2f, 1, 1f,20); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds
+                        
+                        playerStats.SetCountDown(20f);
                         break;
                     }
                     else
@@ -93,8 +96,9 @@ public class PlayerBaseAbilities : MonoBehaviour {
                     if (willPower > 4) {
                         dataSet.numericalValues[4] += 5;
                         dataSet.numericalValues[3]++;
-                        willPower -= 5;
-                        playerStats.SetCountDown(); //enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
+                        willPower -= 15;
+                        playerAnimator.EscapeMechanicUpdate(true);
+                                                                //enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
                         break;
                     }
                     else

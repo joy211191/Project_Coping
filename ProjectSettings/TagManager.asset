@@ -12,6 +12,7 @@ TagManager:
   - Climber
   - Environment
   - InteractionPrompt
+  - Shield
   layers:
   - Default
   - TransparentFX

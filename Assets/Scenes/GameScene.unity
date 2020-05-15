@@ -4264,10 +4264,10 @@ RectTransform:
   m_Father: {fileID: 646423533}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 38.583, y: -36.864}
-  m_SizeDelta: {x: 77.166, y: 110.592}
+  m_AnchorMin: {x: 0, y: 0.19544312}
+  m_AnchorMax: {x: 0.21411324, y: 0.56}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873863340
 MonoBehaviour:
@@ -13369,7 +13369,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -13378,7 +13378,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c312ca9839be7504ab1b56cbd7b1bdc0, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
@@ -13410,10 +13410,10 @@ RectTransform:
   m_Father: {fileID: 873863339}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.55, y: -27.44}
-  m_SizeDelta: {x: 35.37, y: 36.87}
+  m_AnchorMin: {x: 0.448, y: 0.08120002}
+  m_AnchorMax: {x: 0.9283015, y: 0.40889412}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1844595568
 GameObject:
@@ -14114,14 +14114,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   playerDown: 0
-  damageVectors: {x: 5, y: 5, z: 5}
+  damageVectors: {x: 5, y: 5, z: 15}
   rayCastLength: 1
   distanceCheck: 5
   doubleDash: 0
   doubleJump: 1
-  dashTimeRecharge: 0
+  dashTimeRecharge: 1
   offsetVector: {x: 0, y: 0, z: 0}
-  raycastVectorOffset: {x: 0, y: 0, z: 0}
+  raycastVectorOffset: {x: 0, y: -0.81, z: 0}
 --- !u!114 &1951481744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14155,7 +14155,6 @@ MonoBehaviour:
   damageMultiplier: 1
   playHurtAnim: 1
   countDown: 0
-  maxCountDown: 5
   playerBaseAbilities: {fileID: 0}
   numbnessDamageReduction: 0.9
   numbnessPool: 0
@@ -14196,7 +14195,6 @@ MonoBehaviour:
     numericalValues: 00000000000000000000000000000000000000000000000000000000
   powerUpSprites:
   - {fileID: 21300000, guid: fc968719ad914504dad904754f844179, type: 3}
-  - {fileID: 21300000, guid: e6d389e84f3fc1a42928a776a4057976, type: 3}
   - {fileID: 21300000, guid: 24740c63d9bb04143bd015b0db6da0d6, type: 3}
   - {fileID: 21300000, guid: 74b7721ef03e3c7429b5ec69bbee676e, type: 3}
   willPowerImage: {fileID: 536987499}
@@ -14718,7 +14716,7 @@ GameObject:
   - component: {fileID: 2120230255}
   m_Layer: 2
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14731,7 +14729,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2120230252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.49, y: -2.29, z: 0}
+  m_LocalPosition: {x: 2.31, y: -3.52, z: 0}
   m_LocalScale: {x: 0.35, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1508926462}
@@ -14761,7 +14759,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.37, y: 3.99}
   m_EdgeRadius: 0
 --- !u!114 &2120230255
 MonoBehaviour:

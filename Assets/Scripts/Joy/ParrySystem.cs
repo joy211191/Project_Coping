@@ -4,9 +4,22 @@ using UnityEngine;
 
 public class ParrySystem : MonoBehaviour
 {
+
+    BoxCollider2D boxCollider2D;
+
+
+    void Awake () {
+        boxCollider2D = GetComponent<BoxCollider2D>();
+    }
+
+    void Update () {
+        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift);
+    }
+
+
     void OnTriggerEnter2D(Collider2D col) {
         if (Input.GetKeyDown(KeyCode.LeftShift)) {
-            //play enemy stun animation
+            col.GetComponent<Animator>().SetTrigger("Damage");
         }
     }
 

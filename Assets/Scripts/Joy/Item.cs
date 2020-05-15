@@ -14,9 +14,4 @@ public class Item
     public float willpowerIncrease;
     public bool doubleJump;
     public bool doubleDash;
-    //public Sprite sprite;
-
-    /*public void ApplySprite () {
-        GetComponent<SpriteRenderer>().sprite = sprite;
-    }*/
 }
