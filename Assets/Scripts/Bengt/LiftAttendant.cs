@@ -35,6 +35,11 @@ public class LiftAttendant : MonoBehaviour
     Color m_activeText;
     [SerializeField]
     Color m_inactiveText;
+    [Header("Items")]
+    [SerializeField]
+    Item m_firstItem;
+    [SerializeField]
+    Item m_secondItem;
     [Header("Other")]
     [SerializeField]
     GameObject m_player;
@@ -54,6 +59,7 @@ public class LiftAttendant : MonoBehaviour
     protected int m_dialogueNum = 0;
     protected int m_dialogueOptions = 0;
     protected int m_dialogueCounter = 0;
+    protected int m_itemsRecieved = 0;
 
     protected string m_dialoguePath;
     protected string[] m_dialogueLines;
@@ -149,10 +155,12 @@ public class LiftAttendant : MonoBehaviour
 
         if (m_dialogueLines[m_dialogueNum].Contains("{"))   //Checks if we want to run a function
         {
-            if (m_dialogueLines[m_dialogueNum].Split('{', '}')[1] == "giveItem") //If the function is giveItem
+            if (m_dialogueLines[m_dialogueNum].Split('{', '}')[1] == "recieveItem") //If the function is giveItem
             {
-                Item temp = (Item)this.GetType().GetField(m_dialogueLines[m_dialogueNum].Split('-', '-')[1]).GetValue(this);
-                GiveItem(temp);
+                if (m_itemsRecieved == 0)
+                    GiveItem(m_firstItem);
+                else if(m_itemsRecieved == 1)
+                    GiveItem(m_firstItem);
             }
             else if (m_dialogueLines[m_dialogueNum].Split('{', '}')[1] == "refillPotions") //If the function is giveItem
                 RefillPotions();
@@ -343,6 +351,7 @@ public class LiftAttendant : MonoBehaviour
     void GiveItem(Item p_inItem)
     {
         m_player.GetComponent<InventorySystem>().AddItemToList(p_inItem);
+        m_itemsRecieved++;
     }
 
     void RefillPotions()

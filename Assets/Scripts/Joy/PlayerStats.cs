@@ -39,6 +39,7 @@ public class PlayerStats : MonoBehaviour {
     [Header("UI")]
     public Image healthImage;
     public Image numbnessImage;
+    public Text potionsText;
 
     public List<Item> equippedItems = new List<Item>();
 
@@ -49,6 +50,7 @@ public class PlayerStats : MonoBehaviour {
 
     void Awake () {
         potionCounter = maxPotions;
+        potionsText.text = potionCounter.ToString();
         playerAnimator = GetComponent<PlayerAnimator>();
         numbnessPool = maxNumbnessPoolValue;
         SetPlayerStats(1, damageMultiplier, speed, 1);
@@ -117,6 +119,7 @@ public class PlayerStats : MonoBehaviour {
     public void HealPlayer () {
         potionCounter--;
         health = maxHealth;
+        potionsText.text = potionCounter.ToString();
     }
 
     public float PlayerHealth () {
@@ -180,5 +183,6 @@ public class PlayerStats : MonoBehaviour {
     public void refillPotions()
     {
         potionCounter = maxPotions;
+        potionsText.text = potionCounter.ToString();
     }
 }

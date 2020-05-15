@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class Item: MonoBehaviour
+[System.Serializable]
+public class Item
 {
     public string itemName;
     public float healthIncrase;
@@ -13,9 +14,9 @@ public class Item: MonoBehaviour
     public float willpowerIncrease;
     public bool doubleJump;
     public bool doubleDash;
-    public Sprite sprite;
+    //public Sprite sprite;
 
-    public void ApplySprite () {
+    /*public void ApplySprite () {
         GetComponent<SpriteRenderer>().sprite = sprite;
-    }
+    }*/
 }
