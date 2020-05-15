@@ -14,4 +14,5 @@ public class Item
     public float willpowerIncrease;
     public bool doubleJump;
     public bool doubleDash;
+    public UnityEngine.Sprite itemSprite;
 }

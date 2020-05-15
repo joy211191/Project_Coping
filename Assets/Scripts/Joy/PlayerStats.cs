@@ -44,6 +44,8 @@ public class PlayerStats : MonoBehaviour {
     public List<Item> equippedItems = new List<Item>();
 
     bool refillNumbness;
+    List<float> originalvaluesList = new List<float>();
+
 
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
@@ -58,6 +60,11 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void ItemEffects () {
+        originalvaluesList.Add(maxHealth);
+        originalvaluesList.Add(speed);
+        originalvaluesList.Add(numbnessDamageReduction);
+        originalvaluesList.Add(numbnessPool);
+        originalvaluesList.Add(playerBaseAbilities.maxWillPower);
         for (int i = 0; i < equippedItems.Count; i++) {
             maxHealth += equippedItems[i].healthIncrase;
             speed += equippedItems[i].movementSpeedIncrease;
@@ -68,6 +75,16 @@ public class PlayerStats : MonoBehaviour {
             playerAnimator.doubleJump = playerAnimator.doubleJump || equippedItems[i].doubleJump;
             playerAnimator.SetAbilities();
         }
+    }
+
+    public void ResetEffects () {
+        maxHealth = originalvaluesList[0];
+        speed = originalvaluesList[1];
+        numbnessDamageReduction = originalvaluesList[2];
+        numbnessPool = originalvaluesList[3];
+        playerBaseAbilities.maxWillPower = originalvaluesList[4];
+        playerAnimator.doubleDash = false;
+        playerAnimator.doubleJump = false;
     }
 
     public void SetPlayerStats (float healthMultiplier, float damageTaken, float speedChange, float attackMultiplier,float numbnessPoolIncrease=0) {

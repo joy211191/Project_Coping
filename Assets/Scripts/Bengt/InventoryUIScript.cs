@@ -58,9 +58,6 @@ public class InventoryUIScript : MonoBehaviour
         m_player.GetComponent<PlayerController>().enabled = false;
         m_player.GetComponent<PlayerAnimator>().enabled = false;
 
-
-        Debug.Log(m_ItemEquipped.Count + " 1");
-
         m_InventoryBackground.SetActive(true);
         m_InfoPanel.SetActive(true);
         //Show as many items as we need
@@ -86,12 +83,9 @@ public class InventoryUIScript : MonoBehaviour
             tempColour.a = 1f;
             m_InventoryIcons[i].GetComponent<Image>().color = tempColour;
             m_InventoryIcons[i].GetComponent<Button>().enabled = true;
-
+            m_InventoryIcons[i].GetComponent<Image>().sprite = m_inventorySystem.items[i].itemSprite;
 
         }
-
-
-        Debug.Log(m_ItemEquipped.Count + " 2");
     }
 
     public void HideUI()
@@ -114,9 +108,6 @@ public class InventoryUIScript : MonoBehaviour
 
     public void EquipItem(int p_inItem)
     {
-
-        Debug.Log(p_inItem);
-        Debug.Log(m_ItemEquipped.Count + " 3");
 
         if (!m_ItemEquipped[p_inItem])
         {
