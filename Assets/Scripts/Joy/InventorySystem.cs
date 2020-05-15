@@ -24,11 +24,16 @@ public class InventorySystem : MonoBehaviour {
         SaveInventoryData();
     }
 
-    void EquipItem (Item equipItem) {
+    public void EquipItem (Item equipItem) {
         playerStats.equippedItems.Add(equipItem);
         playerStats.ItemEffects();
     }
 
+    public void UnequipItem(Item equipItem)
+    {
+        playerStats.equippedItems.Remove(equipItem);
+        playerStats.ItemEffects();
+    }
 
     void LoadData () {
         BinaryFormatter bf = new BinaryFormatter();

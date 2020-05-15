@@ -81,6 +81,20 @@ public class StoryTellerScript : MonoBehaviour
         m_nameText.text = gameObject.name;
 
         m_dialoguePath = m_dialogueList[0];
+
+        /*
+
+        if (PlayerPrefs.HasKey("Storyteller DialogueCounter"))
+            m_dialogueCounter = PlayerPrefs.GetKey("Storyteller DialogueCounter");
+        else
+            PlayerPrefs.SetKey("Storyteller DialogueCounter", m_dialogueCounter);
+
+        if (PlayerPrefs.HasKey("Storyteller ItemsReceived"))
+            m_itemsRecieved = PlayerPrefs.GetKey("Storyteller ItemsReceived");
+        else
+            PlayerPrefs.SetKey("Storyteller ItemsReceived", m_itemsRecieved);
+
+        */
     }
 
     // Update is called once per frame
@@ -214,6 +228,10 @@ public class StoryTellerScript : MonoBehaviour
 
 
         Array.Clear(m_dialogueLines, 0, m_dialogueLines.Length);//Clear the array
+
+
+        PlayerPrefs.SetInt("Storyteller DialogueCounter", m_dialogueCounter);
+        PlayerPrefs.SetInt("Storyteller ItemsReceived", m_itemsRecieved);
     }
 
     //Prints dialogue options

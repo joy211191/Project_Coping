@@ -70,6 +70,7 @@
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\InventoryUIScript.cs" />
     <Compile Include="Assets\Scripts\Bengt\ClimberSpawner.cs" />
     <Compile Include="Assets\Scripts\Bengt\Enemy.cs" />
     <Compile Include="Assets\Scripts\Bengt\HubStairScript.cs" />

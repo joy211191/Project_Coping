@@ -78,6 +78,7 @@ public class LiftAttendant : MonoBehaviour
         m_nameText.text = gameObject.name;
 
         m_dialoguePath = m_dialogueList[0];
+
     }
 
     // Update is called once per frame
@@ -288,8 +289,6 @@ public class LiftAttendant : MonoBehaviour
             }
 
             //m_dialogueNum++;
-
-
         }
     }
 
