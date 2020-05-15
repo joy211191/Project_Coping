@@ -36,7 +36,8 @@ public class ClimberSpawner : MonoBehaviour
 
     private void OnDestroy()
     {
-        m_climber.transform.position = new Vector2(-50, -50);
+        //Removed this but it may cause problems ¯\_(ツ)_/¯
+        //m_climber.transform.position = new Vector2(-50, -50);
         if (m_climberName == "Veteran")
             m_climber.GetComponent<VeteranScript>().NextDialogue();
         else if (m_climberName == "Storyteller")

@@ -13,6 +13,8 @@ public class InventoryUIScript : MonoBehaviour
     GameObject m_InventoryBackground;
     [SerializeField]
     List<Transform> m_InventoryIcons = new List<Transform>();
+    [SerializeField]
+    List<GameObject> m_EquippedIndicators = new List<GameObject>();
     List<bool> m_ItemEquipped = new List<bool>();
 
     // Start is called before the first frame update
@@ -41,9 +43,15 @@ public class InventoryUIScript : MonoBehaviour
         {
 
             if (m_player.GetComponent<PlayerStats>().equippedItems.Contains(m_player.GetComponent<InventorySystem>().items[i]))
+            {
                 m_ItemEquipped.Add(true);
+                m_EquippedIndicators[i].SetActive(true);
+            }
             else
+            {
                 m_ItemEquipped.Add(false);
+                m_EquippedIndicators[i].SetActive(false);
+            }
 
             m_InventoryBackground.SetActive(true);
             //m_InventoryIcons.sprite = m_player.GetComponent<InventorySystem>().items[i].sprite; //Show the sprite of the object
@@ -74,11 +82,13 @@ public class InventoryUIScript : MonoBehaviour
         {
             m_player.GetComponent<InventorySystem>().EquipItem(m_player.GetComponent<InventorySystem>().items[p_inItem]);
             m_ItemEquipped[p_inItem] = true;
+            m_EquippedIndicators[p_inItem].SetActive(true);
         }
         else
         {
             m_player.GetComponent<InventorySystem>().UnequipItem(m_player.GetComponent<InventorySystem>().items[p_inItem]);
             m_ItemEquipped[p_inItem] = false;
+            m_EquippedIndicators[p_inItem].SetActive(false);
         }
 
     }   
