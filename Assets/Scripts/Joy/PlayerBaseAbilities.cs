@@ -55,9 +55,9 @@ public class PlayerBaseAbilities : MonoBehaviour {
                     if (willPower > 0) {
                         dataSet.numericalValues[4] += 1;
                         dataSet.numericalValues[0]++;
-                        //we can change the values later on
+                        //we can change the values later on 
                         willPower -= 1;
-                        playerStats.SetPlayerStats(2, 1f, 2, 1);
+                        playerStats.SetPlayerStats(2, 1f, 2, 1); //Increases damage, increases speed by 50%, 4x Cost 7 Willpower, 15seconds
                         playerStats.SetCountDown();
                         break;
                     }
@@ -69,7 +69,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[4] += 3;
                         dataSet.numericalValues[1] += 1;
                         willPower -= 3;
-                        playerStats.SetPlayerStats(2, 2.5f, 2, 2);
+                        playerStats.SetPlayerStats(2, 2.5f, 2, 2); //No design remove??
                         playerStats.SetCountDown();
                         break;
                     }
@@ -82,7 +82,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[2]++;
                         willPower -= 4;
                         playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
-                        playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f);
+                        playerStats.SetPlayerStats(1, 2.5f, 2.5f, 2f); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds
                         playerStats.SetCountDown();
                         break;
                     }
@@ -94,7 +94,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[4] += 5;
                         dataSet.numericalValues[3]++;
                         willPower -= 5;
-                        playerStats.SetCountDown();
+                        playerStats.SetCountDown(); //enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
                         break;
                     }
                     else
