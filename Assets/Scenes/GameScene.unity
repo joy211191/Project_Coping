@@ -15576,7 +15576,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 00f8227dd9355eb4db8bda24de606f46, type: 2}
+      objectReference: {fileID: 6200000, guid: 499d3dab0813e464796a46d55a5f9701, type: 2}
     - target: {fileID: 50512961935941442, guid: 2e2183501755a214591e802f3aff33d2,
         type: 3}
       propertyPath: m_GravityScale

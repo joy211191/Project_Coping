@@ -6,14 +6,17 @@ public class ParrySystem : MonoBehaviour
 {
 
     BoxCollider2D boxCollider2D;
+    PlayerAnimator playerAnimator;
 
 
     void Awake () {
         boxCollider2D = GetComponent<BoxCollider2D>();
+        playerAnimator = GetComponentInParent<PlayerAnimator>();
     }
 
     void Update () {
-        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift);
+        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift;
+        playerAnimator.m_animator.SetBool("Block",Input.GetKey(KeyCode.LeftShift));
     }
 
 

@@ -59,6 +59,8 @@ public class PlayerAnimator : PlayerController {
     bool powerActivated;
     float countDown;
 
+    public bool dead;
+
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerStats = GetComponent<PlayerStats>();
@@ -92,148 +94,152 @@ public class PlayerAnimator : PlayerController {
 
     // Update is called once per frame
     void Update () {
-        if (countDown > 0) {
-            countDown -= Time.deltaTime;
-            if (countDown <= 0) {
-                powerActivated = false;
-                EscapeMechanicUpdate(false);
-                playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
-            }
-        }
-        //Dash
-#if UNITY_EDITOR
-        Debug.DrawRay(transform.position+ raycastVectorOffset, transform.right * BoolToInteger() * distanceCheck, Color.green);
-#endif
-        if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) { 
-            RaycastHit2D hit_Combat= Physics2D.Raycast(transform.position+ raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
-            if (hit_Combat.transform == null||hit_Combat.transform.tag != "Environment") {
-                Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
-                playerBaseAbilities.willPower -= 5;
-                m_animator.SetTrigger("Dash");
-                transform.DOMove(newPosition, 0.5f);
-                lastDashed = Time.time;
-                dashCounter++;
-            }
-        }
-        else
-            dashCounter = 0;
+        if (!dead) {
 
-        if ((Input.GetButtonDown("Jump") && m_grounded) || (Input.GetButtonDown("Jump") && jumpCounter < maxJumps)) {
-            jumpCounter++;
-            m_animator.SetTrigger("Jump");
-            m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
-            m_groundSensor.Disable(0.2f);
-        }
-        else if (m_grounded)
-            jumpCounter = 0;
-
-        m_animator.SetBool("Grounded", m_grounded);
-        //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
-
-        #region ATTACK
-        //Attack
-        if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-            m_animator.SetTrigger("FirstAttack");
-            HitEnemy(damageVectors.x);
-        }
-        else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-            m_animator.SetTrigger("Attack");
-            HitEnemy(damageVectors.y+Random.Range(1f,5f));
-        }
-
-        //Heavy Attack
-        if (Input.GetMouseButtonDown(1)) {
-            m_animator.SetTrigger("HeavyAttack");
-            HitEnemy(damageVectors.z);
-        }
-        if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-            float inputX = Input.GetAxis("Horizontal");
-            //Run
-            if (Mathf.Abs(inputX) > Mathf.Epsilon)
-                m_animator.SetInteger("Speed", (int)rb2D.velocity.magnitude);
-        }
-
-        #endregion
-        #region POWER_UP_SELCETION
-        if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-            if (powerUpIndex < 2)
-                powerUpIndex++;
-            else
-                powerUpIndex = 0;
-        }
-        else if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-            if (powerUpIndex > 0)
-                powerUpIndex--;
-            else
-                powerUpIndex = 2;
-        }
-        playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
-        foreach (KeyCode keyStroke in powerUpSelection) {
-            if (Input.GetKeyDown(keyStroke)) {
-                switch (keyStroke) {
-                    case KeyCode.Alpha1: {
-                            powerUpIndex = 0;
-                            break;
-                        }
-                    case KeyCode.Alpha2: {
-                            powerUpIndex = 1;
-                            break;
-                        }
-                    case KeyCode.Alpha3: {
-                            powerUpIndex = 2;
-                            break;
-                        }
+            if (countDown > 0) {
+                countDown -= Time.deltaTime;
+                if (countDown <= 0) {
+                    powerActivated = false;
+                    EscapeMechanicUpdate(false);
+                    playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
                 }
             }
-        }
-        playerBaseAbilities.powerUpImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
-        #endregion
-        //Activating the powerup
-        if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated) {
-            playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
-        }
-
-        if (!playerDown && playerStats.PlayerHealth() <= 0) {
-            playerDown = true;
-            m_animator.SetTrigger("Death");
-        }
-
-        if (playerDown) {
-            if (Input.GetKeyDown(KeyCode.E) && playerBaseAbilities.GetReserveLives() > 3) {
-                m_animator.SetTrigger("Heal");
-                playerBaseAbilities.Revive();
+            //Dash
+#if UNITY_EDITOR
+            Debug.DrawRay(transform.position + raycastVectorOffset, transform.right * BoolToInteger() * distanceCheck, Color.green);
+#endif
+            if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) {
+                RaycastHit2D hit_Combat = Physics2D.Raycast(transform.position + raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
+                if (hit_Combat.transform == null || hit_Combat.transform.tag != "Environment") {
+                    Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
+                    playerBaseAbilities.willPower -= 5;
+                    m_animator.SetTrigger("Dash");
+                    transform.DOMove(newPosition, 0.5f);
+                    lastDashed = Time.time;
+                    dashCounter++;
+                }
             }
-        }
-        if (spriteRenderer.flipX) {
-            attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
-            shieldTransform.localPosition = new Vector2(-shieldPosition.x, shieldPosition.y);
-        }
-        else {
-            attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
-            shieldTransform.localPosition = new Vector2(shieldPosition.x, shieldPosition.y);
-        }
+            else
+                dashCounter = 0;
 
-        if (Input.GetKeyDown(KeyCode.F)&&playerStats.potionCounter>0&&playerStats.health<playerStats.maxHealth) {
-            playerStats.HealPlayer();
-        }
+            if ((Input.GetButtonDown("Jump") && m_grounded) || (Input.GetButtonDown("Jump") && jumpCounter < maxJumps)) {
+                jumpCounter++;
+                m_animator.SetTrigger("Jump");
+                m_body2d.velocity = new Vector2(m_body2d.velocity.x, m_jumpForce);
+                m_groundSensor.Disable(0.2f);
+            }
+            else if (m_grounded)
+                jumpCounter = 0;
 
-        #region CLIMBING
-        RaycastHit2D hit;
-        if (spriteRenderer.flipX)
-            hit = Physics2D.Raycast(transform.position + offsetVector, -transform.right * 5);
-        else
-            hit = Physics2D.Raycast(transform.position + offsetVector, transform.right * 5);
-        climbable = hit.transform.tag == "Climbable";
-        if (climbable && Input.GetAxis("Vertical") > 0) {
-            rb2D.simulated = false;
-            transform.position += new Vector3(0, 2, 0);
+            m_animator.SetBool("Grounded", m_grounded);
+            //Set AirSpeed in animator
+            m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
+
+            #region ATTACK
+            if (m_grounded&& m_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
+                //Attack
+                if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+                    m_animator.SetTrigger("FirstAttack");
+                    HitEnemy(damageVectors.x);
+                }
+                else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+                    m_animator.SetTrigger("Attack");
+                    HitEnemy(damageVectors.y + Random.Range(1f, 5f));
+                }
+
+                //Heavy Attack
+                if (Input.GetMouseButtonDown(1)) {
+                    m_animator.SetTrigger("HeavyAttack");
+                    HitEnemy(damageVectors.z);
+                }
+                if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+                    float inputX = Input.GetAxis("Horizontal");
+                    //Run
+                    if (Mathf.Abs(inputX) > Mathf.Epsilon)
+                        m_animator.SetInteger("Speed", (int)rb2D.velocity.magnitude);
+                }
+            }
+            #endregion
+            #region POWER_UP_SELCETION
+            if (Input.GetAxis("Mouse ScrollWheel") > 0) {
+                if (powerUpIndex < 2)
+                    powerUpIndex++;
+                else
+                    powerUpIndex = 0;
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") > 0) {
+                if (powerUpIndex > 0)
+                    powerUpIndex--;
+                else
+                    powerUpIndex = 2;
+            }
+            playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
+            foreach (KeyCode keyStroke in powerUpSelection) {
+                if (Input.GetKeyDown(keyStroke)) {
+                    switch (keyStroke) {
+                        case KeyCode.Alpha1: {
+                                powerUpIndex = 0;
+                                break;
+                            }
+                        case KeyCode.Alpha2: {
+                                powerUpIndex = 1;
+                                break;
+                            }
+                        case KeyCode.Alpha3: {
+                                powerUpIndex = 2;
+                                break;
+                            }
+                    }
+                }
+            }
+            playerBaseAbilities.powerUpImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
+            #endregion
+            //Activating the powerup
+            if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated) {
+                playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
+            }
+
+            if (!playerDown && playerStats.PlayerHealth() <= 0) {
+                playerDown = true;
+                m_animator.SetTrigger("Death");
+            }
+
+            if (playerDown) {
+                if (Input.GetKeyDown(KeyCode.E) && playerBaseAbilities.GetReserveLives() > 3) {
+                    m_animator.SetTrigger("Heal");
+                    playerBaseAbilities.Revive();
+                }
+            }
+            if (spriteRenderer.flipX) {
+                attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
+                shieldTransform.localPosition = new Vector2(-shieldPosition.x, shieldPosition.y);
+            }
+            else {
+                attackPoint.localPosition = new Vector2(attackPointPosition.x, attackPointPosition.y);
+                shieldTransform.localPosition = new Vector2(shieldPosition.x, shieldPosition.y);
+            }
+
+            if (Input.GetKeyDown(KeyCode.F) && playerStats.potionCounter > 0 && playerStats.health < playerStats.maxHealth) {
+                playerStats.HealPlayer();
+            }
+
+            #region CLIMBING
+            RaycastHit2D hit;
+            if (spriteRenderer.flipX)
+                hit = Physics2D.Raycast(transform.position + offsetVector, -transform.right * 5);
+            else
+                hit = Physics2D.Raycast(transform.position + offsetVector, transform.right * 5);
+            climbable = hit.transform.tag == "Climbable";
+            if (climbable && Input.GetAxis("Vertical") > 0) {
+                rb2D.simulated = false;
+                transform.position += new Vector3(0, 2, 0);
+            }
+            else if (climbable && Input.GetAxis("Vertical") < 0) {
+                rb2D.simulated = false;
+                transform.position += new Vector3(0, -2, 0);
+            }
+            #endregion
         }
-        else if (climbable && Input.GetAxis("Vertical") < 0) {
-            rb2D.simulated = false;
-            transform.position += new Vector3(0, -2, 0);
-        }
-        #endregion
     }
 
     #region COLLISION DETECTIONS
