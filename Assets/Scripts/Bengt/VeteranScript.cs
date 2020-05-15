@@ -110,6 +110,9 @@ public class VeteranScript : MonoBehaviour
 
     void ActivateDialogue()
     {
+
+        m_player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+
         //Reset these two again, just in case
         i = 0;
         m_dialogueNum = 0;

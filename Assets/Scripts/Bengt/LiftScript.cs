@@ -99,6 +99,8 @@ public class LiftScript : MonoBehaviour
 
     private void ShowUI()
     {
+
+        m_player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         m_interactionPrompt.SetActive(false);
         m_LiftUI.SetActive(true);
         m_Tutorial.SetActive(true);

@@ -7,6 +7,9 @@ public class HubStairScript : MonoBehaviour
 
     GameObject m_LevelGenerationManager;
     GameObject m_interactionPrompt;
+    [SerializeField]
+    GameObject m_player;
+
 
     bool m_playerIsByStairs;
 
@@ -20,7 +23,11 @@ public class HubStairScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByStairs)
+        {
             m_LevelGenerationManager.GetComponent<LevelGenerationManager>().ResetLevelGeneration();
+
+            m_player.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col)
