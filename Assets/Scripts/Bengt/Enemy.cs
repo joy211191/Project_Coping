@@ -61,6 +61,8 @@ public class Enemy : MonoBehaviour {
 
     Vector2 m_wantedPos;
 
+    float lastAttack;
+
     void Awake () {
 
         m_groundSensor = transform.Find("Ground Sensor").GetComponent<EnemySensor>();
@@ -110,13 +112,13 @@ public class Enemy : MonoBehaviour {
                 LookForPlayer();
                 //Checks if Player is in melee, if they are then attack, if not then move
 
-                if (m_inMelee)
+                if (m_inMelee&&Time.time > m_attackWait+lastAttack && m_player.GetComponent<PlayerStats>().health > 0)
                 {
                     Attack();
+                    lastAttack = Time.time;
                 }
                 else
                     Move();
-
             }
         }
 
@@ -156,9 +158,6 @@ public class Enemy : MonoBehaviour {
     }
 
     private void Attack () {
-        //Prints if circle intersects with something on player layer
-        // if (Time.time > m_attackWait && m_player.GetComponent<PlayerStats>().health > 0)
-        {
             Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayer)
             {
@@ -173,11 +172,6 @@ public class Enemy : MonoBehaviour {
                 }
 
 			}
-
-
-
-			m_attackWait = Time.time + m_attackSpeed;
-        }
     }
 
 
