@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour {
     protected Image m_enemyHealthbarFill;
     [SerializeField]
     protected Camera m_camera;
+	public bool dealDamage;
 
     protected Rigidbody2D m_body2d;
 
@@ -164,14 +165,18 @@ public class Enemy : MonoBehaviour {
                 if (player.tag == "Player")
                 {
                     m_animator.SetTrigger("Attack");
-                    m_player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
-                }
+					if (dealDamage)
+						m_player.GetComponent<PlayerStats>().TakeDamage(m_attackDamage);
+				}
                 else if (player.tag == "Shield") {
                     m_animator.SetTrigger("Damage");
                 }
-            }
 
-            m_attackWait = Time.time + m_attackSpeed;
+			}
+
+
+
+			m_attackWait = Time.time + m_attackSpeed;
         }
     }
 
