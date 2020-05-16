@@ -157,7 +157,7 @@ public class Enemy : MonoBehaviour {
 
     private void Attack () {
         //Prints if circle intersects with something on player layer
-        if (Time.time > m_attackWait && m_player.GetComponent<PlayerStats>().health > 0)
+        // if (Time.time > m_attackWait && m_player.GetComponent<PlayerStats>().health > 0)
         {
             Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerLayers);
             foreach (Collider2D player in hitPlayer)

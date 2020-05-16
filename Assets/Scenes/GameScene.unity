@@ -11954,8 +11954,14 @@ MonoBehaviour:
   - {fileID: 6578430639860563470, guid: 9cb74697835d02749b08af701e8f1cf9, type: 3}
   - {fileID: 4011575378546940975, guid: 269cea73038130342835910f807758f7, type: 3}
   - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
-  - {fileID: 6463491141919682704, guid: 05a69d32591790345bed6b3fed4848b1, type: 3}
+  - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
+  - {fileID: 1712126437057421631, guid: 0206ec8b7625bb54e8e50945af38f889, type: 3}
   - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 5724630466813879760, guid: 4763f3013acf9424c915e0dd1955ca82, type: 3}
+  - {fileID: 6463491141919682704, guid: 05a69d32591790345bed6b3fed4848b1, type: 3}
+  - {fileID: 6463491141919682704, guid: 05a69d32591790345bed6b3fed4848b1, type: 3}
+  - {fileID: 6463491141919682704, guid: 05a69d32591790345bed6b3fed4848b1, type: 3}
   m_StartRoom: {fileID: 1686982658660957899, guid: c76d29726a541594d9002dce1dd25739,
     type: 3}
   m_EndRoom: {fileID: 3955056792529298342, guid: c7f8ac8c916e53645a08d47359f2aa84,
@@ -13228,7 +13234,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731859947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.26, y: -6.963, z: 0}
+  m_LocalPosition: {x: -18.26, y: -6.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15613,11 +15619,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.06
+      value: -17.68
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.86
+      value: -5.95
       objectReference: {fileID: 0}
     - target: {fileID: 4805181885227780, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15759,7 +15765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb87522ff7532e4db21e21bf35f5fbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_speed: 5
+  m_speed: 6
   m_jumpForce: 12
   m_animator: {fileID: 0}
   playerBaseAbilities: {fileID: 0}

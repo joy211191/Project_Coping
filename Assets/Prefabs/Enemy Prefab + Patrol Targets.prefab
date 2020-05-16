@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_speed: 4
   enemyMaxHealth: 50
-  m_attackDamage: 288
+  m_attackDamage: 10
   m_attackSpeed: 1.5
   attackRange: 0.6
   m_aggroRange: 5
@@ -693,6 +693,7 @@ MonoBehaviour:
   m_enemyHealthbar: {fileID: 599994822}
   m_enemyHealthbarFill: {fileID: 1321910393}
   m_camera: {fileID: 0}
+  dealDamage: 0
   m_target: {fileID: 0}
   m_groundSensor: {fileID: 0}
 --- !u!95 &258918764720793009
