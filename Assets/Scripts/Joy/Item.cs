@@ -9,6 +9,7 @@ public class Item
     public string itemName;
     public float healthIncrase;
     public float numbnessPoolIncrease;
+    [Range(0f,1f)]
     public float numbnessDamagePercentage;
     public float movementSpeedIncrease;
     public float willpowerIncrease;
