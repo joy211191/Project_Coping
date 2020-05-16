@@ -46,10 +46,10 @@ public class LiftScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByLift &&
+        if (Input.GetKeyDown(KeyCode.F) && m_playerIsByLift &&
             m_LevelGenerationManager.m_currentSectionNumber > 0)
             ShowUI();
-        else if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByLift)
+        else if (Input.GetKeyDown(KeyCode.F) && m_playerIsByLift)
             Debug.Log("The lift is broken, take the stairs"); //TODO: Add something that shows that the elevator is broken and if the player cannot afford to take the lift
 
         //TODO: Maybe a tutorial as well?

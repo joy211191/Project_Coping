@@ -84,7 +84,7 @@ public class LiftAttendant : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_canTalk && Input.GetKeyDown(KeyCode.Q))
+        if (m_canTalk && Input.GetKeyDown(KeyCode.F))
             ActivateDialogue();
         else if (!m_canTalk && m_talking && Input.GetKeyDown(KeyCode.Space) && m_dialogueLines[m_dialogueNum] != "*END*" && !m_waitingForInput && m_dialogueLines[m_dialogueNum] != "*NOPROGRESSEND*")
             ContinueDialogue();

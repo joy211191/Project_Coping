@@ -22,7 +22,7 @@ public class StairScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByStairs &&
+        if (Input.GetKeyDown(KeyCode.F) && m_playerIsByStairs &&
             m_player.GetComponent<Rigidbody2D>().velocity == new Vector2(0, 0))
             m_LevelGenerationManager.GetComponent<LevelGenerationManager>().TeleportPlayer();
     }

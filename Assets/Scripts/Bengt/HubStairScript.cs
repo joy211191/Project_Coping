@@ -22,7 +22,7 @@ public class HubStairScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByStairs)
+        if (Input.GetKeyDown(KeyCode.F) && m_playerIsByStairs)
         {
             m_LevelGenerationManager.GetComponent<LevelGenerationManager>().ResetLevelGeneration();
 

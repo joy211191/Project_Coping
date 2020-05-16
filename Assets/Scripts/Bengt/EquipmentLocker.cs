@@ -22,9 +22,9 @@ public class EquipmentLocker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && m_playerIsByLocker && !m_playerInLocker)
+        if (Input.GetKeyDown(KeyCode.F) && m_playerIsByLocker && !m_playerInLocker)
             m_inventoryUIScript.ShowUI();
-        else if (Input.GetKeyDown(KeyCode.Q) && m_playerInLocker)
+        else if (Input.GetKeyDown(KeyCode.F) && m_playerInLocker)
             m_inventoryUIScript.HideUI();
     }
 
