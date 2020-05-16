@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -658,11 +658,10 @@ MonoBehaviour:
   graphElement: {fileID: 6467263703863348717, guid: 62a72eefe4004a348b3046c0f2124197,
     type: 3}
   powerUpNames:
-  - Self Soothing
-  - Compulsive Risk Taking
-  - Self Harm
+  - Compulsion Rage
+  - Numbing
   - Escape
-  - Lives Used
+  - Willpower Used
   - Total Damage Taken
   - Times Revived
   dataSets:

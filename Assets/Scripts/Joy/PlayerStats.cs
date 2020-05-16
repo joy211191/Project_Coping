@@ -104,7 +104,7 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void TakeDamage (float damage, bool selfHarm = false) {
-        playerBaseAbilities.dataSet.numericalValues[5]++;
+        playerBaseAbilities.dataSet.numericalValues[4]++;
         StopCoroutine("NumbnessPoolDecay");
         refillNumbness = false;
         float incrementValue = damage * numbnessDamageReduction;
@@ -176,6 +176,8 @@ public class PlayerStats : MonoBehaviour {
     void Update () {
         if (health<0) {
             if (playerBaseAbilities.willPower > 10) {
+                playerBaseAbilities.dataSet.numericalValues[3] += 10;
+                playerBaseAbilities.dataSet.numericalValues[5]++;
                 health = maxHealth;
                 playerAnimator.m_animator.SetTrigger("Heal");
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
@@ -224,6 +226,7 @@ public class PlayerStats : MonoBehaviour {
 
     private void ResetPlayer()
     {
+        playerBaseAbilities.dataSet.numericalValues[5]++;
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;

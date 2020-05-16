@@ -54,7 +54,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
         switch (index) {
             case PowerUp.CompulsionRage: {
                     if (willPower > 0) {
-                        dataSet.numericalValues[4] += 1;
+                        dataSet.numericalValues[3] += 7;
                         dataSet.numericalValues[0]++;
                         //we can change the values later on 
                         willPower -= 7;
@@ -79,8 +79,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
             case PowerUp.Numbing: {
                     if (willPower > 3) {
-                        dataSet.numericalValues[4] += 4;
-                        dataSet.numericalValues[2]++;
+                        dataSet.numericalValues[3] += 5;
+                        dataSet.numericalValues[1]++;
                         willPower -= 5;
                         playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
                         playerStats.SetPlayerStats(2, 0.2f, 1, 1f,20); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds    
@@ -92,8 +92,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                 }
             case PowerUp.Escape: {
                     if (willPower > 4) {
-                        dataSet.numericalValues[4] += 5;
-                        dataSet.numericalValues[3]++;
+                        dataSet.numericalValues[3] += 15;
+                        dataSet.numericalValues[2]++;
                         willPower -= 15;
                         playerAnimator.EscapeMechanicUpdate(true);//enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
                         playerStats.SetCountDown(8);
