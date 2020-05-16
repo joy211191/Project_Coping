@@ -10060,7 +10060,7 @@ MonoBehaviour:
     itemName: '"Housewarming Gift"'
     healthIncrase: 0
     numbnessPoolIncrease: 0
-    numbnessDamagePercentage: 10
+    numbnessDamagePercentage: 0.1
     movementSpeedIncrease: 0
     willpowerIncrease: 10
     doubleJump: 0
@@ -10070,7 +10070,7 @@ MonoBehaviour:
     healthIncrase: 15
     numbnessPoolIncrease: 0
     numbnessDamagePercentage: 0
-    movementSpeedIncrease: 10
+    movementSpeedIncrease: 0.5
     willpowerIncrease: 0
     doubleJump: 0
     doubleDash: 1
@@ -15817,7 +15817,7 @@ MonoBehaviour:
   playHurtAnim: 1
   countDown: 0
   playerBaseAbilities: {fileID: 1951481749}
-  numbnessDamageReduction: 0.9
+  numbnessDamageReduction: 0.25
   numbnessPool: 0
   maxNumbnessPoolValue: 100
   numbnessPoolDelayTime: 2

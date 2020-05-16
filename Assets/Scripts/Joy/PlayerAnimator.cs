@@ -84,12 +84,16 @@ public class PlayerAnimator : PlayerController {
     }
 
     public void EscapeMechanicUpdate (bool activate) {
-        doubleDash = activate;
-        doubleJump = activate;
-        if (activate)
+        if (activate) {
+            maxDashes = 2;
+            maxJumps = 2;
             dashTimeRecharge = dashTimeRecharge / 2;
-        else
+        }
+        else {
+            maxDashes = 1;
+            maxJumps = 1;
             dashTimeRecharge = dashTimeRecharge * 2;
+        }
     }
 
     // Update is called once per frame
@@ -112,7 +116,6 @@ public class PlayerAnimator : PlayerController {
                 RaycastHit2D hit_Combat = Physics2D.Raycast(transform.position + raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
                 if (hit_Combat.transform == null || hit_Combat.transform.tag != "Environment") {
                     Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
-                    playerBaseAbilities.willPower -= 5;
                     m_animator.SetTrigger("Dash");
                     transform.DOMove(newPosition, 0.5f);
                     lastDashed = Time.time;

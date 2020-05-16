@@ -73,8 +73,8 @@ public class PlayerStats : MonoBehaviour {
             numbnessDamageReduction += equippedItems[i].numbnessDamagePercentage;
             numbnessPool += equippedItems[i].numbnessPoolIncrease;
             playerBaseAbilities.IncreaseWillPower(equippedItems[i].willpowerIncrease);
-            playerAnimator.doubleDash = playerAnimator.doubleDash || equippedItems[i].doubleDash;
-            playerAnimator.doubleJump = playerAnimator.doubleJump || equippedItems[i].doubleJump;
+            //playerAnimator.doubleDash = playerAnimator.doubleDash || 
+            //playerAnimator.doubleJump = playerAnimator.doubleJump || equippedItems[i].doubleJump;
             playerAnimator.SetAbilities();
         }
     }
@@ -99,7 +99,7 @@ public class PlayerStats : MonoBehaviour {
         health *= healthMultiplier;
         damageMultiplier *= damageTaken;
         speed = speedChange;
-        maxNumbnessPoolValue = numbnessPoolIncrease;
+        maxNumbnessPoolValue += numbnessPoolIncrease;
         playerAnimator.GetSpeed();
     }
 
@@ -174,8 +174,13 @@ public class PlayerStats : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K)) {
+            if (playerBaseAbilities.willPower > 10) {
+                playerAnimator.m_animator.SetTrigger("Heal");
+            }
+            else
             ResetPlayer();
+        }
 
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
         healthImage.fillAmount = health / maxHealth;
@@ -214,7 +219,6 @@ public class PlayerStats : MonoBehaviour {
 
     private void ResetPlayer()
     {
-        playerAnimator.m_animator.SetTrigger("Heal");
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
