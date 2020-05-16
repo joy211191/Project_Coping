@@ -83,8 +83,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[2]++;
                         willPower -= 5;
                         playerStats.TakeDamage(playerStats.PlayerHealth() / 2, true);
-                        playerStats.SetPlayerStats(2, 0.2f, 1, 1f,20); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds
-                        
+                        playerStats.SetPlayerStats(2, 0.2f, 1, 1f,20); //Increase health, decresase damage taken, Doubles Numbness pool and % - Cost 5 Willpower, 20 seconds    
                         playerStats.SetCountDown(20f);
                         break;
                     }
@@ -96,8 +95,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[4] += 5;
                         dataSet.numericalValues[3]++;
                         willPower -= 15;
-                        playerAnimator.EscapeMechanicUpdate(true);
-                                                                //enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
+                        playerAnimator.EscapeMechanicUpdate(true);//enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
+                        playerStats.SetCountDown(8);
                         break;
                     }
                     else

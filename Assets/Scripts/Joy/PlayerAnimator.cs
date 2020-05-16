@@ -170,6 +170,7 @@ public class PlayerAnimator : PlayerController {
             }
             #endregion
             #region POWER_UP_SELCETION
+            if(!playerStats.powerActivated)
             if (Input.GetAxis("Mouse ScrollWheel") > 0) {
                 if (powerUpIndex < 2)
                     powerUpIndex++;

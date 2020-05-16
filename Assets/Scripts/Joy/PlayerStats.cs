@@ -109,7 +109,7 @@ public class PlayerStats : MonoBehaviour {
         refillNumbness = false;
         float incrementValue = damage * numbnessDamageReduction;
         if (!selfHarm) {
-            if (numbnessPool <100) {
+            if (numbnessPool <maxNumbnessPoolValue) {
                 numbnessPool += incrementValue;
                 float tempDamage = 1f - numbnessDamageReduction;
                 health -= (damage * damageMultiplier) * tempDamage;
