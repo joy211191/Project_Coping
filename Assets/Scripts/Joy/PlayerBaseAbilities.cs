@@ -50,7 +50,6 @@ public class PlayerBaseAbilities : MonoBehaviour {
 
     public void SetPowerUp (PowerUp index) {
         //powerUp = index;
-        playerAnimator.m_animator.SetTrigger("Cope");
         powerUpImage.GetComponent<Animator>().SetBool("Activate", true);
         switch (index) {
             case PowerUp.CompulsionRage: {
@@ -97,8 +96,8 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         dataSet.numericalValues[4] += 5;
                         dataSet.numericalValues[3]++;
                         willPower -= 15;
-                        playerAnimator.EscapeMechanicUpdate(true);//enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
-                        playerStats.SetCountDown(8);
+                        playerAnimator.EscapeMechanicUpdate(true);
+                                                                //enables double dash, double jump and halves dash timer, Cost 15 Willpower, 8 Seconds
                         break;
                     }
                     else
