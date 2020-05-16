@@ -37,8 +37,6 @@ public class PlayerController : MonoBehaviour {
         else if (inputX > 0)
             GetComponent<SpriteRenderer>().flipX = false;
 
-        // Move
-        m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
     }
 
     public void GetSpeed () {

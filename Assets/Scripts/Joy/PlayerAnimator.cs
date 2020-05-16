@@ -144,6 +144,16 @@ public class PlayerAnimator : PlayerController {
             //Set AirSpeed in animator
             m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
 
+            if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+                float inputX = Input.GetAxis("Horizontal");
+                // Move
+                m_body2d.velocity = new Vector2(inputX * m_speed, m_body2d.velocity.y);
+                m_animator.SetFloat("Speed", Mathf.Abs(m_body2d.velocity.magnitude));
+            }
+            else {
+                m_body2d.velocity = Vector2.zero;
+            }
+
             #region ATTACK
             if (m_grounded) {
                 //Attack
@@ -161,12 +171,6 @@ public class PlayerAnimator : PlayerController {
                 //Heavy Attack
                 if (Input.GetMouseButtonDown(1))
                     m_animator.SetTrigger("HeavyAttack");
-                if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-                    float inputX = Input.GetAxis("Horizontal");
-                    //Run
-                    if (Mathf.Abs(inputX) > Mathf.Epsilon)
-                        m_animator.SetInteger("Speed", (int)rb2D.velocity.magnitude);
-                }
             }
             #endregion
             #region POWER_UP_SELCETION

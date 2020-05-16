@@ -40,10 +40,12 @@ public class ClimberSpawner : MonoBehaviour
         //such as the NPC climbers not switching to the correct dialogue
         //or appearing where they shouldn't
         //¯\_(ツ)_/¯
-        m_climber.transform.position = new Vector2(-50, -50);
-        if (m_climberName == "Veteran")
-            m_climber.GetComponent<VeteranScript>().NextDialogue();
-        else if (m_climberName == "Storyteller")
-            m_climber.GetComponent<StoryTellerScript>().NextDialogue();
+        if (m_climber != null) {
+            m_climber.transform.position = new Vector2(-50, -50);
+            if (m_climberName == "Veteran")
+                m_climber.GetComponent<VeteranScript>().NextDialogue();
+            else if (m_climberName == "Storyteller")
+                m_climber.GetComponent<StoryTellerScript>().NextDialogue();
+        }
     }
 }
