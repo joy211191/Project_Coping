@@ -15780,9 +15780,12 @@ MonoBehaviour:
   doubleDash: 0
   doubleJump: 1
   dashTimeRecharge: 1
+  maxDashes: 1
+  maxJumps: 1
   offsetVector: {x: 0, y: 0, z: 0}
   raycastVectorOffset: {x: 0, y: -0.81, z: 0}
   dead: 0
+  dealDamage: 0
 --- !u!114 &1951481744
 MonoBehaviour:
   m_ObjectHideFlags: 0
