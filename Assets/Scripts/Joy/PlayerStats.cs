@@ -208,6 +208,7 @@ public class PlayerStats : MonoBehaviour {
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
                 originalValues.Clear();
                 playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
+                playerAnimator.EscapeMechanicUpdate(false);
             }
         }
     }
