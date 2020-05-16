@@ -608,7 +608,7 @@ MonoBehaviour:
   m_speed: 4
   enemyMaxHealth: 50
   m_attackDamage: 20
-  m_attackSpeed: 0.6
+  m_attackSpeed: 1.5
   attackRange: 0.6
   m_aggroRange: 5
   m_startWaitTime: 0
