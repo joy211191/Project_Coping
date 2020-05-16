@@ -112,7 +112,7 @@ public class PlayerAnimator : PlayerController {
                 RaycastHit2D hit_Combat = Physics2D.Raycast(transform.position + raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
                 if (hit_Combat.transform == null || hit_Combat.transform.tag != "Environment") {
                     Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
-                    //playerBaseAbilities.willPower -= 5;
+                    playerBaseAbilities.willPower -= 5;
                     m_animator.SetTrigger("Dash");
                     transform.DOMove(newPosition, 0.5f);
                     lastDashed = Time.time;
