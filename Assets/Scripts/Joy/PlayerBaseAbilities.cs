@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public enum PowerUp {
     CompulsionRage,
-    Risk,
     Numbing,
     Escape
 }
