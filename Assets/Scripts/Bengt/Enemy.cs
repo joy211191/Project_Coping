@@ -41,6 +41,7 @@ public class Enemy : MonoBehaviour {
     protected bool m_isDead         = false;
     protected bool m_isFacingRight  = true;
     protected bool m_inMelee        = false;
+    protected bool m_grounded       = true;
 
     protected float m_waitTime      = 0;
     protected float m_attackWait    = 0;
@@ -50,6 +51,8 @@ public class Enemy : MonoBehaviour {
 
     [SerializeField]
     protected Transform m_target;
+    [SerializeField]
+    protected EnemySensor m_groundSensor;
 
     SpriteRenderer spriteRenderer;
 
@@ -57,8 +60,9 @@ public class Enemy : MonoBehaviour {
 
     Vector2 m_wantedPos;
 
-    // Start is called before the first frame update
     void Awake () {
+
+        m_groundSensor = transform.Find("Ground Sensor").GetComponent<EnemySensor>();
         m_body2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         attackPoint = transform.Find("AttackPoint");
@@ -67,11 +71,14 @@ public class Enemy : MonoBehaviour {
         m_animator = GetComponent<Animator>();
         enemyHealth = enemyMaxHealth;
     }
+        
 
     // Update is called once per frame
     void Update () {
 
         m_enemyHealthbarFill.fillAmount = enemyHealth / enemyMaxHealth;
+
+        
 
         if (enemyHealth <= 0 && !m_isDead)
         {
@@ -85,16 +92,31 @@ public class Enemy : MonoBehaviour {
         {
             //m_wantedPos = m_camera.WorldToViewportPoint(new Vector2(transform.position.x, transform.position.y + 50));
             //m_enemyHealthbar.position = m_wantedPos;
-
-
-            LookForPlayer();
-            //Checks if Player is in melee, if they are then attack, if not then move
-            if (m_inMelee)
+            if (!m_grounded && m_groundSensor.State())
             {
-                Attack();
+                m_grounded = true;
+
             }
-            else
-                Move();
+
+            //Check if character just started falling
+            if (m_grounded && !m_groundSensor.State())
+            {
+                m_grounded = false;
+            }
+
+            if (m_grounded)
+            {
+                LookForPlayer();
+                //Checks if Player is in melee, if they are then attack, if not then move
+
+                if (m_inMelee)
+                {
+                    Attack();
+                }
+                else
+                    Move();
+
+            }
         }
 
         //if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
