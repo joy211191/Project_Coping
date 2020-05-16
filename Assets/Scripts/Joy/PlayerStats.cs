@@ -174,12 +174,16 @@ public class PlayerStats : MonoBehaviour {
     }
 
     void Update () {
-        if (Input.GetKeyDown(KeyCode.K)) {
+        if (health<0) {
             if (playerBaseAbilities.willPower > 10) {
+                health = maxHealth;
                 playerAnimator.m_animator.SetTrigger("Heal");
+                SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
+                originalValues.Clear();
             }
-            else
-            ResetPlayer();
+            else {
+                ResetPlayer();
+            }
         }
 
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
@@ -213,6 +217,8 @@ public class PlayerStats : MonoBehaviour {
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
                 originalValues.Clear();
                 playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
+                playerAnimator.maxDashes = 1;
+                playerAnimator.maxJumps = 1;
             }
         }
     }

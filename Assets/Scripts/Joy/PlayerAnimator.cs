@@ -42,8 +42,8 @@ public class PlayerAnimator : PlayerController {
     [SerializeField]
     float dashTimeRecharge;
     float lastDashed;
-    int maxDashes=1;
-    int maxJumps=1;
+    public int maxDashes=1;
+    public int maxJumps=1;
 
     int jumpCounter=0;
     int dashCounter=0;
@@ -60,6 +60,8 @@ public class PlayerAnimator : PlayerController {
     float countDown;
 
     public bool dead;
+
+    public bool dealDamage;
 
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -141,20 +143,19 @@ public class PlayerAnimator : PlayerController {
             #region ATTACK
             if (m_grounded) {
                 //Attack
-                if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
+                if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                     m_animator.SetTrigger("FirstAttack");
+                if (dealDamage) {
                     HitEnemy(damageVectors.x);
-                }
-                else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
-                    m_animator.SetTrigger("Attack");
                     HitEnemy(damageVectors.y + Random.Range(1f, 5f));
-                }
-
-                //Heavy Attack
-                if (Input.GetMouseButtonDown(1)) {
-                    m_animator.SetTrigger("HeavyAttack");
                     HitEnemy(damageVectors.z);
                 }
+                else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+                    m_animator.SetTrigger("Attack");
+
+                //Heavy Attack
+                if (Input.GetMouseButtonDown(1))
+                    m_animator.SetTrigger("HeavyAttack");
                 if (!m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
                     float inputX = Input.GetAxis("Horizontal");
                     //Run
