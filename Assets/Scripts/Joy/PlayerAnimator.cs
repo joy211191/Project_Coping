@@ -25,9 +25,9 @@ public class PlayerAnimator : PlayerController {
 
     public bool playerDown;
 
-    [Tooltip("The x is the first damage, y the second and z the third. This is in respect to the sword swings of the player during the combat")]
+    [Tooltip("The x is the light attack damage value and y is for heavy attack")]
     [SerializeField]
-    Vector3 damageVectors;
+    Vector2 damageVectors;
 
     Rigidbody2D rb2D;
 
@@ -62,6 +62,10 @@ public class PlayerAnimator : PlayerController {
     public bool dead;
 
     public bool dealDamage;
+    public bool dealHeavyDamage;
+
+    [SerializeField]
+    Vector2 randomDamageVector;
 
     void Awake () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -114,7 +118,7 @@ public class PlayerAnimator : PlayerController {
 #if UNITY_EDITOR
             Debug.DrawRay(transform.position + raycastVectorOffset, transform.right * BoolToInteger() * distanceCheck, Color.green);
 #endif
-            if (Input.GetKeyDown(KeyCode.LeftAlt) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) {
+            if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time > lastDashed + dashTimeRecharge * maxDashes && dashCounter < maxDashes) {
                 RaycastHit2D hit_Combat = Physics2D.Raycast(transform.position + raycastVectorOffset, transform.right * BoolToInteger(), distanceCheck);
                 if (hit_Combat.transform == null || hit_Combat.transform.tag != "Environment") {
                     Vector3 newPosition = transform.position + new Vector3(dashDistance * BoolToInteger(), 0, 0);
@@ -146,9 +150,10 @@ public class PlayerAnimator : PlayerController {
                 if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                     m_animator.SetTrigger("FirstAttack");
                 if (dealDamage) {
-                    HitEnemy(damageVectors.x);
-                    HitEnemy(damageVectors.y + Random.Range(1f, 5f));
-                    HitEnemy(damageVectors.z);
+                    HitEnemy(damageVectors.x + Random.Range(randomDamageVector.x, randomDamageVector.y));
+                }
+                if (dealHeavyDamage) {
+                    HitEnemy(damageVectors.y+ Random.Range(randomDamageVector.x, randomDamageVector.y));
                 }
                 else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                     m_animator.SetTrigger("Attack");
@@ -227,7 +232,7 @@ public class PlayerAnimator : PlayerController {
                 shieldTransform.localPosition = new Vector2(shieldPosition.x, shieldPosition.y);
             }
 
-            if (Input.GetKeyDown(KeyCode.F) && playerStats.potionCounter > 0 && playerStats.health < playerStats.maxHealth) {
+            if (Input.GetKeyDown(KeyCode.Q) && playerStats.potionCounter > 0 && playerStats.health < playerStats.maxHealth) {
                 playerStats.HealPlayer();
             }
 

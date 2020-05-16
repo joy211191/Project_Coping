@@ -56,7 +56,7 @@ public class PlayerStats : MonoBehaviour {
         potionCounter = maxPotions;
         potionsText.text = potionCounter.ToString();
         playerAnimator = GetComponent<PlayerAnimator>();
-        numbnessPool = maxNumbnessPoolValue;
+        numbnessPool = 0;
         SetPlayerStats(1, damageMultiplier, speed, 1);
         ItemEffects();
     }
@@ -71,7 +71,7 @@ public class PlayerStats : MonoBehaviour {
             maxHealth += equippedItems[i].healthIncrase;
             speed += equippedItems[i].movementSpeedIncrease;
             numbnessDamageReduction += equippedItems[i].numbnessDamagePercentage;
-            numbnessPool += equippedItems[i].numbnessPoolIncrease;
+            maxNumbnessPoolValue += equippedItems[i].numbnessPoolIncrease;
             playerBaseAbilities.IncreaseWillPower(equippedItems[i].willpowerIncrease);
             //playerAnimator.doubleDash = playerAnimator.doubleDash || 
             //playerAnimator.doubleJump = playerAnimator.doubleJump || equippedItems[i].doubleJump;
@@ -107,19 +107,19 @@ public class PlayerStats : MonoBehaviour {
         playerBaseAbilities.dataSet.numericalValues[5]++;
         StopCoroutine("NumbnessPoolDecay");
         refillNumbness = false;
-        float decrementValue = damage * numbnessDamageReduction;
+        float incrementValue = damage * numbnessDamageReduction;
         if (!selfHarm) {
-            if (numbnessPool >0) {
-                numbnessPool -= decrementValue;
+            if (numbnessPool <100) {
+                numbnessPool += incrementValue;
                 float tempDamage = 1f - numbnessDamageReduction;
                 health -= (damage * damageMultiplier) * tempDamage;
             }
-            else if(numbnessPool< damage / numbnessDamageReduction) {
-                float tempValue = numbnessPool;
-                numbnessPool = 0;
+            else if(damage / numbnessDamageReduction>(maxNumbnessPoolValue-numbnessPool) ) {
+                float tempValue = maxNumbnessPoolValue - numbnessPool;
+                numbnessPool = 100;
                 float tempDamage = 1f - numbnessDamageReduction;
                 health -= (damage * damageMultiplier) * tempDamage;
-                health -= decrementValue - tempValue;
+                health -= incrementValue - tempValue;
             }
             else {
                 health -= damage * damageMultiplier;
@@ -179,7 +179,7 @@ public class PlayerStats : MonoBehaviour {
                 health = maxHealth;
                 playerAnimator.m_animator.SetTrigger("Heal");
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
-                originalValues.Clear();
+                //originalValues.Clear();
             }
             else {
                 ResetPlayer();
@@ -188,8 +188,8 @@ public class PlayerStats : MonoBehaviour {
 
         numbnessImage.fillAmount = numbnessPool / maxNumbnessPoolValue;
         healthImage.fillAmount = health / maxHealth;
-        if (refillNumbness&&numbnessPool<maxNumbnessPoolValue) {
-            numbnessPool += numbnessPoolDecayValue;
+        if (refillNumbness&&numbnessPool>0) {
+            numbnessPool -= numbnessPoolDecayValue;
         }
 #if UNITY_EDITOR
         speedText.text = "Speed: " + speed.ToString();
@@ -200,7 +200,6 @@ public class PlayerStats : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.H)) {
             TakeDamage(Random.Range(1f, 10f));
         }
-
 #else
         speedText.text = "";
         damageMultiplierText.text = "";
@@ -215,7 +214,7 @@ public class PlayerStats : MonoBehaviour {
                 powerActivated = false;
                 playHurtAnim = true;
                 SetPlayerStats(originalValues[0] / health, originalValues[1], originalValues[2], originalValues[3] / attackPower);
-                originalValues.Clear();
+                //originalValues.Clear();
                 playerBaseAbilities.powerUpImage.GetComponent<Animator>().SetBool("Activate", false);
                 playerAnimator.maxDashes = 1;
                 playerAnimator.maxJumps = 1;

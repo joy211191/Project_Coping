@@ -15,13 +15,13 @@ public class ParrySystem : MonoBehaviour
     }
 
     void Update () {
-        boxCollider2D.enabled= Input.GetKey(KeyCode.LeftShift);
+        boxCollider2D.enabled= Input.GetKey(KeyCode.R);
         playerAnimator.m_animator.SetBool("Block",Input.GetKey(KeyCode.LeftShift));
     }
 
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (Input.GetKeyDown(KeyCode.LeftShift)) {
+        if (Input.GetKeyDown(KeyCode.R)) {
             col.GetComponent<Animator>().SetTrigger("Damage");
         }
     }
