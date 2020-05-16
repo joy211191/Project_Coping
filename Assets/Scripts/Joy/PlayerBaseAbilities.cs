@@ -53,7 +53,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
         powerUpImage.GetComponent<Animator>().SetBool("Activate", true);
         switch (index) {
             case PowerUp.CompulsionRage: {
-                    if (willPower > 0) {
+                    if (willPower > 7) {
                         dataSet.numericalValues[4] += 1;
                         dataSet.numericalValues[0]++;
                         //we can change the values later on 
@@ -78,7 +78,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                 }*/
 
             case PowerUp.Numbing: {
-                    if (willPower > 3) {
+                    if (willPower > 6) {
                         dataSet.numericalValues[4] += 4;
                         dataSet.numericalValues[2]++;
                         willPower -= 5;
@@ -92,7 +92,7 @@ public class PlayerBaseAbilities : MonoBehaviour {
                         break;
                 }
             case PowerUp.Escape: {
-                    if (willPower > 4) {
+                    if (willPower > 16) {
                         dataSet.numericalValues[4] += 5;
                         dataSet.numericalValues[3]++;
                         willPower -= 15;
