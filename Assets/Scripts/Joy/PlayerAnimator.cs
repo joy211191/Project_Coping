@@ -136,7 +136,7 @@ public class PlayerAnimator : PlayerController {
             m_animator.SetFloat("AirSpeed", m_body2d.velocity.y);
 
             #region ATTACK
-            if (m_grounded) {
+            if (m_grounded&& m_animator.GetCurrentAnimatorStateInfo(0).IsName("Idle")) {
                 //Attack
                 if (Input.GetMouseButtonDown(0) && !m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack")) {
                     m_animator.SetTrigger("FirstAttack");
@@ -193,15 +193,11 @@ public class PlayerAnimator : PlayerController {
                 }
             }
             playerBaseAbilities.powerUpImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
-            playerStats.countdownTimerImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
-			#endregion
-			//Activating the powerup
-			if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated)
-			{
-				m_animator.SetBool("Cope", true);
-				playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
-			}
-			else m_animator.SetBool("Cope", false);
+            #endregion
+            //Activating the powerup
+            if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated) {
+                playerBaseAbilities.SetPowerUp((PowerUp)powerUpIndex);
+            }
 
             if (!playerDown && playerStats.PlayerHealth() <= 0) {
                 playerDown = true;

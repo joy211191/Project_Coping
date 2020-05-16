@@ -46,8 +46,6 @@ public class PlayerStats : MonoBehaviour {
     bool refillNumbness;
     List<float> originalvaluesList = new List<float>();
 
-    public Image countdownTimerImage;
-    public float maxCountdownValue;
 
     //Debug
     public Text speedText, damageMultiplierText, healthText, attackPowerText, powerUpName, livesText;
@@ -168,7 +166,6 @@ public class PlayerStats : MonoBehaviour {
     }
 
     public void SetCountDown (float maxCountDown) {
-        maxCountdownValue = maxCountDown;
         powerActivated = true;
         countDown = maxCountDown;
     }
@@ -201,7 +198,6 @@ public class PlayerStats : MonoBehaviour {
 #endif
         if (countDown > 0) {
             countDown -= Time.deltaTime;
-            countdownTimerImage.fillAmount = countDown / maxCountdownValue;
             if (countDown <= 0) {
                 powerActivated = false;
                 playHurtAnim = true;
