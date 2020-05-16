@@ -153,7 +153,7 @@ public class PlayerAnimator : PlayerController {
                     HitEnemy(damageVectors.x + Random.Range(randomDamageVector.x, randomDamageVector.y));
                 }
                 if (dealHeavyDamage) {
-                    HitEnemy(damageVectors.y+ Random.Range(randomDamageVector.x, randomDamageVector.y));
+                    HitEnemy(damageVectors.y + Random.Range(randomDamageVector.x, randomDamageVector.y));
                 }
                 else if (Input.GetMouseButtonDown(0) && m_animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
                     m_animator.SetTrigger("Attack");
@@ -170,40 +170,41 @@ public class PlayerAnimator : PlayerController {
             }
             #endregion
             #region POWER_UP_SELCETION
-            if(!playerStats.powerActivated)
-            if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-                if (powerUpIndex < 2)
-                    powerUpIndex++;
-                else
-                    powerUpIndex = 0;
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") > 0) {
-                if (powerUpIndex > 0)
-                    powerUpIndex--;
-                else
-                    powerUpIndex = 2;
-            }
-            playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
-            foreach (KeyCode keyStroke in powerUpSelection) {
-                if (Input.GetKeyDown(keyStroke)) {
-                    switch (keyStroke) {
-                        case KeyCode.Alpha1: {
-                                powerUpIndex = 0;
-                                break;
-                            }
-                        case KeyCode.Alpha2: {
-                                powerUpIndex = 1;
-                                break;
-                            }
-                        case KeyCode.Alpha3: {
-                                powerUpIndex = 2;
-                                break;
-                            }
+            if (!playerStats.powerActivated) {
+                if (Input.GetAxis("Mouse ScrollWheel") > 0) {
+                    if (powerUpIndex < 2)
+                        powerUpIndex++;
+                    else
+                        powerUpIndex = 0;
+                }
+                else if (Input.GetAxis("Mouse ScrollWheel") > 0) {
+                    if (powerUpIndex > 0)
+                        powerUpIndex--;
+                    else
+                        powerUpIndex = 2;
+                }
+                playerBaseAbilities.powerUp = (PowerUp)powerUpIndex;
+                foreach (KeyCode keyStroke in powerUpSelection) {
+                    if (Input.GetKeyDown(keyStroke)) {
+                        switch (keyStroke) {
+                            case KeyCode.Alpha1: {
+                                    powerUpIndex = 0;
+                                    break;
+                                }
+                            case KeyCode.Alpha2: {
+                                    powerUpIndex = 1;
+                                    break;
+                                }
+                            case KeyCode.Alpha3: {
+                                    powerUpIndex = 2;
+                                    break;
+                                }
+                        }
                     }
                 }
+                playerBaseAbilities.powerUpImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
+                playerStats.countdownTimerImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
             }
-            playerBaseAbilities.powerUpImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
-            playerStats.countdownTimerImage.sprite = playerBaseAbilities.powerUpSprites[powerUpIndex];
 			#endregion
 			//Activating the powerup
 			if (Input.GetKeyDown(KeyCode.E) && !playerStats.powerActivated)
