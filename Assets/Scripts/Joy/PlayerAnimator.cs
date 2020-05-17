@@ -223,12 +223,12 @@ public class PlayerAnimator : PlayerController {
                 m_animator.SetTrigger("Death");
             }
 
-            if (playerDown) {
+            /*if (playerDown) {
                 if (Input.GetKeyDown(KeyCode.E) && playerBaseAbilities.GetReserveLives() > 3) {
                     m_animator.SetTrigger("Heal");
                     playerBaseAbilities.Revive();
                 }
-            }
+            }*/
             if (spriteRenderer.flipX) {
                 attackPoint.localPosition = new Vector2(-attackPointPosition.x, attackPointPosition.y);
                 shieldTransform.localPosition = new Vector2(-shieldPosition.x, shieldPosition.y);

@@ -230,6 +230,7 @@ public class PlayerStats : MonoBehaviour {
         health = maxHealth;
         GetComponent<PlayerBaseAbilities>().willPower = GetComponent<PlayerBaseAbilities>().maxWillPower;
         gameObject.transform.position = GameObject.Find("Hub Spawn Point").transform.position;
+        playerBaseAbilities.SaveData();
     }
 
     public void refillPotions()

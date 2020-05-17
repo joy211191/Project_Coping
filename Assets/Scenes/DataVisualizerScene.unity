@@ -654,7 +654,7 @@ MonoBehaviour:
   - {fileID: 1210474831}
   - {fileID: 1189832330}
   - {fileID: 1781760826}
-  graphRange: {x: 7, y: 7, z: 10}
+  graphRange: {x: 6, y: 7, z: 10}
   graphElement: {fileID: 6467263703863348717, guid: 62a72eefe4004a348b3046c0f2124197,
     type: 3}
   powerUpNames:

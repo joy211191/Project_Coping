@@ -108,23 +108,23 @@ public class PlayerBaseAbilities : MonoBehaviour {
 #endif
     }
     public void SaveData () {
-        if (File.Exists(Application.persistentDataPath + " / GameplayData.json")) {
+        if (File.Exists(Application.dataPath + " / GameplayData.json")) {
             string jsonstring = JsonUtility.ToJson(dataSet);
-            File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
+            File.WriteAllText(Application.dataPath + "/GameplayData.json", jsonstring);
         }
         else {
-            FileStream fileStream = new FileStream(Application.persistentDataPath + "/GameplayData.json", FileMode.Create);
+            FileStream fileStream = new FileStream(Application.dataPath + "/GameplayData.json", FileMode.Create);
             fileStream.Close();
             string jsonstring = JsonUtility.ToJson(dataSet);
-            File.WriteAllText(Application.persistentDataPath + "/GameplayData.json", jsonstring);
+            File.WriteAllText(Application.dataPath + "/GameplayData.json", jsonstring);
         }
     }
 
     //Revive Mechanic
-    public void Revive () {
-        willPower -= 1;
-        playerStats.PlayerHealth();
-    }
+    //public void Revive () {
+    //    willPower -= 1;
+    //    playerStats.PlayerHealth();
+    //}
 
     public float GetReserveLives () {
         return willPower;
