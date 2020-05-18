@@ -25,6 +25,9 @@ public class PlayerBaseAbilities : MonoBehaviour {
     public Image willPowerImage;
     public Image powerUpImage;
 
+    const string glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    int charCount = 5;
+
     void Start () {
         playerStats = GetComponent<PlayerStats>();
         playerStats.playerBaseAbilities = this;
@@ -108,23 +111,15 @@ public class PlayerBaseAbilities : MonoBehaviour {
 #endif
     }
     public void SaveData () {
+        string tempString = "";
+        for (int k = 0; k < charCount; k++) {
+            tempString += glyphs[Random.Range(0, glyphs.Length)];
+        }
         if (File.Exists(Application.dataPath + " / GameplayData.json")) {
             string jsonstring = JsonUtility.ToJson(dataSet);
-            File.WriteAllText(Application.dataPath + "/GameplayData.json", jsonstring);
-        }
-        else {
-            FileStream fileStream = new FileStream(Application.dataPath + "/GameplayData.json", FileMode.Create);
-            fileStream.Close();
-            string jsonstring = JsonUtility.ToJson(dataSet);
-            File.WriteAllText(Application.dataPath + "/GameplayData.json", jsonstring);
+            File.WriteAllText(Application.dataPath  +"/GameplayData"+tempString +".json", jsonstring);
         }
     }
-
-    //Revive Mechanic
-    //public void Revive () {
-    //    willPower -= 1;
-    //    playerStats.PlayerHealth();
-    //}
 
     public float GetReserveLives () {
         return willPower;
