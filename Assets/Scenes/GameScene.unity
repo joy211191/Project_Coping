@@ -5312,11 +5312,11 @@ MonoBehaviour:
   m_interactPrompt: {fileID: 1797774472}
   m_portraitPath: StorytellerPortrait
   m_dialogueList:
-  - Assets/Dialogue/Storyteller/StorytellerEncounter1Dialogue - Edit.txt
-  - Assets/Dialogue/Storyteller/StorytellerEncounter2Dialogue - Edit.txt
-  m_endDialoguePath: Assets/Dialogue/Storyteller/StorytellerSpentDialogue1.txt
-  m_endDialoguePath2: Assets/Dialogue/Storyteller/StorytellerSpentDialogue2.txt
-  m_finalDialoguePath: Assets/Dialogue/Storyteller/StoryTellerFinishDialogue.txt
+  - StorytellerEncounter1Dialogue - Edit
+  - StorytellerEncounter2Dialogue - Edit
+  m_endDialoguePath: StorytellerSpentDialogue1
+  m_endDialoguePath2: StorytellerSpentDialogue2
+  m_finalDialoguePath: StoryTellerFinishDialogue
   m_activeText: {r: 0.5566038, g: 0.543385, b: 0.04988429, a: 1}
   m_inactiveText: {r: 0, g: 0, b: 0, a: 1}
   m_firstItem:
@@ -10063,10 +10063,10 @@ MonoBehaviour:
   m_interactPrompt: {fileID: 1797774472}
   m_portraitPath: Veteran Portrait
   m_dialogueList:
-  - Assets/Dialogue/Veteran/VeteranEncounter1Dialogue.txt
-  - Assets/Dialogue/Veteran/VeteranEncounter2Dialogue.txt
-  m_endDialoguePath: Assets/Dialogue/Veteran/VeteranSpentDialogue.txt
-  m_finalDialoguePath: Assets/Dialogue/Veteran/VeteranFinishDialogue.txt
+  - VeteranEncounter1Dialogue
+  - VeteranEncounter2Dialogue
+  m_endDialoguePath: VeteranSpentDialogue
+  m_finalDialoguePath: VeteranFinishDialogue
   m_activeText: {r: 0.5566038, g: 0.543385, b: 0.04988429, a: 1}
   m_inactiveText: {r: 0, g: 0, b: 0, a: 1}
   m_firstItem:

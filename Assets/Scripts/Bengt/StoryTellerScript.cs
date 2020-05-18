@@ -347,17 +347,23 @@ public class StoryTellerScript : MonoBehaviour
     //Read from .txt file
     void TextfileToList()
     {
-        try
-        {
-            //Read the entirety of the file and puts everything in its own place in the array
-            m_dialogueLines = File.ReadAllLines(m_dialoguePath, Encoding.UTF8);
+        TextAsset tempText = (TextAsset)Resources.Load("Dialogue/" + m_dialoguePath);
 
-        }
-        catch
-        {
-            //Print if it can't read the file
-            Debug.Log("Could not read file. Is the path correct?");
-        }
+
+        m_dialogueLines = tempText.text.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
+
+
+        //try
+        //{
+        //    //Read the entirety of the file and puts everything in its own place in the array
+        //    m_dialogueLines = File.ReadAllLines(m_dialoguePath, Encoding.UTF8);
+
+        //}
+        //catch
+        //{
+        //    //Print if it can't read the file
+        //    Debug.Log("Could not read file. Is the path correct?");
+        //}
 
     }
 

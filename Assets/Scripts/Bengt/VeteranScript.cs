@@ -69,6 +69,8 @@ public class VeteranScript : MonoBehaviour
     int i;
 
 
+    StringReader read;
+
     void Awake()
     {
         //Find all the UI object children and put the in the right place and give name
@@ -91,7 +93,9 @@ public class VeteranScript : MonoBehaviour
         else
             PlayerPrefs.SetInt("Veteran ItemsReceived", m_itemsRecieved);
 
-        
+
+
+        //m_dialogueList[0] = Resources.Load<TextAsset>("Portraits/" + m_portraitPath);
     }
 
     // Update is called once per frame
@@ -348,17 +352,42 @@ public class VeteranScript : MonoBehaviour
     //Read from .txt file
     void TextfileToList()
     {
-        try
-        {
-            //Read the entirety of the file and puts everything in its own place in the array
-            m_dialogueLines = File.ReadAllLines(m_dialoguePath, Encoding.UTF8);
 
-        }
-        catch
-        {
-            //Print if it can't read the file
-            Debug.Log("Could not read file. Is the path correct?");
-        }
+
+        TextAsset tempText = (TextAsset)Resources.Load("Dialogue/" + m_dialoguePath);
+
+
+        m_dialogueLines = tempText.text.Split(new[] { "\r\n", "\r", "\n" },StringSplitOptions.None);
+
+        //read = new StringReader(tempText.text);
+
+
+
+        //if (read == null)
+        //    Debug.Log("Could not read file. Is the path correct?");
+        //else
+        //    for (int i = 1; i <= 2006; i++)
+        //    {
+        //        m_dialogueLines[i] = read.ReadLine();
+        //    }
+
+
+        //try
+        //{
+        //    //Read the entirety of the file and puts everything in its own place in the array
+
+
+
+        //    //m_dialogueLines = File.ReadAllLines(), Encoding.UTF8);
+
+
+
+        //}
+        //catch
+        //{
+        //    //Print if it can't read the file
+        //    Debug.Log("Could not read file. Is the path correct?");
+        //}
 
     }
 
@@ -381,13 +410,13 @@ public class VeteranScript : MonoBehaviour
 
     public void NextDialogue()
     {
-        /*
+        
         m_dialogueCounter++;
 
         if (m_dialogueCounter < m_dialogueList.Count)
             m_dialoguePath = m_dialogueList[m_dialogueCounter];
         else
             m_dialoguePath = m_finalDialoguePath;
-            */
+            
     }
 }
